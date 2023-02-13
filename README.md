@@ -1,4 +1,4 @@
-# Virittämö Helsinki Homepage
+# Virittämö Helsinki
 
 This is the new homepage for Virittämö Helsinki, an employment service run by the City of Helsinki that connects jobseekers and companies seeking digital and media professionals. The website has been created using React.js and SCSS.
 
