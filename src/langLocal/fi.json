@@ -1,0 +1,192 @@
+{
+  "header": {
+    "_comment": "Otsikkotekstimuuttujat",
+    "homepage": "Koti",
+    "projects": "Projektit",
+    "experiences": "Kokemukset",
+    "contact": "Ottaa yhteyttä"
+  },
+  "footer": {
+    "_comment": "Alatunnisteen tekstimuuttujat",
+    "homepage": "Etusivu",
+    "projects": "Projektit",
+    "experiences": "Kokemukset",
+    "contact": "Ottaa yhteyttä",
+    "back_to_top": "Takaisin alkuun"
+  },
+  "home_page": {
+    "_comment": "Kotisivun tekstimuuttujat",
+    "home_title": "Virittämö",
+    "home_text": "Virittämö on Helsingin kaupungin työvoimapalvelu, joka yhdistää tuoretta työkokemusta kaipaavat henkilöt käytännön digi- ja media-alan osaajia etsiviin yrityksiin.",
+    "employed_to_text": "Työntekijämme ovat siirtyneet eteenpäin",
+    "companies_list": [
+      "Aalto yliopisto",
+      "Ahlsell",
+      "Apix Ltd",
+      "Suomen ATEA",
+      "Kauppakorkeakoulu Helsinki",
+      "Barona / Infocare / HUS",
+      "Barona Oy",
+      "CaseNine",
+      "Capgemini",
+      "CGI",
+      "CSC - Tieteen tietotekniikan keskus Oy",
+      "Eficode",
+      "Elisa Oyj",
+      "Espoon kaupunki",
+      "FCG Finnish Consulting Group Oy",
+      "Finanssikollega",
+      "FlyAR Augmented Reality Studio Ltd",
+      "Fujitsu Finland Oy",
+      "G-Works",
+      "Gofore Ltd",
+      "Helsingin kaupunki / Stadin ammatti- ja aikuisopisto, Oodi, Kanslia ja Taloushallintopalvelu",
+      "Helvar Oy",
+      "iTaito",
+      "Icareus Ltd",
+      "JackFinder Ltd",
+      "Kuehne Nagel",
+      "Kuntien Tiera Oy",
+      "Kuuhubb Oy",
+      "M-Files MOST Digital Ltd",
+      "Nixu Oyj Helsinki",
+      "NOJA Rahoitus",
+      "OPR-Rahoitus Oy",
+      "Patentti- ja rekisterihallitus",
+      "Pelaa enemmän pelejä",
+      "Reaktor",
+      "Redland Ltd",
+      "RELEX-ratkaisut",
+      "Softico",
+      "Solteq",
+      "Suomen Kiertovoima KIVO Suora lähetys",
+      "Tietokeskus Suomi Oy",
+      "Valve Branding Ltd",
+      "Webhelp Finland Oy",
+      "Woolman Oy",
+      "Yleisradio (Yle)"
+    ],
+    "why_virittamo": "Miksi Virittämö?",
+    "for_an_employee": {
+      "title": "Työntekijän puolesta",
+      "description": [
+        "Saat tuoretta työkokemusta ja ylläpidät ammattitaitoasi mielenkiintoisilla tehtävillä ja asiakasprojekteilla.",
+        "7 kuukauden tukityö, joka auttaa etenemään urallasi.",
+        "Kuntatyöntekijöiden (KVTES) työehtosopimuksen mukainen palkka.",
+        "Voit kehittää taitojasi monin eri tavoin työskennellessäsi, opiskellessaan ja ammattikorkeakoulussa insinööritutkintoon johtavia polkuopintoja suorittaessasi.",
+        "Tulet osaksi kannustavaa ja ystävällistä työyhteisöä. "
+      ]
+    },
+    "for_a_company": {
+      "title": "Yritykselle",
+      "description": [
+        "Osaavat ja ammattitaitoiset media- ja digiasiantuntijat lyhyt- tai pitkäaikaisiin projekteihisi tai vakituiseksi työntekijäksi.",
+        "Ammattilaisten asiantuntemus ja soveltuvuus on puolestasi etukäteen tarkasti määritelty.",
+        "Teet konkreettisen työnteon.",
+        "Voit hyötyä kumppanuudesta markkinoinnissasi."
+      ]
+    },
+    "teams": {
+      "title": "Kolme joukkuetta",
+      "media-desc": "Virittämön Mediatiimi on...",
+      "ict_desc": "Virittämön ICT-tiimi on...",
+      "software-desc": "Virittämön Software-tiimi on..."
+    },
+    "apply": {
+      "title": "Kuka voi hakea?",
+      "description": "Meiltä voit hakea työtä, jos olet helsinkiläinen ja työtön, palkkatukeen oikeutettu työnhakija. ",
+      "qualifications": [
+        {
+          "title": "Alle 25-vuotias.",
+          "desc": "Olet suorittanut ammatillisen koulutuksen tai muun kuin ylioppilastutkinnon ja olet ollut työttömänä yli 6 kuukautta."
+        },
+        {
+          "title": "25-29 vuotias.",
+          "desc": "Olet suorittanut ammatillisen koulutuksen tai muun kuin ylioppilastutkinnon ja olet ollut työnhakijana yli 12 kuukautta viimeisen 14 kuukauden aikana."
+        },
+        {
+          "title": "30 vuotta vanha tai vanhempi.",
+          "desc": "Olet ollut työnhakijana vähintään 24 kuukautta viimeisen 28 kuukauden aikana tai saanut yli 300 päivää työmarkkinatukea."
+        },
+        {
+          "title": "57 vuotta vanha tai vanhempi.",
+          "desc": "Ansiosidonnaisen työttömyyspäivärahan tai peruspäivärahan enimmäiskesto on saavutettu."
+        }
+      ],
+      "or_list": [
+        {
+          "title": "tai",
+          "desc": "Sinulla on työtehtävään vaikuttavan terveydellisen syyn vuoksi osittainen työkyky."
+        },
+        {
+          "title": "tai",
+          "desc": "Olet maahanmuuttaja, jolla on oleskelulupa tai oleskelusi on rekisteröity."
+        }
+      ]
+    },
+    "partners": "Yhteistyökumppanit",
+    "contact_details": {
+      "title": "Yhteystiedot",
+      "team": [
+        {
+          "name": "Tarja Kurvinen",
+          "title": "Joukkueen koordinaattori",
+          "phone": "p. 09 310 27553",
+          "email": "tarja.kurvinen@hel.fi"
+        },
+        {
+          "name": "Anna-Mari Rouru",
+          "title": "Koulutuspäällikkö",
+          "phone": "p. 09 310 81417",
+          "email": "anna-mari.rouru@edu.hel.fi"
+        },
+        {
+          "name": "Jaakko Hyytiä",
+          "title": "Projektiasiantuntija / ohjelmistotiimin vt",
+          "phone": "p. 09 310 28040",
+          "email": "jaakko.hyytia@edu.hel.fi"
+        },
+        {
+          "name": "Kai Rintamaa",
+          "title": "Mediatiimin johtaja",
+          "phone": "p. 09 310 81403",
+          "email": "kai.rintamaa@edu.hel.fi"
+        },
+        {
+          "name": "Ari Tuomi",
+          "title": "ICT-ryhmän johtaja",
+          "phone": "p. 09 310 27571",
+          "email": "ari.tuomi@edu.hel.fi"
+        },
+        {
+          "name": "John Strandberg",
+          "title": "Työpaikan valmentaja",
+          "phone": "p. 09 310 37370",
+          "email": "john.strandberg@edu.hel.fi"
+        },
+        {
+          "name": "Ulla Ijäs",
+          "title": "Työpaikan valmentaja",
+          "phone": "p. 09 310 35264",
+          "email": "ulla.ijas@edu.hel.fi"
+        },
+        {
+          "name": "Virittämö",
+          "title": "Metropolian kampus",
+          "address": "Osoite: Myllypurontie 1",
+          "postalCode": "PL 92305, 00099 Helsingin kaupunki"
+        },
+        {
+          "name": "Virittämö",
+          "title": "Stadin ammatti- ja aikuisopisto",
+          "address": "Osoite: Muotoilijankatu 3",
+          "postalCode": "PL 56305, 00099 Helsingin kaupunki"
+        }
+      ]
+    }
+  },
+  "projects_page": {
+    "projects_title": "Projektit",
+    "projects_desc": "Virittämön kautta yritykset saavat ammattitaitoista työvoimaa ja mahdollisuuden tehdä yhteiskunnallista hyvää. "
+  }
+}

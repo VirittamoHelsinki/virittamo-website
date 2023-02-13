@@ -1,10 +1,32 @@
-// import React Router
+import fi from "./langLocal/fi.json";
+import en from "./langLocal/en.json";
+
+// import Loading from "./components/Loading";
+import { LanguageContext } from "./langLocal/context/langContext";
+
+// import React
 import Router from "./components/Router";
+import { useState, useEffect } from "react";
 
 const App = () => {
+  const [locale, setLocale] = useState("fi");
+  const [lang, setLang] = useState(fi);
+
+  useEffect(() => {
+    const storedLocale = localStorage.getItem("virittamo-lang");
+
+    storedLocale && setLocale(storedLocale);
+  }, []);
+
+  useEffect(() => {
+    locale && locale === "fi" ? setLang(fi) : setLang(en);
+  }, [locale]);
+
   return (
     <main className="app__wrapper">
-      <Router />
+      <LanguageContext.Provider value={{ lang, setLocale, fi }}>
+        <Router />
+      </LanguageContext.Provider>
     </main>
   );
 };

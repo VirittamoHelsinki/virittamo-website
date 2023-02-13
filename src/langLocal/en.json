@@ -1,0 +1,195 @@
+{
+  "header": {
+    "_comment": "Header text variables",
+    "homepage": "Home",
+    "projects": "Projects",
+    "experiences": "Experiences",
+    "contact": "Contact"
+  },
+
+  "footer": {
+    "_comment": "Footer text variables",
+    "homepage": "Home",
+    "projects": "Projects",
+    "experiences": "Experiences",
+    "contact": "Contact",
+    "back_to_top": "Back to top"
+  },
+
+  "home-page": {
+    "_comment": "Home page text variables",
+    "home_title": "Virittämö",
+    "home_text": "Virittämö is a employment service of the City of Helsinki, connecting individuals who are in need of fresh work experience with companies searching for practical digital and media experts.",
+    "employed_to_text": "Our employees have move on to",
+    "companies_list": [
+      "Aalto University",
+      "Ahlsell",
+      "Apix Ltd",
+      "ATEA Finland",
+      "Business College Helsinki",
+      "Barona / Infocare / HUS",
+      "Barona Ltd",
+      "CaseNine",
+      "Capgemini",
+      "CGI",
+      "CSC- IT Center for Science Ltd",
+      "Eficode",
+      "Elisa Corporation",
+      "City of Espoo",
+      "FCG Finnish Consulting Group Ltd",
+      "Fellow Finance",
+      "FlyAR Augmented Reality Studio Ltd",
+      "Fujitsu Finland Ltd",
+      "G-Works",
+      "Gofore Ltd",
+      "City of Helsinki / Stadin ammatti- ja aikuisopisto, Oodi, Kanslia and Taloushallintopalvelu",
+      "Helvar Ltd",
+      "iTaito",
+      "Icareus Ltd",
+      "JackFinder Ltd",
+      "Kuehne + Nagel",
+      "Kuntien Tiera Ltd",
+      "Kuuhubb Ltd",
+      "M-Files MOST Digital Ltd",
+      "Nixu Corporation Helsinki",
+      "NOJA Rahoitus",
+      "OPR-Finance Ltd",
+      "Finnish Patent and Registration Office",
+      "Playmore Games",
+      "Reaktor",
+      "Redland Ltd",
+      "RELEX Solutions",
+      "Softico",
+      "Solteq",
+      "Suomen Kiertovoima KIVO Suora Broadcast",
+      "Tietokeskus Finland Ltd",
+      "Valve Branding Ltd",
+      "Webhelp Finland Ltd",
+      "Woolman Ltd",
+      "Finnish Broadcasting Company (Yle)"
+    ],
+    "why_virittamo": "Why Virittämö?",
+    "for_an_employee": {
+      "title": "For the employee",
+      "description": [
+        "You will gain fresh work experience and maintain your professional skills with interesting tasks and customer projects.",
+        "A 7-month subsidized employment that helps you move forward in your career.",
+        "Salary according to the collective agreement for local government employees (KVTES).",
+        "You can develop your skills in various ways while working, studying and completing pathway studies leading to a degree in engineering at a university of applied sciences.",
+        "You will be part of a supportive and friendly work community. The guidance team of Virittämö will be with you throughout the employment period, helping you develop the skills needed for job search and working life."
+      ]
+    },
+    "for_a_company": {
+      "title": "For a company",
+      "description": [
+        "Skilled and professional media and digital experts for your short or long-term projects, or as a permanent employee.",
+        "The expertise and suitability of the professionals have been carefully determined in advance on your behalf.",
+        "You will make a concrete act of employment.",
+        "You can benefit from the partnership in your marketing."
+      ]
+    },
+    "teams": {
+      "title": "Three teams",
+      "media_desc": "Virittämö's Media team is...",
+      "ict_desc": "Virittämö's ICT team is...",
+      "software_desc": "Virittämö's Software team is..."
+    },
+    "apply": {
+      "title": "Who can apply?",
+      "description": "You can apply for a job with us if you are a Helsinki resident and an unemployed job seeker eligible for a wage subsidy. At least three years must have passed since your previous wage-subsidized employment.",
+      "qualifications": [
+        {
+          "title": "Under 25 years old.",
+          "desc": "You have completed vocational training or other than matriculation examination and have been unemployed for over 6 months."
+        },
+        {
+          "title": "25-29 years old.",
+          "desc": "You have completed vocational training or other than matriculation examination and have been a jobseeker for over 12 months in the past 14 months."
+        },
+        {
+          "title": "30 years old or older.",
+          "desc": "You have been a jobseeker for at least 24 months in the past 28 months or have received over 300 days of labor market support."
+        },
+        {
+          "title": "57 years old or older.",
+          "desc": "The maximum duration of your earnings-related unemployment allowance or basic unemployment allowance has been reached."
+        }
+      ],
+      "or_list": [
+        {
+          "title": "or",
+          "desc": "You have a partial work ability due to a health reason affecting the work task."
+        },
+        {
+          "title": "or",
+          "desc": "You are an immigrant with a residence permit or your stay has been registered."
+        }
+      ]
+    },
+    "partners": "Partners",
+    "contact_details": {
+      "title": "Contact details",
+      "team": [
+        {
+          "name": "Tarja Kurvinen",
+          "title": "Team Coordinator",
+          "phone": "p. 09 310 27553",
+          "email": "tarja.kurvinen@hel.fi"
+        },
+        {
+          "name": "Anna-Mari Rouru",
+          "title": "Training Manager",
+          "phone": "p. 09 310 81417",
+          "email": "anna-mari.rouru@edu.hel.fi"
+        },
+        {
+          "name": "Jaakko Hyytiä",
+          "title": "Project Specialist / Acting Head of Software Team",
+          "phone": "p. 09 310 28040",
+          "email": "jaakko.hyytia@edu.hel.fi"
+        },
+        {
+          "name": "Kai Rintamaa",
+          "title": "Head of Media Team",
+          "phone": "p. 09 310 81403",
+          "email": "kai.rintamaa@edu.hel.fi"
+        },
+        {
+          "name": "Ari Tuomi",
+          "title": "Head of ICT Team",
+          "phone": "p. 09 310 27571",
+          "email": "ari.tuomi@edu.hel.fi"
+        },
+        {
+          "name": "John Strandberg",
+          "title": "Workplace Coach",
+          "phone": "p. 09 310 37370",
+          "email": "john.strandberg@edu.hel.fi"
+        },
+        {
+          "name": "Ulla Ijäs",
+          "title": "Workplace Coach",
+          "phone": "p. 09 310 35264",
+          "email": "ulla.ijas@edu.hel.fi"
+        },
+        {
+          "name": "Virittämö",
+          "title": "Metropolia Campus",
+          "address": "Address: Myllypurontie 1",
+          "postalCode": "PO Box 92305, 00099 City of Helsinki"
+        },
+        {
+          "name": "Virittämö",
+          "title": "Stadin Vocational and Adult Institute",
+          "address": "Address: Muotoilijankatu 3",
+          "postalCode": "PO Box 56305, 00099 City of Helsinki"
+        }
+      ]
+    }
+  },
+
+  "projects_page": {
+    "projects_title": "Projects",
+    "projects_desc": "Through Virittämö, companies can get skilled labor and the opportunity to do social good. Virittämö's media, IT, and software industry experts can participate in your projects for a few days to several months. Through various projects, employees can improve their skills, update their work experience, and gain workplace skills to jump back onto their own career path."
+  }
+}

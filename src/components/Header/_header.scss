@@ -1,0 +1,15 @@
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  .header__container {
+    .header__nav {
+      .header__nav--list {
+        .header__nav--list-item {
+        }
+      }
+    }
+  }
+}
