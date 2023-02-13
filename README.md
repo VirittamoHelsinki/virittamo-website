@@ -10,7 +10,15 @@ Virittämö Helsinki is a groundbreaking employment service that benefits everyo
 
 ## Usage
 
-### `npm start`
+```
+git clone https://github.com/VirittamoHelsinki/virittamo-website.git
+
+cd virittamo-website
+
+npm install
+
+npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -18,5 +26,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-Started 13/02/2023 by Jesse Hamberg [@hambergjesse](https://github.com/hambergjesse)
-Last updated: 13/02/2023 by Jesse Hamberg [@hambergjesse](https://github.com/hambergjesse)
+## Credit
+Started 13/02/2023 by Jesse Hamberg [@hambergjesse](https://github.com/hambergjesse) @ Virittämö Helsinki\
+Last updated: 13/02/2023 by Jesse Hamberg [@hambergjesse](https://github.com/hambergjesse) @ Virittämö Helsinki
