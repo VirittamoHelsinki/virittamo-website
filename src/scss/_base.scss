@@ -1,0 +1,70 @@
+// colour scheme
+$virittamo-light-violet: E0DEEC;
+$virittamo-black: #050505;
+$virittamo-pink: #f4a3c5;
+
+// font sizing
+$base-font-size: 16px;
+$base-font-size-mobile: 14px;
+$base-font-size-tiny: 12px;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+
+  // define font family
+  font-family: Helsinki-Grotesk, Arial;
+  font-weight: 300;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+button,
+input {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  // disable horizontal scroll
+  overflow-x: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+main.app__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
