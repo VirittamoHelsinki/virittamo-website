@@ -10,14 +10,14 @@ import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
 // import virittämö helsinki logo
 import VirittamoLogo from "./assets/virittamo-helsinki.png";
 
-const Header = () => {
+export const Header = () => {
   const { lang, setLocale, fi } = useContext(LanguageContext);
 
   const { header } = lang;
 
   return (
     <main className="header__wrapper">
-      <section className="header__container">
+      <div className="header__container">
         <img src={VirittamoLogo} alt="Virittämö Helsinki" />
         {/* nav links */}
         <nav className="header__nav">
@@ -37,7 +37,7 @@ const Header = () => {
           </ul>
         </nav>
         {/* virittämö social icons */}
-        <div className="header__socials">
+        <section className="header__socials">
           <a
             href="https://www.facebook.com/virittamohelsinki/"
             alt="Virittämö Facebook Link"
@@ -86,10 +86,8 @@ const Header = () => {
               </a>
             )}
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 };
-
-export default Header;

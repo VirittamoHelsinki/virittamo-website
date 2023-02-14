@@ -1,22 +1,21 @@
 main.header__wrapper {
   display: flex;
-  padding: 50px 200px 25px;
+  padding: 45px 200px 25px;
   justify-content: center;
+  margin-bottom: -60px;
   align-items: center;
-  border: 1px solid red;
-  height: 150px;
+  height: 145px;
   width: 100%;
 
-  section.header__container {
+  div.header__container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     height: 100%;
     width: 100%;
-    border: solid 1px red;
 
     img {
-      height: 100%px;
+      height: 75px;
       width: auto;
     }
 
@@ -32,6 +31,8 @@ main.header__wrapper {
             font-weight: bold;
             font-size: $font-size-big;
             color: $virittamo-black;
+            // transition
+            transition: 0.1s ease-in-out;
           }
 
           a:hover {
@@ -42,7 +43,7 @@ main.header__wrapper {
     }
 
     // virittämö social icons
-    div.header__socials {
+    section.header__socials {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -51,12 +52,14 @@ main.header__wrapper {
 
       a {
         height: 30px;
-        width: auto;
+        width: 30px;
 
         .social-icon {
           color: $virittamo-black;
           height: 100%;
           width: 100%;
+          // transition
+          transition: 0.1s ease-in-out;
         }
 
         .social-icon:hover {
@@ -71,6 +74,8 @@ main.header__wrapper {
         a {
           color: $virittamo-black;
           font-weight: bolder;
+          // transition
+          transition: 0.1s ease-in-out;
         }
 
         a:hover {
