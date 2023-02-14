@@ -1,22 +1,22 @@
 {
   "header": {
     "_comment": "Header text variables",
-    "homepage": "Home",
+    "home_page": "Home",
     "projects": "Projects",
     "experiences": "Experiences",
-    "contact": "Contact"
+    "contact": "Contact Us"
   },
 
   "footer": {
     "_comment": "Footer text variables",
-    "homepage": "Home",
+    "home_page": "Home",
     "projects": "Projects",
     "experiences": "Experiences",
-    "contact": "Contact",
+    "contact": "Contact Us",
     "back_to_top": "Back to top"
   },
 
-  "home-page": {
+  "home_page": {
     "_comment": "Home page text variables",
     "home_title": "Virittämö",
     "home_text": "Virittämö is a employment service of the City of Helsinki, connecting individuals who are in need of fresh work experience with companies searching for practical digital and media experts.",

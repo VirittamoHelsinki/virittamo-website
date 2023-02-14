@@ -4,10 +4,14 @@ $virittamo-white: #ffffff;
 $virittamo-black: #050505;
 $virittamo-light-violet: #e0deec;
 
+// other
+$dark-link-hover: #5e5e5e;
+
 // font sizing
-$base-font-size: 16px;
-$base-font-size-mobile: 14px;
-$base-font-size-tiny: 12px;
+$font-size-big: 18px;
+$font-size-normal: 16px;
+$font-size-mobile: 14px;
+$font-size-tiny: 12px;
 
 * {
   margin: 0px;
@@ -19,6 +23,9 @@ $base-font-size-tiny: 12px;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
+
+  // transition
+  transition: 0.1s ease-in-out;
 
   // define font family
   font-family: Helsinki-Grotesk, Arial;
@@ -59,6 +66,15 @@ body {
     height: auto;
     max-width: 100%;
     max-height: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li {
+    color: $virittamo-black;
   }
 }
 

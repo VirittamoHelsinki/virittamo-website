@@ -1,17 +1,17 @@
 {
   "header": {
     "_comment": "Otsikkotekstimuuttujat",
-    "homepage": "Koti",
+    "home_page": "Etusivu",
     "projects": "Projektit",
     "experiences": "Kokemukset",
-    "contact": "Ottaa yhteyttä"
+    "contact": "Ota yhteyttä"
   },
   "footer": {
     "_comment": "Alatunnisteen tekstimuuttujat",
-    "homepage": "Etusivu",
+    "home_page": "Etusivu",
     "projects": "Projektit",
     "experiences": "Kokemukset",
-    "contact": "Ottaa yhteyttä",
+    "contact": "Ota yhteyttä",
     "back_to_top": "Takaisin alkuun"
   },
   "home_page": {
