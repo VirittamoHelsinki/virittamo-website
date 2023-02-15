@@ -87,10 +87,12 @@
       ]
     },
     "teams": {
-      "title": "Kolme joukkuetta",
-      "media-desc": "Virittämön Mediatiimi on...",
-      "ict_desc": "Virittämön ICT-tiimi on...",
-      "software-desc": "Virittämön Software-tiimi on..."
+      "title": "Kolme tiimiä",
+      "media_desc": "Virittämön Mediatiimi on... Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic alias atque quis, laboriosam nisi obcaecati unde eaque sunt iste voluptatem iusto itaque, nostrum illum. Esse fuga corrupti sequi eum est dicta, tempora accusantium doloremque, mollitia nobis quidem iusto expedita. Harum, dolores, expedita consequuntur, ipsa commodi officia vero error aperiam ex possimus unde cupiditate tenetur doloremque rerum illum nam. Autem molestiae, fugiat rem rerum quo odio hic ut ducimus earum itaque dolorem sint inventore esse maiores natus voluptas beatae consequatur! Libero delectus provident nam veritatis quo, similique eaque ipsam, suscipit cum aut expedita nostrum quis, accusantium nulla repellendus dolorem saepe!",
+      "ict_desc": "Virittämön ICT-tiimi on... Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic alias atque quis, laboriosam nisi obcaecati unde eaque sunt iste voluptatem iusto itaque, nostrum illum. Esse fuga corrupti sequi eum est dicta, tempora accusantium doloremque, mollitia nobis quidem iusto expedita. Harum, dolores, expedita consequuntur, ipsa commodi officia vero error aperiam ex possimus unde cupiditate tenetur doloremque rerum illum nam. Autem molestiae, fugiat rem rerum quo odio hic ut ducimus earum itaque dolorem sint inventore esse maiores natus voluptas beatae consequatur! Libero delectus provident nam veritatis quo, similique eaque ipsam, suscipit cum aut expedita nostrum quis, accusantium nulla repellendus dolorem saepe!",
+      "software_desc": "Virittämön Software-tiimi on... Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic alias atque quis, laboriosam nisi obcaecati unde eaque sunt iste voluptatem iusto itaque, nostrum illum. Esse fuga corrupti sequi eum est dicta, tempora accusantium doloremque, mollitia nobis quidem iusto expedita. Harum, dolores, expedita consequuntur, ipsa commodi officia vero error aperiam ex possimus unde cupiditate tenetur doloremque rerum illum nam. Autem molestiae, fugiat rem rerum quo odio hic ut ducimus earum itaque dolorem sint inventore esse maiores natus voluptas beatae consequatur! Libero delectus provident nam veritatis quo, similique eaque ipsam, suscipit cum aut expedita nostrum quis, accusantium nulla repellendus dolorem saepe!",
+      "read_more_btn": "Lue lisää",
+      "read_less_btn": "Lue vähemmän"
     },
     "apply": {
       "title": "Kuka voi hakea?",

@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 // import context
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
 
 // import assets
@@ -12,6 +13,37 @@ import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
 // import components
 import { Header } from "../../components/Header/Header";
+
+const TeamsItem = (props) => {
+  const [showMore, setShowMore] = useState(false);
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
+  // Check if props and props.text are defined before trying to slice
+  const textPreview = props.text
+    ? props.text.slice(0, props.text.indexOf(".") + 1)
+    : "";
+
+  const textRest = props.text
+    ? props.text.slice(props.text.indexOf(".") + 1)
+    : "";
+
+  return (
+    <div className="homePage__teams--containers-item ">
+      <img src={props.img} alt={props.alt} />
+      <h3>{props.title}</h3>
+      <p>
+        {textPreview}
+        {showMore ? textRest : "..."}
+      </p>
+      <button onClick={toggleShowMore}>
+        {showMore ? props.less : props.more}
+      </button>
+    </div>
+  );
+};
 
 const HomePage = () => {
   const { lang } = useContext(LanguageContext);
@@ -74,6 +106,35 @@ const HomePage = () => {
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+      <section className="homePage__teams">
+        <h2>{home_page.teams.title}</h2>
+        <div className="homePage__teams--containers">
+          <TeamsItem
+            img=""
+            title="Media"
+            text={home_page.teams.media_desc}
+            alt="Virittämö's Media Team"
+            more={home_page.teams.read_more_btn}
+            less={home_page.teams.read_less_btn}
+          />
+          <TeamsItem
+            img=""
+            title="ICT"
+            text={home_page.teams.ict_desc}
+            alt="Virittämö's ICT Team"
+            more={home_page.teams.read_more_btn}
+            less={home_page.teams.read_less_btn}
+          />
+          <TeamsItem
+            img=""
+            title="Softa"
+            text={home_page.teams.software_desc}
+            alt="Virittämö's Software Team"
+            more={home_page.teams.read_more_btn}
+            less={home_page.teams.read_less_btn}
+          />
         </div>
       </section>
     </main>

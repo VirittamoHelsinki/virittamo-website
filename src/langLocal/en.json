@@ -90,9 +90,11 @@
     },
     "teams": {
       "title": "Three teams",
-      "media_desc": "Virittämö's Media team is...",
-      "ict_desc": "Virittämö's ICT team is...",
-      "software_desc": "Virittämö's Software team is..."
+      "media_desc": "Virittämö's Media team is...  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic alias atque quis, laboriosam nisi obcaecati unde eaque sunt iste voluptatem iusto itaque, nostrum illum. Esse fuga corrupti sequi eum est dicta, tempora accusantium doloremque, mollitia nobis quidem iusto expedita. Harum, dolores, expedita consequuntur, ipsa commodi officia vero error aperiam ex possimus unde cupiditate tenetur doloremque rerum illum nam. Autem molestiae, fugiat rem rerum quo odio hic ut ducimus earum itaque dolorem sint inventore esse maiores natus voluptas beatae consequatur! Libero delectus provident nam veritatis quo, similique eaque ipsam, suscipit cum aut expedita nostrum quis, accusantium nulla repellendus dolorem saepe!",
+      "ict_desc": "Virittämö's ICT team is...  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic alias atque quis, laboriosam nisi obcaecati unde eaque sunt iste voluptatem iusto itaque, nostrum illum. Esse fuga corrupti sequi eum est dicta, tempora accusantium doloremque, mollitia nobis quidem iusto expedita. Harum, dolores, expedita consequuntur, ipsa commodi officia vero error aperiam ex possimus unde cupiditate tenetur doloremque rerum illum nam. Autem molestiae, fugiat rem rerum quo odio hic ut ducimus earum itaque dolorem sint inventore esse maiores natus voluptas beatae consequatur! Libero delectus provident nam veritatis quo, similique eaque ipsam, suscipit cum aut expedita nostrum quis, accusantium nulla repellendus dolorem saepe!",
+      "software_desc": "Virittämö's Software team is...  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic alias atque quis, laboriosam nisi obcaecati unde eaque sunt iste voluptatem iusto itaque, nostrum illum. Esse fuga corrupti sequi eum est dicta, tempora accusantium doloremque, mollitia nobis quidem iusto expedita. Harum, dolores, expedita consequuntur, ipsa commodi officia vero error aperiam ex possimus unde cupiditate tenetur doloremque rerum illum nam. Autem molestiae, fugiat rem rerum quo odio hic ut ducimus earum itaque dolorem sint inventore esse maiores natus voluptas beatae consequatur! Libero delectus provident nam veritatis quo, similique eaque ipsam, suscipit cum aut expedita nostrum quis, accusantium nulla repellendus dolorem saepe!",
+      "read_more_btn": "Read more",
+      "read_less_btn": "Read less"
     },
     "apply": {
       "title": "Who can apply?",
