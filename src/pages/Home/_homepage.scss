@@ -173,13 +173,15 @@ main.homePage__wrapper {
     flex-direction: column;
     align-items: center;
     padding-bottom: 60px;
+    position: relative;
+    height: 100%;
     width: 100%;
     gap: 60px;
 
     h2 {
       font-size: 48px;
       font-weight: bold;
-      line-height: 30px;
+      line-height: 34px;
     }
 
     div.homePage__teams--containers {
@@ -201,7 +203,6 @@ main.homePage__wrapper {
 
         img {
           border-radius: 50% 50% 0px 0px;
-          border: 1px solid red;
           object-fit: cover;
           width: 100%;
           height: 525px;

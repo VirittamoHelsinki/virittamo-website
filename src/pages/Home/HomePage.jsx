@@ -7,12 +7,16 @@ import { LanguageContext } from "../../langLocal/context/langContext";
 import HeaderImg from "./assets/main-header-img.jpeg";
 import ForEmployeeImg from "./assets/why-section-employee.jpeg";
 import ForCompanyImg from "./assets/why-section-company.jpeg";
+import MediaImg from "./assets/teams-section-media.jpeg";
+import IctImg from "./assets/teams-section-ict.jpeg";
+import SoftaImg from "./assets/teams-section-softa.jpeg";
 
 // import icons from react-icons
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
 // import components
 import { Header } from "../../components/Header/Header";
+import { Background } from "../../components/Background/Background";
 
 const TeamsItem = (props) => {
   const [showMore, setShowMore] = useState(false);
@@ -109,10 +113,11 @@ const HomePage = () => {
         </div>
       </section>
       <section className="homePage__teams">
+        <Background />
         <h2>{home_page.teams.title}</h2>
         <div className="homePage__teams--containers">
           <TeamsItem
-            img=""
+            img={MediaImg}
             title="Media"
             text={home_page.teams.media_desc}
             alt="Virittämö's Media Team"
@@ -120,7 +125,7 @@ const HomePage = () => {
             less={home_page.teams.read_less_btn}
           />
           <TeamsItem
-            img=""
+            img={IctImg}
             title="ICT"
             text={home_page.teams.ict_desc}
             alt="Virittämö's ICT Team"
@@ -128,7 +133,8 @@ const HomePage = () => {
             less={home_page.teams.read_less_btn}
           />
           <TeamsItem
-            img=""
+            id
+            img={SoftaImg}
             title="Softa"
             text={home_page.teams.software_desc}
             alt="Virittämö's Software Team"

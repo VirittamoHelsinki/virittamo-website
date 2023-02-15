@@ -1,9 +1,16 @@
-div.background {
+div.background__wrapper {
   background: $virittamo-light-violet;
+  position: absolute;
+  height: 50%;
   width: 100%;
+  z-index: -1;
+  bottom: 0;
 
-  svg.koros-wave {
+  svg {
     fill: $virittamo-light-violet;
-    top: -60px;
+    height: 85px;
+    width: 100%;
+    margin-top: -60px;
+    top: 0px;
   }
 }
