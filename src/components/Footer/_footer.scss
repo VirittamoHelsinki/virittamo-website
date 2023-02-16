@@ -2,11 +2,13 @@ main.footer__wrapper {
   display: flex;
   padding: 25px 10% 75px;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   position: relative;
   margin-top: 60px;
-  height: 175px;
+  height: auto;
   width: 100%;
+  gap: 100px;
 
   div.background__wrapper {
     background: $virittamo-light-violet;
@@ -22,6 +24,42 @@ main.footer__wrapper {
       width: 100%;
       margin-top: -60px;
       top: 0px;
+    }
+  }
+
+  div.footer__contacts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+
+    div#black-bar {
+      background: $virittamo-black;
+      width: 200px;
+      height: 3px;
+    }
+
+    ul.footer__contacts--list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 500px;
+      width: 100%;
+      gap: 20px;
+
+      li.footer__contacts--list-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 25%;
+
+        p:first-of-type {
+          font-weight: bolder;
+        }
+      }
     }
   }
 

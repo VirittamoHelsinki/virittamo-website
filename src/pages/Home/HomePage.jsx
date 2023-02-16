@@ -192,7 +192,22 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <Footer></Footer>
+      <Footer>
+        <h2>{home_page.contact_details.title}</h2>
+        <div className="footer__contacts">
+          <ul className="footer__contacts--list">
+            {home_page.contact_details.team.map((item, index) => (
+              <li key={index} className="footer__contacts--list-item">
+                <p>{item.name}</p>
+                <p>{item.title}</p>
+                <p>{item.phone}</p>
+                <p>{item.email}</p>
+              </li>
+            ))}
+          </ul>
+          <div id="black-bar"></div>
+        </div>
+      </Footer>
     </main>
   );
 };

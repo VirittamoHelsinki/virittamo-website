@@ -169,21 +169,23 @@
           "title": "Työpaikan valmentaja",
           "phone": "p. 09 310 35264",
           "email": "ulla.ijas@edu.hel.fi"
-        },
-        {
-          "name": "Virittämö",
-          "title": "Metropolian kampus",
-          "address": "Osoite: Myllypurontie 1",
-          "postalCode": "PL 92305, 00099 Helsingin kaupunki"
-        },
-        {
-          "name": "Virittämö",
-          "title": "Stadin ammatti- ja aikuisopisto",
-          "address": "Osoite: Muotoilijankatu 3",
-          "postalCode": "PL 56305, 00099 Helsingin kaupunki"
         }
       ]
-    }
+    },
+    "locations": [
+      {
+        "name": "Virittämö",
+        "title": "Metropolian kampus",
+        "address": "Osoite: Myllypurontie 1",
+        "postalCode": "PL 92305, 00099 Helsingin kaupunki"
+      },
+      {
+        "name": "Virittämö",
+        "title": "Stadin ammatti- ja aikuisopisto",
+        "address": "Osoite: Muotoilijankatu 3",
+        "postalCode": "PL 56305, 00099 Helsingin kaupunki"
+      }
+    ]
   },
   "projects_page": {
     "projects_title": "Projektit",
