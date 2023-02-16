@@ -12,7 +12,7 @@
     "projects": "Projektit",
     "experiences": "Kokemukset",
     "contact": "Ota yhteyttä",
-    "back_to_top": "Takaisin alkuun"
+    "back_to_top": "Sivun alkuun"
   },
   "home_page": {
     "_comment": "Kotisivun tekstimuuttujat",
@@ -96,7 +96,7 @@
     },
     "apply": {
       "title": "Kuka voi hakea?",
-      "description": "Meiltä voit hakea työtä, jos olet helsinkiläinen ja työtön, palkkatukeen oikeutettu työnhakija. ",
+      "description": "Meille voit hakea töihin, jos olet helsinkiläinen ja palkkatukioikeuden omaava työtön työnhakija. Edellisestä palkkatukijaksosta on pitänyt kulua kolme vuotta.",
       "qualifications": [
         {
           "title": "Alle 25-vuotias.",
@@ -113,15 +113,13 @@
         {
           "title": "57 vuotta vanha tai vanhempi.",
           "desc": "Ansiosidonnaisen työttömyyspäivärahan tai peruspäivärahan enimmäiskesto on saavutettu."
-        }
-      ],
-      "or_list": [
+        },
         {
-          "title": "tai",
+          "title": "TAI",
           "desc": "Sinulla on työtehtävään vaikuttavan terveydellisen syyn vuoksi osittainen työkyky."
         },
         {
-          "title": "tai",
+          "title": "TAI",
           "desc": "Olet maahanmuuttaja, jolla on oleskelulupa tai oleskelusi on rekisteröity."
         }
       ]

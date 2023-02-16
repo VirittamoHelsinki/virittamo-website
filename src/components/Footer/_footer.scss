@@ -1,13 +1,31 @@
-main.header__wrapper {
+main.footer__wrapper {
   display: flex;
-  padding: 45px 10% 25px;
+  padding: 25px 10% 75px;
   justify-content: center;
-  margin-bottom: -100px;
   align-items: center;
-  height: 145px;
+  position: relative;
+  margin-top: 60px;
+  height: 175px;
   width: 100%;
 
-  div.header__container {
+  div.background__wrapper {
+    background: $virittamo-light-violet;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    bottom: 0;
+
+    svg {
+      fill: $virittamo-light-violet;
+      height: 85px;
+      width: 100%;
+      margin-top: -60px;
+      top: 0px;
+    }
+  }
+
+  div.footer__container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -20,13 +38,13 @@ main.header__wrapper {
     }
 
     // nav links
-    nav.header__nav {
+    nav.footer__nav {
       margin-bottom: 3px;
-      ul.header__nav--list {
+      ul.footer__nav--list {
         display: flex;
         gap: 42px;
 
-        li.header__nav--list-item {
+        li.footer__nav--list-item {
           a {
             font-weight: bolder;
             font-size: $font-size-big;
@@ -43,7 +61,7 @@ main.header__wrapper {
     }
 
     // virittämö social icons
-    section.header__socials {
+    section.footer__socials {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -67,20 +85,13 @@ main.header__wrapper {
         }
       }
 
-      // fi/en language switch button
-      div.header__language {
-        margin-left: 12px;
-
-        a {
-          color: $virittamo-black;
-          font-weight: bolder;
-          // transition
-          transition: 0.1s ease-in-out;
-        }
-
-        a:hover {
-          color: $virittamo-pink;
-        }
+      button {
+        display: flex;
+        width: auto;
+        color: $virittamo-black;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
       }
     }
   }

@@ -7,9 +7,17 @@ import { LanguageContext } from "../../langLocal/context/langContext";
 import HeaderImg from "./assets/main-header-img.jpeg";
 import ForEmployeeImg from "./assets/why-section-employee.jpeg";
 import ForCompanyImg from "./assets/why-section-company.jpeg";
+
 import MediaImg from "./assets/teams-section-media.jpeg";
 import IctImg from "./assets/teams-section-ict.jpeg";
 import SoftaImg from "./assets/teams-section-softa.jpeg";
+
+import Helsinki from "./assets/partners/helsinki-logo.webp";
+import Metropolia from "./assets/partners/metropolia-logo.webp";
+import Ohjaamo from "./assets/partners/ohjaamo-logo.webp";
+import Laurea from "./assets/partners/laurea-logo.webp";
+import TyöPalv from "./assets/partners/työpalv-logo.webp";
+import Europe from "./assets/partners/eu-logo.webp";
 
 // import icons from react-icons
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
@@ -17,6 +25,7 @@ import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 // import components
 import { Header } from "../../components/Header/Header";
 import { Background } from "../../components/Background/Background";
+import { Footer } from "../../components/Footer/Footer";
 
 const TeamsItem = (props) => {
   const [showMore, setShowMore] = useState(false);
@@ -54,6 +63,15 @@ const HomePage = () => {
 
   const { home_page } = lang;
 
+  const partner_images = [
+    Helsinki,
+    Metropolia,
+    Ohjaamo,
+    Laurea,
+    TyöPalv,
+    Europe,
+  ];
+
   return (
     <main className="homePage__wrapper">
       <Header />
@@ -82,6 +100,7 @@ const HomePage = () => {
         </button>
       </section>
       <section className="homePage__why">
+        <Background />
         <h2>{home_page.why_virittamo}</h2>
         <div className="homePage__why--containers">
           <div className="homePage__why--containers-item">
@@ -143,6 +162,37 @@ const HomePage = () => {
           />
         </div>
       </section>
+      <section className="homePage__apply">
+        <h2>{home_page.apply.title}</h2>
+        <p>{home_page.apply.description}</p>
+        <div className="homePage__apply--container">
+          <ul className="homePage__apply--container-list">
+            {home_page.apply.qualifications.map((item, index) => (
+              <div key={index} className="homePage__apply--container-list-item">
+                <h3>{item.title}</h3>
+                <li>&#9656; {item.desc}</li>
+              </div>
+            ))}
+          </ul>
+        </div>
+        <div id="pink-bar"></div>
+      </section>
+      <section className="homePage__partners">
+        <h2>{home_page.partners}</h2>
+        <div className="homePage__partners--container">
+          <div className="homePage__partners--container-images">
+            {partner_images.map((item, index) => (
+              <img
+                src={item}
+                key={index}
+                className="partner-image"
+                alt="partner image"
+              ></img>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Footer></Footer>
     </main>
   );
 };

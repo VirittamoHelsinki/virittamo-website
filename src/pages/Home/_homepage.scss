@@ -5,7 +5,43 @@ main.homePage__wrapper {
   align-items: center;
   width: 100%;
   height: auto;
-  gap: 60px;
+  gap: 100px;
+
+  h1 {
+    font-size: 82px;
+    font-weight: bold;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 38px;
+  }
+
+  h3 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  li {
+    font-size: $font-size-normal;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: $font-size-normal;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  div#pink-bar {
+    background: $virittamo-pink;
+    width: 200px;
+    height: 3px;
+  }
 
   div.homePage__img--container {
     height: 80vh;
@@ -26,24 +62,11 @@ main.homePage__wrapper {
     width: 100%;
     gap: 25px;
 
-    h1 {
-      font-size: 82px;
-      font-weight: bold;
-      line-height: 60px;
-    }
-
     p {
-      font-size: $font-size-big;
-      font-weight: 500;
       width: 475px;
     }
-
-    div#pink-bar {
-      background: $virittamo-pink;
-      width: 150px;
-      height: 3px;
-    }
   }
+
   section.homePage__carousel {
     display: flex;
     justify-content: center;
@@ -94,10 +117,7 @@ main.homePage__wrapper {
         gap: 2px;
 
         li {
-          font-size: $font-size-normal;
-          font-weight: 500;
           width: 33.3333333333%;
-          font-size: 20px;
         }
       }
     }
@@ -108,14 +128,10 @@ main.homePage__wrapper {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 150px;
+    position: relative;
     width: 100%;
-    gap: 60px;
-
-    h2 {
-      font-size: 48px;
-      font-weight: bold;
-      line-height: 30px;
-    }
+    gap: 100px;
 
     div.homePage__why--containers {
       display: flex;
@@ -146,22 +162,10 @@ main.homePage__wrapper {
           object-position: 32% 50%;
         }
 
-        h3 {
-          font-size: 36px;
-          font-weight: bold;
-          line-height: 30px;
-        }
-
         ul.homePage__why--containers-list {
           display: flex;
           flex-direction: column;
           gap: 16px;
-
-          li {
-            font-size: $font-size-normal;
-            font-weight: 500;
-            font-size: 20px;
-          }
         }
       }
     }
@@ -172,17 +176,11 @@ main.homePage__wrapper {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     position: relative;
     height: 100%;
     width: 100%;
-    gap: 60px;
-
-    h2 {
-      font-size: 48px;
-      font-weight: bold;
-      line-height: 34px;
-    }
+    gap: 100px;
 
     div.homePage__teams--containers {
       display: flex;
@@ -210,16 +208,7 @@ main.homePage__wrapper {
         }
 
         h3 {
-          font-size: 36px;
-          font-weight: bold;
-          line-height: 30px;
           margin-bottom: 16px;
-        }
-
-        p {
-          font-size: $font-size-normal;
-          font-weight: 500;
-          font-size: 20px;
         }
 
         button {
@@ -234,6 +223,66 @@ main.homePage__wrapper {
 
         button:hover {
           color: $dark-link-hover;
+        }
+      }
+    }
+  }
+
+  section.homePage__apply {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12% 0;
+    width: 100%;
+    gap: 50px;
+  }
+
+  div.homePage__apply--container {
+    ul.homePage__apply--container-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 32px;
+
+      div.homePage__apply--container-list-item {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 600px;
+        min-width: 600px;
+        gap: 32px;
+      }
+    }
+  }
+
+  section.homePage__partners {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12% 0;
+    width: 100%;
+    gap: 100px;
+
+    div.homePage__partners--container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      div.homePage__partners--container-images {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        width: 100%;
+        gap: 50px;
+
+        img {
+          width: 175px;
         }
       }
     }

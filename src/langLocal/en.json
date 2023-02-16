@@ -115,15 +115,13 @@
         {
           "title": "57 years old or older.",
           "desc": "The maximum duration of your earnings-related unemployment allowance or basic unemployment allowance has been reached."
-        }
-      ],
-      "or_list": [
+        },
         {
-          "title": "or",
+          "title": "OR",
           "desc": "You have a partial work ability due to a health reason affecting the work task."
         },
         {
-          "title": "or",
+          "title": "OR",
           "desc": "You are an immigrant with a residence permit or your stay has been registered."
         }
       ]
