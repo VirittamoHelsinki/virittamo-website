@@ -31,14 +31,14 @@ main.footer__wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
     height: auto;
     width: 100%;
+    gap: 20px;
 
     div#black-bar {
       background: $virittamo-black;
-      width: 200px;
-      height: 3px;
+      width: 100px;
+      height: 4px;
     }
 
     ul.footer__contacts--list {
@@ -54,10 +54,32 @@ main.footer__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        width: 25%;
+        width: 50%;
 
         p:first-of-type {
-          font-weight: bolder;
+          font-weight: 900;
+        }
+      }
+    }
+
+    ul.footer__locations--list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      height: 105px;
+      width: 100%;
+      gap: 20px;
+
+      li.footer__locations--list-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 50%;
+
+        p:first-of-type {
+          font-weight: 900;
         }
       }
     }
@@ -130,6 +152,12 @@ main.footer__wrapper {
         font-weight: bold;
         font-size: 20px;
         cursor: pointer;
+        // transition
+        transition: 0.1s ease-in-out;
+      }
+
+      button:hover {
+        color: $virittamo-pink;
       }
     }
   }
