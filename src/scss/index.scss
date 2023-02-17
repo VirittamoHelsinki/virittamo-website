@@ -1,3 +1,6 @@
+// import responsive mixins
+@import "./responsive";
+
 // boilerplate styling
 @import "base";
 
@@ -6,6 +9,7 @@
 
 // import page styling
 @import "../pages/Home/homepage";
+@import "../pages/Loading/loading";
 
 // import component styling
 @import "../components/Header/header";

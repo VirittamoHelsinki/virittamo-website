@@ -119,6 +119,18 @@ main.homePage__wrapper {
         li {
           width: 33.3333333333%;
         }
+
+        @include responsive(desktop) {
+          height: 475px;
+
+          li {
+            width: 30%;
+          }
+        }
+      }
+
+      @include responsive(desktop) {
+        width: 85%;
       }
     }
   }
@@ -132,6 +144,12 @@ main.homePage__wrapper {
     position: relative;
     width: 100%;
     gap: 100px;
+
+    @include responsive(desktop) {
+      div.background__wrapper {
+        height: 75%;
+      }
+    }
 
     div.homePage__why--containers {
       display: flex;
@@ -181,6 +199,12 @@ main.homePage__wrapper {
     height: 100%;
     width: 100%;
     gap: 100px;
+
+    @include responsive(desktop) {
+      div.background__wrapper {
+        height: 70%;
+      }
+    }
 
     div.homePage__teams--containers {
       display: flex;
@@ -250,8 +274,8 @@ main.homePage__wrapper {
         display: flex;
         flex-direction: column;
         height: auto;
-        width: 600px;
-        min-width: 600px;
+        width: 475px;
+        min-width: 475px;
         gap: 32px;
       }
     }

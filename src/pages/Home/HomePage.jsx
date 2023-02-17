@@ -4,13 +4,13 @@ import { useContext, useState } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
 
 // import assets
-import HeaderImg from "./assets/main-header-img.jpeg";
-import ForEmployeeImg from "./assets/why-section-employee.jpeg";
-import ForCompanyImg from "./assets/why-section-company.jpeg";
+import HeaderImg from "./assets/main-header-img.webp";
+import ForEmployeeImg from "./assets/why-section-employee.webp";
+import ForCompanyImg from "./assets/why-section-company.webp";
 
-import MediaImg from "./assets/teams-section-media.jpeg";
-import IctImg from "./assets/teams-section-ict.jpeg";
-import SoftaImg from "./assets/teams-section-softa.jpeg";
+import MediaImg from "./assets/teams-section-media.webp";
+import IctImg from "./assets/teams-section-ict.webp";
+import SoftaImg from "./assets/teams-section-softa.webp";
 
 import Helsinki from "./assets/partners/helsinki-logo.webp";
 import Metropolia from "./assets/partners/metropolia-logo.webp";

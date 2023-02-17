@@ -1,9 +1,12 @@
 // import react depencies
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, Suspense, lazy } from "react";
+
+// loader
+import Loading from "../pages/Loading/Loading";
 
 // import page components
-import HomePage from "../pages/Home/HomePage";
+const HomePage = lazy(() => import("../pages/Home/HomePage"));
 
 const Router = () => {
   // location variable
@@ -17,9 +20,11 @@ const Router = () => {
   }, []);
 
   return (
-    <Routes key={path} location={useLocation()}>
-      <Route path="/" element={<HomePage />} />
-    </Routes>
+    <Suspense fallback={<Loading />}>
+      <Routes key={path} location={useLocation()}>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Suspense>
   );
 };
 
