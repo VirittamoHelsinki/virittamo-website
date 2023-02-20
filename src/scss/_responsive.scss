@@ -31,6 +31,12 @@
     }
   }
 
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 1080px) {
+      @content;
+    }
+  }
+
   @if $breakpoint==large_mobile {
     @media only screen and (max-width: 720px) {
       @content;
