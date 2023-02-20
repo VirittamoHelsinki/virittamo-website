@@ -1,7 +1,8 @@
-/* eslint-disable react/prop-types */
 // import context
 import { useContext, useState } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
+
+import PropTypes from "prop-types";
 
 // import assets
 import HeaderImg from "./assets/main-header-img.webp";
@@ -57,7 +58,6 @@ const TeamsItem = (props) => {
     </div>
   );
 };
-
 const HomePage = () => {
   const { lang } = useContext(LanguageContext);
 
@@ -220,6 +220,15 @@ const HomePage = () => {
       </Footer>
     </main>
   );
+};
+
+TeamsItem.propTypes = {
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  more: PropTypes.string.isRequired,
+  less: PropTypes.string.isRequired,
 };
 
 export default HomePage;

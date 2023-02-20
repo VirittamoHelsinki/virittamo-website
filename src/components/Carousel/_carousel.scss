@@ -1,0 +1,26 @@
+section.carousel__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 100%;
+  gap: 24px;
+
+  button.arrow-button {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+
+    .arrow-button--icon {
+      color: $dark-link-hover;
+      height: 100%;
+      width: 100%;
+      // transition
+      transition: 0.1s ease-in-out;
+    }
+
+    .arrow-button--icon:hover {
+      color: $virittamo-black;
+    }
+  }
+}
