@@ -1,32 +1,80 @@
-import CarouselSetup from "./CarouselSetup";
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-import Article from "./SubComponents/Article";
-import Video from "./SubComponents/Video";
-import Image from "./SubComponents/Image";
+// import icons from react-icons
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
-import Mock_Video from "../../pages/Home/assets/carousel/mock-video.mp4";
+import { slides } from "./Content";
 
 export const Carousel = () => {
-  const slides = [
-    {
-      component: Article,
-      title: "Lorem ipsum dolor sit, amet consectetureeeeeee",
-      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fugit et obcaecati voluptatum eaque ipsam rerum quia possimus quidem saepe? Amet iste accusamus pariatur voluptatibus ad? Voluptate voluptatibus illum iure aliquam numquam quibusdam dignissimos assumenda autem pariatur itaque, accusamus asperiores ratione reprehenderit consequatur dolores sapiente deserunt sunt ducimus aliquid qui deleniti! Explicabo labore ipsum ducimus error vel alias libero repudiandae modi suscipit, iure officia, sint sapiente officiis cumque, minus ipsa aut? Vitae nulla similique pariatur beatae inventore blanditiis, omnis accusantium rem tempora ex fuga illo, suscipit totam culpa tempore odio non? Quaerat reiciendis tempora amet a nobis non, saepe aliquid.",
-      bg_image:
-        "https://stadinao.fi/app/uploads/2022/10/FF22Viritta%CC%88mo%CC%88_Teemu_Turunen_1-1050x696.jpg",
-      link: "https://virittamohelsinki.fi/",
-    },
-    {
-      component: Video,
-      src: Mock_Video,
-      alt: "placeholder video",
-    },
-    {
-      component: Image,
-      src: "https://images.pexels.com/photos/2567959/pexels-photo-2567959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      alt: "Placeholder image",
-    },
-  ];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
-  return <CarouselSetup items={slides} />;
+  const handlePrevClick = () => {
+    setActiveIndex(activeIndex === 0 ? slides.length - 1 : activeIndex - 1);
+  };
+
+  const handleNextClick = () => {
+    setActiveIndex(activeIndex === slides.length - 1 ? 0 : activeIndex + 1);
+  };
+
+  const renderActiveItem = () => {
+    const ActiveItem = slides[activeIndex].component;
+    return <ActiveItem key={activeIndex} {...slides[activeIndex]} />;
+  };
+
+  const INTERVAL_DURATION = 7500;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isHovering) {
+        handleNextClick();
+      }
+    }, INTERVAL_DURATION);
+    return () => clearInterval(interval);
+  }, [activeIndex, isHovering]);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
+  return (
+    <section
+      className="carousel__container"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <button className="arrow-button">
+        <BsArrowLeftCircle
+          className="arrow-button--icon"
+          onClick={handlePrevClick}
+        />
+      </button>
+      {renderActiveItem()}
+      <button className="arrow-button">
+        <BsArrowRightCircle
+          className="arrow-button--icon"
+          onClick={handleNextClick}
+        />
+      </button>
+    </section>
+  );
+};
+
+Carousel.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      component: PropTypes.elementType.isRequired,
+      title: PropTypes.string,
+      text: PropTypes.string,
+      src: PropTypes.string,
+      alt: PropTypes.string,
+      bg_image: PropTypes.string,
+      link: PropTypes.string,
+    })
+  ).isRequired,
 };
