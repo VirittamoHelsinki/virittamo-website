@@ -6,6 +6,7 @@ import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
 const CarouselSetup = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   const handlePrevClick = () => {
     setActiveIndex(activeIndex === 0 ? items.length - 1 : activeIndex - 1);
@@ -20,18 +21,28 @@ const CarouselSetup = ({ items }) => {
     return <ActiveItem {...items[activeIndex]} />;
   };
 
-  const intervalId = window.setInterval(() => {
-    handleNextClick();
-  }, 5000);
-
   useEffect(() => {
-    intervalId;
-  });
+    const interval = setInterval(() => {
+      if (!isHovering) {
+        handleNextClick();
+      }
+    }, 7500);
+    return () => clearInterval(interval);
+  }, [activeIndex, isHovering]);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
 
   return (
     <section
       className="carousel__container"
-      onMouseOver={clearInterval(intervalId)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <button className="arrow-button">
         <BsArrowLeftCircle

@@ -8,13 +8,10 @@ section.carousel__container {
   width: 100%;
   gap: 24px;
 
-  div.carousel__item--image {
+  img.carousel__item--image {
     height: 100%;
     width: 100%;
-
-    img {
-      object-fit: cover;
-    }
+    object-fit: cover;
   }
 
   a.carousel__item--article {
@@ -56,15 +53,10 @@ section.carousel__container {
     }
   }
 
-  div.carousel__item--video {
+  video.carousel__item--video {
     height: 100%;
     width: 100%;
-
-    video {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+    object-fit: cover;
   }
 
   button.arrow-button {

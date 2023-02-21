@@ -1,11 +1,7 @@
 import PropTypes from "prop-types";
 
 const Image = ({ src, alt }) => {
-  return (
-    <div className="carousel__item--image">
-      <img src={src} alt={alt} />
-    </div>
-  );
+  return <img className="carousel__item--image" src={src} alt={alt} />;
 };
 
 Image.propTypes = {
