@@ -9,6 +9,7 @@ import { slides } from "./Content";
 export const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePrevClick = () => {
     setActiveIndex(activeIndex === 0 ? slides.length - 1 : activeIndex - 1);
@@ -19,20 +20,40 @@ export const Carousel = () => {
   };
 
   const renderActiveItem = () => {
-    const ActiveItem = slides[activeIndex].component;
-    return <ActiveItem key={activeIndex} {...slides[activeIndex]} />;
+    const activeItem = slides[activeIndex];
+    const ActiveItem = activeItem.component;
+
+    useEffect(() => {
+      const videoEl = document.querySelector(".carousel__item--video");
+      if (videoEl) {
+        videoEl.addEventListener("play", () => {
+          setIsHovering(true);
+          setIsPlaying(true); // set isPlaying to true when video starts playing
+        });
+        videoEl.addEventListener("pause", () => {
+          setIsHovering(false);
+          setIsPlaying(false); // set isPlaying to false when video is paused
+        });
+        return () => {
+          videoEl.removeEventListener("play", () => setIsHovering(true));
+          videoEl.removeEventListener("pause", () => setIsHovering(false));
+        };
+      }
+    }, [activeIndex]);
+
+    return <ActiveItem key={activeIndex} {...activeItem} />;
   };
 
   const INTERVAL_DURATION = 7500;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!isHovering) {
+      if (!isHovering && !isPlaying) {
         handleNextClick();
       }
     }, INTERVAL_DURATION);
     return () => clearInterval(interval);
-  }, [activeIndex, isHovering]);
+  }, [activeIndex, isHovering, isPlaying]);
 
   const handleMouseEnter = () => {
     setIsHovering(true);
