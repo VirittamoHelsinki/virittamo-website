@@ -8,7 +8,7 @@ const Article = ({ title, text, bg_image, link }) => {
     <a
       style={{
         backgroundImage: `url(${bg_image})`,
-        backgroundSize: "100% auto",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}

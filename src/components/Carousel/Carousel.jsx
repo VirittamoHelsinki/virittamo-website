@@ -23,8 +23,8 @@ export const Carousel = () => {
     },
     {
       component: Image,
-      src: "https://stadinao.fi/app/uploads/2022/10/FF22Viritta%CC%88mo%CC%88_Teemu_Turunen_1-1050x696.jpg",
-      alt: "Picture of Virittämö Helsinki's media team on a bridge",
+      src: "https://images.pexels.com/photos/2567959/pexels-photo-2567959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      alt: "Placeholder image",
     },
   ];
 

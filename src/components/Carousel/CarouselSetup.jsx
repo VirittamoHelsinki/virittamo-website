@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 // import icons from react-icons
@@ -20,8 +20,19 @@ const CarouselSetup = ({ items }) => {
     return <ActiveItem {...items[activeIndex]} />;
   };
 
+  const intervalId = window.setInterval(() => {
+    handleNextClick();
+  }, 5000);
+
+  useEffect(() => {
+    intervalId;
+  });
+
   return (
-    <section className="carousel__container">
+    <section
+      className="carousel__container"
+      onMouseOver={clearInterval(intervalId)}
+    >
       <button className="arrow-button">
         <BsArrowLeftCircle
           className="arrow-button--icon"
