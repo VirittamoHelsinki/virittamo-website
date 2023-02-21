@@ -1,24 +1,32 @@
 import CarouselSetup from "./CarouselSetup";
 
-import { Text } from "./SubComponents/Text";
-import { Video } from "./SubComponents/Video";
-import { Image } from "./SubComponents/Image";
+import Article from "./SubComponents/Article";
+import Video from "./SubComponents/Video";
+import Image from "./SubComponents/Image";
+
+import Mock_Video from "../../pages/Home/assets/carousel/mock-video.mp4";
 
 export const Carousel = () => {
-  /*
-    { component: <Text title="" text="" /> },
-    { component: <Video src="" /> },
-    { component: <Image src="" alt="" /> },
-  */
   const slides = [
-    { component: <Text title="" text="" /> },
-    { component: <Video src="" /> },
-    { component: <Image src="" alt="" /> },
+    {
+      component: Article,
+      title: "Lorem ipsum dolor sit, amet consectetureeeeeee",
+      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fugit et obcaecati voluptatum eaque ipsam rerum quia possimus quidem saepe? Amet iste accusamus pariatur voluptatibus ad? Voluptate voluptatibus illum iure aliquam numquam quibusdam dignissimos assumenda autem pariatur itaque, accusamus asperiores ratione reprehenderit consequatur dolores sapiente deserunt sunt ducimus aliquid qui deleniti! Explicabo labore ipsum ducimus error vel alias libero repudiandae modi suscipit, iure officia, sint sapiente officiis cumque, minus ipsa aut? Vitae nulla similique pariatur beatae inventore blanditiis, omnis accusantium rem tempora ex fuga illo, suscipit totam culpa tempore odio non? Quaerat reiciendis tempora amet a nobis non, saepe aliquid.",
+      bg_image:
+        "https://stadinao.fi/app/uploads/2022/10/FF22Viritta%CC%88mo%CC%88_Teemu_Turunen_1-1050x696.jpg",
+      link: "https://virittamohelsinki.fi/",
+    },
+    {
+      component: Video,
+      src: Mock_Video,
+      alt: "placeholder video",
+    },
+    {
+      component: Image,
+      src: "https://stadinao.fi/app/uploads/2022/10/FF22Viritta%CC%88mo%CC%88_Teemu_Turunen_1-1050x696.jpg",
+      alt: "Picture of Virittämö Helsinki's media team on a bridge",
+    },
   ];
 
-  return (
-    <div className="carousel__items--container">
-      <CarouselSetup items={slides} />
-    </div>
-  );
+  return <CarouselSetup items={slides} />;
 };

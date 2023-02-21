@@ -90,9 +90,9 @@
     },
     "teams": {
       "title": "Three teams",
-      "media_desc": "Virittämö's Media team is...  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic alias atque quis, laboriosam nisi obcaecati unde eaque sunt iste voluptatem iusto itaque, nostrum illum. Esse fuga corrupti sequi eum est dicta, tempora accusantium doloremque, mollitia nobis quidem iusto expedita. Harum, dolores, expedita consequuntur, ipsa commodi officia vero error aperiam ex possimus unde cupiditate tenetur doloremque rerum illum nam. Autem molestiae, fugiat rem rerum quo odio hic ut ducimus earum itaque dolorem sint inventore esse maiores natus voluptas beatae consequatur! Libero delectus provident nam veritatis quo, similique eaque ipsam, suscipit cum aut expedita nostrum quis, accusantium nulla repellendus dolorem saepe!",
-      "ict_desc": "Virittämö's ICT team is...  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic alias atque quis, laboriosam nisi obcaecati unde eaque sunt iste voluptatem iusto itaque, nostrum illum. Esse fuga corrupti sequi eum est dicta, tempora accusantium doloremque, mollitia nobis quidem iusto expedita. Harum, dolores, expedita consequuntur, ipsa commodi officia vero error aperiam ex possimus unde cupiditate tenetur doloremque rerum illum nam. Autem molestiae, fugiat rem rerum quo odio hic ut ducimus earum itaque dolorem sint inventore esse maiores natus voluptas beatae consequatur! Libero delectus provident nam veritatis quo, similique eaque ipsam, suscipit cum aut expedita nostrum quis, accusantium nulla repellendus dolorem saepe!",
-      "software_desc": "Virittämö's Software team is...  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic alias atque quis, laboriosam nisi obcaecati unde eaque sunt iste voluptatem iusto itaque, nostrum illum. Esse fuga corrupti sequi eum est dicta, tempora accusantium doloremque, mollitia nobis quidem iusto expedita. Harum, dolores, expedita consequuntur, ipsa commodi officia vero error aperiam ex possimus unde cupiditate tenetur doloremque rerum illum nam. Autem molestiae, fugiat rem rerum quo odio hic ut ducimus earum itaque dolorem sint inventore esse maiores natus voluptas beatae consequatur! Libero delectus provident nam veritatis quo, similique eaque ipsam, suscipit cum aut expedita nostrum quis, accusantium nulla repellendus dolorem saepe!",
+      "media_desc": "Virittämö's Media team is an expert team of professionals who produce media productions for a wide range of needs. The work starts with identifying the client's wishes and planning the production. Together, we think about what and how to do it, plan the implementation with equipment, teams and post-production work, and draw up a schedule. The team includes experts in video, photography, sound, animation, and graphic design. We have produced promotional videos, training videos, interviews, animation, 3D modelling, live-action animation, web and print photography.",
+      "ict_desc": "Through work experience and training, the Virittämö ICT team increases the skills of its employees and thus also meets the skill needs of companies, and on the other hand, serves the further employability of the ICT team's employees. Tasks are tailored to the individual's interests and skills. Employees have found their own specific areas of expertise in which they have been able to improve their skills. A variety of up-to-date technologies are available. Technical solutions are made for real use. Examples of the tasks include infrastructure development and local and remote support.",
+      "software_desc": "The Softa team at Virittämö is an innovative and knowledgeable group of software developers. We implement both browser-based applications and mobile apps for our partners, using modern development tools and technologies. We have implemented booking systems, websites, and form systems for our clients. We use modern software development methods (Agile software development). React, Node.js, Python, Azure. Projects are carried out in teams of a few people.",
       "read_more_btn": "Read more",
       "read_less_btn": "Read less"
     },
@@ -171,21 +171,23 @@
           "title": "Workplace Coach",
           "phone": "p. 09 310 35264",
           "email": "ulla.ijas@edu.hel.fi"
-        },
-        {
-          "name": "Virittämö",
-          "title": "Metropolia Campus",
-          "address": "Address: Myllypurontie 1",
-          "postalCode": "PO Box 92305, 00099 City of Helsinki"
-        },
-        {
-          "name": "Virittämö",
-          "title": "Stadin Vocational and Adult Institute",
-          "address": "Address: Muotoilijankatu 3",
-          "postalCode": "PO Box 56305, 00099 City of Helsinki"
         }
       ]
-    }
+    },
+    "locations": [
+      {
+        "name": "Virittämö",
+        "title": "Metropolia Campus",
+        "address": "Address: Myllypurontie 1",
+        "postalCode": "PO Box 92305, 00099 City of Helsinki"
+      },
+      {
+        "name": "Virittämö",
+        "title": "Stadin Vocational and Adult Institute",
+        "address": "Address: Muotoilijankatu 3",
+        "postalCode": "PO Box 56305, 00099 City of Helsinki"
+      }
+    ]
   },
 
   "projects_page": {

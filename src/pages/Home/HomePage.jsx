@@ -20,11 +20,9 @@ import Laurea from "./assets/partners/laurea-logo.webp";
 import TyöPalv from "./assets/partners/työpalv-logo.webp";
 import Europe from "./assets/partners/eu-logo.webp";
 
-// import icons from react-icons
-import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
-
 // import components
 import { Header } from "../../components/Header/Header";
+import { Carousel } from "../../components/Carousel/Carousel";
 import { Background } from "../../components/Background/Background";
 import { Footer } from "../../components/Footer/Footer";
 
@@ -83,22 +81,7 @@ const HomePage = () => {
         <p>{home_page.home_text}</p>
         <div id="pink-bar"></div>
       </section>
-      <section className="homePage__carousel">
-        <button className="arrow-button">
-          <BsArrowLeftCircle className="arrow-button--icon" />
-        </button>
-        <div className="homePage__violetBox">
-          <h3>{home_page.employed_to_text}</h3>
-          <ul className="homePage__violetBox--list">
-            {home_page.companies_list.map((company, index) => (
-              <li key={index}>{company}</li>
-            ))}
-          </ul>
-        </div>
-        <button className="arrow-button">
-          <BsArrowRightCircle className="arrow-button--icon" />
-        </button>
-      </section>
+      <Carousel />
       <section className="homePage__why">
         <Background />
         <h2>{home_page.why_virittamo}</h2>

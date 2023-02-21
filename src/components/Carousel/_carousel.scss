@@ -2,9 +2,59 @@ section.carousel__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 450px;
+  max-height: 700px;
+  height: 700px;
+  padding: 0 2% 0;
   width: 100%;
   gap: 24px;
+
+  div.carousel__item--image {
+    height: 100%;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  a.carousel__item--article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 45px;
+    height: 100%;
+    width: 100%;
+
+    div.carousel__item--article-text {
+      display: flex;
+      flex-direction: column;
+      background: $virittamo-white;
+      border-left: 6px solid $virittamo-pink;
+      border-radius: 0 15px 0 0;
+      position: absolute;
+      padding: 22.5px;
+      max-height: 50%;
+      max-width: 47.5%;
+      gap: 11.25px;
+      height: auto;
+      width: auto;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  div.carousel__item--video {
+    height: 100%;
+    width: 100%;
+
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 
   button.arrow-button {
     cursor: pointer;

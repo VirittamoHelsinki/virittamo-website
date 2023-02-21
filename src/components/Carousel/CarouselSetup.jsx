@@ -17,11 +17,11 @@ const CarouselSetup = ({ items }) => {
 
   const renderActiveItem = () => {
     const ActiveItem = items[activeIndex].component;
-    return <ActiveItem />;
+    return <ActiveItem {...items[activeIndex]} />;
   };
 
   return (
-    <section className="homePage__carousel">
+    <section className="carousel__container">
       <button className="arrow-button">
         <BsArrowLeftCircle
           className="arrow-button--icon"
@@ -43,6 +43,12 @@ CarouselSetup.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       component: PropTypes.elementType.isRequired,
+      title: PropTypes.string,
+      text: PropTypes.string,
+      src: PropTypes.string,
+      alt: PropTypes.string,
+      bg_image: PropTypes.string,
+      link: PropTypes.string,
     })
   ).isRequired,
 };
