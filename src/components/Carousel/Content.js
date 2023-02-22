@@ -1,3 +1,4 @@
+import Instagram from "./SubComponents/Instagram/Instagram";
 import Article from "./SubComponents/Article";
 import Video from "./SubComponents/Video";
 import Image from "./SubComponents/Image";
@@ -22,5 +23,8 @@ export const slides = [
     component: Image,
     src: "https://images.pexels.com/photos/2567959/pexels-photo-2567959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     alt: "Placeholder image",
+  },
+  {
+    component: Instagram,
   },
 ];

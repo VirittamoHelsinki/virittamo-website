@@ -1,6 +1,7 @@
 // import context
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect, Suspense } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
+import Loading from "../Loading/Loading";
 
 import PropTypes from "prop-types";
 
@@ -33,7 +34,6 @@ const TeamsItem = (props) => {
     setShowMore(!showMore);
   };
 
-  // Check if props and props.text are defined before trying to slice
   const textPreview = props.text
     ? props.text.slice(0, props.text.indexOf(".") + 1)
     : "";
@@ -61,6 +61,15 @@ const HomePage = () => {
 
   const { home_page } = lang;
 
+  // preloads images
+  useEffect(() => {
+    const images = [Helsinki, Metropolia, Ohjaamo, Laurea, TyöPalv, Europe];
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
+
   const partner_images = [
     Helsinki,
     Metropolia,
@@ -71,137 +80,142 @@ const HomePage = () => {
   ];
 
   return (
-    <main className="homePage__wrapper">
-      <Header />
-      <div className="homePage__img--container">
-        <img src={HeaderImg} alt="Home page main image" />
-      </div>
-      <section className="homePage__introduction">
-        <h1>{home_page.home_title}</h1>
-        <p>{home_page.home_text}</p>
-        <div id="pink-bar"></div>
-      </section>
-      <Carousel />
-      <section className="homePage__why">
-        <Background />
-        <h2>{home_page.why_virittamo}</h2>
-        <div className="homePage__why--containers">
-          <div className="homePage__why--containers-item">
-            <img
-              id="employee-img"
-              src={ForEmployeeImg}
-              alt="Why choose Virittämö employee picture"
-            />
-            <h3>{home_page.for_an_employee.title}</h3>
-            <ul className="homePage__why--containers-list">
-              {home_page.for_an_employee.description.map((item, index) => (
-                <li key={index}>&#9656; {item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="homePage__why--containers-item">
-            <img
-              id="company-img"
-              src={ForCompanyImg}
-              alt="Why choose Virittämö company picture"
-            />
-            <h3>{home_page.for_a_company.title}</h3>
-            <ul className="homePage__why--containers-list">
-              {home_page.for_a_company.description.map((item, index) => (
-                <li key={index}>&#9656; {item}</li>
-              ))}
-            </ul>
-          </div>
+    <Suspense fallback={<Loading />}>
+      <main className="homePage__wrapper">
+        <Header />
+        <div className="homePage__img--container">
+          <img src={HeaderImg} alt="Home page main image" />
         </div>
-      </section>
-      <section className="homePage__teams">
-        <Background />
-        <h2>{home_page.teams.title}</h2>
-        <div className="homePage__teams--containers">
-          <TeamsItem
-            img={MediaImg}
-            title="Media"
-            text={home_page.teams.media_desc}
-            alt="Virittämö's Media Team"
-            more={home_page.teams.read_more_btn}
-            less={home_page.teams.read_less_btn}
-          />
-          <TeamsItem
-            img={IctImg}
-            title="ICT"
-            text={home_page.teams.ict_desc}
-            alt="Virittämö's ICT Team"
-            more={home_page.teams.read_more_btn}
-            less={home_page.teams.read_less_btn}
-          />
-          <TeamsItem
-            id
-            img={SoftaImg}
-            title="Softa"
-            text={home_page.teams.software_desc}
-            alt="Virittämö's Software Team"
-            more={home_page.teams.read_more_btn}
-            less={home_page.teams.read_less_btn}
-          />
-        </div>
-      </section>
-      <section className="homePage__apply">
-        <h2>{home_page.apply.title}</h2>
-        <p>{home_page.apply.description}</p>
-        <div className="homePage__apply--container">
-          <ul className="homePage__apply--container-list">
-            {home_page.apply.qualifications.map((item, index) => (
-              <div key={index} className="homePage__apply--container-list-item">
-                <h3>{item.title}</h3>
-                <li>&#9656; {item.desc}</li>
-              </div>
-            ))}
-          </ul>
-        </div>
-        <div id="pink-bar"></div>
-      </section>
-      <section className="homePage__partners">
-        <h2>{home_page.partners}</h2>
-        <div className="homePage__partners--container">
-          <div className="homePage__partners--container-images">
-            {partner_images.map((item, index) => (
+        <section className="homePage__introduction">
+          <h1>{home_page.home_title}</h1>
+          <p>{home_page.home_text}</p>
+          <div id="pink-bar"></div>
+        </section>
+        <Carousel />
+        <section className="homePage__why">
+          <Background />
+          <h2>{home_page.why_virittamo}</h2>
+          <div className="homePage__why--containers">
+            <div className="homePage__why--containers-item">
               <img
-                src={item}
-                key={index}
-                className="partner-image"
-                alt="partner image"
-              ></img>
-            ))}
+                id="employee-img"
+                src={ForEmployeeImg}
+                alt="Why choose Virittämö employee picture"
+              />
+              <h3>{home_page.for_an_employee.title}</h3>
+              <ul className="homePage__why--containers-list">
+                {home_page.for_an_employee.description.map((item, index) => (
+                  <li key={index}>&#9656; {item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="homePage__why--containers-item">
+              <img
+                id="company-img"
+                src={ForCompanyImg}
+                alt="Why choose Virittämö company picture"
+              />
+              <h3>{home_page.for_a_company.title}</h3>
+              <ul className="homePage__why--containers-list">
+                {home_page.for_a_company.description.map((item, index) => (
+                  <li key={index}>&#9656; {item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
-      <Footer>
-        <h2>{home_page.contact_details.title}</h2>
-        <div className="footer__contacts">
-          <ul className="footer__contacts--list">
-            {home_page.contact_details.team.map((item, index) => (
-              <li key={index} className="footer__contacts--list-item">
-                <p>{item.name}</p>
-                <p>{item.title}</p>
-                <p>{item.phone}</p>
-                <p>{item.email}</p>
-              </li>
-            ))}
-          </ul>
-          <div id="black-bar"></div>
-          <ul className="footer__locations--list">
-            {home_page.locations.map((item, index) => (
-              <li key={index} className="footer__locations--list-item">
-                <p>{item.name}</p>
-                <p>{item.title}</p>
-                <p>{item.address}</p>
-                <p>{item.postalCode}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Footer>
-    </main>
+        </section>
+        <section className="homePage__teams">
+          <Background />
+          <h2>{home_page.teams.title}</h2>
+          <div className="homePage__teams--containers">
+            <TeamsItem
+              img={MediaImg}
+              title="Media"
+              text={home_page.teams.media_desc}
+              alt="Virittämö's Media Team"
+              more={home_page.teams.read_more_btn}
+              less={home_page.teams.read_less_btn}
+            />
+            <TeamsItem
+              img={IctImg}
+              title="ICT"
+              text={home_page.teams.ict_desc}
+              alt="Virittämö's ICT Team"
+              more={home_page.teams.read_more_btn}
+              less={home_page.teams.read_less_btn}
+            />
+            <TeamsItem
+              id
+              img={SoftaImg}
+              title="Softa"
+              text={home_page.teams.software_desc}
+              alt="Virittämö's Software Team"
+              more={home_page.teams.read_more_btn}
+              less={home_page.teams.read_less_btn}
+            />
+          </div>
+        </section>
+        <section className="homePage__apply">
+          <h2>{home_page.apply.title}</h2>
+          <p>{home_page.apply.description}</p>
+          <div className="homePage__apply--container">
+            <ul className="homePage__apply--container-list">
+              {home_page.apply.qualifications.map((item, index) => (
+                <div
+                  key={index}
+                  className="homePage__apply--container-list-item"
+                >
+                  <h3>{item.title}</h3>
+                  <li>&#9656; {item.desc}</li>
+                </div>
+              ))}
+            </ul>
+          </div>
+          <div id="pink-bar"></div>
+        </section>
+        <section className="homePage__partners">
+          <h2>{home_page.partners}</h2>
+          <div className="homePage__partners--container">
+            <div className="homePage__partners--container-images">
+              {partner_images.map((item, index) => (
+                <img
+                  src={item}
+                  key={index}
+                  className="partner-image"
+                  alt="partner image"
+                ></img>
+              ))}
+            </div>
+          </div>
+        </section>
+        <Footer>
+          <h2>{home_page.contact_details.title}</h2>
+          <div className="footer__contacts">
+            <ul className="footer__contacts--list">
+              {home_page.contact_details.team.map((item, index) => (
+                <li key={index} className="footer__contacts--list-item">
+                  <p>{item.name}</p>
+                  <p>{item.title}</p>
+                  <p>{item.phone}</p>
+                  <p>{item.email}</p>
+                </li>
+              ))}
+            </ul>
+            <div id="black-bar"></div>
+            <ul className="footer__locations--list">
+              {home_page.locations.map((item, index) => (
+                <li key={index} className="footer__locations--list-item">
+                  <p>{item.name}</p>
+                  <p>{item.title}</p>
+                  <p>{item.address}</p>
+                  <p>{item.postalCode}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Footer>
+      </main>
+    </Suspense>
   );
 };
 

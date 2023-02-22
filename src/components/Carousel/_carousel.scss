@@ -79,6 +79,12 @@ section.carousel__container {
     }
   }
 
+  iframe.carousel__item--instagram {
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
+
   button.arrow-button {
     cursor: pointer;
     height: 35px;
