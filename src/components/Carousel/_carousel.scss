@@ -6,10 +6,85 @@ section.carousel__container {
   height: 700px;
   padding: 0 2% 0;
   width: 100%;
-  gap: 24px;
+  gap: 25px;
 
   @include responsive(desktop) {
     padding: 0 4% 0;
+    max-height: 750px;
+    height: 750px;
+  }
+
+  @include responsive(large_mobile) {
+    text-align: center;
+    max-height: 500px;
+    height: 500px;
+  }
+
+  @include responsive(mobile) {
+    text-align: center;
+    max-height: 360px;
+    height: 360px;
+  }
+
+  div.carousel__item--companies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $virittamo-light-violet;
+    padding: 45px;
+    height: 100%;
+    width: 100%;
+    gap: 45px;
+
+    @include responsive(desktop) {
+      width: 85%;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    ul.carousel__item--companies-list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 500px;
+      width: 100%;
+      gap: 9px;
+      overflow-y: hidden;
+      overflow-x: auto;
+
+      @include responsive(desktop) {
+        height: 550px;
+      }
+
+      @include responsive(laptop) {
+        width: auto;
+        height: 600px;
+      }
+
+      @include responsive(large_mobile) {
+        max-height: 450px;
+        height: 450px;
+      }
+
+      li {
+        height: auto;
+        width: 30%;
+        line-height: 22px;
+
+        @include responsive(laptop) {
+          width: 50%;
+        }
+
+        @include responsive(large_mobile) {
+          width: 100%;
+        }
+      }
+    }
   }
 
   img.carousel__item--image {
@@ -24,6 +99,18 @@ section.carousel__container {
     @include responsive(laptop) {
       width: 85%;
     }
+
+    @include responsive(tablet) {
+      width: 82.5%;
+    }
+
+    @include responsive(large_mobile) {
+      width: 80%;
+    }
+
+    @include responsive(mobile) {
+      width: 75%;
+    }
   }
 
   a.carousel__item--article {
@@ -32,9 +119,18 @@ section.carousel__container {
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 45px;
     height: 100%;
     width: 100%;
+
+    @include responsive(large_mobile) {
+      h3 {
+        font-size: 26px;
+      }
+    }
+
+    @include responsive(mobile) {
+      padding: 22.5px;
+    }
 
     div.carousel__item--article-text {
       display: flex;
@@ -56,26 +152,62 @@ section.carousel__container {
       bottom: 0;
       left: 0;
 
+      @include responsive(mobile) {
+        padding: 22.5px;
+      }
+
+      @include responsive(desktop) {
+        max-width: 65%;
+      }
+
+      @include responsive(laptop) {
+        max-width: 100%;
+        text-align: center;
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          $virittamo-black 100%
+        );
+        border-bottom: 6px solid $virittamo-pink;
+      }
+
       p,
       h3 {
         padding-left: 11.25px;
         border-left: 3px solid $virittamo-pink;
         color: $virittamo-white;
+
+        @include responsive(laptop) {
+          padding-left: 0;
+          border-left: 0;
+        }
       }
     }
   }
 
   video.carousel__item--video {
     height: 100%;
-    width: 95%;
+    width: 92.5%;
     object-fit: cover;
 
     @include responsive(desktop) {
       width: 90%;
     }
 
-    @include responsive(tablet) {
+    @include responsive(laptop) {
       width: 85%;
+    }
+
+    @include responsive(tablet) {
+      width: 82.5%;
+    }
+
+    @include responsive(large_mobile) {
+      width: 80%;
+    }
+
+    @include responsive(mobile) {
+      width: 75%;
     }
   }
 

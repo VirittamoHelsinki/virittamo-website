@@ -48,7 +48,7 @@ const TeamsItem = (props) => {
       <h3>{props.title}</h3>
       <p>
         {textPreview}
-        {showMore ? textRest : "..."}
+        {showMore ? textRest : ".."}
       </p>
       <button onClick={toggleShowMore}>
         {showMore ? props.less : props.more}

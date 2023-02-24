@@ -60,9 +60,6 @@ body {
   width: 100vw;
   height: 100vh;
 
-  // disable horizontal scroll
-  overflow-x: hidden;
-
   img {
     width: 100%;
     height: auto;
@@ -77,6 +74,38 @@ body {
   p,
   li {
     color: $virittamo-black;
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+    font-weight: bold;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+    font-weight: bold;
+    line-height: 38px;
+  }
+
+  h3 {
+    font-size: $font-size-h3;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  li {
+    font-size: $font-size-li;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: $font-size-normal;
+    font-weight: 500;
+
+    @include responsive(large_mobile) {
+      font-size: $font-size-mobile;
+    }
   }
 }
 

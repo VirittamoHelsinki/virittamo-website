@@ -7,32 +7,12 @@ main.homePage__wrapper {
   height: auto;
   gap: 100px;
 
-  h1 {
-    font-size: $font-size-h1;
-    font-weight: bold;
-    line-height: 60px;
-  }
-
   h2 {
-    font-size: $font-size-h2;
-    font-weight: bold;
-    line-height: 38px;
-  }
+    padding: 0 5% 0;
 
-  h3 {
-    font-size: $font-size-h3;
-    font-weight: bold;
-    line-height: 30px;
-  }
-
-  li {
-    font-size: $font-size-li;
-    font-weight: 500;
-  }
-
-  p {
-    font-size: $font-size-normal;
-    font-weight: 500;
+    @include responsive(mobile) {
+      font-size: 36px;
+    }
   }
 
   div#pink-bar {
@@ -61,9 +41,23 @@ main.homePage__wrapper {
     width: 100%;
     gap: 25px;
 
+    @include responsive(mobile) {
+      h1 {
+        font-size: 64px;
+      }
+    }
+
     p {
       font-size: $font-size-subtext;
       width: 475px;
+
+      @include responsive(large_mobile) {
+        width: 425px;
+      }
+
+      @include responsive(mobile) {
+        width: 350px;
+      }
     }
   }
 
@@ -77,9 +71,19 @@ main.homePage__wrapper {
     width: 100%;
     gap: 100px;
 
+    h2 {
+      text-align: center;
+    }
+
     @include responsive(desktop) {
       div.background__wrapper {
         height: 75%;
+      }
+    }
+
+    @include responsive(mobile) {
+      div.background__wrapper {
+        height: 80%;
       }
     }
 
@@ -101,11 +105,38 @@ main.homePage__wrapper {
         min-width: 600px;
         gap: 32px;
 
+        @include responsive(tablet) {
+          width: 525px;
+          min-width: 525px;
+        }
+
+        @include responsive(large_mobile) {
+          width: 400px;
+          min-width: 400px;
+        }
+
+        @include responsive(mobile) {
+          width: 325px;
+          min-width: 325px;
+        }
+
         img {
           border-radius: 50% 50% 0px 0px;
           object-fit: cover;
           width: 100%;
           height: 700px;
+
+          @include responsive(tablet) {
+            height: 625px;
+          }
+
+          @include responsive(large_mobile) {
+            height: 475px;
+          }
+
+          @include responsive(mobile) {
+            height: 400px;
+          }
         }
 
         img#employee-img {
@@ -132,9 +163,23 @@ main.homePage__wrapper {
     width: 100%;
     gap: 100px;
 
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      font-size: $font-size-subtext;
+    }
+
     @include responsive(desktop) {
       div.background__wrapper {
         height: 70%;
+      }
+    }
+
+    @include responsive(large_mobile) {
+      div.background__wrapper {
+        height: 82.5%;
       }
     }
 
@@ -153,7 +198,22 @@ main.homePage__wrapper {
         text-align: left;
         height: auto;
         width: 450px;
-        min-width: 300px;
+        min-width: 450px;
+
+        @include responsive(tablet) {
+          width: 400px;
+          min-width: 400px;
+        }
+
+        @include responsive(large_mobile) {
+          width: 400px;
+          min-width: 400px;
+        }
+
+        @include responsive(mobile) {
+          width: 325px;
+          min-width: 325px;
+        }
 
         img {
           border-radius: 50% 50% 0px 0px;
@@ -161,6 +221,14 @@ main.homePage__wrapper {
           width: 100%;
           height: 525px;
           margin-bottom: 32px;
+
+          @include responsive(tablet) {
+            height: 475px;
+          }
+
+          @include responsive(mobile) {
+            height: 400px;
+          }
         }
 
         h3 {
@@ -193,6 +261,14 @@ main.homePage__wrapper {
     width: 100%;
     gap: 50px;
 
+    @include responsive(tablet) {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
     p {
       font-size: $font-size-subtext;
     }
@@ -212,6 +288,16 @@ main.homePage__wrapper {
           width: 475px;
           min-width: 475px;
           gap: 32px;
+
+          @include responsive(laptop) {
+            width: 400px;
+            min-width: 400px;
+          }
+
+          @include responsive(tablet) {
+            width: 100%;
+            min-width: 100%;
+          }
         }
       }
     }
@@ -225,6 +311,10 @@ main.homePage__wrapper {
     padding: 0 12% 0;
     width: 100%;
     gap: 100px;
+
+    h2 {
+      text-align: center;
+    }
 
     div.homePage__partners--container {
       display: flex;

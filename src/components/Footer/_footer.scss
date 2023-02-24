@@ -10,6 +10,10 @@ main.footer__wrapper {
   width: 100%;
   gap: 100px;
 
+  h2 {
+    text-align: center;
+  }
+
   div.background__wrapper {
     background: $virittamo-light-violet;
     position: absolute;
@@ -35,6 +39,10 @@ main.footer__wrapper {
     width: 100%;
     gap: 40px;
 
+    @include responsive(large_mobile) {
+      align-items: center;
+    }
+
     p {
       font-size: $font-size-subtext;
     }
@@ -54,11 +62,20 @@ main.footer__wrapper {
       width: 100%;
       gap: 20px;
 
+      @include responsive(large_mobile) {
+        text-align: center;
+        height: auto;
+      }
+
       li.footer__contacts--list-item {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         width: 50%;
+
+        @include responsive(large_mobile) {
+          width: 100%;
+        }
 
         p:first-of-type {
           font-weight: 900;
@@ -75,11 +92,20 @@ main.footer__wrapper {
       width: 100%;
       gap: 20px;
 
+      @include responsive(large_mobile) {
+        text-align: center;
+        height: auto;
+      }
+
       li.footer__locations--list-item {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         width: 50%;
+
+        @include responsive(large_mobile) {
+          width: 100%;
+        }
 
         p:first-of-type {
           font-weight: 900;
@@ -95,6 +121,12 @@ main.footer__wrapper {
     height: 100%;
     width: 100%;
 
+    @include responsive(large_mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
     img {
       height: 75px;
       width: auto;
@@ -106,6 +138,14 @@ main.footer__wrapper {
       ul.footer__nav--list {
         display: flex;
         gap: 42px;
+
+        @include responsive(laptop) {
+          gap: 21px;
+        }
+
+        @include responsive(tablet) {
+          display: none;
+        }
 
         li.footer__nav--list-item {
           a {
