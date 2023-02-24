@@ -7,11 +7,21 @@ main.homePage__wrapper {
   height: auto;
   gap: 100px;
 
+  @include responsive(mobile) {
+    gap: 50px;
+  }
+
   h2 {
     padding: 0 5% 0;
 
     @include responsive(mobile) {
-      font-size: 36px;
+      font-size: 28px;
+    }
+  }
+
+  @include responsive(mobile) {
+    h3 {
+      font-size: 24px;
     }
   }
 
@@ -24,6 +34,10 @@ main.homePage__wrapper {
   div.homePage__img--container {
     height: 80vh;
     width: 100%;
+
+    @include responsive(mobile) {
+      height: 45vh;
+    }
 
     img {
       height: 100%;
@@ -43,7 +57,7 @@ main.homePage__wrapper {
 
     @include responsive(mobile) {
       h1 {
-        font-size: 64px;
+        font-size: 54px;
       }
     }
 
@@ -71,6 +85,11 @@ main.homePage__wrapper {
     width: 100%;
     gap: 100px;
 
+    @include responsive(mobile) {
+      padding-bottom: 75px;
+      gap: 50px;
+    }
+
     h2 {
       text-align: center;
     }
@@ -95,6 +114,22 @@ main.homePage__wrapper {
       gap: 150px;
       padding: 0 5% 0;
 
+      @include responsive(laptop) {
+        gap: 125px;
+      }
+
+      @include responsive(tablet) {
+        gap: 100px;
+      }
+
+      @include responsive(large_mobile) {
+        gap: 75px;
+      }
+
+      @include responsive(mobile) {
+        gap: 50px;
+      }
+
       div.homePage__why--containers-item {
         display: flex;
         flex-direction: column;
@@ -111,6 +146,9 @@ main.homePage__wrapper {
         }
 
         @include responsive(large_mobile) {
+          justify-content: center;
+          align-items: center;
+          text-align: center;
           width: 400px;
           min-width: 400px;
         }
@@ -163,6 +201,11 @@ main.homePage__wrapper {
     width: 100%;
     gap: 100px;
 
+    @include responsive(mobile) {
+      padding-bottom: 75px;
+      gap: 50px;
+    }
+
     h2 {
       text-align: center;
     }
@@ -191,6 +234,10 @@ main.homePage__wrapper {
       gap: 100px;
       padding: 0 5% 0;
 
+      @include responsive(mobile) {
+        gap: 50px;
+      }
+
       div.homePage__teams--containers-item {
         display: flex;
         flex-direction: column;
@@ -206,6 +253,8 @@ main.homePage__wrapper {
         }
 
         @include responsive(large_mobile) {
+          align-items: center;
+          text-align: center;
           width: 400px;
           min-width: 400px;
         }
@@ -237,12 +286,17 @@ main.homePage__wrapper {
 
         button {
           display: flex;
-          width: 33%;
+          width: auto;
           color: $virittamo-pink;
           font-weight: bold;
           font-style: italic;
           font-size: 20px;
           cursor: pointer;
+
+          @include responsive(large_mobile) {
+            justify-content: center;
+            align-items: center;
+          }
         }
 
         button:hover {
@@ -311,6 +365,10 @@ main.homePage__wrapper {
     padding: 0 12% 0;
     width: 100%;
     gap: 100px;
+
+    @include responsive(mobile) {
+      gap: 50px;
+    }
 
     h2 {
       text-align: center;
