@@ -130,7 +130,7 @@
       "team": [
         {
           "name": "Tarja Kurvinen",
-          "title": "Joukkueen koordinaattori",
+          "title": "Tiimikoordinaattori",
           "phone": "p. 09 310 27553",
           "email": "tarja.kurvinen@hel.fi"
         },
@@ -160,13 +160,13 @@
         },
         {
           "name": "John Strandberg",
-          "title": "Työpaikan valmentaja",
+          "title": "Työelämävalmentaja",
           "phone": "p. 09 310 37370",
           "email": "john.strandberg@edu.hel.fi"
         },
         {
           "name": "Ulla Ijäs",
-          "title": "Työpaikan valmentaja",
+          "title": "Työelämävalmentaja",
           "phone": "p. 09 310 35264",
           "email": "ulla.ijas@edu.hel.fi"
         }

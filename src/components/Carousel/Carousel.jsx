@@ -44,7 +44,7 @@ export const Carousel = () => {
     return <ActiveItem key={activeIndex} {...activeItem} />;
   };
 
-  const INTERVAL_DURATION = 500000000;
+  const INTERVAL_DURATION = 5000;
 
   useEffect(() => {
     const interval = setInterval(() => {
