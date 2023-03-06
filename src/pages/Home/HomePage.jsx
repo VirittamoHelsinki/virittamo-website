@@ -27,6 +27,8 @@ import { Carousel } from "../../components/Carousel/Carousel";
 import { Background } from "../../components/Background/Background";
 import { Footer } from "../../components/Footer/Footer";
 
+import { slides } from "../../components/Carousel/Content";
+
 const TeamsItem = (props) => {
   const [showMore, setShowMore] = useState(false);
 
@@ -91,7 +93,7 @@ const HomePage = () => {
           <p>{home_page.home_text}</p>
           <div id="pink-bar"></div>
         </section>
-        <Carousel />
+        {slides && <Carousel slides={slides} />}
         <section className="homePage__why">
           <Background />
           <h2>{home_page.why_virittamo}</h2>

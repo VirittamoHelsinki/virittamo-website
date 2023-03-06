@@ -24,7 +24,7 @@ const Video = ({ src, alt, onPlayStatusChange }) => {
 Video.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  onPlayStatusChange: PropTypes.func.isRequired,
+  onPlayStatusChange: PropTypes.func,
 };
 
 export default Video;

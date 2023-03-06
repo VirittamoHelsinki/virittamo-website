@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 // import icons from react-icons
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
-import { slides } from "./Content";
+import { LoadingSlides } from "./SubComponents/LoadingSlides";
 
-export const Carousel = () => {
+export const Carousel = ({ slides }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -75,7 +75,7 @@ export const Carousel = () => {
           onClick={handlePrevClick}
         />
       </button>
-      {renderActiveItem()}
+      {slides ? renderActiveItem() : <LoadingSlides />}
       <button className="arrow-button">
         <BsArrowRightCircle
           className="arrow-button--icon"
@@ -87,7 +87,7 @@ export const Carousel = () => {
 };
 
 Carousel.propTypes = {
-  items: PropTypes.arrayOf(
+  slides: PropTypes.arrayOf(
     PropTypes.shape({
       component: PropTypes.elementType.isRequired,
       title: PropTypes.string,

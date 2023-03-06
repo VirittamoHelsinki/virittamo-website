@@ -217,6 +217,14 @@ section.carousel__container {
     width: 100%;
   }
 
+  div.carousel__item--loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
   button.arrow-button {
     cursor: pointer;
     height: 35px;
