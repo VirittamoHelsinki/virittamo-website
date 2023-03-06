@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
 const Article = ({ title, text, bg_image, link }) => {
@@ -5,7 +6,7 @@ const Article = ({ title, text, bg_image, link }) => {
   const textLimit = text.length > 500 ? text.substring(0, 500) + ".." : text;
 
   return (
-    <a
+    <motion.a
       style={{
         backgroundImage: `url(${bg_image})`,
         backgroundSize: "cover",
@@ -16,12 +17,19 @@ const Article = ({ title, text, bg_image, link }) => {
       rel="noreferrer"
       target="_blank"
       href={link}
+      layout
+      initial={{ opacity: 0, ease: "easeInOut" }}
+      whileInView={{ opacity: 1, ease: "easeInOut" }}
+      transition={{
+        ease: "easeInOut",
+        duration: 1,
+      }}
     >
       <div className="carousel__item--article-text">
         <h3>{titleLimit}</h3>
         <p>{textLimit}</p>
       </div>
-    </a>
+    </motion.a>
   );
 };
 

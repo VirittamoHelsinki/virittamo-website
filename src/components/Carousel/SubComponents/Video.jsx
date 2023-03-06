@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
 const Video = ({ src, alt, onPlayStatusChange }) => {
@@ -10,13 +11,20 @@ const Video = ({ src, alt, onPlayStatusChange }) => {
   };
 
   return (
-    <video
+    <motion.video
       className="carousel__item--video"
       src={src}
       alt={alt}
       controls
       onPlay={handlePlay}
       onPause={handlePause}
+      layout
+      initial={{ opacity: 0, ease: "easeInOut" }}
+      whileInView={{ opacity: 1, ease: "easeInOut" }}
+      transition={{
+        ease: "easeInOut",
+        duration: 1,
+      }}
     />
   );
 };
