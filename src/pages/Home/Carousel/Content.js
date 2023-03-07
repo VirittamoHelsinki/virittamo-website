@@ -4,7 +4,7 @@ import Article from "./SubComponents/Article";
 import Video from "./SubComponents/Video";
 import Image from "./SubComponents/Image";
 
-import Mock_Video from "../../pages/Home/assets/carousel/mock-video.mp4";
+import Mock_Video from "../../Home/assets/carousel/mock-video.mp4";
 
 export const slides = [
   {

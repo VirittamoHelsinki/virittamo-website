@@ -11,7 +11,7 @@ import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
 import StadinAOLogo from "./assets/stadinAO-logo.png";
 
 // import background
-import { Background } from "../Background/Background";
+import { Background } from "../../pages/Home/Background/Background";
 
 export const Footer = ({ children }) => {
   const { lang } = useContext(LanguageContext);
