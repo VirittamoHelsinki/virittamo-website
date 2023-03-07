@@ -1,0 +1,57 @@
+main.projectPage__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 100px;
+
+  @include responsive(mobile) {
+    gap: 50px;
+  }
+
+  h2 {
+    padding: 0 5% 0;
+
+    @include responsive(mobile) {
+      font-size: 28px;
+    }
+  }
+
+  @include responsive(mobile) {
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  section.projectPage__introduction {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+    gap: 50px;
+
+    @include responsive(mobile) {
+      h1 {
+        font-size: 54px;
+      }
+    }
+
+    p {
+      font-size: $font-size-subtext;
+      width: 800px;
+
+      @include responsive(large_mobile) {
+        width: 425px;
+      }
+
+      @include responsive(mobile) {
+        width: 350px;
+      }
+    }
+  }
+}

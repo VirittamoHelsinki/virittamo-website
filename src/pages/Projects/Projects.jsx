@@ -9,17 +9,22 @@ import Loading from "../Loading/Loading";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 
+import { TeamProjects } from "./TeamProjects/TeamProjects";
+
 const Projects = () => {
   const { lang } = useContext(LanguageContext);
 
-  const { home_page } = lang;
-
-  console.log(home_page);
+  const { projects_page } = lang;
 
   return (
     <Suspense fallback={<Loading />}>
       <main className="projectPage__wrapper">
         <Header />
+        <section className="projectPage__introduction">
+          <h2>{projects_page.projects_title}</h2>
+          <p>{projects_page.projects_desc}</p>
+        </section>
+        <TeamProjects />
         <Footer />
       </main>
     </Suspense>
