@@ -6,7 +6,8 @@ import { useEffect, Suspense, lazy } from "react";
 import Loading from "../pages/Loading/Loading";
 
 // import page components
-const HomePage = lazy(() => import("../pages/Home/HomePage"));
+const Home = lazy(() => import("../pages/Home/Home"));
+const Projects = lazy(() => import("../pages/Projects/Projects"));
 
 const Router = () => {
   // location variable
@@ -22,7 +23,8 @@ const Router = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Routes key={path} location={useLocation()}>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </Suspense>
   );

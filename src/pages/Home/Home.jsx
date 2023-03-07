@@ -23,11 +23,11 @@ import Europe from "./assets/partners/eu-logo.webp";
 
 // import components
 import { Header } from "../../components/Header/Header";
-import { Carousel } from "../../pages/Home/Carousel/Carousel";
-import { Background } from "../../pages/Home/Background/Background";
+import { Carousel } from "./Carousel/Carousel";
+import { Background } from "./Background/Background";
 import { Footer } from "../../components/Footer/Footer";
 
-import { slides } from "../Home/Carousel/Content";
+import { slides } from "./Carousel/Content";
 
 const TeamsItem = (props) => {
   const [showMore, setShowMore] = useState(false);
