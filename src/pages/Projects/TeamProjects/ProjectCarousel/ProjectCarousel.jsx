@@ -41,7 +41,7 @@ export const ProjectCarousel = ({ slides }) => {
   }, [activeIndex, slides]);
 
   return (
-    <section className="carousel__container">
+    <div className="projectPage__teams--carousel">
       <button
         className="arrow-button"
         onClick={handlePrevClick}
@@ -57,7 +57,7 @@ export const ProjectCarousel = ({ slides }) => {
       >
         <BsArrowRightCircle className="arrow-button--icon" />
       </button>
-    </section>
+    </div>
   );
 };
 

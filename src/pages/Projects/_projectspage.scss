@@ -54,4 +54,65 @@ main.projectPage__wrapper {
       }
     }
   }
+
+  section.projectPage__teams--container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 25px;
+
+    div.projectPage__teams--carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      padding: 0 2% 0;
+      width: 100%;
+      gap: 50px;
+
+      div.projectPage__teams--carousel-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 450px;
+
+        div.carousel-img-container {
+          height: 400px;
+          width: 450px;
+          img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+          }
+        }
+
+        div.carousel-title-container {
+          margin: 12.5px 0 12.5px;
+        }
+      }
+
+      button.arrow-button {
+        cursor: pointer;
+        height: 35px;
+        width: 35px;
+
+        .arrow-button--icon {
+          color: $dark-link-hover;
+          height: 100%;
+          width: 100%;
+          // transition
+          transition: 0.1s ease-in-out;
+        }
+
+        .arrow-button--icon:hover {
+          color: $virittamo-black;
+        }
+      }
+    }
+  }
 }

@@ -10,16 +10,31 @@ const slides = [
     alt: "placeholder image",
     link: "",
   },
+  {
+    component: Carousel_Item,
+    src: tempIMG,
+    alt: "placeholder image",
+    link: "",
+  },
+  {
+    component: Carousel_Item,
+    src: tempIMG,
+    alt: "placeholder image",
+    link: "",
+  },
 ];
 
 export const TeamProjects = () => {
   return (
-    <section className="projectPage__team--container">
+    <section className="projectPage__teams--container">
       <h2>Lorem ipsum</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quas,
-        dolorum quae in amet suscipit? At perspiciatis sapiente rerum quam.
-      </p>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>
+          Qui quas, dolorum quae in amet suscipit? At perspiciatis sapiente
+          rerum quam.
+        </p>
+      </div>
       <ProjectCarousel slides={slides} />
     </section>
   );
