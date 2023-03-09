@@ -53,13 +53,13 @@
       "NOJA Rahoitus",
       "OPR-Rahoitus Oy",
       "Patentti- ja rekisterihallitus",
-      "Pelaa enemmän pelejä",
+      "Playmore Games",
       "Reaktor",
       "Redland Oy",
       "RELEX-ratkaisut",
       "Softico",
       "Solteq",
-      "Suomen Kiertovoima KIVO Suora lähetys",
+      "Suomen Kiertovoima KIVO",
       "Tietokeskus Suomi Oy",
       "Valve Branding Oy",
       "Webhelp Finland Oy",
@@ -99,19 +99,19 @@
       "description": "Meille voit hakea töihin, jos olet helsinkiläinen ja palkkatukioikeuden omaava työtön työnhakija. Edellisestä palkkatukijaksosta on pitänyt kulua kolme vuotta.",
       "qualifications": [
         {
-          "title": "Alle 25-vuotias.",
+          "title": "Alle 25v",
           "desc": "Olet suorittanut ammatillisen koulutuksen tai muun kuin ylioppilastutkinnon ja olet ollut työttömänä yli 6 kuukautta."
         },
         {
-          "title": "25-29 vuotias.",
+          "title": "25-29v",
           "desc": "Olet suorittanut ammatillisen koulutuksen tai muun kuin ylioppilastutkinnon ja olet ollut työnhakijana yli 12 kuukautta viimeisen 14 kuukauden aikana."
         },
         {
-          "title": "30 vuotta vanha tai vanhempi.",
+          "title": "30+ v",
           "desc": "Olet ollut työnhakijana vähintään 24 kuukautta viimeisen 28 kuukauden aikana tai saanut yli 300 päivää työmarkkinatukea."
         },
         {
-          "title": "57 vuotta vanha tai vanhempi.",
+          "title": "57+ v",
           "desc": "Ansiosidonnaisen työttömyyspäivärahan tai peruspäivärahan enimmäiskesto on saavutettu."
         },
         {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Article = ({ title, text, bg_image, link }) => {
   const titleLimit = title.length > 150 ? text.substring(0, 150) + ".." : title;
-  const textLimit = text.length > 500 ? text.substring(0, 500) + ".." : text;
+  const textLimit = text.length > 225 ? text.substring(0, 225) + ".." : text;
 
   return (
     <motion.a

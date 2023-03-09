@@ -1,18 +1,4 @@
-/*
-
-360x640 (small mobile)
-720x1280 (large mobile)
-1366x768 (average laptop)
-1440x900 (average desktop)
-1920x1080 (large desktop)
-
-*/
-
-// responsive is the name of your mixin
-
 @mixin responsive($breakpoint) {
-  // $breakpoint is simply a variable that can have several values
-
   @if $breakpoint==large_desktop {
     @media only screen and (max-width: 1920px) {
       @content;

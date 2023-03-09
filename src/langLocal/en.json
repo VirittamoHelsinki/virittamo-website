@@ -61,7 +61,7 @@
       "RELEX Solutions",
       "Softico",
       "Solteq",
-      "Suomen Kiertovoima KIVO Suora Broadcast",
+      "Suomen Kiertovoima KIVO",
       "Tietokeskus Finland Ltd",
       "Valve Branding Ltd",
       "Webhelp Finland Ltd",
@@ -101,19 +101,19 @@
       "description": "You can apply for a job with us if you are a Helsinki resident and an unemployed job seeker eligible for a wage subsidy. At least three years must have passed since your previous wage-subsidized employment.",
       "qualifications": [
         {
-          "title": "Under 25 years old.",
+          "title": "Under 25yo",
           "desc": "You have completed vocational training or other than matriculation examination and have been unemployed for over 6 months."
         },
         {
-          "title": "25-29 years old.",
+          "title": "25-29yo.",
           "desc": "You have completed vocational training or other than matriculation examination and have been a jobseeker for over 12 months in the past 14 months."
         },
         {
-          "title": "30 years old or older.",
+          "title": "+30 yo",
           "desc": "You have been a jobseeker for at least 24 months in the past 28 months or have received over 300 days of labor market support."
         },
         {
-          "title": "57 years old or older.",
+          "title": "+57 yo",
           "desc": "The maximum duration of your earnings-related unemployment allowance or basic unemployment allowance has been reached."
         },
         {

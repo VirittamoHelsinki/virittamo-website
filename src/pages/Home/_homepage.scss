@@ -94,9 +94,9 @@ main.homePage__wrapper {
       text-align: center;
     }
 
-    @include responsive(desktop) {
+    @media only screen and (max-width: 1499px) {
       div.background__wrapper {
-        height: 75%;
+        height: 77.5%;
       }
     }
 
@@ -214,9 +214,15 @@ main.homePage__wrapper {
       font-size: $font-size-subtext;
     }
 
-    @include responsive(desktop) {
+    @media only screen and (max-width: 1722px) {
       div.background__wrapper {
-        height: 70%;
+        height: 72.5%;
+      }
+    }
+
+    @media only screen and (max-width: 1111px) {
+      div.background__wrapper {
+        height: 82.5%;
       }
     }
 
@@ -248,8 +254,8 @@ main.homePage__wrapper {
         min-width: 450px;
 
         @include responsive(tablet) {
-          width: 400px;
-          min-width: 400px;
+          width: 450px;
+          min-width: 450px;
         }
 
         @include responsive(large_mobile) {
@@ -275,8 +281,12 @@ main.homePage__wrapper {
             height: 475px;
           }
 
+          @include responsive(large_mobile) {
+            height: 435px;
+          }
+
           @include responsive(mobile) {
-            height: 400px;
+            height: 350px;
           }
         }
 
