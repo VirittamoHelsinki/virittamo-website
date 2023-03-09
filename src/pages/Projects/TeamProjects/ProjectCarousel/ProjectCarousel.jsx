@@ -6,7 +6,7 @@ import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
 import { LoadingSlides } from "../../../Home/Carousel/SubComponents/LoadingSlides";
 
-export const ProjectCarousel = ({ slides }) => {
+export const ProjectCarousel = ({ text, slides }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePrevClick = () => {
@@ -41,31 +41,46 @@ export const ProjectCarousel = ({ slides }) => {
   }, [activeIndex, slides]);
 
   return (
-    <div className="projectPage__teams--carousel">
-      <button
-        className="arrow-button"
-        onClick={handlePrevClick}
-        disabled={activeIndex === 0}
-      >
-        <BsArrowLeftCircle className="arrow-button--icon" />
-      </button>
-      {slides ? renderActiveItems() : <LoadingSlides />}
-      <button
-        className="arrow-button"
-        onClick={handleNextClick}
-        disabled={activeIndex >= slides.length - 3}
-      >
-        <BsArrowRightCircle className="arrow-button--icon" />
-      </button>
+    <div className="projectPage__teams--container-item">
+      <h2>{text[0].title}</h2>
+      <p>{text[0].description}</p>
+      <p>{text[0].contact}</p>
+      <div className="projectPage__teams--carousel">
+        <button
+          className="arrow-button"
+          onClick={handlePrevClick}
+          disabled={activeIndex === 0}
+        >
+          <BsArrowLeftCircle className="arrow-button--icon" />
+        </button>
+        {slides ? renderActiveItems() : <LoadingSlides />}
+        <button
+          className="arrow-button"
+          onClick={handleNextClick}
+          disabled={activeIndex >= slides.length - 3}
+        >
+          <BsArrowRightCircle className="arrow-button--icon" />
+        </button>
+      </div>
     </div>
   );
 };
 
 ProjectCarousel.propTypes = {
+  text: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+      contact: PropTypes.string,
+    })
+  ).isRequired,
   slides: PropTypes.arrayOf(
     PropTypes.shape({
       component: PropTypes.elementType.isRequired,
-      src: PropTypes.string,
+      img_src: PropTypes.string,
+      client_name: PropTypes.string,
+      project_title: PropTypes.string,
+      completion_year: PropTypes.string,
       alt: PropTypes.string,
       link: PropTypes.string,
     })

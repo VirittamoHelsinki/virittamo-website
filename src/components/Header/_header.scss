@@ -60,6 +60,7 @@ main.header__wrapper {
       justify-content: center;
       align-items: center;
       margin-bottom: 3px;
+      height: 30px;
       gap: 16px;
 
       @include responsive(mobile) {
@@ -67,18 +68,18 @@ main.header__wrapper {
       }
 
       a {
-        height: 30px;
+        height: 100%;
         width: 30px;
 
-        .social-icon {
+        svg.social-icon {
           color: $virittamo-black;
           height: 100%;
-          width: 100%;
+          width: auto;
           // transition
           transition: 0.1s ease-in-out;
         }
 
-        .social-icon:hover {
+        svg.social-icon:hover {
           color: $dark-link-hover;
         }
       }

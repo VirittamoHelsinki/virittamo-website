@@ -62,12 +62,29 @@ main.projectPage__wrapper {
     align-items: center;
     text-align: center;
     width: 100%;
-    gap: 25px;
+    gap: 100px;
+
+    div.projectPage__teams--container-item {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: $font-size-subtext;
+        width: 900px;
+      }
+    }
 
     div.projectPage__teams--carousel {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 35px 0px 0px;
       height: auto;
       padding: 0 2% 0;
       width: 100%;
@@ -98,19 +115,53 @@ main.projectPage__wrapper {
 
       button.arrow-button {
         cursor: pointer;
+        min-height: 35px;
         height: 35px;
+        min-width: 35px;
         width: 35px;
 
-        .arrow-button--icon {
-          color: $dark-link-hover;
+        svg.arrow-button--icon {
           height: 100%;
           width: 100%;
-          // transition
-          transition: 0.1s ease-in-out;
         }
+      }
+    }
+  }
 
-        .arrow-button--icon:hover {
-          color: $virittamo-black;
+  section.homePage__partners {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12% 0;
+    width: 100%;
+    gap: 100px;
+
+    @include responsive(mobile) {
+      gap: 50px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    div.homePage__partners--container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      div.homePage__partners--container-images {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        width: 100%;
+        gap: 50px;
+
+        img {
+          width: 175px;
         }
       }
     }

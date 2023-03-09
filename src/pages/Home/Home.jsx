@@ -1,5 +1,5 @@
 // import context
-import { useContext, useState, useEffect, Suspense } from "react";
+import { useContext, useState, Suspense } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
 import Loading from "../Loading/Loading";
 
@@ -14,17 +14,11 @@ import MediaImg from "./assets/teams-section-media.webp";
 import IctImg from "./assets/teams-section-ict.webp";
 import SoftaImg from "./assets/teams-section-softa.webp";
 
-import Helsinki from "./assets/partners/helsinki-logo.webp";
-import Metropolia from "./assets/partners/metropolia-logo.webp";
-import Ohjaamo from "./assets/partners/ohjaamo-logo.webp";
-import Laurea from "./assets/partners/laurea-logo.webp";
-import TyöPalv from "./assets/partners/työpalv-logo.webp";
-import Europe from "./assets/partners/eu-logo.webp";
-
 // import components
 import { Header } from "../../components/Header/Header";
 import { Carousel } from "./Carousel/Carousel";
 import { Background } from "./Background/Background";
+import { Partners } from "../../components/Partners/Partners";
 import { Footer } from "../../components/Footer/Footer";
 
 import { slides } from "./Carousel/Content";
@@ -62,24 +56,6 @@ const HomePage = () => {
   const { lang } = useContext(LanguageContext);
 
   const { home_page } = lang;
-
-  // preloads images
-  useEffect(() => {
-    const images = [Helsinki, Metropolia, Ohjaamo, Laurea, TyöPalv, Europe];
-    images.forEach((image) => {
-      const img = new Image();
-      img.src = image;
-    });
-  }, []);
-
-  const partner_images = [
-    Helsinki,
-    Metropolia,
-    Ohjaamo,
-    Laurea,
-    TyöPalv,
-    Europe,
-  ];
 
   return (
     <Suspense fallback={<Loading />}>
@@ -175,21 +151,7 @@ const HomePage = () => {
           </div>
           <div id="pink-bar"></div>
         </section>
-        <section className="homePage__partners">
-          <h2>{home_page.partners}</h2>
-          <div className="homePage__partners--container">
-            <div className="homePage__partners--container-images">
-              {partner_images.map((item, index) => (
-                <img
-                  src={item}
-                  key={index}
-                  className="partner-image"
-                  alt="partner image"
-                ></img>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Partners />
         <Footer>
           <h2>{home_page.contact_details.title}</h2>
           <div className="footer__contacts">
