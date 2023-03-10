@@ -1,14 +1,24 @@
 import { Carousel_Item } from "./ProjectCarousel/Carousel_Item";
 
-import tempIMG from "../../Home/assets/teams-section-ict.webp";
+import Qteatteri from "../assets/carousel/MEDIA_OODI_2_SMALL.webp";
+import Oodi from "../assets/carousel/MEDIA_OODI_SMALL.webp";
+import MoiPanda from "../assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
+import RadioHelsinki from "../assets/carousel/MEDIA_RADIOHELSINKI_SMALL.webp";
+import Henkilökuvaus from "../assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
 
-import Qteatteri from "../assets/carousel/MEDIA_OODI_2.webp";
-import Oodi from "../assets/carousel/MEDIA_OODI.webp";
-import RadioHelsinki from "../assets/carousel/MEDIA_RADIOHELSINKI.webp";
+import Pilvipalvelu from "../assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
+import Virtualisointi from "../assets/carousel/ICT_VIRTUALISOINTIPROJEKTI_SMALL.webp";
+import Tietoliikenne from "../assets/carousel/ICT_TIETOLIIKENNEKAAPPI_SMALL.webp";
 
-import Pilvipalvelu from "../assets/carousel/ICT_PILVIPALVELU.webp";
-import Virtualisointi from "../assets/carousel/ICT_VIRTUALISOINTIPROJEKTI.webp";
-import Tietoliikenne from "../assets/carousel/ICT_TIETOLIIKENNEKAAPPI.webp";
+import Digirasti from "../assets/carousel/SOFTA_DIGIRASTI_SMALL.webp";
+import Liikuntakoutsaus from "../assets/carousel/SOFTA_LIIKUNTAKOUTSAUS_SMALL.webp";
+import SoteApp from "../assets/carousel/SOFTA_SOTEAPP_SMALL.webp";
+
+/*
+
+MEDIA EXPORTS
+
+*/
 
 export const media_text = [
   {
@@ -46,7 +56,7 @@ export const media_slides = [
     client_name: "Moi Panda",
     project_title: "Media & Design",
     completion_year: "2023",
-    img_src: tempIMG,
+    img_src: MoiPanda,
     alt: "placeholder image",
     link: "https://virittamohelsinki.fi/",
     description:
@@ -68,13 +78,19 @@ export const media_slides = [
     client_name: "Ohjaamo, Helsingin Kaupunki jne",
     project_title: "Henkilökuvaus",
     completion_year: "2023",
-    img_src: tempIMG,
+    img_src: Henkilökuvaus,
     alt: "placeholder image",
     link: "https://virittamohelsinki.fi/",
     description:
       "Mediatiimin toistuviin projekteihin kuuluu asiakkaan tarpeisiin soveltuva henkilökuvaus, jota olemme toteuttaneet esimerkiksi CV-kuvauspisteen muodossa. Asiakkaitamme ovat olleet muun muassa Ohjaamo Studia-messuilla ja Helsingin Kaupunki Oodin kesätyörekryssä.",
   },
 ];
+
+/*
+
+ICT EXPORTS
+
+*/
 
 export const ict_text = [
   {
@@ -121,6 +137,11 @@ export const ict_slides = [
   },
 ];
 
+/*
+
+SOFTA EXPORTS
+
+*/
 export const softa_text = [
   {
     title: "Softa",
@@ -132,32 +153,35 @@ export const softa_text = [
 export const softa_slides = [
   {
     component: Carousel_Item,
-    client_name: "Client Name",
-    project_title: "Project Name",
+    client_name: "Helsingin työllisyyspalvelut",
+    project_title: "Digirasti",
     completion_year: "2023",
-    img_src: tempIMG,
-    alt: "placeholder image",
+    img_src: Digirasti,
+    alt: "Digirasti project image",
     link: "https://virittamohelsinki.fi/",
-    description: "",
+    description:
+      "Digirasti on tehtäväkokonaisuus nettisivu Helsingin työllisyyspalveluille, joka tukee ja kehittää suomalaisten digitaitoja ja osaamista älylaitteiden ja digitaalisten palvelujen käytössä. Digirastin tarkoituksena on mahdollisesti auttaa suomalaisia pysymään mukana nopeassa digitaalisessa muutoksessa ja parantamaan heidän taitonsa älylaitteiden ja digipalvelujen käytössä. Digirastissa tarjolla on erilaisia tehtäviä ja pelejä, joiden avulla käyttäjät voivat parantaa taitojaan älylaitteiden ja digitaalisten palvelujen käytössä. Nämä tehtävät ja pelit tarjoavat hauskan ja interaktiivisen tavan kehittää digitaitoja ja osaamista.",
   },
   {
     component: Carousel_Item,
-    client_name: "Client Name 2",
-    project_title: "Project Name 2",
+    client_name: "Helsinki",
+    project_title: "Liikuntakoutsaus",
     completion_year: "2023",
-    img_src: tempIMG,
-    alt: "placeholder image",
+    img_src: Liikuntakoutsaus,
+    alt: "Liikuntakoutsaus project image",
     link: "https://virittamohelsinki.fi/",
-    description: "",
+    description:
+      "Liikuntakoutsaus-sovellus on kehitetty tukemaan henkilöstön liikuntaharrastuksia ja hyvinvointia. Se tarjoaa yksilöllistä ohjausta ja neuvontaa sekä mahdollisuuden seurata omaa edistymistä. Sovellus tarjoaa neljä tapaamiskertaa henkilökohtaisen liikuntakouluttajan kanssa, joissa keskustellaan elämäntavoista ja tavoitteista ja luodaan juuri sinulle sopiva suunnitelma aktiivisempaan arkeen. Sovellus on kehitetty yhteistyössä työterveyshuollon kanssa ja toteutus tapahtuu henkilöstöliikunnassa.",
   },
   {
     component: Carousel_Item,
-    client_name: "Client Name 3",
-    project_title: "Project Name 3",
+    client_name: "Helsinki",
+    project_title: "Sote-App",
     completion_year: "2023",
-    img_src: tempIMG,
-    alt: "placeholder image",
+    img_src: SoteApp,
+    alt: "Sote-App project image",
     link: "https://virittamohelsinki.fi/",
-    description: "",
+    description:
+      "Sote-App on suunniteltu tarjoamaan terveydenhuollon työntekijöille mahdollisuuden arvioida potilaan tilannetta yksityiskohtaisesti. Sovellus kysyy työntekijältä potilaan tietoja, kuten sydämen sykettä, lämpötilaa ja muuta potilaan hyvinvointiin liittyvää tietoa, ja terveydenhuollon työntekijä voi arvioida potilaan tilan ja tarvittaessa tarjota tarvittavia hoitotoimenpiteitä. Sote-App on erittäin kätevä ja helppokäyttöinen, ja se tarjoaa terveydenhuollon työntekijöille mahdollisuuden tarjota parhaan mahdollisen hoidon potilailleen. Se on tärkeä apuväline terveydenhuollon työntekijöille, jotka haluavat tarjota tehokasta ja laadukasta hoitoa potilailleen.",
   },
 ];
