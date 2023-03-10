@@ -1,6 +1,9 @@
 import { Carousel_Item } from "./ProjectCarousel/Carousel_Item";
 
 import tempIMG from "../../Home/assets/teams-section-ict.webp";
+import Pilvipalvelu from "../assets/carousel/ICT_PILVIPALVELU.webp";
+import Virtualisointi from "../assets/carousel/ICT_VIRTUALISOINTIPROJEKTI.webp";
+import Tietoliikenne from "../assets/carousel/ICT_TIETOLIIKENNEKAAPPI.webp";
 
 export const media_text = [
   {
@@ -52,29 +55,29 @@ export const ict_text = [
 export const ict_slides = [
   {
     component: Carousel_Item,
-    client_name: "Client Name",
-    project_title: "Project Name",
+    client_name: "Virittämö",
+    project_title: "Pilvipalvelu",
     completion_year: "2023",
-    img_src: tempIMG,
-    alt: "placeholder image",
+    img_src: Pilvipalvelu,
+    alt: "Pilvipalvelu project image",
     link: "https://virittamohelsinki.fi/",
   },
   {
     component: Carousel_Item,
-    client_name: "Client Name 2",
-    project_title: "Project Name 2",
+    client_name: "Virittämö",
+    project_title: "Virtualisointiprojekti",
     completion_year: "2023",
-    img_src: tempIMG,
-    alt: "placeholder image",
+    img_src: Virtualisointi,
+    alt: "Virtualisointi project image",
     link: "https://virittamohelsinki.fi/",
   },
   {
     component: Carousel_Item,
-    client_name: "Client Name 3",
-    project_title: "Project Name 3",
+    client_name: "Virittämö",
+    project_title: "Tietoliikennekaapin siistiminen",
     completion_year: "2023",
-    img_src: tempIMG,
-    alt: "placeholder image",
+    img_src: Tietoliikenne,
+    alt: "Tietoliikenne project image",
     link: "https://virittamohelsinki.fi/",
   },
 ];

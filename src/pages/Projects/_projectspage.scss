@@ -95,6 +95,7 @@ main.projectPage__wrapper {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        align-self: flex-start;
         height: 100%;
         width: 450px;
 
@@ -109,7 +110,11 @@ main.projectPage__wrapper {
         }
 
         div.carousel-title-container {
-          margin: 12.5px 0 12.5px;
+          margin-top: 12.5px;
+
+          h3 {
+            margin-bottom: 10px;
+          }
         }
       }
 
