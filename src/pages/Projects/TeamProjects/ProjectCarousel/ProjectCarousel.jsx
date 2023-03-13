@@ -77,12 +77,11 @@ ProjectCarousel.propTypes = {
   slides: PropTypes.arrayOf(
     PropTypes.shape({
       component: PropTypes.elementType.isRequired,
-      img_src: PropTypes.string,
-      client_name: PropTypes.string,
-      project_title: PropTypes.string,
-      completion_year: PropTypes.string,
+      img_src: PropTypes.string.isRequired,
+      client_name: PropTypes.string.isRequired,
+      project_title: PropTypes.string.isRequired,
+      completion_year: PropTypes.string.isRequired,
       alt: PropTypes.string,
-      link: PropTypes.string,
     })
   ).isRequired,
 };

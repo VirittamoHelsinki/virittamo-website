@@ -8,6 +8,7 @@ import Loading from "../pages/Loading/Loading";
 // import page components
 const Home = lazy(() => import("../pages/Home/Home"));
 const Projects = lazy(() => import("../pages/Projects/Projects"));
+import ProjectDetails from "../pages/Projects/ProjectDetails/ProjectDetails";
 
 const Router = () => {
   // location variable
@@ -25,6 +26,7 @@ const Router = () => {
       <Routes key={path} location={useLocation()}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:team/:id" element={<ProjectDetails />} />
       </Routes>
     </Suspense>
   );
