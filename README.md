@@ -1,6 +1,6 @@
 # Virittämö Helsinki
 
-This is the new homepage for Virittämö Helsinki, an employment service run by the City of Helsinki that connects jobseekers and companies seeking digital and media professionals. The website has been created using React.js and SCSS.
+This is the new homepage for Virittämö Helsinki, an employment service run by the City of Helsinki that connects jobseekers and companies seeking digital and media professionals. The website has been created using React.js, JavaScript and SCSS (view specific packages in the package.json file).
 
 ## Introduction
 
@@ -21,11 +21,12 @@ npm start
 ```
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ## Credit
+
 Started 13/02/2023 by Jesse Hamberg [@hambergjesse](https://github.com/hambergjesse) @ Virittämö Helsinki\
 Last updated: 13/02/2023 by Jesse Hamberg [@hambergjesse](https://github.com/hambergjesse) @ Virittämö Helsinki
