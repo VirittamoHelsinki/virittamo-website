@@ -29,4 +29,4 @@ You may also see any lint errors in the console.
 ## Credit
 
 Started 13/02/2023 by Jesse Hamberg [@hambergjesse](https://github.com/hambergjesse) @ Virittämö Helsinki\
-Last updated: 13/02/2023 by Jesse Hamberg [@hambergjesse](https://github.com/hambergjesse) @ Virittämö Helsinki
+Last updated: 13/03/2023 by Jesse Hamberg [@hambergjesse](https://github.com/hambergjesse) @ Virittämö Helsinki
