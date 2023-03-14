@@ -4,7 +4,7 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
 
-// import icons from react-icons
+// import icons from assets
 import { ReactComponent as Facebook_icon } from "../assets/facebook-icon.svg";
 import { ReactComponent as Linkedin_icon } from "../assets/linkedin-icon.svg";
 import { ReactComponent as Instagram_icon } from "../assets/instagram-icon.svg";

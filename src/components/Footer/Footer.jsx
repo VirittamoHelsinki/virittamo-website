@@ -4,8 +4,10 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
 
-// import icons from react-icons
-import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
+// import icons from assets
+import { ReactComponent as Facebook_icon } from "../assets/facebook-icon.svg";
+import { ReactComponent as Linkedin_icon } from "../assets/linkedin-icon.svg";
+import { ReactComponent as Instagram_icon } from "../assets/instagram-icon.svg";
 
 // import virittämö helsinki logo
 import StadinAOLogo from "./assets/stadinAO-logo.png";
@@ -57,7 +59,7 @@ export const Footer = ({ children }) => {
             rel="noreferrer"
             target="_blank"
           >
-            <BsFacebook className="social-icon" />
+            <Facebook_icon className="social-icon" />
           </a>
           <a
             href="https://www.linkedin.com/company/virittamohelsinki/"
@@ -65,7 +67,7 @@ export const Footer = ({ children }) => {
             rel="noreferrer"
             target="_blank"
           >
-            <BsLinkedin className="social-icon" />
+            <Linkedin_icon className="social-icon" />
           </a>
           <a
             href="https://www.instagram.com/virittamohelsinki/"
@@ -73,7 +75,7 @@ export const Footer = ({ children }) => {
             rel="noreferrer"
             target="_blank"
           >
-            <BsInstagram className="social-icon" />
+            <Instagram_icon className="social-icon" />
           </a>
           <button
             onClick={() => {
