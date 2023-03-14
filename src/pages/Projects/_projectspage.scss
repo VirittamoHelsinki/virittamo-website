@@ -86,40 +86,51 @@ main.projectPage__wrapper {
       justify-content: center;
       align-items: center;
       margin: 35px 0px 0px;
+      padding: 0 3% 0;
       height: auto;
-      padding: 0 2% 0;
       width: 100%;
-      gap: 25px;
+      gap: 35px;
 
-      div.projectPage__teams--carousel-item {
+      div.projectPage__teams--carousel-list {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        align-self: flex-start;
-        height: 100%;
-        width: 550px;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        gap: 25px;
 
-        p {
-          font-weight: 600;
-        }
+        div.projectPage__teams--carousel-item {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          align-self: flex-start;
+          height: 100%;
+          width: 32%;
 
-        div.carousel-img-container {
-          border: 1px solid $virittamo-light-violet;
-          height: 475px;
-          width: 100%;
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+          p {
+            width: auto;
+            font-weight: 600;
           }
-        }
 
-        div.carousel-title-container {
-          margin-top: 12.5px;
+          div.carousel-img-container {
+            border: 1px solid $virittamo-light-violet;
+            height: 475px;
+            width: 100%;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
 
-          h3 {
-            margin-bottom: 10px;
+          div.carousel-title-container {
+            margin-top: 12.5px;
+
+            h3 {
+              margin-bottom: 10px;
+            }
           }
         }
       }

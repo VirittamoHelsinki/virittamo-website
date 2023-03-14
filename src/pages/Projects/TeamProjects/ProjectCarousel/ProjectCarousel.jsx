@@ -53,7 +53,9 @@ export const ProjectCarousel = ({ text, slides }) => {
         >
           <BsArrowLeftCircle className="arrow-button--icon" />
         </button>
-        {slides ? renderActiveItems() : <LoadingSlides />}
+        <div className="projectPage__teams--carousel-list">
+          {slides ? renderActiveItems() : <LoadingSlides />}
+        </div>
         <button
           className="arrow-button"
           onClick={handleNextClick}
