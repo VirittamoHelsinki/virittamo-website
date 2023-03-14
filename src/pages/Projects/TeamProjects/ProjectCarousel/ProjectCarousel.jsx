@@ -22,11 +22,11 @@ export const ProjectCarousel = ({ text, slides }) => {
   };
 
   const renderActiveItems = () => {
-    const activeItems = [
+    let activeItems = [
       slides[activeIndex],
       slides[activeIndex + 1],
       slides[activeIndex + 2],
-    ].filter(Boolean); // filter out undefined values
+    ].filter(Boolean);
 
     return activeItems.map((activeItem, index) => {
       const ActiveItem = activeItem.component;
