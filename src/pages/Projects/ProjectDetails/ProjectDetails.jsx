@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { useParams } from "react-router-dom";
 import { Suspense } from "react";
 
@@ -13,6 +15,13 @@ const ProjectDetails = () => {
   const { id, team } = useParams();
 
   const project = slides[team].find((item) => item._id == id);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <Suspense fallback={<Loading />}>

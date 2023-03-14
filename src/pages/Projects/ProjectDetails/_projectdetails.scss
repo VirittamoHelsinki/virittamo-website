@@ -42,7 +42,11 @@ main.projectDetails__wrapper {
     text-align: center;
     margin-top: 100px;
     width: 100%;
-    gap: 12.5px;
+    gap: 15px;
+
+    p {
+      font-size: 28px;
+    }
   }
 
   section.projectDetails__image--container {
