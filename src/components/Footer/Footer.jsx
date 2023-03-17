@@ -18,7 +18,7 @@ import { Background } from "../../pages/Home/Background/Background";
 export const Footer = ({ children }) => {
   const { lang } = useContext(LanguageContext);
 
-  const { footer } = lang;
+  const { footer } = lang[1];
 
   // scroll to top of page on button click
   const scrollToTop = () => {

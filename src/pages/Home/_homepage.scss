@@ -7,10 +7,6 @@ main.homePage__wrapper {
   height: auto;
   gap: 100px;
 
-  @include responsive(mobile) {
-    gap: 50px;
-  }
-
   h2 {
     padding: 0 5% 0;
 
@@ -20,6 +16,8 @@ main.homePage__wrapper {
   }
 
   @include responsive(mobile) {
+    gap: 50px;
+
     h3 {
       font-size: 24px;
     }
@@ -169,11 +167,11 @@ main.homePage__wrapper {
           }
 
           @include responsive(large_mobile) {
-            height: 475px;
+            height: 450px;
           }
 
           @include responsive(mobile) {
-            height: 400px;
+            height: 375px;
           }
         }
 

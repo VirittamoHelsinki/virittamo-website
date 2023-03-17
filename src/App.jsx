@@ -1,5 +1,5 @@
-import fi from "./langLocal/fi.json";
-import en from "./langLocal/en.json";
+import { fi } from "./langLocal/fi.js";
+import { en } from "./langLocal/en.js";
 
 // import Loading from "./components/Loading";
 import { LanguageContext } from "./langLocal/context/langContext";

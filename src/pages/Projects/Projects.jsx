@@ -15,7 +15,7 @@ import { TeamProjects } from "./TeamProjects/TeamProjects";
 const Projects = () => {
   const { lang } = useContext(LanguageContext);
 
-  const { projects_page } = lang;
+  const { projects_page } = lang[3];
 
   return (
     <Suspense fallback={<Loading />}>
