@@ -26,10 +26,6 @@ main.projectDetails__wrapper {
     }
   }
 
-  p {
-    font-size: $font-size-subtext;
-  }
-
   main.header__wrapper {
     margin-bottom: 0px;
   }
@@ -45,7 +41,20 @@ main.projectDetails__wrapper {
     gap: 15px;
 
     p {
+      font-weight: 600;
       font-size: 28px;
+      width: auto;
+    }
+
+    h2#projectDetails__title--client {
+      font-weight: 500;
+    }
+
+    p#projectDetails__title--desc {
+      font-weight: 500;
+      margin-top: 50px;
+      font-size: 20px;
+      width: 55%;
     }
   }
 
@@ -63,10 +72,6 @@ main.projectDetails__wrapper {
       height: 100%;
       width: 80%;
       object-fit: cover;
-    }
-
-    p {
-      width: 50%;
     }
   }
 

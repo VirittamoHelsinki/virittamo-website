@@ -6,7 +6,7 @@ import { useContext } from "react";
 const Companies = () => {
   const { lang } = useContext(LanguageContext);
 
-  const { home_page } = lang[2];
+  const home_page = lang.home_page;
 
   return (
     <motion.div

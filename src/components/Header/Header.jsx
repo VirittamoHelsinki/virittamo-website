@@ -15,7 +15,7 @@ import VirittamoLogo from "./assets/virittamo-helsinki.png";
 export const Header = () => {
   const { lang, setLocale, fi } = useContext(LanguageContext);
 
-  const { header } = lang[0];
+  const header = lang.header;
 
   return (
     <main className="header__wrapper">

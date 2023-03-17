@@ -1,20 +1,22 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
+import { LanguageContext } from "../../../langLocal/context/langContext";
 import { useParams } from "react-router-dom";
 import { Suspense } from "react";
 
 import { Header } from "../../../components/Header/Header";
-import { Partners } from "../../../components/Partners/Partners";
 import { Footer } from "../../../components/Footer/Footer";
 
 import Loading from "../../Loading/Loading";
 
-import { slides } from "../TeamProjects/Content";
-
 const ProjectDetails = () => {
   const { id, team } = useParams();
+  const { lang } = useContext(LanguageContext);
+  const projects_page = lang.projects_page;
 
-  const project = slides[team].find((item) => item._id == id);
+  const project = projects_page.carousels.slides[team].find(
+    (item) => item._id == id
+  );
 
   useEffect(() => {
     window.scrollTo({
@@ -28,16 +30,15 @@ const ProjectDetails = () => {
       <main className="projectDetails__wrapper">
         <Header />
         <section className="projectDetails__title">
-          <h1>{project.client_name}</h1>
-          <h2>{project.project_title}</h2>
-          <p>{project.completion_year}</p>
+          <h1>{project?.project_title}</h1>
+          <h2 id="projectDetails__title--client">{project?.client_name}</h2>
+          <p>{project?.completion_year}</p>
+          <p id="projectDetails__title--desc">{project?.description}</p>
         </section>
         <section className="projectDetails__image--container">
-          <img src={project.img_src} alt={project.alt} />
-          <p>{project.description}</p>
+          <img src={project?.img_src} alt={project?.alt} />
         </section>
         <div id="pink-bar"></div>
-        <Partners />
         <Footer />
       </main>
     </Suspense>

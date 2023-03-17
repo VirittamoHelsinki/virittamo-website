@@ -55,7 +55,7 @@ const TeamsItem = (props) => {
 const HomePage = () => {
   const { lang } = useContext(LanguageContext);
 
-  const { home_page } = lang[2];
+  const home_page = lang.home_page;
 
   return (
     <Suspense fallback={<Loading />}>
@@ -65,8 +65,8 @@ const HomePage = () => {
           <img src={HeaderImg} alt="Home page main image" />
         </div>
         <section className="homePage__introduction">
-          <h1>{home_page.home_title}</h1>
-          <p>{home_page.home_text}</p>
+          <h1>{home_page.title}</h1>
+          <p>{home_page.text}</p>
           <div id="pink-bar"></div>
         </section>
         {slides && <Carousel slides={slides} />}

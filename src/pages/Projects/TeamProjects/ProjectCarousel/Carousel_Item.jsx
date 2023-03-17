@@ -17,8 +17,8 @@ export const Carousel_Item = ({
         </Link>
       </div>
       <div className="carousel-title-container">
-        <h3>{client_name}</h3>
         <h3>{project_title}</h3>
+        <h3 id="carousel-title-container-client">{client_name}</h3>
       </div>
       <p>{completion_year}</p>
     </div>

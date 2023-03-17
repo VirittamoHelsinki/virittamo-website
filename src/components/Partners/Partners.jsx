@@ -11,7 +11,7 @@ import Europe from "./assets/eu-logo.webp";
 export const Partners = () => {
   const { lang } = useContext(LanguageContext);
 
-  const { home_page } = lang[2];
+  const home_page = lang.home_page;
 
   // preloads images
   useEffect(() => {

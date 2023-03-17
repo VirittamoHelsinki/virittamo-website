@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 // import icons from react-icons
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
@@ -42,9 +43,9 @@ export const ProjectCarousel = ({ text, slides }) => {
 
   return (
     <div className="projectPage__teams--container-item">
-      <h2>{text[0].title}</h2>
-      <p>{text[0].description}</p>
-      <p>{text[0].contact}</p>
+      <h2>{text.title}</h2>
+      <p>{text.description}</p>
+      <p>{text.contact}</p>
       <div className="projectPage__teams--carousel">
         <button
           className="arrow-button"
@@ -68,6 +69,7 @@ export const ProjectCarousel = ({ text, slides }) => {
   );
 };
 
+/*
 ProjectCarousel.propTypes = {
   text: PropTypes.arrayOf(
     PropTypes.shape({
@@ -87,3 +89,4 @@ ProjectCarousel.propTypes = {
     })
   ).isRequired,
 };
+*/
