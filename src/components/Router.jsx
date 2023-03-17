@@ -1,32 +1,21 @@
-// import react depencies
+import { useEffect, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, Suspense, lazy } from "react";
 
-// loader
 import Loading from "../pages/Loading/Loading";
-
-// import page components
-const Home = lazy(() => import("../pages/Home/Home"));
-const Projects = lazy(() => import("../pages/Projects/Projects"));
+import Home from "../pages/Home/Home";
+import Projects from "../pages/Projects/Projects";
 import ProjectDetails from "../pages/Projects/ProjectDetails/ProjectDetails";
 
 const Router = () => {
-  // location variable
-  const location = useLocation();
-
-  // shorten for cleanness
-  const path = location.pathname;
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (
     <Suspense fallback={<Loading />}>
-      <Routes key={path} location={useLocation()}>
+      <Routes key={pathname} location={useLocation()}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:team/:id" element={<ProjectDetails />} />
