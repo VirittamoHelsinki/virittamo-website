@@ -11,7 +11,7 @@ import Europe from "./assets/eu-logo.webp";
 export const Partners = () => {
   const { lang } = useContext(LanguageContext);
 
-  const home_page = lang.home_page;
+  const { partners } = lang.home_page;
 
   // preloads images
   useEffect(() => {
@@ -33,7 +33,7 @@ export const Partners = () => {
 
   return (
     <section className="homePage__partners">
-      <h2>{home_page.partners}</h2>
+      <h2>{partners}</h2>
       <div className="homePage__partners--container">
         <div className="homePage__partners--container-images">
           {partner_images.map((item, index) => (

@@ -6,7 +6,7 @@ import { ProjectCarousel } from "./ProjectCarousel/ProjectCarousel";
 export const TeamProjects = () => {
   const { lang } = useContext(LanguageContext);
 
-  const projects_page = lang.projects_page;
+  const { projects_page } = lang.projects_page;
 
   return (
     <section className="projectPage__teams--container">

@@ -15,7 +15,7 @@ import VirittamoLogo from "./assets/virittamo-helsinki.png";
 export const Header = () => {
   const { lang, setLocale, fi } = useContext(LanguageContext);
 
-  const header = lang.header;
+  const { home_page, projects, experiences, contact } = lang.header;
 
   return (
     <main className="header__wrapper">
@@ -25,16 +25,16 @@ export const Header = () => {
         <nav className="header__nav">
           <ul className="header__nav--list">
             <li className="header__nav--list-item">
-              <a href="/">{header.home_page}</a>
+              <a href="/">{home_page}</a>
             </li>
             <li className="header__nav--list-item">
-              <a href="/projects">{header.projects}</a>
+              <a href="/projects">{projects}</a>
             </li>
             <li className="header__nav--list-item">
-              <a href="/experiences">{header.experiences}</a>
+              <a href="/experiences">{experiences}</a>
             </li>
             <li className="header__nav--list-item">
-              <a href="/contact">{header.contact}</a>
+              <a href="/contact">{contact}</a>
             </li>
           </ul>
         </nav>

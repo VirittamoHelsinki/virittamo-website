@@ -18,7 +18,8 @@ import { Background } from "../../pages/Home/Background/Background";
 export const Footer = ({ children }) => {
   const { lang } = useContext(LanguageContext);
 
-  const footer = lang.footer;
+  const { home_page, projects, experiences, contact, back_to_top } =
+    lang.footer;
 
   // scroll to top of page on button click
   const scrollToTop = () => {
@@ -38,16 +39,16 @@ export const Footer = ({ children }) => {
         <nav className="footer__nav">
           <ul className="footer__nav--list">
             <li className="footer__nav--list-item">
-              <a href="/">{footer.home_page}</a>
+              <a href="/">{home_page}</a>
             </li>
             <li className="footer__nav--list-item">
-              <a href="/projects">{footer.projects}</a>
+              <a href="/projects">{projects}</a>
             </li>
             <li className="footer__nav--list-item">
-              <a href="/experiences">{footer.experiences}</a>
+              <a href="/experiences">{experiences}</a>
             </li>
             <li className="footer__nav--list-item">
-              <a href="/contact">{footer.contact}</a>
+              <a href="/contact">{contact}</a>
             </li>
           </ul>
         </nav>
@@ -82,7 +83,7 @@ export const Footer = ({ children }) => {
               scrollToTop();
             }}
           >
-            {footer.back_to_top} &#8593;
+            {back_to_top} &#8593;
           </button>
         </section>
       </div>
