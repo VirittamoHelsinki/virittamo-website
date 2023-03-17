@@ -15,15 +15,15 @@ import { TeamProjects } from "./TeamProjects/TeamProjects";
 const Projects = () => {
   const { lang } = useContext(LanguageContext);
 
-  const projects_page = lang.projects_page;
+  const { title, desc } = lang.projects_page;
 
   return (
     <Suspense fallback={<Loading />}>
       <main className="projectPage__wrapper">
         <Header />
         <section className="projectPage__introduction">
-          <h2>{projects_page.title}</h2>
-          <p>{projects_page.desc}</p>
+          <h2>{title}</h2>
+          <p>{desc}</p>
         </section>
         <TeamProjects />
         <Partners />
