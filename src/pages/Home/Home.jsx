@@ -34,7 +34,7 @@ const TeamsItem = (props) => {
     ? props.text.slice(0, props.text.indexOf(".") + 1)
     : "";
 
-  const textRest = props.text
+  const textAll = props.text
     ? props.text.slice(props.text.indexOf(".") + 1)
     : "";
 
@@ -44,7 +44,7 @@ const TeamsItem = (props) => {
       <h3>{props.title}</h3>
       <p>
         {textPreview}
-        {showMore ? textRest : ".."}
+        {showMore ? textAll : ".."}
       </p>
       <button onClick={toggleShowMore}>
         {showMore ? props.less : props.more}
@@ -52,10 +52,21 @@ const TeamsItem = (props) => {
     </div>
   );
 };
+
 const HomePage = () => {
   const { lang } = useContext(LanguageContext);
 
-  const home_page = lang.home_page;
+  const {
+    title,
+    text,
+    why_virittamo,
+    for_an_employee,
+    for_a_company,
+    teams,
+    apply,
+    contact_details,
+    locations,
+  } = lang.home_page;
 
   return (
     <Suspense fallback={<Loading />}>
@@ -65,14 +76,14 @@ const HomePage = () => {
           <img src={HeaderImg} alt="Home page main image" />
         </div>
         <section className="homePage__introduction">
-          <h1>{home_page.title}</h1>
-          <p>{home_page.text}</p>
+          <h1>{title}</h1>
+          <p>{text}</p>
           <div id="pink-bar"></div>
         </section>
         {slides && <Carousel slides={slides} />}
         <section className="homePage__why">
           <Background />
-          <h2>{home_page.why_virittamo}</h2>
+          <h2>{why_virittamo}</h2>
           <div className="homePage__why--containers">
             <div className="homePage__why--containers-item">
               <img
@@ -80,9 +91,9 @@ const HomePage = () => {
                 src={ForEmployeeImg}
                 alt="Why choose Virittämö employee picture"
               />
-              <h3>{home_page.for_an_employee.title}</h3>
+              <h3>{for_an_employee.title}</h3>
               <ul className="homePage__why--containers-list">
-                {home_page.for_an_employee.description.map((item, index) => (
+                {for_an_employee.description.map((item, index) => (
                   <li key={index}>&#9656; {item}</li>
                 ))}
               </ul>
@@ -93,9 +104,9 @@ const HomePage = () => {
                 src={ForCompanyImg}
                 alt="Why choose Virittämö company picture"
               />
-              <h3>{home_page.for_a_company.title}</h3>
+              <h3>{for_a_company.title}</h3>
               <ul className="homePage__why--containers-list">
-                {home_page.for_a_company.description.map((item, index) => (
+                {for_a_company.description.map((item, index) => (
                   <li key={index}>&#9656; {item}</li>
                 ))}
               </ul>
@@ -104,41 +115,41 @@ const HomePage = () => {
         </section>
         <section className="homePage__teams">
           <Background />
-          <h2>{home_page.teams.title}</h2>
+          <h2>{teams.title}</h2>
           <div className="homePage__teams--containers">
             <TeamsItem
               img={MediaImg}
               title="Media"
-              text={home_page.teams.media_desc}
+              text={teams.media_desc}
               alt="Virittämö's Media Team"
-              more={home_page.teams.read_more_btn}
-              less={home_page.teams.read_less_btn}
+              more={teams.read_more_btn}
+              less={teams.read_less_btn}
             />
             <TeamsItem
               img={IctImg}
               title="ICT"
-              text={home_page.teams.ict_desc}
+              text={teams.ict_desc}
               alt="Virittämö's ICT Team"
-              more={home_page.teams.read_more_btn}
-              less={home_page.teams.read_less_btn}
+              more={teams.read_more_btn}
+              less={teams.read_less_btn}
             />
             <TeamsItem
               id
               img={SoftaImg}
               title="Softa"
-              text={home_page.teams.software_desc}
+              text={teams.software_desc}
               alt="Virittämö's Software Team"
-              more={home_page.teams.read_more_btn}
-              less={home_page.teams.read_less_btn}
+              more={teams.read_more_btn}
+              less={teams.read_less_btn}
             />
           </div>
         </section>
         <section className="homePage__apply">
-          <h2>{home_page.apply.title}</h2>
-          <p>{home_page.apply.description}</p>
+          <h2>{apply.title}</h2>
+          <p>{apply.description}</p>
           <div className="homePage__apply--container">
             <ul className="homePage__apply--container-list">
-              {home_page.apply.qualifications.map((item, index) => (
+              {apply.qualifications.map((item, index) => (
                 <div
                   key={index}
                   className="homePage__apply--container-list-item"
@@ -153,10 +164,10 @@ const HomePage = () => {
         </section>
         <Partners />
         <Footer>
-          <h2>{home_page.contact_details.title}</h2>
+          <h2>{contact_details.title}</h2>
           <div className="footer__contacts">
             <ul className="footer__contacts--list">
-              {home_page.contact_details.team.map((item, index) => (
+              {contact_details.team.map((item, index) => (
                 <li key={index} className="footer__contacts--list-item">
                   <p>{item.name}</p>
                   <p>{item.title}</p>
@@ -167,7 +178,7 @@ const HomePage = () => {
             </ul>
             <div id="black-bar"></div>
             <ul className="footer__locations--list">
-              {home_page.locations.map((item, index) => (
+              {locations.map((item, index) => (
                 <li key={index} className="footer__locations--list-item">
                   <p>{item.name}</p>
                   <p>{item.title}</p>
