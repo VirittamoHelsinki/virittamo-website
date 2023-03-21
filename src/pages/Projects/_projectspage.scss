@@ -25,6 +25,12 @@ main.projectPage__wrapper {
     }
   }
 
+  div#pink-bar {
+    background: $virittamo-pink;
+    width: 200px;
+    height: 3px;
+  }
+
   section.projectPage__introduction {
     display: flex;
     justify-content: center;
@@ -115,7 +121,8 @@ main.projectPage__wrapper {
 
           div.carousel-img-container {
             border: 1px solid $virittamo-light-violet;
-            height: 475px;
+            height: 400px;
+            min-width: 400px;
             width: 100%;
             img {
               height: 100%;

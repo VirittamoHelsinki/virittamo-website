@@ -26,6 +26,7 @@ const Projects = () => {
           <p>{desc}</p>
         </section>
         <TeamProjects />
+        <div id="pink-bar"></div>
         <Partners />
         <Footer />
       </main>
