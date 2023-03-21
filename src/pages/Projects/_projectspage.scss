@@ -112,7 +112,7 @@ main.projectPage__wrapper {
           align-items: center;
           align-self: flex-start;
           height: 100%;
-          width: 32%;
+          width: 100%;
 
           p {
             width: auto;
@@ -122,8 +122,13 @@ main.projectPage__wrapper {
           div.carousel-img-container {
             border: 1px solid $virittamo-light-violet;
             height: 400px;
-            min-width: 400px;
+            min-width: 375px;
             width: 100%;
+
+            @include responsive(tablet) {
+              height: 600px;
+            }
+
             img {
               height: 100%;
               width: 100%;
