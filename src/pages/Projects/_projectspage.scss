@@ -15,13 +15,13 @@ main.projectPage__wrapper {
     padding: 0 5% 0;
 
     @include responsive(mobile) {
-      font-size: 28px;
+      font-size: 36px;
     }
   }
 
   @include responsive(mobile) {
     h3 {
-      font-size: 24px;
+      font-size: 32px;
     }
   }
 
@@ -56,11 +56,11 @@ main.projectPage__wrapper {
       }
 
       @include responsive(large_mobile) {
-        width: 425px;
+        width: 350px;
       }
 
       @include responsive(mobile) {
-        width: 350px;
+        width: 325px;
       }
     }
   }
@@ -89,8 +89,26 @@ main.projectPage__wrapper {
         font-size: $font-size-subtext;
         width: auto;
 
+        @include responsive(tablet) {
+          width: 70%;
+        }
+
         @include responsive(large_mobile) {
           width: 75%;
+        }
+      }
+
+      div.projectPage__teams--carousel-indicators {
+        display: none;
+      }
+
+      @include responsive(large_mobile) {
+        div.projectPage__teams--carousel-indicators {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 25px;
+          gap: 6px;
         }
       }
     }
@@ -110,7 +128,8 @@ main.projectPage__wrapper {
       }
 
       @include responsive(large_mobile) {
-        padding: 0 5% 0;
+        margin: 12.5px 0px 0px;
+        padding: 0 0% 0;
       }
 
       div.projectPage__teams--carousel-list {
@@ -138,7 +157,6 @@ main.projectPage__wrapper {
           div.carousel-img-container {
             border: 1px solid $virittamo-light-violet;
             height: 400px;
-            min-width: 375px;
             width: 100%;
 
             @include responsive(tablet) {
@@ -177,6 +195,10 @@ main.projectPage__wrapper {
         height: 35px;
         min-width: 35px;
         width: 35px;
+
+        @include responsive(large_mobile) {
+          display: none;
+        }
 
         svg.arrow-button--icon {
           height: 100%;

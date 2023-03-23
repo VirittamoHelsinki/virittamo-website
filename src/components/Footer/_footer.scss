@@ -14,6 +14,10 @@ main.footer__wrapper {
     text-align: center;
   }
 
+  @include responsive(large_mobile) {
+    padding: 10px 10% 50px;
+  }
+
   div.background__wrapper {
     background: $virittamo-light-violet;
     position: absolute;

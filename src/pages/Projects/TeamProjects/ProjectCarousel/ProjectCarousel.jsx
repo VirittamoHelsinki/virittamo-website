@@ -3,8 +3,31 @@ import PropTypes from "prop-types";
 
 // import icons from react-icons
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+import { FaCircle, FaRegCircle } from "react-icons/fa";
 
 import { LoadingSlides } from "../../../Home/Carousel/SubComponents/LoadingSlides";
+
+const SlideIndicator = ({ numSlides, activeIndex }) => {
+  const indicators = Array.from({ length: numSlides }).map((_, i) =>
+    i === activeIndex ? (
+      <FaCircle
+        key={i}
+        className="projectPage__teams--carousel-indicator active"
+      />
+    ) : (
+      <FaRegCircle key={i} className="projectPage__teams--carousel-indicator" />
+    )
+  );
+
+  return (
+    <div className="projectPage__teams--carousel-indicators">{indicators}</div>
+  );
+};
+
+SlideIndicator.propTypes = {
+  numSlides: PropTypes.number.isRequired,
+  activeIndex: PropTypes.number.isRequired,
+};
 
 const getNumVisibleSlides = (slides, width) => {
   switch (true) {
@@ -65,6 +88,27 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [slides]);
 
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    setTouchEnd(e.changedTouches[0].clientX);
+
+    if (touchEnd - touchStart > 50) {
+      // Swipe right
+      handlePrevClick();
+    }
+
+    if (touchStart - touchEnd > 50) {
+      // Swipe left
+      handleNextClick();
+    }
+  };
+
   const { title = "", description = "", contact = "" } = text;
 
   return (
@@ -72,6 +116,7 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
       {title && <h2>{title}</h2>}
       {description && <p>{description}</p>}
       {contact && <p>{contact}</p>}
+      <SlideIndicator numSlides={slides.length} activeIndex={activeIndex} />
       <div className="projectPage__teams--carousel">
         <button
           className="arrow-button"
@@ -80,7 +125,11 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
         >
           <BsArrowLeftCircle className="arrow-button--icon" />
         </button>
-        <div className="projectPage__teams--carousel-list">
+        <div
+          className="projectPage__teams--carousel-list"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {slides.length > 0 ? renderActiveItems() : <LoadingSlides />}
         </div>
         <button
