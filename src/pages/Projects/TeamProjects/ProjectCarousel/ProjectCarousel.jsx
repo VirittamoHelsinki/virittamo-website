@@ -1,26 +1,35 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 // import icons from react-icons
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
 import { LoadingSlides } from "../../../Home/Carousel/SubComponents/LoadingSlides";
 
-const getNumVisibleSlides = (slides) => {
-  const width = window.innerWidth;
-  if (width <= 1080) {
-    return 1;
-  } else if (width <= 1440) {
-    return 2;
-  } else {
-    return Math.min(slides.length, 3);
+const getNumVisibleSlides = (slides, width) => {
+  switch (true) {
+    case width <= 1080:
+      return 1;
+    case width <= 1440:
+      return 2;
+    default:
+      return Math.min(slides.length, 3);
   }
 };
 
-export const ProjectCarousel = ({ text, slides }) => {
+const Slide = ({ component: Component, ...props }) => {
+  return <Component {...props} />;
+};
+
+Slide.propTypes = {
+  component: PropTypes.elementType.isRequired,
+};
+
+export const ProjectCarousel = ({ text = {}, slides = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const numVisibleSlides = getNumVisibleSlides(slides);
+  const [numVisibleSlides, setNumVisibleSlides] = useState(
+    getNumVisibleSlides(slides, window.innerWidth)
+  );
 
   const handlePrevClick = () => {
     setActiveIndex(activeIndex - 1);
@@ -31,13 +40,12 @@ export const ProjectCarousel = ({ text, slides }) => {
   };
 
   const renderActiveItems = () => {
-    let activeItems = slides
+    const activeItems = slides
       .slice(activeIndex, activeIndex + numVisibleSlides)
       .filter(Boolean);
 
     return activeItems.map((activeItem, index) => {
-      const ActiveItem = activeItem.component;
-      return <ActiveItem key={index} {...activeItem} />;
+      return <Slide key={index} {...activeItem} />;
     });
   };
 
@@ -47,15 +55,23 @@ export const ProjectCarousel = ({ text, slides }) => {
     } else if (activeIndex + numVisibleSlides > slides.length) {
       setActiveIndex(slides.length - numVisibleSlides);
     }
-  }, [activeIndex, slides]);
+  }, [activeIndex, numVisibleSlides, slides]);
 
-  const { title, description, contact } = text;
+  useEffect(() => {
+    const handleResize = () => {
+      setNumVisibleSlides(getNumVisibleSlides(slides, window.innerWidth));
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [slides]);
+
+  const { title = "", description = "", contact = "" } = text;
 
   return (
     <div className="projectPage__teams--container-item">
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p>{contact}</p>
+      {title && <h2>{title}</h2>}
+      {description && <p>{description}</p>}
+      {contact && <p>{contact}</p>}
       <div className="projectPage__teams--carousel">
         <button
           className="arrow-button"
@@ -65,7 +81,7 @@ export const ProjectCarousel = ({ text, slides }) => {
           <BsArrowLeftCircle className="arrow-button--icon" />
         </button>
         <div className="projectPage__teams--carousel-list">
-          {slides ? renderActiveItems() : <LoadingSlides />}
+          {slides.length > 0 ? renderActiveItems() : <LoadingSlides />}
         </div>
         <button
           className="arrow-button"
@@ -79,15 +95,12 @@ export const ProjectCarousel = ({ text, slides }) => {
   );
 };
 
-/*
 ProjectCarousel.propTypes = {
-  text: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      description: PropTypes.string,
-      contact: PropTypes.string,
-    })
-  ).isRequired,
+  text: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    contact: PropTypes.string,
+  }),
   slides: PropTypes.arrayOf(
     PropTypes.shape({
       component: PropTypes.elementType.isRequired,
@@ -99,4 +112,3 @@ ProjectCarousel.propTypes = {
     })
   ).isRequired,
 };
-*/

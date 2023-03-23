@@ -51,6 +51,10 @@ main.projectPage__wrapper {
       font-size: $font-size-subtext;
       width: 800px;
 
+      @include responsive(tablet) {
+        width: 600px;
+      }
+
       @include responsive(large_mobile) {
         width: 425px;
       }
@@ -83,7 +87,11 @@ main.projectPage__wrapper {
 
       p {
         font-size: $font-size-subtext;
-        width: 900px;
+        width: auto;
+
+        @include responsive(large_mobile) {
+          width: 75%;
+        }
       }
     }
 
@@ -96,6 +104,14 @@ main.projectPage__wrapper {
       height: auto;
       width: 100%;
       gap: 35px;
+
+      @include responsive(tablet) {
+        padding: 0 5% 0;
+      }
+
+      @include responsive(large_mobile) {
+        padding: 0 5% 0;
+      }
 
       div.projectPage__teams--carousel-list {
         display: flex;
@@ -127,6 +143,10 @@ main.projectPage__wrapper {
 
             @include responsive(tablet) {
               height: 600px;
+            }
+
+            @include responsive(large_mobile) {
+              height: 350px;
             }
 
             img {
