@@ -23,44 +23,25 @@ export const Carousel = ({ slides }) => {
     const activeItem = slides[activeIndex];
     const ActiveItem = activeItem.component;
 
-    let numSlides = 3;
-    if (window.innerWidth >= 1440) {
-      numSlides = 2;
-    } else if (window.innerWidth >= 1080) {
-      numSlides = 1;
-    }
-
-    const startIndex = Math.max(0, activeIndex - Math.floor(numSlides / 2));
-    const endIndex = startIndex + numSlides - 1;
-
-    const slideItems = slides
-      .slice(startIndex, endIndex + 1)
-      .map((item, index) => {
-        const SlideItem = item.component;
-        return <SlideItem key={startIndex + index} {...item} />;
-      });
-
     useEffect(() => {
-      const videoEls = document.querySelectorAll(".carousel__item--video");
-      videoEls.forEach((videoEl) => {
-        if (videoEl) {
-          videoEl.addEventListener("play", () => {
-            setIsHovering(true);
-            setIsPlaying(true); // set isPlaying to true when video starts playing
-          });
-          videoEl.addEventListener("pause", () => {
-            setIsHovering(false);
-            setIsPlaying(false); // set isPlaying to false when video is paused
-          });
-          return () => {
-            videoEl.removeEventListener("play", () => setIsHovering(true));
-            videoEl.removeEventListener("pause", () => setIsHovering(false));
-          };
-        }
-      });
-    }, [startIndex]);
+      const videoEl = document.querySelector(".carousel__item--video");
+      if (videoEl) {
+        videoEl.addEventListener("play", () => {
+          setIsHovering(true);
+          setIsPlaying(true); // set isPlaying to true when video starts playing
+        });
+        videoEl.addEventListener("pause", () => {
+          setIsHovering(false);
+          setIsPlaying(false); // set isPlaying to false when video is paused
+        });
+        return () => {
+          videoEl.removeEventListener("play", () => setIsHovering(true));
+          videoEl.removeEventListener("pause", () => setIsHovering(false));
+        };
+      }
+    }, [activeIndex]);
 
-    return <div className="carousel__items">{slideItems}</div>;
+    return <ActiveItem key={activeIndex} {...activeItem} />;
   };
 
   const INTERVAL_DURATION = 5000;
