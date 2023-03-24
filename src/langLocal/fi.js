@@ -188,19 +188,19 @@ export const fi = {
         },
         {
           name: "Kai Rintamaa",
-          title: "Mediatiimin johtaja",
+          title: "Mediatiimin vastaava",
           phone: "p. 09 310 81403",
           email: "kai.rintamaa@edu.hel.fi",
         },
         {
           name: "Ari Tuomi",
-          title: "ICT-ryhmän johtaja",
+          title: "ICT-tiimin vastaava",
           phone: "p. 09 310 27571",
           email: "ari.tuomi@edu.hel.fi",
         },
         {
           name: "Arto Aitta",
-          title: "Softatiimin johtaja",
+          title: "Softatiimin vastaava",
           phone: "p. 09 3102 7555",
           email: "arto.aitta@hel.fi",
         },
@@ -422,8 +422,21 @@ export const fi = {
         alt: "Kuva Andrei Vlassenko:sta",
         img_src: "",
         full_name: "Andrei Vlassenko",
-        story_text:
-          "Tarina Virittämö Helsingin kanssa alkoi ennen kuin edes aloitin työt. Hain ensin, mutta en saanut paikkaa. Edellisen ICT-tiimin johtajan neuvojen ansiosta opiskelin pilviteknologioita enemmän ja hain uudelleen. Vaikka haastattelussa kamppailin yhä suomen kielen kanssa, minut palkattiin. Aluksi olin melko hiljainen, ujo ja epävarma, mutta sain työskennellä yhden järjestelmämme kanssa.\nHuomasin asioita, joita voisimme parantaa, mutta minulla oli vaikeuksia viestinnän kanssa. Siirsin fokukseni viestintä- ja kielitaitoihin. Tiesin, ettei ole merkitystä kuinka hyvin ymmärrän järjestelmät, jos en voi saada ihmisiä keskustelemaan niistä. Tämän avulla sain tilaisuuden oppia sitä, mitä tarvitsin eniten.\nJoka viikko eri tiimin jäsen oli vastuussa tietyn viikoittaisen rutiinin hoitamisesta, jotta kaikki voisivat harjoitella esitystaitoja ja auttaa muita. Oli myös edistyneitä suomen kielen oppitunteja ja ilmaisia kursseja Metropolia-yliopistolta, jotka auttoivat minua kehittymään ammatillisesti ja henkisesti. Opin lisää työnhakutaitoja ja vaikka en löytänyt sopivaa työpaikkaa itselleni, monet muut löysivät.\n Olen kiitollinen kaikille, joihin törmäsin Virittämössä. Opin niin paljon aikani aikana ja minulla oli erittäin onnekas ensimmäinen työkokemukseni. Näin omilla silmilläni, kuinka ihmiset kasvoivat tämän tuen avulla ja saavuttivat lopulta haluamansa. Mukaan lukien minä. Kiitos Virittämö Helsinki. Tämä muutti elämäni varmasti.",
+        story_text: [
+          "Tarina Virittämö Helsingin kanssa alkoi ennen kuin edes aloitin työt. Hain ensin, mutta en saanut paikkaa. Edellisen ICT-tiimin johtajan neuvojen ansiosta opiskelin pilviteknologioita enemmän ja hain uudelleen. Vaikka haastattelussa kamppailin yhä suomen kielen kanssa, minut palkattiin. Aluksi olin melko hiljainen, ujo ja epävarma, mutta sain työskennellä yhden järjestelmämme kanssa.",
+          "Huomasin asioita, joita voisimme parantaa, mutta minulla oli vaikeuksia viestinnän kanssa. Siirsin fokukseni viestintä- ja kielitaitoihin. Tiesin, ettei ole merkitystä kuinka hyvin ymmärrän järjestelmät, jos en voi saada ihmisiä keskustelemaan niistä. Tämän avulla sain tilaisuuden oppia sitä, mitä tarvitsin eniten.\nJoka viikko eri tiimin jäsen oli vastuussa tietyn viikoittaisen rutiinin hoitamisesta, jotta kaikki voisivat harjoitella esitystaitoja ja auttaa muita. Oli myös edistyneitä suomen kielen oppitunteja ja ilmaisia kursseja Metropolia-yliopistolta, jotka auttoivat minua kehittymään ammatillisesti ja henkisesti. Opin lisää työnhakutaitoja ja vaikka en löytänyt sopivaa työpaikkaa itselleni, monet muut löysivät.",
+          "Olen kiitollinen kaikille, joihin törmäsin Virittämössä. Opin niin paljon aikani aikana ja minulla oli erittäin onnekas ensimmäinen työkokemukseni. Näin omilla silmilläni, kuinka ihmiset kasvoivat tämän tuen avulla ja saavuttivat lopulta haluamansa. Mukaan lukien minä. Kiitos Virittämö Helsinki. Tämä muutti elämäni varmasti.",
+        ],
+      },
+      {
+        alt: "Kuva Eetu Lehmuksesta:sta, entinen Virittämön työntekijä.",
+        img_src: "",
+        full_name: "Eetu Lehmus",
+        story_text: [
+          "Valmistuin aikoinaan datanomiksi, jonka jälkeen pääsin Oulun ammattikorkeakouluun opiskelemaan tieto- ja viestintätekniikkaa. Opiskelujen viimeisenä vuonna siirryin mobiilipelialalle pelisuunnittelijaksi ja muutin Helsinkiin. Kesken jääneiden opintojen jälkeen pidin parin vuoden tauon ja haaveilin urasta ohjelmoijana. Törmäsin sattumalta Virittämön rekryilmoitukseen, jonka kautta sain elämäni ensimmäisen ohjelmoijan työn. Virittämön softatiimi vaikutti juuri oikealta paikalta aloittaa toivomissani tehtävissä.",
+          "Virittämöstä minulla on pelkästään hyvää sanottavaa. Oli mahtavaa päästä suoraan käsiksi asiakasprojekteihin, joissa pääsin hyödyntämään aiemmin oppimiani asioita. Työssä ei ollut liian kova kiire ja oli aikaa opetella uusia koodikieliä. Opin paljon uutta ja lisäksi sain lisää itsevarmuutta siihen, että pystyn toteuttamaan asiakkaan toiveiden mukaisia toimeksiantoja. Sain paljon apua muilta työntekijöiltä yhteisissä projekteissa. Koen, että sosiaalinen tukiverkosto oli kokonaisuudessaan hyvä; kaikki auttoivat toisiaan.",
+          "Seuraavaksi palaan takaisin Ouluun tekemään ammattikorkeakoulututkintoni loppuun, jotta voin työllistyä ohjelmoijaksi tulevaisuudessakin. Virittämö auttoi asettamaan selkeitä päämääriä, toi tekemisen meininkiä ja paremman rytmin arkeen. Suosittelen Virittämöä lämpimästi!",
+        ],
       },
     ],
   },

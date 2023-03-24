@@ -7,7 +7,11 @@ export const Stories_Item = ({ alt, img_src, full_name, story_text }) => {
       <h2>Tarinoita</h2>
       <p>{full_name}</p>
       <div id="pink-bar"></div>
-      <p>{story_text}</p>
+      <div className="storiesPage__list--item-text">
+        {story_text.map(function (text_part, index) {
+          return <p key={index}>{text_part}</p>;
+        })}
+      </div>
     </li>
   );
 };
@@ -16,5 +20,5 @@ Stories_Item.propTypes = {
   alt: PropTypes.string,
   img_src: PropTypes.string.isRequired,
   full_name: PropTypes.string.isRequired,
-  story_text: PropTypes.string.isRequired,
+  story_text: PropTypes.array.isRequired,
 };

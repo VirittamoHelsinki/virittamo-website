@@ -14,7 +14,6 @@ const Stories = () => {
   const { lang } = useContext(LanguageContext);
 
   const { stories } = lang.stories_page;
-  console.log(stories);
 
   const renderSlides = () => {
     if (!stories) {
