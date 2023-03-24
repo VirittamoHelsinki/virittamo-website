@@ -31,7 +31,7 @@ export const Header = () => {
               <a href="/projects">{projects}</a>
             </li>
             <li className="header__nav--list-item">
-              <a href="/experiences">{stories}</a>
+              <a href="/stories">{stories}</a>
             </li>
             <li className="header__nav--list-item">
               <a href="/contact">{contact}</a>

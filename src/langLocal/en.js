@@ -414,4 +414,15 @@ export const en = {
       },
     },
   },
+  stories_page: {
+    stories: [
+      {
+        alt: "Picture of Andrei Vlassenko",
+        img_src: "",
+        full_name: "Andrei Vlassenko",
+        story_text:
+          "My story with Virittämö Helsinki started before I even got hired. I first applied and didn't get the job, but thanks to the previous ICT team leaders advice, I studied cloud technologies more and applied again. Even though I still struggled with Finnish language in the interview, I got hired. At first I was pretty quiet, shy and unsure, but I got to work with one of our systems.\nI started to notice things we could improve, but I struggled about communicating. I shifted my focus to communication skills and language. I knew it wouldnt matter how well I can understand the systems if I can't make people to discuss about them. This way I got an opportunity to learn what I needed the most.\nEach week we had different team member responsible for certain weekly routines so everyone could practice presentation skills and help others. There were also advanced Finnish lessons and free courses from Metropolia University helping me to become more professional and healthy. I learned more job-seeking skills and even though I didn't find a suitable job for myself, many others did.\nI'm grateful for everyone I met at Virittämö. I learned so much during my time and I got very lucky with my first job experience. I saw with my own eyes, how people grew with this support and were able to achieve what they wanted in the end. Including me. Thank you Virittämö Helsinki. Life-changing for sure",
+      },
+    ],
+  },
 };
