@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export const Carousel_Item = ({
   _id,
   team,
-  img_src,
+  img_src_small,
   client_name,
   project_title,
   completion_year,
@@ -13,7 +13,7 @@ export const Carousel_Item = ({
     <div className="projectPage__teams--carousel-item">
       <div className="carousel-img-container">
         <Link to={`/projects/${team}/${_id}`}>
-          <img src={img_src} alt="temp image" />
+          <img src={img_src_small} alt="temp image" />
         </Link>
       </div>
       <div className="carousel-title-container">
@@ -28,7 +28,7 @@ export const Carousel_Item = ({
 Carousel_Item.propTypes = {
   _id: PropTypes.number,
   team: PropTypes.string,
-  img_src: PropTypes.string.isRequired,
+  img_src_small: PropTypes.string.isRequired,
   client_name: PropTypes.string.isRequired,
   project_title: PropTypes.string.isRequired,
   completion_year: PropTypes.string.isRequired,

@@ -12,8 +12,8 @@ import Loading from "../../Loading/Loading";
 const ProjectDetails = () => {
   const { id, team } = useParams();
   const { lang } = useContext(LanguageContext);
-  const projects_page = lang.projects_page;
 
+  const projects_page = lang.projects_page;
   const project = projects_page.carousels.slides[team].find(
     (item) => item._id == id
   );

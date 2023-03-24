@@ -1,18 +1,37 @@
 import { Carousel_Item } from "../pages/Projects/TeamProjects/ProjectCarousel/Carousel_Item";
 
 import Qteatteri from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI.webp";
-import Oodi from "../pages/Projects/assets/carousel/MEDIA_OODI_SMALL.webp";
-import MoiPanda from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
-import RadioHelsinki from "../pages/Projects/assets/carousel/MEDIA_RADIOHELSINKI_SMALL.webp";
-import Henkilökuvaus from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
+import Qteatteri_small from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI_SMALL.webp";
 
-import Pilvipalvelu from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
-import Virtualisointi from "../pages/Projects/assets/carousel/ICT_VIRTUALISOINTIPROJEKTI_SMALL.webp";
-import Tietoliikenne from "../pages/Projects/assets/carousel/ICT_TIETOLIIKENNEKAAPPI_SMALL.webp";
+import Oodi from "../pages/Projects/assets/carousel/MEDIA_OODI.webp";
+import Oodi_small from "../pages/Projects/assets/carousel/MEDIA_OODI_SMALL.webp";
 
-import Digirasti from "../pages/Projects/assets/carousel/SOFTA_DIGIRASTI_SMALL.webp";
-import Liikuntakoutsaus from "../pages/Projects/assets/carousel/SOFTA_LIIKUNTAKOUTSAUS_SMALL.webp";
-import SoteApp from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP_SMALL.webp";
+import MoiPanda from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA.webp";
+import MoiPanda_small from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
+
+import RadioHelsinki from "../pages/Projects/assets/carousel/MEDIA_RADIOHELSINKI.webp";
+import RadioHelsinki_small from "../pages/Projects/assets/carousel/MEDIA_RADIOHELSINKI_SMALL.webp";
+
+import Henkilökuvaus from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
+import Henkilökuvaus_small from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
+
+import Pilvipalvelu from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU.webp";
+import Pilvipalvelu_small from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
+
+import Virtualisointi from "../pages/Projects/assets/carousel/ICT_VIRTUALISOINTIPROJEKTI.webp";
+import Virtualisointi_small from "../pages/Projects/assets/carousel/ICT_VIRTUALISOINTIPROJEKTI_SMALL.webp";
+
+import Tietoliikenne from "../pages/Projects/assets/carousel/ICT_TIETOLIIKENNEKAAPPI.webp";
+import Tietoliikenne_small from "../pages/Projects/assets/carousel/ICT_TIETOLIIKENNEKAAPPI_SMALL.webp";
+
+import Digirasti from "../pages/Projects/assets/carousel/SOFTA_DIGIRASTI.webp";
+import Digirasti_small from "../pages/Projects/assets/carousel/SOFTA_DIGIRASTI_SMALL.webp";
+
+import Liikuntakoutsaus from "../pages/Projects/assets/carousel/SOFTA_LIIKUNTAKOUTSAUS.webp";
+import Liikuntakoutsaus_small from "../pages/Projects/assets/carousel/SOFTA_LIIKUNTAKOUTSAUS_SMALL.webp";
+
+import SoteApp from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP.webp";
+import SoteApp_small from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP_SMALL.webp";
 
 export const en = {
   header: {
@@ -241,6 +260,7 @@ export const en = {
             project_title: "Storytheater-video",
             completion_year: "2023",
             img_src: Qteatteri,
+            img_src_small: Qteatteri_small,
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -254,6 +274,7 @@ export const en = {
             project_title: "Photoshoot",
             completion_year: "2023",
             img_src: Oodi,
+            img_src_small: Oodi_small,
             alt: "Oodi photography project image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -267,6 +288,7 @@ export const en = {
             project_title: "Media & Design",
             completion_year: "2023",
             img_src: MoiPanda,
+            img_src_small: MoiPanda_small,
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -280,6 +302,7 @@ export const en = {
             project_title: "Sound Design",
             completion_year: "2023",
             img_src: RadioHelsinki,
+            img_src_small: RadioHelsinki_small,
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -293,6 +316,7 @@ export const en = {
             project_title: "Henkilökuvaus",
             completion_year: "2023",
             img_src: Henkilökuvaus,
+            img_src_small: Henkilökuvaus_small,
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -308,6 +332,7 @@ export const en = {
             project_title: "Azure Cloud Service",
             completion_year: "2023",
             img_src: Pilvipalvelu,
+            img_src_small: Pilvipalvelu_small,
             alt: "Pilvipalvelu project image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -321,6 +346,7 @@ export const en = {
             project_title: "Virtuliazation Project",
             completion_year: "2023",
             img_src: Virtualisointi,
+            img_src_small: Virtualisointi_small,
             alt: "Virtualisointi project image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -334,6 +360,7 @@ export const en = {
             project_title: "Telecommunications cabinet organization",
             completion_year: "2023",
             img_src: Tietoliikenne,
+            img_src_small: Tietoliikenne_small,
             alt: "Tietoliikenne project image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -349,6 +376,7 @@ export const en = {
             project_title: "Digirasti",
             completion_year: "2023",
             img_src: Digirasti,
+            img_src_small: Digirasti_small,
             alt: "Digirasti project image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -362,6 +390,7 @@ export const en = {
             project_title: "Liikuntakoutsaus",
             completion_year: "2023",
             img_src: Liikuntakoutsaus,
+            img_src_small: Liikuntakoutsaus_small,
             alt: "Liikuntakoutsaus project image",
             link: "https://virittamohelsinki.fi/",
             description:
@@ -375,6 +404,7 @@ export const en = {
             project_title: "Aina mukana (sote-app)",
             completion_year: "2023",
             img_src: SoteApp,
+            img_src_small: SoteApp_small,
             alt: "Sote-App project image",
             link: "https://virittamohelsinki.fi/",
             description:
