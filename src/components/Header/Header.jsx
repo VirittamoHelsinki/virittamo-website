@@ -18,171 +18,89 @@ import { Hamburger_X } from "./Hamburger";
 export const Header = () => {
   const { lang, setLocale, fi } = useContext(LanguageContext);
   const { home_page, projects, stories, contact } = lang.header;
-
-  // hamburger menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const handleClick = () => setIsMenuOpen(!isMenuOpen);
+
+  const navLinks = (
+    <ul className="header__nav--list">
+      <li className="header__nav--list-item">
+        <a href="/">{home_page}</a>
+      </li>
+      <li className="header__nav--list-item">
+        <a href="/projects">{projects}</a>
+      </li>
+      <li className="header__nav--list-item">
+        <a href="/stories">{stories}</a>
+      </li>
+      <li className="header__nav--list-item">
+        <a href="/contact">{contact}</a>
+      </li>
+    </ul>
+  );
+
+  const languageButton = (
+    <button
+      onClick={() => {
+        setLocale(lang === fi ? "en" : "fi");
+        localStorage.setItem("virittamo-lang", lang === fi ? "en" : "fi");
+      }}
+    >
+      {lang === fi ? "EN" : "FI"}
+    </button>
+  );
+
+  const socialIcons = (
+    <section className="header__socials">
+      <a
+        href="https://www.facebook.com/virittamohelsinki/"
+        alt="Virittämö Facebook Link"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Facebook_icon className="social-icon" />
+      </a>
+      <a
+        href="https://www.linkedin.com/company/virittamohelsinki/"
+        alt="Virittämö Linkedin Link"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Linkedin_icon className="social-icon" />
+      </a>
+      <a
+        href="https://www.instagram.com/virittamohelsinki/"
+        alt="Virittämö Instagram Link"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Instagram_icon className="social-icon" />
+      </a>
+      <div className="header__language">{languageButton}</div>
+    </section>
+  );
 
   return (
     <main className="header__wrapper">
       <div className="header__container">
         <img src={VirittamoLogo} alt="Virittämö Helsinki" />
-        {/* nav links */}
-        <nav className="header__nav">
-          <ul className="header__nav--list">
-            <li className="header__nav--list-item">
-              <a href="/">{home_page}</a>
-            </li>
-            <li className="header__nav--list-item">
-              <a href="/projects">{projects}</a>
-            </li>
-            <li className="header__nav--list-item">
-              <a href="/stories">{stories}</a>
-            </li>
-            <li className="header__nav--list-item">
-              <a href="/contact">{contact}</a>
-            </li>
-          </ul>
-        </nav>
-        {/* virittämö social icons */}
-        <section className="header__socials">
-          <a
-            href="https://www.facebook.com/virittamohelsinki/"
-            alt="Virittämö Facebook Link"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Facebook_icon className="social-icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/virittamohelsinki/"
-            alt="Virittämö Linkedin Link"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Linkedin_icon className="social-icon" />
-          </a>
-          <a
-            href="https://www.instagram.com/virittamohelsinki/"
-            alt="Virittämö Instagram Link"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Instagram_icon className="social-icon" />
-          </a>
-          {/* fi/en language switch button */}
-          <div className="header__language">
-            {lang === fi ? (
-              <a
-                href="#"
-                onClick={() => {
-                  setLocale("en");
-                  localStorage.setItem("virittamo-lang", "en");
-                }}
-              >
-                EN
-              </a>
-            ) : (
-              <a
-                href="#"
-                onClick={() => {
-                  setLocale("fi");
-                  localStorage.setItem("virittamo-lang", "fi");
-                }}
-              >
-                FI
-              </a>
-            )}
-          </div>
-        </section>
+        <nav className="header__nav">{navLinks}</nav>
+        {socialIcons}
         {isMenuOpen ? (
           <Hamburger_X onClick={handleClick} />
         ) : (
           <Hamburger onClick={handleClick} />
         )}
       </div>
-      {/* hamburger manu */}
       {isMenuOpen && (
         <motion.div
           className="header__hamburgerMenu"
           initial={{ opacity: 0, ease: "easeInOut" }}
           animate={{ opacity: 1, ease: "easeInOut" }}
-          transition={{
-            ease: "easeInOut",
-            duration: 0.5,
-          }}
+          transition={{ ease: "easeInOut", duration: 0.5 }}
         >
-          {/* nav links */}
-          <nav className="header__nav">
-            <ul className="header__nav--list">
-              <li className="header__nav--list-item">
-                <a href="/">{home_page}</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="/projects">{projects}</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="/stories">{stories}</a>
-              </li>
-              <li className="header__nav--list-item">
-                <a href="/contact">{contact}</a>
-              </li>
-            </ul>
-          </nav>
-          {/* virittämö social icons */}
-          <section className="header__socials">
-            <a
-              href="https://www.facebook.com/virittamohelsinki/"
-              alt="Virittämö Facebook Link"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Facebook_icon className="social-icon" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/virittamohelsinki/"
-              alt="Virittämö Linkedin Link"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Linkedin_icon className="social-icon" />
-            </a>
-            <a
-              href="https://www.instagram.com/virittamohelsinki/"
-              alt="Virittämö Instagram Link"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Instagram_icon className="social-icon" />
-            </a>
-            {/* fi/en language switch button */}
-            <div className="header__language">
-              {lang === fi ? (
-                <a
-                  href="#"
-                  onClick={() => {
-                    setLocale("en");
-                    localStorage.setItem("virittamo-lang", "en");
-                  }}
-                >
-                  EN
-                </a>
-              ) : (
-                <a
-                  href="#"
-                  onClick={() => {
-                    setLocale("fi");
-                    localStorage.setItem("virittamo-lang", "fi");
-                  }}
-                >
-                  FI
-                </a>
-              )}
-            </div>
-          </section>
+          <nav className="header__nav">{navLinks}</nav>
+          {socialIcons}
         </motion.div>
       )}
     </main>

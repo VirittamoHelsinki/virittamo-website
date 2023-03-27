@@ -90,14 +90,18 @@ main.header__wrapper {
       div.header__language {
         margin-left: 12px;
 
-        a {
+        button {
+          display: flex;
+          width: auto;
           color: $virittamo-black;
-          font-weight: bolder;
+          font-weight: bold;
+          font-size: 20px;
+          cursor: pointer;
           // transition
           transition: 0.1s ease-in-out;
         }
 
-        a:hover {
+        button:hover {
           color: $virittamo-pink;
         }
       }
@@ -205,14 +209,17 @@ main.header__wrapper {
       div.header__language {
         margin-left: 12px;
 
-        a {
+        button {
           color: $virittamo-black;
           font-weight: bolder;
+          font-size: 20px;
+          cursor: pointer;
+
           // transition
           transition: 0.1s ease-in-out;
         }
 
-        a:hover {
+        button:hover {
           color: $virittamo-pink;
         }
       }
