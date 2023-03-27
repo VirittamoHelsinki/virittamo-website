@@ -110,6 +110,12 @@ main.header__wrapper {
     @include responsive(tablet) {
       svg#header__hamburger {
         display: block;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+      }
+
+      svg#header__hamburger:hover {
+        fill: $virittamo-pink;
       }
     }
   }
@@ -119,7 +125,7 @@ main.header__wrapper {
     position: absolute;
     flex-direction: column;
     justify-content: space-between;
-    border-top: 1px solid $virittamo-black;
+    border-top: 3px solid $virittamo-light-violet;
     background: $virittamo-white;
     padding: 45px 10%;
     align-items: center;

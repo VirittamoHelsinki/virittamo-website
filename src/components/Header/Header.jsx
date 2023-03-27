@@ -1,5 +1,5 @@
 // import context
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
 
 // import icons from assets
@@ -13,22 +13,18 @@ import VirittamoLogo from "./assets/virittamo-helsinki.png";
 import { motion } from "framer-motion";
 
 import { Hamburger } from "./Hamburger";
+import { Hamburger_X } from "./Hamburger";
 
 export const Header = () => {
   const { lang, setLocale, fi } = useContext(LanguageContext);
   const { home_page, projects, stories, contact } = lang.header;
 
   // hamburger menu
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  useEffect(() => {
-    console.log(`toggled: ${isMenuOpen}`);
-  }, [isMenuOpen]);
 
   return (
     <main className="header__wrapper">
@@ -102,7 +98,11 @@ export const Header = () => {
             )}
           </div>
         </section>
-        <Hamburger onClick={handleClick} />
+        {isMenuOpen ? (
+          <Hamburger_X onClick={handleClick} />
+        ) : (
+          <Hamburger onClick={handleClick} />
+        )}
       </div>
       {/* hamburger manu */}
       {isMenuOpen && (
@@ -112,7 +112,7 @@ export const Header = () => {
           animate={{ opacity: 1, ease: "easeInOut" }}
           transition={{
             ease: "easeInOut",
-            duration: 0.75,
+            duration: 0.5,
           }}
         >
           {/* nav links */}
