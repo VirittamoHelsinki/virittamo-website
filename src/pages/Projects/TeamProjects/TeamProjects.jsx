@@ -8,20 +8,26 @@ export const TeamProjects = () => {
 
   const projects_page = lang.projects_page;
 
+  const projectCarousels = [
+    {
+      text: projects_page.carousels.text.media,
+      slides: projects_page.carousels.slides.media,
+    },
+    {
+      text: projects_page.carousels.text.ict,
+      slides: projects_page.carousels.slides.ict,
+    },
+    {
+      text: projects_page.carousels.text.softa,
+      slides: projects_page.carousels.slides.softa,
+    },
+  ];
+
   return (
     <section className="projectPage__teams--container">
-      <ProjectCarousel
-        text={projects_page.carousels.text.media}
-        slides={projects_page.carousels.slides.media}
-      />
-      <ProjectCarousel
-        text={projects_page.carousels.text.ict}
-        slides={projects_page.carousels.slides.ict}
-      />
-      <ProjectCarousel
-        text={projects_page.carousels.text.softa}
-        slides={projects_page.carousels.slides.softa}
-      />
+      {projectCarousels.map((item, index) => (
+        <ProjectCarousel key={index} text={item.text} slides={item.slides} />
+      ))}
     </section>
   );
 };
