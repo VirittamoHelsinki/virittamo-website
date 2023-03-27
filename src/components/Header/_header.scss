@@ -1,6 +1,8 @@
 main.header__wrapper {
   display: flex;
+  position: relative;
   padding: 45px 10% 25px;
+  background: $virittamo-white;
   justify-content: center;
   margin-bottom: -100px;
   align-items: center;
@@ -21,10 +23,6 @@ main.header__wrapper {
     align-items: flex-end;
     height: 100%;
     width: 100%;
-
-    @include responsive(mobile) {
-      justify-content: center;
-    }
 
     img {
       height: 75px;
@@ -67,9 +65,118 @@ main.header__wrapper {
       height: 30px;
       gap: 16px;
 
-      @include responsive(mobile) {
+      @include responsive(tablet) {
         display: none;
       }
+
+      a {
+        height: 100%;
+        width: 30px;
+
+        svg.social-icon {
+          color: $virittamo-black;
+          height: 100%;
+          width: auto;
+          // transition
+          transition: 0.1s ease-in-out;
+        }
+
+        svg.social-icon:hover {
+          color: $dark-link-hover;
+        }
+      }
+
+      // fi/en language switch button
+      div.header__language {
+        margin-left: 12px;
+
+        a {
+          color: $virittamo-black;
+          font-weight: bolder;
+          // transition
+          transition: 0.1s ease-in-out;
+        }
+
+        a:hover {
+          color: $virittamo-pink;
+        }
+      }
+    }
+
+    svg#header__hamburger {
+      display: none;
+    }
+
+    @include responsive(tablet) {
+      svg#header__hamburger {
+        display: block;
+      }
+    }
+  }
+
+  div.header__hamburgerMenu {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 1px solid $virittamo-black;
+    background: $virittamo-white;
+    padding: 45px 10%;
+    align-items: center;
+    bottom: -175px;
+    height: 175px;
+    width: 100%;
+
+    @media only screen and (min-width: 1080px) {
+      display: none;
+    }
+
+    @include responsive(mobile) {
+      bottom: -325px;
+      height: 325px;
+    }
+
+    // nav links
+    nav.header__nav {
+      margin-bottom: 3px;
+      ul.header__nav--list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 42px;
+
+        @include responsive(large_mobile) {
+          gap: 21px;
+        }
+
+        @include responsive(mobile) {
+          flex-direction: column;
+        }
+
+        li.header__nav--list-item {
+          a {
+            font-weight: bolder;
+            font-size: $font-size-a;
+            color: $virittamo-black;
+            // transition
+            transition: 0.1s ease-in-out;
+          }
+
+          a:hover {
+            color: $virittamo-pink;
+          }
+        }
+      }
+    }
+
+    // virittämö social icons
+    section.header__socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3px;
+      height: 30px;
+      gap: 16px;
 
       a {
         height: 100%;
