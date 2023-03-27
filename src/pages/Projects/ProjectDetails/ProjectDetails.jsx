@@ -13,8 +13,10 @@ const ProjectDetails = () => {
   const { id, team } = useParams();
   const { lang } = useContext(LanguageContext);
 
+  console.log(id, team);
+
   const projects_page = lang.projects_page;
-  const project = projects_page.carousels.slides[team].find(
+  const project = projects_page.carousels.slides[team]?.find(
     (item) => item._id == id
   );
 

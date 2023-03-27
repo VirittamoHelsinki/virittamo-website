@@ -55,7 +55,9 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
   );
 
   const handlePrevClick = () => {
-    setActiveIndex(activeIndex - 1);
+    if (activeIndex > 0) {
+      setActiveIndex(activeIndex - 1);
+    }
   };
 
   const handleNextClick = () => {
@@ -99,15 +101,17 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
     setTouchEnd(e.changedTouches[0].clientX);
 
     if (touchEnd - touchStart > 50) {
-      // Swipe right
       handlePrevClick();
     }
 
     if (touchStart - touchEnd > 50) {
-      // Swipe left
       handleNextClick();
     }
   };
+
+  useEffect(() => {
+    console.log(activeIndex);
+  }, [activeIndex]);
 
   const { title = "", description = "", contact = "" } = text;
 
