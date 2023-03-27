@@ -36,6 +36,14 @@ main.storiesPage__wrapper {
       width: 60%;
       gap: 30px;
 
+      @include responsive(desktop) {
+        width: 75%;
+      }
+
+      @include responsive(tablet) {
+        width: 75%;
+      }
+
       img {
         background: $virittamo-pink;
         border-radius: 50%;
@@ -55,7 +63,12 @@ main.storiesPage__wrapper {
       div.storiesPage__list--item-text {
         display: flex;
         flex-direction: column;
+        text-align: justify;
         gap: 30px;
+
+        @include responsive(tablet) {
+          text-align: center;
+        }
       }
     }
   }

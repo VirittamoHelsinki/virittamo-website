@@ -8,9 +8,9 @@ export const Stories_Item = ({ alt, img_src, full_name, story_text }) => {
       <p>{full_name}</p>
       <div id="pink-bar"></div>
       <div className="storiesPage__list--item-text">
-        {story_text.map((text_part, index) => {
-          return <p key={index}>{text_part}</p>;
-        })}
+        {story_text.map((text_part, index) => (
+          <p key={index}>{text_part}</p>
+        ))}
       </div>
     </li>
   );

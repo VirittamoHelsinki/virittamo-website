@@ -20,17 +20,15 @@ const Stories = () => {
       return null;
     }
 
-    return stories.map((item, index) => {
-      return (
-        <Stories_Item
-          key={index}
-          alt={item.alt}
-          img_src={item.img_src}
-          full_name={item.full_name}
-          story_text={item.story_text}
-        />
-      );
-    });
+    return stories.map((item, index) => (
+      <Stories_Item
+        key={index}
+        alt={item.alt}
+        img_src={item.img_src}
+        full_name={item.full_name}
+        story_text={item.story_text}
+      />
+    ));
   };
 
   return (
