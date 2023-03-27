@@ -20,7 +20,7 @@ const Stories = () => {
       return null;
     }
 
-    return stories.map(function (item, index) {
+    return stories.map((item, index) => {
       return (
         <Stories_Item
           key={index}
