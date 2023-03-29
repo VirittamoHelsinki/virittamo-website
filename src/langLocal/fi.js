@@ -33,6 +33,10 @@ import Liikuntakoutsaus_small from "../pages/Projects/assets/carousel/SOFTA_LIIK
 import SoteApp from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP.webp";
 import SoteApp_small from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP_SMALL.webp";
 
+import Andrei from "../pages/Stories/assets/andrei.webp";
+import Eetu from "../pages/Stories/assets/eetu.webp";
+import Kari from "../pages/Stories/assets/kari.webp";
+
 export const fi = {
   header: {
     _comment: "Otsikkotekstimuuttujat",
@@ -420,7 +424,7 @@ export const fi = {
     stories: [
       {
         alt: "Kuva Andrei Vlassenko:sta",
-        img_src: "",
+        img_src: Andrei,
         full_name: "Andrei Vlassenko",
         story_text: [
           "Tarina Virittämö Helsingin kanssa alkoi ennen kuin edes aloitin työt. Hain ensin, mutta en saanut paikkaa. Edellisen ICT-tiimin johtajan neuvojen ansiosta opiskelin pilviteknologioita enemmän ja hain uudelleen. Vaikka haastattelussa kamppailin yhä suomen kielen kanssa, minut palkattiin. Aluksi olin melko hiljainen, ujo ja epävarma, mutta sain työskennellä yhden järjestelmämme kanssa.",
@@ -430,7 +434,7 @@ export const fi = {
       },
       {
         alt: "Kuva Eetu Lehmuksesta:sta, entinen Virittämön työntekijä.",
-        img_src: "",
+        img_src: Eetu,
         full_name: "Eetu Lehmus",
         story_text: [
           "Valmistuin aikoinaan datanomiksi, jonka jälkeen pääsin Oulun ammattikorkeakouluun opiskelemaan tieto- ja viestintätekniikkaa. Opiskelujen viimeisenä vuonna siirryin mobiilipelialalle pelisuunnittelijaksi ja muutin Helsinkiin. Kesken jääneiden opintojen jälkeen pidin parin vuoden tauon ja haaveilin urasta ohjelmoijana. Törmäsin sattumalta Virittämön rekryilmoitukseen, jonka kautta sain elämäni ensimmäisen ohjelmoijan työn. Virittämön softatiimi vaikutti juuri oikealta paikalta aloittaa toivomissani tehtävissä.",

@@ -33,6 +33,10 @@ import Liikuntakoutsaus_small from "../pages/Projects/assets/carousel/SOFTA_LIIK
 import SoteApp from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP.webp";
 import SoteApp_small from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP_SMALL.webp";
 
+import Andrei from "../pages/Stories/assets/andrei.webp";
+import Eetu from "../pages/Stories/assets/eetu.webp";
+import Kari from "../pages/Stories/assets/kari.webp";
+
 export const en = {
   header: {
     _comment: "Header text variables",
