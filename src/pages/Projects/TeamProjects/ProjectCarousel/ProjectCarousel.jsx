@@ -65,9 +65,16 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
   };
 
   const renderActiveItems = () => {
-    const activeItems = slides
+    let activeItems = slides
       .slice(activeIndex, activeIndex + numVisibleSlides)
       .filter(Boolean);
+
+    if (activeIndex === slides.length) {
+      setActiveIndex(activeIndex - 1);
+      activeItems = slides
+        .slice(activeIndex - 1, activeIndex - 1 + numVisibleSlides)
+        .filter(Boolean);
+    }
 
     return activeItems.map((activeItem, index) => {
       return <Slide key={index} {...activeItem} />;
@@ -87,31 +94,28 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
       setNumVisibleSlides(getNumVisibleSlides(slides, window.innerWidth));
     };
     window.addEventListener("resize", handleResize);
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, [slides]);
 
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
+  // const [touchStart, setTouchStart] = useState(0);
+  // const [touchEnd, setTouchEnd] = useState(0);
 
-  const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
+  // const handleTouchStart = (e) => {
+  //   setTouchStart(e.targetTouches[0].clientX);
+  // };
 
-  const handleTouchEnd = (e) => {
-    setTouchEnd(e.changedTouches[0].clientX);
+  // const handleTouchEnd = (e) => {
+  //   setTouchEnd(e.changedTouches[0].clientX);
 
-    if (touchEnd - touchStart > 50) {
-      handlePrevClick();
-    }
+  //   if (touchEnd - touchStart > 50) {
+  //     handlePrevClick();
+  //   }
 
-    if (touchStart - touchEnd > 50) {
-      handleNextClick();
-    }
-  };
-
-  useEffect(() => {
-    console.log(activeIndex);
-  }, [activeIndex]);
+  //   if (touchStart - touchEnd > 50) {
+  //     handleNextClick();
+  //   }
+  // };
 
   const { title = "", description = "", contact = "" } = text;
 
@@ -129,11 +133,7 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
         >
           <BsArrowLeftCircle className="arrow-button--icon" />
         </button>
-        <div
-          className="projectPage__teams--carousel-list"
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
+        <div className="projectPage__teams--carousel-list">
           {slides.length > 0 ? renderActiveItems() : <LoadingSlides />}
         </div>
         <button

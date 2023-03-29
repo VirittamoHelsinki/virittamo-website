@@ -118,6 +118,7 @@ main.projectPage__wrapper {
       justify-content: center;
       align-items: center;
       margin: 35px 0px 0px;
+      position: relative;
       padding: 0 3% 0;
       height: auto;
       width: 100%;
@@ -196,13 +197,29 @@ main.projectPage__wrapper {
         min-width: 35px;
         width: 35px;
 
-        @include responsive(large_mobile) {
-          display: none;
-        }
-
         svg.arrow-button--icon {
           height: 100%;
           width: 100%;
+
+          @include responsive(large_mobile) {
+            fill: $virittamo-white;
+            background: $virittamo-black;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      @include responsive(large_mobile) {
+        button:first-of-type {
+          position: absolute;
+          top: 170px;
+          left: 25px;
+        }
+
+        button:last-of-type {
+          position: absolute;
+          top: 170px;
+          right: 25px;
         }
       }
     }

@@ -422,7 +422,7 @@ export const en = {
     stories: [
       {
         alt: "Picture of Andrei Vlassenko",
-        img_src: "",
+        img_src: Andrei,
         full_name: "Andrei Vlassenko",
         story_text: [
           "My story with Virittämö Helsinki started before I even got hired. I first applied and didn't get the job, but thanks to the previous ICT team leaders advice, I studied cloud technologies more and applied again. Even though I still struggled with Finnish language in the interview, I got hired. At first I was pretty quiet, shy and unsure, but I got to work with one of our systems.",
@@ -432,7 +432,7 @@ export const en = {
       },
       {
         alt: "Picture of Eetu Lehmus, an ex Virittämö employee.",
-        img_src: "",
+        img_src: Eetu,
         full_name: "Eetu Lehmus",
         story_text: [
           "I graduated as a data clerk and then got into Oulu University of Applied Sciences to study information and communication technology. In the last year of my studies, I switched to the mobile gaming industry as a game designer and moved to Helsinki. After taking a break for a couple of years due to unfinished studies, I dreamt of a career as a programmer. By chance, I came across a job advertisement from Virittämö and got my first programming job. Virittämö's software team seemed like the perfect place to start in the desired position.",
