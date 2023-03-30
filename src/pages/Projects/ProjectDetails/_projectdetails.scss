@@ -22,7 +22,18 @@ main.projectDetails__wrapper {
     }
 
     @include responsive(large_mobile) {
-      font-size: 52px;
+      line-height: 46px;
+      font-size: 46px;
+    }
+
+    @include responsive(mobile) {
+      line-height: 36px;
+      font-size: 36px;
+    }
+
+    @include responsive(small_mobile) {
+      line-height: 30px;
+      font-size: 30px;
     }
   }
 
@@ -35,6 +46,18 @@ main.projectDetails__wrapper {
 
     @include responsive(tablet) {
       font-size: 38px;
+    }
+
+    @include responsive(large_mobile) {
+      font-size: 34px;
+    }
+
+    @include responsive(mobile) {
+      font-size: 28px;
+    }
+
+    @include responsive(small_mobile) {
+      font-size: 24px;
     }
   }
 
@@ -60,10 +83,11 @@ main.projectDetails__wrapper {
 
     @include responsive(tablet) {
       margin-top: 75px;
+      gap: 10px;
     }
 
     @include responsive(large_mobile) {
-      margin-top: 50px;
+      gap: 5px;
     }
 
     p {
@@ -80,10 +104,20 @@ main.projectDetails__wrapper {
       font-weight: 500;
       margin-top: 50px;
       font-size: 20px;
-      width: 55%;
+      width: 60%;
 
       @include responsive(tablet) {
+        width: 70%;
+        font-size: 18px;
         margin-top: 25px;
+      }
+
+      @include responsive(large_mobile) {
+        font-size: 16px;
+      }
+
+      @include responsive(mobile) {
+        font-size: 14px;
       }
     }
   }

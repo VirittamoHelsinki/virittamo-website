@@ -23,10 +23,18 @@ main.storiesPage__wrapper {
     p {
       font-size: $font-size-subtext;
       text-align: center;
-      width: 50%;
+      width: 35%;
+
+      @include responsive(desktop) {
+        width: 45%;
+      }
 
       @include responsive(tablet) {
-        width: 75%;
+        width: 60%;
+      }
+
+      @include responsive(large_mobile) {
+        width: 70%;
       }
     }
   }
@@ -82,11 +90,6 @@ main.storiesPage__wrapper {
         flex-direction: column;
         text-align: justify;
         margin-bottom: 25px;
-        gap: 30px;
-
-        @include responsive(tablet) {
-          text-align: center;
-        }
       }
     }
   }
