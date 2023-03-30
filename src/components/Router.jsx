@@ -21,6 +21,7 @@ const Router = () => {
     <Suspense fallback={<Loading />}>
       <Routes key={pathname} location={useLocation()}>
         <Route path="/" element={<Home />} />
+        <Route path="/:contact" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:team/:id" element={<ProjectDetails />} />
         <Route path="/stories" element={<Stories />} />

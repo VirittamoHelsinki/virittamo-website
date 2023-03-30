@@ -1,6 +1,7 @@
 // import context
-import { useContext, useState, Suspense } from "react";
+import { useContext, useState, useEffect, useRef, Suspense } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
+import { useParams } from "react-router-dom";
 import Loading from "../Loading/Loading";
 
 import PropTypes from "prop-types";
@@ -54,7 +55,19 @@ const TeamsItem = (props) => {
 };
 
 const HomePage = () => {
+  const { contact } = useParams();
+  console.log(contact);
   const { lang } = useContext(LanguageContext);
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    window.onload = () => {
+      if (contact == ":contact") {
+        scrollRef.current.scrollIntoView();
+      }
+    };
+    console.log("lol");
+  }, []);
 
   const {
     title,
@@ -164,7 +177,7 @@ const HomePage = () => {
         </section>
         <Partners />
         <Footer>
-          <h2>{contact_details.title}</h2>
+          <h2 ref={scrollRef}>{contact_details.title}</h2>
           <div className="footer__contacts">
             <ul className="footer__contacts--list">
               {contact_details.team.map((item, index) => (

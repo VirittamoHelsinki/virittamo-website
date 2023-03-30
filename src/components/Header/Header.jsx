@@ -34,7 +34,7 @@ export const Header = () => {
         <a href="/stories">{stories}</a>
       </li>
       <li className="header__nav--list-item">
-        <a href="/contact">{contact}</a>
+        <a href="/:contact">{contact}</a>
       </li>
     </ul>
   );

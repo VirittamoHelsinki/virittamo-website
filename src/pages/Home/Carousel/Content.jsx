@@ -1,5 +1,5 @@
 import Companies from "./SubComponents/Companies";
-import Instagram from "./SubComponents/Instagram";
+// import Instagram from "./SubComponents/Instagram";
 import Article from "./SubComponents/Article";
 import Video from "./SubComponents/Video";
 import Image from "./SubComponents/Image";
@@ -23,9 +23,9 @@ export const slides = [
       "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     link: "https://virittamohelsinki.fi/",
   },
-  {
-    component: Instagram,
-  },
+  // {
+  //   component: Instagram,
+  // },
   {
     component: Image,
     src: "https://images.pexels.com/photos/2567959/pexels-photo-2567959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
