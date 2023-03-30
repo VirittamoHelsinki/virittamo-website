@@ -5,10 +5,24 @@ main.storiesPage__wrapper {
   align-items: center;
   width: 100%;
   height: auto;
-  gap: 100px;
+  gap: 50px;
 
   @include responsive(mobile) {
     gap: 50px;
+  }
+  div.storiesPage__introduction {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    width: 100%;
+    gap: 25px;
+
+    p {
+      text-align: center;
+      width: 50%;
+    }
   }
 
   div#pink-bar {
@@ -23,9 +37,8 @@ main.storiesPage__wrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 100px;
     width: 100%;
-    gap: 100px;
+    gap: 60px;
 
     li.storiesPage__list--item {
       display: flex;
@@ -33,7 +46,7 @@ main.storiesPage__wrapper {
       flex-direction: column;
       align-items: center;
       text-align: left;
-      width: 60%;
+      width: 50%;
       gap: 30px;
 
       @include responsive(desktop) {
@@ -65,6 +78,7 @@ main.storiesPage__wrapper {
         display: flex;
         flex-direction: column;
         text-align: justify;
+        margin-bottom: 25px;
         gap: 30px;
 
         @include responsive(tablet) {

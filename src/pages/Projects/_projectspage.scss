@@ -202,8 +202,8 @@ main.projectPage__wrapper {
           width: 100%;
 
           @include responsive(large_mobile) {
-            fill: $virittamo-white;
-            background: $virittamo-black;
+            fill: $virittamo-black;
+            background: $virittamo-white;
             border-radius: 50%;
           }
         }

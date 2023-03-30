@@ -7,7 +7,6 @@ import Loading from "../Loading/Loading";
 
 // import components
 import { Header } from "../../components/Header/Header";
-import { Partners } from "../../components/Partners/Partners";
 import { Footer } from "../../components/Footer/Footer";
 
 import { TeamProjects } from "./TeamProjects/TeamProjects";
@@ -25,9 +24,9 @@ const Projects = () => {
           <h2>{title}</h2>
           <p>{desc}</p>
         </section>
+        <div id="pink-bar"></div>
         <TeamProjects />
         <div id="pink-bar"></div>
-        <Partners />
         <Footer />
       </main>
     </Suspense>

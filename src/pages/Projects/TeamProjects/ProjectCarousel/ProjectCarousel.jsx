@@ -98,25 +98,6 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [slides]);
 
-  // const [touchStart, setTouchStart] = useState(0);
-  // const [touchEnd, setTouchEnd] = useState(0);
-
-  // const handleTouchStart = (e) => {
-  //   setTouchStart(e.targetTouches[0].clientX);
-  // };
-
-  // const handleTouchEnd = (e) => {
-  //   setTouchEnd(e.changedTouches[0].clientX);
-
-  //   if (touchEnd - touchStart > 50) {
-  //     handlePrevClick();
-  //   }
-
-  //   if (touchStart - touchEnd > 50) {
-  //     handleNextClick();
-  //   }
-  // };
-
   const { title = "", description = "", contact = "" } = text;
 
   return (

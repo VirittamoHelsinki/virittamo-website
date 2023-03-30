@@ -4,14 +4,13 @@ export const Stories_Item = ({ alt, img_src, full_name, story_text }) => {
   return (
     <li className="storiesPage__list--item">
       <img src={img_src} alt={alt} />
-      <h2>Tarinoita</h2>
-      <p>{full_name}</p>
-      <div id="pink-bar"></div>
+      <h3>{full_name}</h3>
       <div className="storiesPage__list--item-text">
         {story_text.map((text_part, index) => (
           <p key={index}>{text_part}</p>
         ))}
       </div>
+      <div id="pink-bar"></div>
     </li>
   );
 };
