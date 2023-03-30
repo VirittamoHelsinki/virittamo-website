@@ -51,10 +51,26 @@ main.footer__wrapper {
       font-size: $font-size-subtext;
     }
 
-    div#black-bar {
-      background: $virittamo-black;
-      width: 100px;
+    div#black-bar-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 4px;
+      width: 50%;
+
+      div#black-bar {
+        background: $virittamo-black;
+        height: 4px;
+        width: 65%;
+
+        @include responsive(desktop) {
+          width: 75%;
+        }
+
+        @include responsive(laptop) {
+          width: 85%;
+        }
+      }
     }
 
     ul.footer__contacts--list {
@@ -62,7 +78,6 @@ main.footer__wrapper {
       flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
-      padding: 0px 50px 0px;
       height: 500px;
       width: 100%;
       gap: 17.5px;
@@ -80,16 +95,31 @@ main.footer__wrapper {
         text-align: left;
         width: 50%;
 
-        div {
-          width: 50%;
+        @include responsive(large_mobile) {
+          text-align: center;
+          width: 100%;
         }
 
-        @include responsive(large_mobile) {
-          width: 100%;
+        div {
+          width: 65%;
+
+          @include responsive(desktop) {
+            width: 75%;
+          }
+
+          @include responsive(laptop) {
+            width: 85%;
+          }
         }
 
         p:first-of-type {
           font-weight: 900;
+        }
+
+        @include responsive(mobile) {
+          p {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -113,14 +143,33 @@ main.footer__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        width: auto;
+        align-items: center;
+        width: 50%;
 
         @include responsive(large_mobile) {
           width: 100%;
         }
 
+        div {
+          width: 65%;
+
+          @include responsive(desktop) {
+            width: 75%;
+          }
+
+          @include responsive(laptop) {
+            width: 85%;
+          }
+        }
+
         p:first-of-type {
           font-weight: 900;
+        }
+
+        @include responsive(mobile) {
+          p {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -181,6 +230,7 @@ main.footer__wrapper {
       justify-content: center;
       align-items: center;
       margin-bottom: 3px;
+      flex-wrap: wrap;
       gap: 16px;
 
       a {

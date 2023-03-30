@@ -178,7 +178,9 @@ const HomePage = () => {
                 </li>
               ))}
             </ul>
-            <div id="black-bar"></div>
+            <div id="black-bar-container">
+              <div id="black-bar"></div>
+            </div>
             <ul className="footer__locations--list">
               {locations.map((item, index) => (
                 <li key={index} className="footer__locations--list-item">

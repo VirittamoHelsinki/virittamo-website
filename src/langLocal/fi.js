@@ -35,7 +35,7 @@ import SoteApp_small from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP_SMALL
 
 import Andrei from "../pages/Stories/assets/andrei.webp";
 import Eetu from "../pages/Stories/assets/eetu.webp";
-import Kari from "../pages/Stories/assets/kari.webp";
+// import Kari from "../pages/Stories/assets/kari.webp";
 
 export const fi = {
   header: {
