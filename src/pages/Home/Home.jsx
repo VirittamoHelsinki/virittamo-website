@@ -56,7 +56,6 @@ const TeamsItem = (props) => {
 
 const HomePage = () => {
   const { contact } = useParams();
-  console.log(contact);
   const { lang } = useContext(LanguageContext);
   const scrollRef = useRef(null);
 
@@ -66,7 +65,6 @@ const HomePage = () => {
         scrollRef.current.scrollIntoView();
       }
     };
-    console.log("lol");
   }, []);
 
   const {
