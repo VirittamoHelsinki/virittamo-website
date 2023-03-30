@@ -10,6 +10,7 @@ main.storiesPage__wrapper {
   @include responsive(mobile) {
     gap: 50px;
   }
+
   div.storiesPage__introduction {
     display: flex;
     justify-content: center;
@@ -20,8 +21,13 @@ main.storiesPage__wrapper {
     gap: 25px;
 
     p {
+      font-size: $font-size-subtext;
       text-align: center;
       width: 50%;
+
+      @include responsive(tablet) {
+        width: 75%;
+      }
     }
   }
 
@@ -50,10 +56,11 @@ main.storiesPage__wrapper {
       gap: 30px;
 
       @include responsive(desktop) {
-        width: 75%;
+        width: 60%;
       }
 
       @include responsive(tablet) {
+        text-align: center;
         width: 75%;
       }
 
@@ -68,10 +75,6 @@ main.storiesPage__wrapper {
       h2 {
         font-size: 36px;
         padding: 0 5% 0;
-      }
-
-      p {
-        font-size: $font-size-subtext;
       }
 
       div.storiesPage__list--item-text {

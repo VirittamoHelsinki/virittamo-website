@@ -421,6 +421,9 @@ export const fi = {
     },
   },
   stories_page: {
+    _comment: "Text fields for the story page",
+    title: "Stories",
+    text: "We have had some amazing employees working for us. Here are some former employees' experiences from their time working with us.",
     stories: [
       {
         alt: "Kuva Andrei Vlassenko:sta",

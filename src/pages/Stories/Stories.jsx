@@ -13,7 +13,7 @@ import { Stories_Item } from "./Stories_Item";
 const Stories = () => {
   const { lang } = useContext(LanguageContext);
 
-  const { stories } = lang.stories_page;
+  const { title, text, stories } = lang.stories_page;
 
   const renderSlides = () => {
     if (!stories) {
@@ -36,15 +36,8 @@ const Stories = () => {
       <main className="storiesPage__wrapper">
         <Header />
         <div className="storiesPage__introduction">
-          <h2>Tarinat</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At et
-            incidunt facilis amet in minima non, placeat rem deleniti distinctio
-            corrupti atque sit harum aut officia. Enim laboriosam et, laborum
-            sed recusandae eos perspiciatis? Autem vitae ullam cupiditate. Saepe
-            officia delectus nulla dolores, aspernatur aliquid sunt eum libero
-            beatae totam.
-          </p>
+          <h2>{title}</h2>
+          <p>{text}</p>
         </div>
         <div id="pink-bar"></div>
         <ul className="storiesPage__list">{renderSlides()}</ul>
