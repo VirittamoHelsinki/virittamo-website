@@ -29,7 +29,7 @@ SlideIndicator.propTypes = {
   activeIndex: PropTypes.number.isRequired,
 };
 
-const getNumVisibleSlides = (slides, width) => {
+export const getNumVisibleSlides = (slides, width) => {
   switch (true) {
     case width <= 1080:
       return 1;
