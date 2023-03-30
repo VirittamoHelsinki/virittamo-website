@@ -2,6 +2,7 @@ section.carousel__container {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   max-height: 700px;
   height: 700px;
   padding: 0 2% 0;
@@ -16,8 +17,10 @@ section.carousel__container {
 
   @include responsive(large_mobile) {
     text-align: center;
+    padding: 0 0% 0;
     max-height: 500px;
     height: 500px;
+    gap: 0px;
   }
 
   @include responsive(mobile) {
@@ -39,6 +42,10 @@ section.carousel__container {
 
     @include responsive(desktop) {
       width: 85%;
+    }
+
+    @include responsive(large_mobile) {
+      width: 100%;
     }
 
     h3 {
@@ -105,11 +112,7 @@ section.carousel__container {
     }
 
     @include responsive(large_mobile) {
-      width: 80%;
-    }
-
-    @include responsive(mobile) {
-      width: 75%;
+      width: 100%;
     }
   }
 
@@ -203,11 +206,7 @@ section.carousel__container {
     }
 
     @include responsive(large_mobile) {
-      width: 80%;
-    }
-
-    @include responsive(mobile) {
-      width: 75%;
+      width: 100%;
     }
   }
 
@@ -229,17 +228,38 @@ section.carousel__container {
     cursor: pointer;
     height: 35px;
     width: 35px;
+    z-index: 2;
 
-    .arrow-button--icon {
+    svg.arrow-button--icon {
       color: $dark-link-hover;
       height: 100%;
       width: 100%;
       // transition
       transition: 0.1s ease-in-out;
+
+      @include responsive(large_mobile) {
+        fill: $virittamo-black;
+        background: $virittamo-white;
+        border-radius: 50%;
+      }
     }
 
-    .arrow-button--icon:hover {
+    svg.arrow-button--icon:hover {
       color: $virittamo-black;
+    }
+  }
+
+  @include responsive(large_mobile) {
+    button:first-of-type {
+      position: absolute;
+      top: 50%;
+      left: 25px;
+    }
+
+    button:last-of-type {
+      position: absolute;
+      top: 50%;
+      right: 25px;
     }
   }
 }
