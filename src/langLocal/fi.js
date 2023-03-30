@@ -421,9 +421,9 @@ export const fi = {
     },
   },
   stories_page: {
-    _comment: "Text fields for the story page",
-    title: "Stories",
-    text: "We have had some amazing employees working for us. Here are some former employees' experiences from their time working with us.",
+    _comment: "Tarinat sivun tekstikentät",
+    title: "Tarinat",
+    text: "Meillä on ollut mahtavia työntekijöitä töissä. Tässä muutamien entisten virittämöläisten kokemuksia työjaksostaan.",
     stories: [
       {
         alt: "Kuva Andrei Vlassenko:sta",

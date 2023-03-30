@@ -419,6 +419,9 @@ export const en = {
     },
   },
   stories_page: {
+    _comment: "Text fields for the story page",
+    title: "Stories",
+    text: "We have had some great employees working for us. Here are some former employees' experiences from their time working with us.",
     stories: [
       {
         alt: "Picture of Andrei Vlassenko",
