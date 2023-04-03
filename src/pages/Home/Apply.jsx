@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import { PinkBar } from "../../components/PinkBar";
+
 export const Apply = ({ apply }) => {
   const { title, description, qualifications } = apply;
   return (
@@ -16,7 +18,7 @@ export const Apply = ({ apply }) => {
           ))}
         </ul>
       </div>
-      <div id="pink-bar"></div>
+      <PinkBar />
     </section>
   );
 };

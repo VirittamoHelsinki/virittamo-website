@@ -6,6 +6,7 @@ import { useContext, Suspense } from "react";
 import Loading from "../Loading/Loading";
 
 import { Header } from "../../components/Header/Header";
+import { PinkBar } from "../../components/PinkBar";
 import { Footer } from "../../components/Footer/Footer";
 
 import { Stories_Item } from "./Stories_Item";
@@ -39,7 +40,7 @@ const Stories = () => {
           <h2>{title}</h2>
           <p>{text}</p>
         </div>
-        <div id="pink-bar"></div>
+        <PinkBar />
         <ul className="storiesPage__list">{renderSlides()}</ul>
         <Footer />
       </main>

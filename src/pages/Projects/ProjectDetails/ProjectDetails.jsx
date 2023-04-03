@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { Suspense } from "react";
 
 import { Header } from "../../../components/Header/Header";
+import { PinkBar } from "../../../components/PinkBar";
 import { Footer } from "../../../components/Footer/Footer";
 
 import Loading from "../../Loading/Loading";
@@ -38,7 +39,7 @@ const ProjectDetails = () => {
         <section className="projectDetails__image--container">
           <img src={project?.img_src} alt={project?.alt} />
         </section>
-        <div id="pink-bar"></div>
+        <PinkBar />
         <Footer />
       </main>
     </Suspense>

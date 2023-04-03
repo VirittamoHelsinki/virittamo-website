@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import { PinkBar } from "../../components/PinkBar";
+
 export const Stories_Item = ({ alt, img_src, full_name, story_text }) => {
   return (
     <li className="storiesPage__list--item">
@@ -10,7 +12,7 @@ export const Stories_Item = ({ alt, img_src, full_name, story_text }) => {
           <p key={index}>{text_part}</p>
         ))}
       </div>
-      <div id="pink-bar"></div>
+      <PinkBar />
     </li>
   );
 };
