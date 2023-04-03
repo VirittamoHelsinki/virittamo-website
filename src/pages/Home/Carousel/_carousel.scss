@@ -190,7 +190,7 @@ section.carousel__container {
 
   video.carousel__item--video {
     height: 100%;
-    width: 92.5%;
+    width: 100%;
     object-fit: cover;
 
     @include responsive(desktop) {
