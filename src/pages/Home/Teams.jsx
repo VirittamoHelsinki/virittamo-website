@@ -1,22 +1,29 @@
+// Importing useState hook and PropTypes library
 import { useState } from "react";
 import PropTypes from "prop-types";
+
+// Importing Background component
 import { Background } from "./Background/Background";
 
+// A functional component for the individual team item
 const TeamsItem = (props) => {
+  // Defining the showMore state and its setState function using useState hook
   const [showMore, setShowMore] = useState(false);
 
+  // Toggling the showMore state
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
 
+  // Slicing the text into a preview and the rest
   const textPreview = props.text
     ? props.text.slice(0, props.text.indexOf(".") + 1)
     : "";
-
   const textAll = props.text
     ? props.text.slice(props.text.indexOf(".") + 1)
     : "";
 
+  // Rendering the individual team item with the relevant props and state
   return (
     <div className="homePage__teams--containers-item ">
       <img src={props.img} alt={props.alt} />
@@ -32,6 +39,7 @@ const TeamsItem = (props) => {
   );
 };
 
+// Defining the propTypes for the TeamsItem component
 TeamsItem.propTypes = {
   img: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
@@ -41,7 +49,9 @@ TeamsItem.propTypes = {
   less: PropTypes.string.isRequired,
 };
 
+// The Teams component that renders all the teams on the home page
 export const Teams = ({ teams, mediaImg, ictImg, softaImg }) => {
+  // Defining the teams data that will be passed to the TeamsItem components
   const teamsData = [
     {
       id: "media",
@@ -66,6 +76,7 @@ export const Teams = ({ teams, mediaImg, ictImg, softaImg }) => {
     },
   ];
 
+  // Rendering the Teams component with the relevant props and state
   return (
     <section className="homePage__teams">
       <Background />
@@ -87,6 +98,7 @@ export const Teams = ({ teams, mediaImg, ictImg, softaImg }) => {
   );
 };
 
+// Defining the propTypes for the Teams component
 Teams.propTypes = {
   teams: PropTypes.shape({
     title: PropTypes.string.isRequired,

@@ -1,8 +1,8 @@
-// import context
+// Import LanguageContext and useContext hook from react
 import { LanguageContext } from "../../langLocal/context/langContext";
 import { useContext, Suspense } from "react";
 
-// import loading page to be used when page is loading
+// Import Loading component to be used while the page is loading
 import Loading from "../Loading/Loading";
 
 import { Header } from "../../components/Header/Header";
@@ -12,16 +12,21 @@ import { Footer } from "../../components/Footer/Footer";
 import { Stories_Item } from "./Stories_Item";
 
 const Stories = () => {
+  // Get the current language from LanguageContext
   const { lang } = useContext(LanguageContext);
 
+  // Extract the title, text, and stories from lang.stories_page
   const { title, text, stories } = lang.stories_page;
 
+  // Function to render stories as slides
   const renderSlides = () => {
     if (!stories) {
+      // If there are no stories, return null
       return null;
     }
 
     return stories.map((item, index) => (
+      // Render Stories_Item component for each story item
       <Stories_Item
         key={index}
         alt={item.alt}
@@ -33,6 +38,7 @@ const Stories = () => {
   };
 
   return (
+    // Use Suspense to show a loading component while the page is being loaded
     <Suspense fallback={<Loading />}>
       <main className="storiesPage__wrapper">
         <Header />

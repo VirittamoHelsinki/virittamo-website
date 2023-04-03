@@ -1,24 +1,27 @@
+// Import necessary modules
 import { useContext, useEffect } from "react";
-
 import { LanguageContext } from "../../../langLocal/context/langContext";
 import { useParams } from "react-router-dom";
 import { Suspense } from "react";
-
 import { Header } from "../../../components/Header/Header";
 import { PinkBar } from "../../../components/PinkBar";
 import { Footer } from "../../../components/Footer/Footer";
-
 import Loading from "../../Loading/Loading";
 
 const ProjectDetails = () => {
+  // Extract id and team from URL params
   const { id, team } = useParams();
-  const { lang } = useContext(LanguageContext);
 
+  // Get language data from context
+  const { lang } = useContext(LanguageContext);
   const projects_page = lang.projects_page;
+
+  // Get project data using id and team
   const project = projects_page.carousels.slides[team]?.find(
     (item) => item._id == id
   );
 
+  // Scroll to top of page on mount
   useEffect(() => {
     window.scrollTo({
       top: 0,
