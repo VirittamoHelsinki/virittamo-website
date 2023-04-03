@@ -192,23 +192,17 @@ main.projectPage__wrapper {
 
       button.arrow-button {
         cursor: pointer;
-        min-height: 35px;
         height: 35px;
-        min-width: 35px;
         width: 35px;
-
-        @include responsive(large_mobile) {
-          fill: $virittamo-white;
-          background: $virittamo-black;
-        }
 
         svg.arrow-button--icon {
           height: 100%;
           width: 100%;
 
           @include responsive(large_mobile) {
+            height: 75%;
+            width: 75%;
             fill: $virittamo-white;
-            background: $virittamo-black;
           }
         }
       }

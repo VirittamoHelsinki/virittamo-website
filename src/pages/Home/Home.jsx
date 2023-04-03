@@ -1,19 +1,18 @@
-// import context
+// Import libraries
 import { useContext, useEffect, useRef, Suspense } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
 import { useParams } from "react-router-dom";
 import Loading from "../Loading/Loading";
 
-// import assets
+// Import assets
 import HeaderImg from "./assets/main-header-img.webp";
 import ForEmployeeImg from "./assets/why-section-employee.webp";
 import ForCompanyImg from "./assets/why-section-company.webp";
-
 import MediaImg from "./assets/teams-section-media.webp";
 import IctImg from "./assets/teams-section-ict.webp";
 import SoftaImg from "./assets/teams-section-softa.webp";
 
-// import components
+// Import components
 import { Header } from "../../components/Header/Header";
 import { Introduction } from "./Introduction";
 import { Carousel } from "./Carousel/Carousel";
@@ -24,13 +23,21 @@ import { Partners } from "../../components/Partners/Partners";
 import { Contacts } from "./Contacts";
 import { Footer } from "../../components/Footer/Footer";
 
+// Import slide data
 import { slides } from "./Carousel/Content";
 
+// Define HomePage component
 const HomePage = () => {
+  // Get the "contact" parameter from the URL
   const { contact } = useParams();
+
+  // Get the current language from the LanguageContext
   const { lang } = useContext(LanguageContext);
+
+  // Create a reference to the scroll element
   const scrollRef = useRef(null);
 
+  // On page load, scroll to the Contact section if the "contact" parameter is present in the URL
   useEffect(() => {
     window.onload = () => {
       if (contact == ":contact") {
@@ -39,6 +46,7 @@ const HomePage = () => {
     };
   }, []);
 
+  // Destructure the language data for the home page
   const {
     title,
     text,
@@ -87,4 +95,5 @@ const HomePage = () => {
   );
 };
 
+// Export the HomePage component as the default export of this module
 export default HomePage;

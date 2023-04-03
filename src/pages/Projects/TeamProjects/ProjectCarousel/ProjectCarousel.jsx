@@ -1,34 +1,11 @@
+// Importing necessary modules and components
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-
-// import icons from react-icons
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import { FaCircle, FaRegCircle } from "react-icons/fa";
-
 import { LoadingSlides } from "../../../Home/Carousel/SubComponents/LoadingSlides";
+import { SlideIndicator } from "./SlideIndicator";
 
-const SlideIndicator = ({ numSlides, activeIndex }) => {
-  const indicators = Array.from({ length: numSlides }).map((_, i) =>
-    i === activeIndex ? (
-      <FaCircle
-        key={i}
-        className="projectPage__teams--carousel-indicator active"
-      />
-    ) : (
-      <FaRegCircle key={i} className="projectPage__teams--carousel-indicator" />
-    )
-  );
-
-  return (
-    <div className="projectPage__teams--carousel-indicators">{indicators}</div>
-  );
-};
-
-SlideIndicator.propTypes = {
-  numSlides: PropTypes.number.isRequired,
-  activeIndex: PropTypes.number.isRequired,
-};
-
+// Returns the number of visible slides based on the width of the viewport
 export const getNumVisibleSlides = (slides, width) => {
   switch (true) {
     case width <= 1080:
@@ -40,6 +17,7 @@ export const getNumVisibleSlides = (slides, width) => {
   }
 };
 
+// A helper component that renders the active slides
 const Slide = ({ component: Component, ...props }) => {
   return <Component {...props} />;
 };
@@ -48,27 +26,33 @@ Slide.propTypes = {
   component: PropTypes.elementType.isRequired,
 };
 
+// The main component that renders the project carousel
 export const ProjectCarousel = ({ text = {}, slides = [] }) => {
+  // State variables to keep track of the active slide index and the number of visible slides
   const [activeIndex, setActiveIndex] = useState(0);
   const [numVisibleSlides, setNumVisibleSlides] = useState(
     getNumVisibleSlides(slides, window.innerWidth)
   );
 
+  // Handler function for the previous arrow button
   const handlePrevClick = () => {
     if (activeIndex > 0) {
       setActiveIndex(activeIndex - 1);
     }
   };
 
+  // Handler function for the next arrow button
   const handleNextClick = () => {
     setActiveIndex(activeIndex + 1);
   };
 
+  // Function that returns an array of active slide components
   const renderActiveItems = () => {
     let activeItems = slides
       .slice(activeIndex, activeIndex + numVisibleSlides)
       .filter(Boolean);
 
+    // If the last slide is active, set the active index to the previous slide
     if (activeIndex === slides.length) {
       setActiveIndex(activeIndex - 1);
       activeItems = slides
@@ -76,11 +60,13 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
         .filter(Boolean);
     }
 
+    // Render the active slides
     return activeItems.map((activeItem, index) => {
       return <Slide key={index} {...activeItem} />;
     });
   };
 
+  // Ensure that the active index and the number of visible slides are within valid ranges
   useEffect(() => {
     if (activeIndex < 0) {
       setActiveIndex(0);
@@ -89,6 +75,7 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
     }
   }, [activeIndex, numVisibleSlides, slides]);
 
+  // Update the number of visible slides on window resize
   useEffect(() => {
     const handleResize = () => {
       setNumVisibleSlides(getNumVisibleSlides(slides, window.innerWidth));
@@ -98,6 +85,7 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [slides]);
 
+  // Extract text data from the props
   const { title = "", description = "", contact = "" } = text;
 
   return (

@@ -32,10 +32,10 @@ section.carousel__container {
   div.carousel__item--companies {
     display: flex;
     flex-direction: column;
+    background: $virittamo-light-violet;
     justify-content: center;
     align-items: center;
-    background: $virittamo-light-violet;
-    padding: 45px;
+    padding: 100px;
     height: 100%;
     width: 100%;
     gap: 45px;
@@ -57,12 +57,14 @@ section.carousel__container {
     ul.carousel__item--companies-list {
       display: flex;
       flex-direction: column;
+      justify-content: space-evenly;
+      padding-bottom: 15px;
+      overflow-y: hidden;
+      overflow-x: scroll;
       flex-wrap: wrap;
       height: 500px;
       width: 100%;
       gap: 9px;
-      overflow-y: hidden;
-      overflow-x: auto;
 
       @include responsive(desktop) {
         height: 550px;
@@ -90,6 +92,10 @@ section.carousel__container {
         @include responsive(large_mobile) {
           width: 100%;
         }
+      }
+
+      h4 {
+        font-weight: bold;
       }
     }
   }
@@ -146,7 +152,7 @@ section.carousel__container {
       );
       border-radius: 0 15px 0 0;
       position: absolute;
-      padding: 45px;
+      padding: 100px;
       max-height: 100%;
       max-width: 50%;
       gap: 11.25px;
@@ -238,9 +244,9 @@ section.carousel__container {
       transition: 0.1s ease-in-out;
 
       @include responsive(large_mobile) {
-        fill: $virittamo-black;
-        background: $virittamo-white;
-        border-radius: 50%;
+        height: 75%;
+        width: 75%;
+        fill: $virittamo-white;
       }
     }
 

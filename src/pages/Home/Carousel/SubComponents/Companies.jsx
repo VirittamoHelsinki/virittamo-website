@@ -1,4 +1,3 @@
-// import context
 import { LanguageContext } from "../../../../langLocal/context/langContext";
 import { motion } from "framer-motion";
 import { useContext } from "react";
@@ -6,7 +5,16 @@ import { useContext } from "react";
 const Companies = () => {
   const { lang } = useContext(LanguageContext);
 
-  const home_page = lang.home_page;
+  const { companies_list, employed_to_text } = lang.home_page;
+
+  const companiesByLetter = companies_list.reduce((result, company) => {
+    const firstLetter = company.charAt(0).toUpperCase();
+    if (!result[firstLetter]) {
+      result[firstLetter] = [];
+    }
+    result[firstLetter].push(company);
+    return result;
+  }, {});
 
   return (
     <motion.div
@@ -19,10 +27,17 @@ const Companies = () => {
         duration: 1,
       }}
     >
-      <h3>{home_page.employed_to_text}</h3>
+      <h3>{employed_to_text}</h3>
       <ul className="carousel__item--companies-list">
-        {home_page.companies_list.map((company, index) => (
-          <li key={index}>{company}</li>
+        {Object.entries(companiesByLetter).map(([letter, companies]) => (
+          <li key={letter}>
+            <h4>{letter}</h4>
+            <ul>
+              {companies.map((company, index) => (
+                <li key={index}>{company}</li>
+              ))}
+            </ul>
+          </li>
         ))}
       </ul>
     </motion.div>
