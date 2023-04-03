@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 // import icons from react-icons
-import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 
 import { LoadingSlides } from "../../../Home/Carousel/SubComponents/LoadingSlides";
@@ -112,7 +112,7 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
           onClick={handlePrevClick}
           disabled={activeIndex === 0}
         >
-          <BsArrowLeftCircle className="arrow-button--icon" />
+          <SlArrowLeft className="arrow-button--icon" />
         </button>
         <div className="projectPage__teams--carousel-list">
           {slides.length > 0 ? renderActiveItems() : <LoadingSlides />}
@@ -122,7 +122,7 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
           onClick={handleNextClick}
           disabled={activeIndex >= slides.length - numVisibleSlides}
         >
-          <BsArrowRightCircle className="arrow-button--icon" />
+          <SlArrowRight className="arrow-button--icon" />
         </button>
       </div>
     </div>

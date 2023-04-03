@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 // import icons from react-icons
-import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 import { LoadingSlides } from "./SubComponents/LoadingSlides";
 
@@ -70,14 +70,11 @@ export const Carousel = ({ slides }) => {
       onMouseLeave={handleMouseLeave}
     >
       <button className="arrow-button">
-        <BsArrowLeftCircle
-          className="arrow-button--icon"
-          onClick={handlePrevClick}
-        />
+        <SlArrowLeft className="arrow-button--icon" onClick={handlePrevClick} />
       </button>
       {slides ? renderActiveItem() : <LoadingSlides />}
       <button className="arrow-button">
-        <BsArrowRightCircle
+        <SlArrowRight
           className="arrow-button--icon"
           onClick={handleNextClick}
         />

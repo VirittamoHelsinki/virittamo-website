@@ -197,14 +197,18 @@ main.projectPage__wrapper {
         min-width: 35px;
         width: 35px;
 
+        @include responsive(large_mobile) {
+          fill: $virittamo-white;
+          background: $virittamo-black;
+        }
+
         svg.arrow-button--icon {
           height: 100%;
           width: 100%;
 
           @include responsive(large_mobile) {
-            fill: $virittamo-black;
-            background: $virittamo-white;
-            border-radius: 50%;
+            fill: $virittamo-white;
+            background: $virittamo-black;
           }
         }
       }
