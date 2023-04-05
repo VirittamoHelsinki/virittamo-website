@@ -195,13 +195,17 @@ main.projectPage__wrapper {
         height: 35px;
         width: 35px;
 
+        @include responsive(large_mobile) {
+          background: rgba(0, 0, 0, 0.1);
+        }
+
         svg.arrow-button--icon {
           height: 100%;
           width: 100%;
 
           @include responsive(large_mobile) {
-            height: 75%;
-            width: 75%;
+            height: 50%;
+            width: 50%;
             fill: $virittamo-white;
           }
         }

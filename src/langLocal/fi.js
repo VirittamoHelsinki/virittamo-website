@@ -416,6 +416,20 @@ export const fi = {
             description:
               "Sote-App on suunniteltu tarjoamaan terveydenhuollon työntekijöille mahdollisuuden arvioida potilaan tilannetta yksityiskohtaisesti. Sovellus kysyy työntekijältä potilaan tietoja, kuten sydämen sykettä, lämpötilaa ja muuta potilaan hyvinvointiin liittyvää tietoa, ja terveydenhuollon työntekijä voi arvioida potilaan tilan ja tarvittaessa tarjota tarvittavia hoitotoimenpiteitä. Sote-App on erittäin kätevä ja helppokäyttöinen, ja se tarjoaa terveydenhuollon työntekijöille mahdollisuuden tarjota parhaan mahdollisen hoidon potilailleen. Se on tärkeä apuväline terveydenhuollon työntekijöille, jotka haluavat tarjota tehokasta ja laadukasta hoitoa potilailleen.",
           },
+          {
+            _id: 4,
+            team: "softa",
+            component: Carousel_Item,
+            client_name: "Virittämö",
+            project_title: "Virittämö CRM",
+            completion_year: "2023",
+            img_src: SoteApp,
+            img_src_small: SoteApp_small,
+            alt: "Virittämö CRM project image",
+            link: "https://virittamohelsinki.fi/",
+            description:
+              "Virittämö CRM on digitaalinen palvelu, joka on suunniteltu avuksi Virittämön uraohjaajille. Palvelu tarjoaa erilaisia työkaluja ja toimintoja, jotka auttavat uraohjaajia tehtävässään. Virittämö CRM:n avulla uraohjaajat voivat tarjota verkossa toimivaa uraohjausta ja -valmennusta yksilöille sekä organisaatioille. Virittämö CRM:n tavoitteena on helpottaa uravalintoja ja urasuunnittelua tarjoamalla digitaalisia työkaluja ja henkilökohtaista tukea. ",
+          },
         ],
       },
     },

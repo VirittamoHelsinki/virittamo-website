@@ -236,6 +236,10 @@ section.carousel__container {
     width: 35px;
     z-index: 2;
 
+    @include responsive(large_mobile) {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
     svg.arrow-button--icon {
       color: $dark-link-hover;
       height: 100%;
@@ -244,8 +248,8 @@ section.carousel__container {
       transition: 0.1s ease-in-out;
 
       @include responsive(large_mobile) {
-        height: 75%;
-        width: 75%;
+        height: 50%;
+        width: 50%;
         fill: $virittamo-white;
       }
     }
