@@ -45,6 +45,7 @@ section.carousel__container {
     }
 
     @include responsive(large_mobile) {
+      padding: 50px;
       width: 100%;
     }
 
@@ -58,13 +59,13 @@ section.carousel__container {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      padding-bottom: 15px;
+      padding-bottom: 30px;
       overflow-y: hidden;
       overflow-x: scroll;
       flex-wrap: wrap;
       height: 500px;
       width: 100%;
-      gap: 9px;
+      gap: 15px;
 
       @include responsive(desktop) {
         height: 550px;
@@ -80,7 +81,7 @@ section.carousel__container {
         height: 450px;
       }
 
-      li {
+      li.carousel__item--companies-list-item {
         height: auto;
         width: 30%;
         line-height: 22px;
@@ -97,6 +98,26 @@ section.carousel__container {
       h4 {
         font-weight: bold;
       }
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #adadad3f;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: $virittamo-white;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: $virittamo-pink;
     }
   }
 

@@ -33,9 +33,15 @@ import Liikuntakoutsaus_small from "../pages/Projects/assets/carousel/SOFTA_LIIK
 import SoteApp from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP.webp";
 import SoteApp_small from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP_SMALL.webp";
 
+import VirittamoCRM from "../pages/Projects/assets/carousel/SOFTA_VIRITTAMO-CRM.webp";
+import VirittamoCRM_small from "../pages/Projects/assets/carousel/SOFTA_VIRITTAMO-CRM_SMALL.webp";
+
+import Muistojalki from "../pages/Projects/assets/carousel/SOFTA_MUISTOJALKI.webp";
+import Muistojalki_small from "../pages/Projects/assets/carousel/SOFTA_MUISTOJALKI_SMALL.webp";
+
 import Andrei from "../pages/Stories/assets/andrei.webp";
 import Eetu from "../pages/Stories/assets/eetu.webp";
-// import Kari from "../pages/Stories/assets/kari.webp";
+import Kari from "../pages/Stories/assets/kari.webp";
 
 export const en = {
   header: {
@@ -56,7 +62,7 @@ export const en = {
   home_page: {
     _comment: "Home page text variables",
     title: "Virittämö",
-    text: "Virittämö is a employment service of the City of Helsinki, connecting individuals who are in need of fresh work experience with companies searching for practical digital and media experts.",
+    text: "Virittämö is a employment service of the city of Helsinki that brings together individuals who need fresh work experience and companies looking for practical ICT, software development, and media experts.",
     employed_to_text: "Our employees have move on to",
     companies_list: [
       "Aalto Yliopisto",
@@ -421,12 +427,26 @@ export const en = {
             client_name: "Virittämö",
             project_title: "Virittämö CRM",
             completion_year: "2023",
-            img_src: SoteApp,
-            img_src_small: SoteApp_small,
+            img_src: VirittamoCRM,
+            img_src_small: VirittamoCRM_small,
             alt: "Virittämö CRM project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Virittämö CRM on digitaalinen palvelu, joka on suunniteltu avuksi Virittämön uraohjaajille. Palvelu tarjoaa erilaisia työkaluja ja toimintoja, jotka auttavat uraohjaajia tehtävässään. Virittämö CRM:n avulla uraohjaajat voivat tarjota verkossa toimivaa uraohjausta ja -valmennusta yksilöille sekä organisaatioille. Virittämö CRM:n tavoitteena on helpottaa uravalintoja ja urasuunnittelua tarjoamalla digitaalisia työkaluja ja henkilökohtaista tukea. ",
+              "Virittämö CRM is a digital service designed to assist Virittämö's career counselors. The service offers various tools and features that help career counselors in their tasks. With Virittämö CRM, career counselors can offer online career guidance and coaching to individuals and organizations. The goal of Virittämö CRM is to facilitate career choices and career planning by providing digital tools and personal support.",
+          },
+          {
+            _id: 5,
+            team: "softa",
+            component: Carousel_Item,
+            client_name: "Kalle Lamberg",
+            project_title: "Muistojälki",
+            completion_year: "2023",
+            img_src: Muistojalki,
+            img_src_small: Muistojalki_small,
+            alt: "Muistojälki project image",
+            link: "https://virittamohelsinki.fi/",
+            description:
+              "Muistojälki is a web application that guides you to the grave of your friend, relative or even a celebrity. The application also allows you to leave virtual candles on the desired grave. In addition, Muistojälki offers a paid service that enables you to record the life story of your friend or relative for future generations to read. The application has a user-friendly interface that makes it easy to find gravesites. You can search for the location of a grave by name, date of birth and death, and cemetery. You can also use the application to explore the history of different cemeteries. Muistojälki was developed for preserving and sharing memories with loved ones. We hope that the application helps users connect the past and present and keep the memory of their loved ones alive.",
           },
         ],
       },
@@ -455,6 +475,16 @@ export const en = {
           "I graduated as a data clerk and then got into Oulu University of Applied Sciences to study information and communication technology. In the last year of my studies, I switched to the mobile gaming industry as a game designer and moved to Helsinki. After taking a break for a couple of years due to unfinished studies, I dreamt of a career as a programmer. By chance, I came across a job advertisement from Virittämö and got my first programming job. Virittämö's software team seemed like the perfect place to start in the desired position.",
           "I have nothing but good things to say about Virittämö. It was great to dive right into customer projects, where I was able to utilize what I had learned before. There wasn't too much pressure at work, and I had time to learn new programming languages. I learned a lot of new things and gained more confidence that I could implement client requests. I got a lot of help from other employees in joint projects. I feel that the social support network was good overall, and everyone helped each other.",
           "Next, I will return to Oulu to finish my university degree, so I can continue working as a programmer in the future. Virittämö helped me set clear goals, brought a sense of doing things, and a better rhythm to my daily life. I highly recommend Virittämö!",
+        ],
+      },
+      {
+        alt: "Picture of Kari Loise, an ex Virittämö employee.",
+        img_src: Kari,
+        full_name: "Kari Loise",
+        story_text: [
+          "My work at Virittämö began after I changed my career and studied to become an ICT technician. In the ICT team at Virittämö, I was able to broaden my expertise by performing various tasks such as local support, remote support, and maintaining the hardware and personnel registry. The work was diverse and I had a say in my job.",
+          "I found Virittämö to be a pleasant work environment and received a lot of support regarding job searching. Especially the career counselor's tips were useful.",
+          "During my employment at Virittämö, I was employed by the City of Helsinki as a digital support person in a permanent position. The work includes maintaining the hardware registry and lending equipment. I can recommend Virittämö to anyone who wants to progress in their career.",
         ],
       },
     ],

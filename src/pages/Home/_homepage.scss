@@ -66,14 +66,14 @@ main.homePage__wrapper {
 
     p {
       font-size: $font-size-subtext;
-      width: 475px;
+      width: 525px;
 
       @include responsive(large_mobile) {
-        width: 425px;
+        width: 350px;
       }
 
       @include responsive(mobile) {
-        width: 350px;
+        width: 250px;
       }
     }
   }
@@ -157,8 +157,8 @@ main.homePage__wrapper {
         }
 
         @include responsive(mobile) {
-          width: 325px;
-          min-width: 325px;
+          width: 300px;
+          min-width: 300px;
         }
 
         img {
@@ -269,8 +269,8 @@ main.homePage__wrapper {
         }
 
         @include responsive(mobile) {
-          width: 325px;
-          min-width: 325px;
+          width: 300px;
+          min-width: 300px;
         }
 
         img {
