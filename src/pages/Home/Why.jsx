@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Background } from "./Background/Background";
+import { Background } from "../../components/Background/Background";
 
 export const Why = ({ title, employee, employeeImg, company, companyImg }) => {
   return (

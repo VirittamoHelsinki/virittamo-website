@@ -16,6 +16,7 @@ main.footer__wrapper {
 
   @include responsive(large_mobile) {
     padding: 10px 10% 50px;
+    gap: 50px;
   }
 
   div.background__wrapper {
@@ -39,11 +40,13 @@ main.footer__wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 0px 10%;
     height: auto;
     width: 100%;
-    gap: 40px;
+    gap: 75px;
 
     @include responsive(large_mobile) {
+      padding: 0px 0%;
       align-items: center;
     }
 
@@ -55,36 +58,34 @@ main.footer__wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 4px;
-      width: 50%;
+      height: 2px;
+      width: 100%;
 
       div#black-bar {
         background: $virittamo-black;
-        height: 4px;
-        width: 65%;
-
-        @include responsive(desktop) {
-          width: 75%;
-        }
-
-        @include responsive(laptop) {
-          width: 85%;
-        }
+        height: 2px;
+        width: 60%;
       }
     }
 
     ul.footer__contacts--list {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       height: 500px;
       width: 100%;
-      gap: 17.5px;
+      gap: 20px;
 
-      @include responsive(large_mobile) {
+      @include responsive(tablet) {
         text-align: center;
         height: auto;
+        gap: 35px;
+      }
+
+      @include responsive(large_mobile) {
+        gap: 25px;
       }
 
       li.footer__contacts--list-item {
@@ -92,24 +93,12 @@ main.footer__wrapper {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: left;
+        text-align: center;
         width: 50%;
 
         @include responsive(large_mobile) {
           text-align: center;
           width: 100%;
-        }
-
-        div {
-          width: 65%;
-
-          @include responsive(desktop) {
-            width: 75%;
-          }
-
-          @include responsive(laptop) {
-            width: 85%;
-          }
         }
 
         p:first-of-type {
@@ -128,9 +117,9 @@ main.footer__wrapper {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       flex-wrap: wrap;
-      height: 105px;
+      height: auto;
       width: 100%;
       gap: 20px;
 
@@ -142,24 +131,13 @@ main.footer__wrapper {
       li.footer__locations--list-item {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
+        text-align: center;
         align-items: center;
         width: 50%;
 
         @include responsive(large_mobile) {
           width: 100%;
-        }
-
-        div {
-          width: 65%;
-
-          @include responsive(desktop) {
-            width: 75%;
-          }
-
-          @include responsive(laptop) {
-            width: 85%;
-          }
         }
 
         p:first-of-type {

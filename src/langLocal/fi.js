@@ -268,20 +268,6 @@ export const fi = {
             _id: 1,
             team: "media",
             component: Carousel_Item,
-            client_name: "Q-teatteri",
-            project_title: "Tarinateatteri-video",
-            completion_year: "2023",
-            img_src: Qteatteri,
-            img_src_small: Qteatteri_small,
-            alt: "placeholder image",
-            link: "https://virittamohelsinki.fi/",
-            description:
-              "Projektissamme Q-teatterin kanssa teimme videotallenteita muun muassa oppilaitosten ja sosiaali- ja terveysalan palveluiden hankkimasta yleisötyö- ja yhteisöteatterista. Tarinateatteri on soveltavaa ja osallistavaa improvisaatiota, joka perustuu yleisön kertomiin ajatuksiin, tunteisiin ja tarinoihin. Näyttelijät tekevät näkyväksi ihmisen välisiä vuorovaikutussuhteita, antavat osallistujille mahdollisuuden tarkastella tilannettaan itsensä ulkopuolelta ja nähdä vaihtoehtoisia ratkaisuja. Virittämön tuottamaa videomateriaalia käytetään muun muassa rohkaistaessa opiskelijoita laajentamaan osaamistaan, sekä perhevalmennuksessa.",
-          },
-          {
-            _id: 2,
-            team: "media",
-            component: Carousel_Item,
             client_name: "Oodi",
             project_title: "Valokuvaus",
             completion_year: "2023",
@@ -293,21 +279,7 @@ export const fi = {
               "Toteutimme Oodille tuotannolliset valokuvat heidän laitteistaan nettisivua ja somea varten. Oodi on Helsingin keskustakirjasto, jonka palveluihin ja laitteisiin kuuluu monipuolisesti niin ompelukoneita, keittiö kuin valokuvastudiokin.",
           },
           {
-            _id: 3,
-            team: "media",
-            component: Carousel_Item,
-            client_name: "Moi Panda",
-            project_title: "Media & Design",
-            completion_year: "2023",
-            img_src: MoiPanda,
-            img_src_small: MoiPanda_small,
-            alt: "placeholder image",
-            link: "https://virittamohelsinki.fi/",
-            description:
-              "Virittämön Mediatiimi on tehnyt Moi Pandalle peligrafiikkaa, hahmosuunnittelua, animaatioita, äänisuunnittelua sekä mainosvideon. Moi Panda-sovelluksen kautta lapset voivat ystävystyä toistensa kautta ympäri maailman, oppia uusia kieliä, sosiaalisia taitoja, kommunikaatiotaitoja ja uutta toistensa kulttuureista pelien, videopuhelujen ja chattien välityksellä. Myös heidän vanhempansa voivat olla sovelluksen kautta ystäviä keskenään ja jakaa pedagogisia vinkkejä ja vanhemmuuteen liittyviä asioita, kokemuksia, tunteita ja ongelmia globaalisti.",
-          },
-          {
-            _id: 4,
+            _id: 2,
             team: "media",
             component: Carousel_Item,
             client_name: "Radio Helsinki",
@@ -319,6 +291,34 @@ export const fi = {
             link: "https://virittamohelsinki.fi/",
             description:
               "Radio Helsinki on ollut Virittämön harjoittelupaikka, jossa äänisuunnittelijamme on päässyt tututustumaan monipuolisesti radiotyöhön, muun muassa lähetyksiin, perehtymään tuotantopuolen työskentelyyn sekä spiikkaamaan radiomainoksia. Radio Helsinki on tarjonnut mahdollisuuden kehittää omaa osaamista ja antanut sopivassa määrin vastuuta sekä tukea.",
+          },
+          {
+            _id: 3,
+            team: "media",
+            component: Carousel_Item,
+            client_name: "Q-teatteri",
+            project_title: "Tarinateatteri-video",
+            completion_year: "2023",
+            img_src: Qteatteri,
+            img_src_small: Qteatteri_small,
+            alt: "placeholder image",
+            link: "https://virittamohelsinki.fi/",
+            description:
+              "Projektissamme Q-teatterin kanssa teimme videotallenteita muun muassa oppilaitosten ja sosiaali- ja terveysalan palveluiden hankkimasta yleisötyö- ja yhteisöteatterista. Tarinateatteri on soveltavaa ja osallistavaa improvisaatiota, joka perustuu yleisön kertomiin ajatuksiin, tunteisiin ja tarinoihin. Näyttelijät tekevät näkyväksi ihmisen välisiä vuorovaikutussuhteita, antavat osallistujille mahdollisuuden tarkastella tilannettaan itsensä ulkopuolelta ja nähdä vaihtoehtoisia ratkaisuja. Virittämön tuottamaa videomateriaalia käytetään muun muassa rohkaistaessa opiskelijoita laajentamaan osaamistaan, sekä perhevalmennuksessa.",
+          },
+          {
+            _id: 4,
+            team: "media",
+            component: Carousel_Item,
+            client_name: "Moi Panda",
+            project_title: "Media & Design",
+            completion_year: "2023",
+            img_src: MoiPanda,
+            img_src_small: MoiPanda_small,
+            alt: "placeholder image",
+            link: "https://virittamohelsinki.fi/",
+            description:
+              "Virittämön Mediatiimi on tehnyt Moi Pandalle peligrafiikkaa, hahmosuunnittelua, animaatioita, äänisuunnittelua sekä mainosvideon. Moi Panda-sovelluksen kautta lapset voivat ystävystyä toistensa kautta ympäri maailman, oppia uusia kieliä, sosiaalisia taitoja, kommunikaatiotaitoja ja uutta toistensa kulttuureista pelien, videopuhelujen ja chattien välityksellä. Myös heidän vanhempansa voivat olla sovelluksen kautta ystäviä keskenään ja jakaa pedagogisia vinkkejä ja vanhemmuuteen liittyviä asioita, kokemuksia, tunteita ja ongelmia globaalisti.",
           },
           {
             _id: 5,
@@ -457,16 +457,16 @@ export const fi = {
   stories_page: {
     _comment: "Tarinat sivun tekstikentät",
     title: "Tarinat",
-    text: "Meillä on ollut mahtavia työntekijöitä töissä. Tässä muutamien entisten virittämöläisten kokemuksia työjaksostaan.",
+    text: "Virittämö Helsingissä olemme saaneet vuosien varrella etuoikeuden työskennellä uskomattoman lahjakkaiden ihmisten kanssa. Tällä sivulla osa heistä jakaa kokemuksiaan ja tarinoitaan omasta matkastaan Virittämön työntekijöinä. Heidän kertomuksistaan tulee esille onnistumisia, haasteita ja henkilökohtaista kasvua, jotka kaikki ovat osa Virittämöä. Erilaiset ihmiset ja mahdollisuudet tekevät Virittämöstä ainutlaatuisen sekä inspiroivan työpaikan.",
     stories: [
       {
         alt: "Kuva Andrei Vlassenko:sta",
         img_src: Andrei,
         full_name: "Andrei Vlassenko",
         story_text: [
-          "Tarinani Virittämössä Helsingissä alkoi ennen työn aloittamista. Hain ensin, mutta en saanut paikkaa. Edellisen ICT-tiimin johtajan neuvojen ansiosta opiskelin enemmän pilviteknologioita ja hain uudelleen. Vaikka haastattelussa kamppailin yhä suomen kielen kanssa, minut palkattiin. Aluksi olin melko hiljainen, ujo ja epävarma, mutta sain työskennellä yhden järjestelmämme kanssa.",
+          "Tarinani Virittämö Helsingissä alkoi ennen työn aloittamista. Hain ensin, mutta en saanut paikkaa. Edellisen ICT-tiimin johtajan neuvojen ansiosta opiskelin enemmän pilviteknologioita ja hain uudelleen. Vaikka haastattelussa kamppailin yhä suomen kielen kanssa, minut palkattiin. Aluksi olin melko hiljainen, ujo ja epävarma, mutta sain työskennellä yhden järjestelmämme kanssa.",
           "Huomasin asioita, joita voisimme parantaa, mutta minulla oli vaikeuksia viestinnän kanssa. Siirsin fokukseni viestintä- ja kielitaitoihin. Tiesin, ettei ole merkitystä, kuinka hyvin ymmärrän järjestelmät, jos en voi saada ihmisiä keskustelemaan niistä. Tämän avulla sain tilaisuuden oppia sitä, mitä tarvitsin eniten.",
-          "Joka viikko eri tiimin jäsen oli vastuussa tietyn viikoittaisen rutiinin hoitamisesta, jotta kaikki voisivat harjoitella esitystaitoja ja auttaa muita. Oli myös edistyneitä suomen kielen oppitunteja ja ilmaisia kursseja Metropolia-yliopistolta, jotka auttoivat minua kehittymään ammatillisesti ja henkisesti. Opin lisää työnhakutaitoja ja vaikka en löytänyt sopivaa työpaikkaa itselleni, monet muut löysivät.",
+          "Joka viikko eri tiimin jäsen oli vastuussa tietyn viikoittaisen rutiinin hoitamisesta, jotta kaikki voisivat harjoitella esitystaitoja ja auttaa muita. Oli myös edistyneitä suomen kielen oppitunteja ja ilmaisia kursseja Metropoliasta, jotka auttoivat minua kehittymään ammatillisesti ja henkisesti. Opin lisää työnhakutaitoja ja vaikka en löytänyt sopivaa työpaikkaa itselleni, monet muut löysivät.",
           "Olen kiitollinen kaikille, joihin törmäsin Virittämössä. Opin niin paljon aikani aikana ja minulla oli erittäin onnekas ensimmäinen työkokemukseni. Näin omilla silmilläni, kuinka ihmiset kasvoivat tämän tuen avulla ja saavuttivat lopulta haluamansa. Mukaan lukien minä. Kiitos Virittämö Helsinki. Tämä muutti elämäni varmasti.",
         ],
       },

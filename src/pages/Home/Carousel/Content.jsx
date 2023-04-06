@@ -3,10 +3,19 @@ import Companies from "./SubComponents/Companies";
 import Article from "./SubComponents/Article";
 import Video from "./SubComponents/Video";
 import Image from "./SubComponents/Image";
+import Feedback from "./SubComponents/Feedback";
 
 import Mock_Video from "../../Home/assets/carousel/mock-video.mp4";
+import Image_1 from "../../Home/assets/carousel/carousel-img-1.webp";
+import Image_2 from "../../Home/assets/carousel/carousel-img-1.webp";
 
 export const slides = [
+  {
+    component: Feedback,
+    number: 4.2,
+    scale: "(Asteikko 1-5)",
+    question: "Miten tyytyväinen olet Virittämö jaksoosi kokonaisuudestaan?",
+  },
   {
     component: Video,
     src: Mock_Video,
@@ -14,6 +23,11 @@ export const slides = [
   },
   {
     component: Companies,
+  },
+  {
+    component: Image,
+    src: Image_2,
+    alt: "Image taken by Emilia Rautio",
   },
   {
     component: Article,
@@ -28,7 +42,7 @@ export const slides = [
   // },
   {
     component: Image,
-    src: "https://images.pexels.com/photos/2567959/pexels-photo-2567959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "Placeholder image",
+    src: Image_1,
+    alt: "Image taken by Emilia Rautio",
   },
 ];

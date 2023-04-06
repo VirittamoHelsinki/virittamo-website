@@ -3,7 +3,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 // Importing Background component
-import { Background } from "./Background/Background";
+import { Background } from "../../components/Background/Background";
 
 // A functional component for the individual team item
 const TeamsItem = (props) => {

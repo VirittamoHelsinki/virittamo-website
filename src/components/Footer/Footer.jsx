@@ -13,7 +13,7 @@ import { ReactComponent as Instagram_icon } from "../assets/instagram-icon.svg";
 import StadinAOLogo from "./assets/stadinAO-logo.png";
 
 // import background
-import { Background } from "../../pages/Home/Background/Background";
+import { Background } from "../Background/Background";
 
 export const Footer = ({ children }) => {
   const { lang } = useContext(LanguageContext);

@@ -8,12 +8,10 @@ export const Contacts = ({ scrollRef, contact_details, locations }) => {
         <ul className="footer__contacts--list">
           {contact_details.team.map((item, index) => (
             <li key={index} className="footer__contacts--list-item">
-              <div>
-                <p>{item.name}</p>
-                <p>{item.title}</p>
-                <p>{item.phone}</p>
-                <p>{item.email}</p>
-              </div>
+              <p>{item.name}</p>
+              <p>{item.title}</p>
+              <p>{item.phone}</p>
+              <p>{item.email}</p>
             </li>
           ))}
         </ul>
@@ -23,12 +21,10 @@ export const Contacts = ({ scrollRef, contact_details, locations }) => {
         <ul className="footer__locations--list">
           {locations.map((item, index) => (
             <li key={index} className="footer__locations--list-item">
-              <div>
-                <p>{item.name}</p>
-                <p>{item.title}</p>
-                <p>{item.address}</p>
-                <p>{item.postalCode}</p>
-              </div>
+              <p>{item.name}</p>
+              <p>{item.title}</p>
+              <p>{item.address}</p>
+              <p>{item.postalCode}</p>
             </li>
           ))}
         </ul>

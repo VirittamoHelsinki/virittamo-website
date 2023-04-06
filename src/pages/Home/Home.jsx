@@ -20,7 +20,7 @@ import { Why } from "./Why";
 import { Teams } from "./Teams";
 import { Apply } from "./Apply";
 import { Partners } from "../../components/Partners/Partners";
-import { Contacts } from "./Contacts";
+import { Contacts } from "../../components/Footer/Contacts";
 import { Footer } from "../../components/Footer/Footer";
 
 // Import slide data

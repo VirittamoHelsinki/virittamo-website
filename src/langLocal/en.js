@@ -266,20 +266,6 @@ export const en = {
             _id: 1,
             team: "media",
             component: Carousel_Item,
-            client_name: "Q-teatteri",
-            project_title: "Storytheater-video",
-            completion_year: "2023",
-            img_src: Qteatteri,
-            img_src_small: Qteatteri_small,
-            alt: "placeholder image",
-            link: "https://virittamohelsinki.fi/",
-            description:
-              "In our project with Q-teatteri, we made video recordings of, among other things, audience work and community theater acquired by educational institutions and social and health services. Story theater is applied and participatory improvisation based on the audience's thoughts, emotions, and stories. Actors make visible human interaction and give participants the opportunity to examine their situation from outside themselves and see alternative solutions. Video material produced by Virittämö is used, among other things, to encourage students to expand their skills, as well as in family coaching.",
-          },
-          {
-            _id: 2,
-            team: "media",
-            component: Carousel_Item,
             client_name: "Oodi",
             project_title: "Photoshoot",
             completion_year: "2023",
@@ -291,21 +277,7 @@ export const en = {
               "We produced production photos for Oodi for their website and social media. Oodi is Helsinki's central library, which offers a variety of services and devices, including sewing machines, kitchen equipment, and even a photo studio.",
           },
           {
-            _id: 3,
-            team: "media",
-            component: Carousel_Item,
-            client_name: "Moi Panda",
-            project_title: "Media & Design",
-            completion_year: "2023",
-            img_src: MoiPanda,
-            img_src_small: MoiPanda_small,
-            alt: "placeholder image",
-            link: "https://virittamohelsinki.fi/",
-            description:
-              "Virittämö's media team has created game graphics, character design, animations, sound design, and promotional videos for Moi Panda. Through the Moi Panda app, children can make friends with each other around the world, learn new languages, social skills, communication skills, and new things about each other's cultures through games, video calls, and chats. Their parents can also be friends with each other through the app and share educational tips and parenting-related issues, experiences, emotions, and problems globally.",
-          },
-          {
-            _id: 4,
+            _id: 2,
             team: "media",
             component: Carousel_Item,
             client_name: "Radio Helsinki",
@@ -317,6 +289,34 @@ export const en = {
             link: "https://virittamohelsinki.fi/",
             description:
               "Radio Helsinki has been a training place for Virittämö, where our sound designer has been able to become familiar with various radio work, including broadcasts, to familiarize themselves with production work and to speak radio commercials. Radio Helsinki has provided opportunities to develop their own skills and given them appropriate amounts of responsibility and support.",
+          },
+          {
+            _id: 3,
+            team: "media",
+            component: Carousel_Item,
+            client_name: "Q-teatteri",
+            project_title: "Storytheater-video",
+            completion_year: "2023",
+            img_src: Qteatteri,
+            img_src_small: Qteatteri_small,
+            alt: "placeholder image",
+            link: "https://virittamohelsinki.fi/",
+            description:
+              "In our project with Q-teatteri, we made video recordings of, among other things, audience work and community theater acquired by educational institutions and social and health services. Story theater is applied and participatory improvisation based on the audience's thoughts, emotions, and stories. Actors make visible human interaction and give participants the opportunity to examine their situation from outside themselves and see alternative solutions. Video material produced by Virittämö is used, among other things, to encourage students to expand their skills, as well as in family coaching.",
+          },
+          {
+            _id: 4,
+            team: "media",
+            component: Carousel_Item,
+            client_name: "Moi Panda",
+            project_title: "Media & Design",
+            completion_year: "2023",
+            img_src: MoiPanda,
+            img_src_small: MoiPanda_small,
+            alt: "placeholder image",
+            link: "https://virittamohelsinki.fi/",
+            description:
+              "Virittämö's media team has created game graphics, character design, animations, sound design, and promotional videos for Moi Panda. Through the Moi Panda app, children can make friends with each other around the world, learn new languages, social skills, communication skills, and new things about each other's cultures through games, video calls, and chats. Their parents can also be friends with each other through the app and share educational tips and parenting-related issues, experiences, emotions, and problems globally.",
           },
           {
             _id: 5,
@@ -455,7 +455,7 @@ export const en = {
   stories_page: {
     _comment: "Text fields for the story page",
     title: "Stories",
-    text: "We have had some great employees working for us. Here are some former employees' experiences from their time working with us.",
+    text: "At Virittämö in Helsinki, we have had the privilege over the years to work with incredibly talented people. On this page, some of them share their experiences and stories of their journey as Virittämö employees. Their stories reveal successes, challenges, and personal growth, all of which are part of Virittämö. Different people and opportunities make Virittämö a unique and inspiring workplace.",
     stories: [
       {
         alt: "Picture of Andrei Vlassenko",

@@ -66,14 +66,14 @@ main.homePage__wrapper {
 
     p {
       font-size: $font-size-subtext;
-      width: 525px;
+      width: 600px;
 
       @include responsive(large_mobile) {
-        width: 350px;
+        width: 425px;
       }
 
       @include responsive(mobile) {
-        width: 250px;
+        width: 320px;
       }
     }
   }
