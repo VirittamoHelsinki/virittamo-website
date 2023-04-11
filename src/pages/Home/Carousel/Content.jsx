@@ -7,7 +7,7 @@ import Feedback from "./SubComponents/Feedback";
 
 import Mock_Video from "../../Home/assets/carousel/mock-video.mp4";
 import Image_1 from "../../Home/assets/carousel/carousel-img-1.webp";
-import Image_2 from "../../Home/assets/carousel/carousel-img-1.webp";
+import Image_2 from "../../Home/assets/carousel/carousel-img-2.webp";
 
 export const slides = [
   {

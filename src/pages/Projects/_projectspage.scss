@@ -97,20 +97,6 @@ main.projectPage__wrapper {
           width: 75%;
         }
       }
-
-      div.projectPage__teams--carousel-indicators {
-        display: none;
-      }
-
-      @include responsive(large_mobile) {
-        div.projectPage__teams--carousel-indicators {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 25px;
-          gap: 6px;
-        }
-      }
     }
 
     div.projectPage__teams--carousel {

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { LoadingSlides } from "./SubComponents/LoadingSlides";
+import { SlideIndicator } from "../../../components/SlideIndicator/SlideIndicator";
 
 // Create a carousel component
 export const Carousel = ({ slides }) => {
@@ -73,21 +74,27 @@ export const Carousel = ({ slides }) => {
 
   // Return the carousel component
   return (
-    <section
-      className="carousel__container"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <button className="arrow-button">
-        <SlArrowLeft className="arrow-button--icon" onClick={handlePrevClick} />
-      </button>
-      {slides ? renderActiveItem() : <LoadingSlides />}
-      <button className="arrow-button">
-        <SlArrowRight
-          className="arrow-button--icon"
-          onClick={handleNextClick}
-        />
-      </button>
+    <section className="carousel__wrapper">
+      <SlideIndicator numSlides={slides.length} activeIndex={activeIndex} />
+      <div
+        className="carousel__container"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <button className="arrow-button">
+          <SlArrowLeft
+            className="arrow-button--icon"
+            onClick={handlePrevClick}
+          />
+        </button>
+        {slides ? renderActiveItem() : <LoadingSlides />}
+        <button className="arrow-button">
+          <SlArrowRight
+            className="arrow-button--icon"
+            onClick={handleNextClick}
+          />
+        </button>
+      </div>
     </section>
   );
 };

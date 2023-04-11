@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { LoadingSlides } from "../../../Home/Carousel/SubComponents/LoadingSlides";
-import { SlideIndicator } from "./SlideIndicator";
+import { SlideIndicator } from "../../../../components/SlideIndicator/SlideIndicator";
 
 // Returns the number of visible slides based on the width of the viewport
 export const getNumVisibleSlides = (slides, width) => {
