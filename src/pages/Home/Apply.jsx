@@ -7,7 +7,7 @@ export const Apply = ({ apply }) => {
   return (
     <section className="homePage__apply">
       <h2>{title}</h2>
-      <p>{description}</p>
+      <p>{description}hihi</p>
       <div className="homePage__apply--container">
         <ul className="homePage__apply--container-list">
           {qualifications.map((item, index) => (
