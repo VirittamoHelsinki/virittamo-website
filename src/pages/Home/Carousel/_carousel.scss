@@ -191,6 +191,10 @@ section.carousel__wrapper {
           height: 450px;
         }
 
+        @include responsive(mobile) {
+          height: auto;
+        }
+
         li.carousel__item--companies-list-item {
           height: auto;
           width: 30%;
@@ -202,6 +206,10 @@ section.carousel__wrapper {
 
           @include responsive(large_mobile) {
             width: 100%;
+          }
+
+          @include responsive(mobile) {
+            height: auto;
           }
         }
 
