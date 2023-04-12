@@ -45,9 +45,17 @@ section.carousel__wrapper {
       height: 100%;
       width: 100%;
 
+      @include responsive(laptop) {
+        gap: 50px;
+      }
+
+      @include responsive(large_mobile) {
+        gap: 25px;
+      }
+
       h1 {
-        font-size: 200px;
-        line-height: 200px;
+        font-size: 224px;
+        line-height: 224px;
         color: $virittamo-white;
       }
 
@@ -56,8 +64,35 @@ section.carousel__wrapper {
       }
 
       p {
-        font-size: 28px;
+        font-size: 34px;
         color: $virittamo-white;
+      }
+
+      @include responsive(large_mobile) {
+        h1 {
+          font-size: 184px;
+          line-height: 184px;
+        }
+
+        p {
+          font-size: 30px;
+        }
+      }
+
+      @include responsive(mobile) {
+        h1 {
+          font-size: 124px;
+          line-height: 124px;
+        }
+
+        h2 {
+          line-height: 24px !important;
+          font-size: 24px !important;
+        }
+
+        p {
+          font-size: 24px;
+        }
       }
 
       div.carousel__item--feedback-text {
@@ -68,6 +103,12 @@ section.carousel__wrapper {
         position: absolute;
         left: 150px;
         top: 150px;
+
+        @include responsive(laptop) {
+          position: initial;
+          left: 0;
+          top: 0;
+        }
       }
 
       h2 {
@@ -78,6 +119,23 @@ section.carousel__wrapper {
         padding: 0;
         width: 40%;
         position: absolute;
+
+        @include responsive(laptop) {
+          font-size: 36px;
+          line-height: 36px;
+          position: initial;
+          width: 60%;
+          bottom: 0;
+          right: 0;
+        }
+
+        @include responsive(tablet) {
+          width: 70%;
+        }
+
+        @include responsive(large_mobile) {
+          width: 75%;
+        }
       }
     }
 

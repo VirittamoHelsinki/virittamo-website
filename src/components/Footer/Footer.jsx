@@ -32,7 +32,7 @@ export const Footer = ({ children }) => {
         <a href="/stories">{stories}</a>
       </li>
       <li className="footer__nav--list-item">
-        <a href="/contact">{contact}</a>
+        <a href="/:contact">{contact}</a>
       </li>
     </ul>
   );
