@@ -133,21 +133,9 @@ main.projectDetails__wrapper {
 
     img {
       border: 1px solid $virittamo-light-violet;
-      height: 85vh;
-      width: 80%;
       object-fit: cover;
-
-      @include responsive(tablet) {
-        height: 50vh;
-      }
-
-      @include responsive(large_mobile) {
-        height: 35vh;
-      }
-
-      @include responsive(mobile) {
-        height: 25vh;
-      }
+      height: 100%;
+      width: 80%;
     }
   }
 
