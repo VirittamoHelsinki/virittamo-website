@@ -23,7 +23,7 @@ npm start
 ```
 
 Runs the app in the development mode.\
-Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+Open **[http://localhost:5173](http://localhost:5173)** to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -38,7 +38,7 @@ virittamo-website/src/langLocal/fi.js (finnish translation)
 virittamo-website/src/langLocal/en.js (english translation)
 ```
 
-\*Keep in mind **_when adding content to either of the files_**, you also have to add it's translation to the other file.\*
+_Keep in mind **when adding content to either of the files**, you also have to add it's translation to the other file._
 
 (The carousels and slides on the Projects page are also included within the files due to their summaries having to be translate).
 <br><br>
