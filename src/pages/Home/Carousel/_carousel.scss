@@ -300,8 +300,12 @@ section.carousel__wrapper {
         bottom: 0;
         left: 0;
 
+        @include responsive(large_mobile) {
+          padding: 50px;
+        }
+
         @include responsive(mobile) {
-          padding: 22.5px;
+          padding: 60px;
         }
 
         @include responsive(desktop) {
