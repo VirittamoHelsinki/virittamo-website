@@ -1,11 +1,11 @@
 import Companies from "./SubComponents/Companies";
 // import Instagram from "./SubComponents/Instagram";
 // import Article from "./SubComponents/Article";
-import Video from "./SubComponents/Video";
+// import Video from "./SubComponents/Video";
 import Image from "./SubComponents/Image";
 import Feedback from "./SubComponents/Feedback";
 
-import Mock_Video from "../../Home/assets/carousel/mock-video.mp4";
+// import Mock_Video from "../../Home/assets/carousel/mock-video.mp4";
 import Image_1 from "../../Home/assets/carousel/carousel-img-1.webp";
 import Image_2 from "../../Home/assets/carousel/carousel-img-2.webp";
 
@@ -20,9 +20,9 @@ export const slides = [
     question_en: "How satisfied were you with your time at Virittämö?",
   },
   {
-    component: Video,
-    src: Mock_Video,
-    alt: "placeholder video",
+    component: Image,
+    src: Image_1,
+    alt: "Image taken by Emilia Rautio",
   },
   {
     component: Companies,
@@ -32,6 +32,13 @@ export const slides = [
     src: Image_2,
     alt: "Image taken by Emilia Rautio",
   },
+  /*
+  {
+    component: Video,
+    src: Mock_Video,
+    alt: "placeholder video",
+  },
+  */
   /*
   {
     component: Article,
@@ -51,9 +58,4 @@ export const slides = [
      component: Instagram,
   },
   */
-  {
-    component: Image,
-    src: Image_1,
-    alt: "Image taken by Emilia Rautio",
-  },
 ];
