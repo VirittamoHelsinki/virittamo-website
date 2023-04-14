@@ -44,6 +44,11 @@ import Eetu from "../pages/Stories/assets/eetu.webp";
 import Kari from "../pages/Stories/assets/kari.webp";
 
 export const fi = {
+  /*
+  --------------------
+  Header text elements
+  --------------------
+  */
   header: {
     _comment: "Otsikkotekstimuuttujat",
     home_page: "Etusivu",
@@ -52,6 +57,11 @@ export const fi = {
     contact: "Ota yhteyttä",
   },
 
+  /*
+  --------------------
+  Footer text elements
+  --------------------
+  */
   footer: {
     _comment: "Alatunnisteen tekstimuuttujat",
     home_page: "Etusivu",
@@ -60,6 +70,12 @@ export const fi = {
     contact: "Ota yhteyttä",
     back_to_top: "Sivun alkuun",
   },
+
+  /*
+  --------------------
+  Home page text elements
+  --------------------
+  */
   home_page: {
     _comment: "Kotisivun tekstimuuttujat",
     title: "Virittämö",
@@ -120,16 +136,16 @@ export const fi = {
         "7 kuukauden tukityö, joka auttaa etenemään urallasi.",
         "Kuntatyöntekijöiden (KVTES) työehtosopimuksen mukainen palkka.",
         "Voit kehittää taitojasi monin eri tavoin työskennellessäsi, opiskellessaan ja ammattikorkeakoulussa insinööritutkintoon johtavia polkuopintoja suorittaessasi.",
-        "Tulet osaksi kannustavaa ja ystävällistä työyhteisöä. ",
+        "Olet osa kannustavaa ja mukavaa työyhteisöä. Virittämön ohjaustiimi kulkee mukanasi kokotyöllistämisjakson ajan, auttaen sinuakehittämään työnhaussa ja työelämässä tarvittavia taitoja kohti työelämää tai jatko-opintoja.",
       ],
     },
     for_a_company: {
       title: "Yritykselle",
       description: [
-        "Osaavat ja ammattitaitoiset media- ja digiasiantuntijat lyhyt- tai pitkäaikaisiin projekteihisi tai vakituiseksi työntekijäksi.",
+        "Osaavat ja ammattitaitoiset ICT-, ohjelmistokehitys- ja mediatekijät lyhyt- tai pitkäaikaisiin projekteihisi tai vakituiseksi työntekijäksi.",
         "Ammattilaisten asiantuntemus ja soveltuvuus on puolestasi etukäteen tarkasti määritelty.",
-        "Teet konkreettisen työnteon.",
-        "Voit hyötyä kumppanuudesta markkinoinnissasi.",
+        "Teet konkreettisen työllistämisteon.",
+        "Voitte hyödyntää kumppanuutta markkinoinnissanne.",
       ],
     },
     teams: {
@@ -237,6 +253,12 @@ export const fi = {
       },
     ],
   },
+
+  /*
+  --------------------
+  Projects page elements
+  --------------------
+  */
   projects_page: {
     title: "Projektit",
     desc: "Virittämön kautta yritykset voivat saada ammattitaitoista työvoimaa sekä mahdollisuuden tehdä yhteiskunnallista hyvää. Virittämön media-, IT- ja ohjelmistoalojen osaajat voivat olla mukana projekteissanne muutamasta päivästä useaan kuukauteen. Erilaisten projektien kautta työntekijät saavat kartutettua osaamistaan, päivitettyä työkokemusta ja työelämätaitoja ponnistaakseen takaisin omalle urapolulleen.",
@@ -454,6 +476,12 @@ export const fi = {
       },
     },
   },
+
+  /*
+  --------------------
+  Stories page elements
+  --------------------
+  */
   stories_page: {
     _comment: "Tarinat sivun tekstikentät",
     title: "Tarinat",

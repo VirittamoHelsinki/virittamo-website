@@ -136,6 +136,7 @@ main.header__wrapper {
     bottom: -175px;
     height: 175px;
     width: 100%;
+    z-index: 1;
 
     @media only screen and (min-width: 1080px) {
       display: none;
