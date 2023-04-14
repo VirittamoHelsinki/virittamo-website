@@ -44,6 +44,11 @@ import Eetu from "../pages/Stories/assets/eetu.webp";
 import Kari from "../pages/Stories/assets/kari.webp";
 
 export const en = {
+  /*
+  --------------------
+  Header text elements
+  --------------------
+  */
   header: {
     _comment: "Header text variables",
     home_page: "Home",
@@ -51,6 +56,12 @@ export const en = {
     stories: "Stories",
     contact: "Contact Us",
   },
+
+  /*
+  --------------------
+  Footer text elements
+  --------------------
+  */
   footer: {
     _comment: "Footer text variables",
     home_page: "Home",
@@ -59,10 +70,16 @@ export const en = {
     contact: "Contact Us",
     back_to_top: "Back to top",
   },
+
+  /*
+  --------------------
+  Home page text elements
+  --------------------
+  */
   home_page: {
     _comment: "Home page text variables",
     title: "Virittämö",
-    text: "Virittämö is a employment service of the city of Helsinki that brings together individuals who need fresh work experience and companies looking for practical ICT, software development, and media experts.",
+    text: "Virittämö is an employment service of the City of Helsinki that brings together individuals who need fresh work experience and companies looking for practical ICT-, software development-, and media experts.",
     employed_to_text: "Our employees have move on to",
     companies_list: [
       "Aalto Yliopisto",
@@ -119,13 +136,13 @@ export const en = {
         "A 7-month subsidized employment that helps you move forward in your career.",
         "Salary according to the collective agreement for local government employees (KVTES).",
         "You can develop your skills in various ways while working, studying and completing pathway studies leading to a degree in engineering at a university of applied sciences.",
-        "You will be part of a supportive and friendly work community. The guidance team of Virittämö will be with you throughout the employment period, helping you develop the skills needed for job search and working life.",
+        "You will be part of a supportive and friendly work community. The guidance team of Virittämö will be with you throughout the employment period, helping you develop the skills needed for your job search and work life.",
       ],
     },
     for_a_company: {
       title: "For companies",
       description: [
-        "Skilled and professional media and digital experts for your short or long-term projects, or as a permanent employee.",
+        "Skilled and professional ICT-, software development-, and media experts for your short or long-term projects, or as a permanent employee.",
         "The expertise and suitability of the professionals have been carefully determined in advance on your behalf.",
         "You will make a concrete act of employment.",
         "You can benefit from the partnership in your marketing.",
@@ -134,11 +151,11 @@ export const en = {
     teams: {
       title: "Three teams",
       media_desc:
-        "Virittämö's Media team is an expert team of professionals who produce media productions for a wide range of needs. The work starts with identifying the client's wishes and planning the production. Together, we think about what and how to do it, plan the implementation with equipment, teams and post-production work, and draw up a schedule. The team includes experts in video, photography, sound, animation, and graphic design. We have produced promotional videos, training videos, interviews, animation, 3D modelling, live-action animation, web and print photography.",
+        "Virittämö's Media team is an expert team of professionals who produce media productions for a wide range of needs. The work starts with identifying the client's wishes and planning the production. Together, we think about what we need to do and how to do it, plan the implementation with equipment, teams and post-production work, and draw up a schedule. The team includes experts in video, photography, sound, animation, and graphic design. We have produced promotional videos, training videos, interviews, animation, 3D modelling, livestreams, web and print photography.",
       ict_desc:
-        "Through work experience and training, the Virittämö ICT team increases the skills of its employees and thus also meets the skill needs of companies, and on the other hand, serves the further employability of the ICT team's employees. Tasks are tailored to the individual's interests and skills. Employees have found their own specific areas of expertise in which they have been able to improve their skills. A variety of up-to-date technologies are available. Technical solutions are made for real use. Examples of the tasks include infrastructure development and local and remote support.",
+        "Through work experience and training, the Virittämö ICT team increases the skills of its employees and thus also meets the skill needs of companies, and on the other hand, serves the further employability of the ICT team's employees. Tasks are tailored to the individual's interests and skills. Employees have found their own specific areas of expertise in which they have been able to improve their skills. A variety of up-to-date technologies are available. Technical solutions are made for real use. Examples of the tasks include infrastructure development and local and remote technical support.",
       software_desc:
-        "The Softa team at Virittämö is an innovative and knowledgeable group of software developers. We implement both browser-based applications and mobile apps for our partners, using modern development tools and technologies. We have implemented booking systems, websites, and form systems for our clients. We use modern software development methods (Agile software development). React, Node.js, Python, Azure. Projects are carried out in teams of a few people.",
+        "The Softa team at Virittämö is an innovative and knowledgeable group of software developers. We implement both browser-based applications and mobile apps for our partners, using modern development tools and technologies. We have implemented booking systems, websites, and form systems for our clients. We use modern software development methods (Agile software development). Some keywords from technologies we use: React, Node.js, Python, Azure. Projects are carried out in teams of a few people.",
       read_more_btn: "Read more",
       read_less_btn: "Read less",
     },
@@ -165,7 +182,7 @@ export const en = {
         },
         {
           title: "OR",
-          desc: "You have a partial work ability due to a health reason affecting the work task.",
+          desc: "You have a partial work ability due to a health reason affecting the work tasks.",
         },
         {
           title: "OR",
@@ -237,9 +254,14 @@ export const en = {
     ],
   },
 
+  /*
+  --------------------
+  Projects page elements
+  --------------------
+  */
   projects_page: {
     title: "Projects",
-    desc: "Through Virittämö, companies can get skilled workforce and the opportunity to do societal good. Virittämö's media, IT, and software experts can participate in your projects from a few days to several months. Through various projects, employees can gain expertise, update work experience and work-life skills to bounce back to their own career path.",
+    desc: "Through Virittämö, companies can get skilled workers and the opportunity to do societal good. Virittämö's media, IT, and software experts can participate in your projects from a few days to several months. Through various projects, employees can gain expertise, update work experience and work-life skills to bounce back to their own career path.",
     carousels: {
       text: {
         media: {
@@ -452,10 +474,16 @@ export const en = {
       },
     },
   },
+
+  /*
+  --------------------
+  Stories page elements
+  --------------------
+  */
   stories_page: {
     _comment: "Text fields for the story page",
     title: "Stories",
-    text: "At Virittämö in Helsinki, we have had the privilege over the years to work with incredibly talented people. On this page, some of them share their experiences and stories of their journey as Virittämö employees. Their stories reveal successes, challenges, and personal growth, all of which are part of Virittämö. Different people and opportunities make Virittämö a unique and inspiring workplace.",
+    text: "At Virittämö Helsinki, we have had the privilege over the years to work with incredibly talented people. On this page, some of them share their experiences and stories of their journey as Virittämö employees. Their stories reveal successes, challenges, and personal growth, all of which are part of Virittämö. Different people and opportunities make Virittämö a unique and inspiring workplace.",
     stories: [
       {
         alt: "Picture of Andrei Vlassenko",
