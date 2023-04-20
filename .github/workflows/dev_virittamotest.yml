@@ -4,9 +4,6 @@
 name: Build and deploy container app to Azure Web App - virittamotest
 
 on:
-  push:
-    branches:
-      - dev
   workflow_dispatch:
 
 jobs:
