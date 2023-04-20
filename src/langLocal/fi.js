@@ -82,7 +82,7 @@ export const fi = {
     text: "Virittämö on Helsingin kaupungin työllistämispalvelu, joka yhdistää tuoretta työkokemusta tarvitsevat tekijät ja käytännön ICT-, ohjelmistokehitys- ja mediaosaajia etsivät yritykset.",
     employed_to_text: "Tänne meiltä on työllistytty",
     companies_list: [
-      "Aalto Yliopisto",
+      "Aalto-yliopisto",
       "Ahlsell",
       "Apix Oy",
       "ATEA Finland",
@@ -144,12 +144,11 @@ export const fi = {
       description: [
         "Osaavat ja ammattitaitoiset ICT-, ohjelmistokehitys- ja mediatekijät lyhyt- tai pitkäaikaisiin projekteihisi tai vakituiseksi työntekijäksi.",
         "Ammattilaisten asiantuntemus ja soveltuvuus on puolestasi etukäteen tarkasti määritelty.",
-        "Teet konkreettisen työllistämisteon.",
         "Voitte hyödyntää kumppanuutta markkinoinnissanne.",
       ],
     },
     teams: {
-      title: "Kolme tiimiä",
+      title: "Tiimit",
       media_desc:
         "Virittämön Mediatiimi on asiantunteva osaajajoukko, joka tekee mediatuotantoja monipuolisiin tarpeisiin. Työ lähtee tilaajan toiveiden kartoituksesta ja tuotannon suunnittelusta. Mietimme yhdessä, mitä ja miten kannattaa tehdä, suunnittelemme toteutuksen kalustoineen, työryhmineen ja jälkitöineen, sekä laadimme aikataulun. Tiimistä löytyy mm. videokuvauksen, valokuvauksen, äänityön, animaation ja graafisen suunnittelun osaajia. Olemme toteuttaneet esimerkiksi mainosvideoita, koulutusvideoita, haastatteluja, animaatioita, 3D-mallinnuksia, livestriimauksia, sekä valokuvanneet nettiin ja painotuotteisiin.",
       ict_desc:
@@ -208,7 +207,7 @@ export const fi = {
         },
         {
           name: "Jaakko Hyytiä",
-          title: "Uraohjain+- hanke, Projektipäällikkö",
+          title: "Projektipäällikkö, Uraohjain+ -hanke",
           phone: "p. 09 310 28040",
           email: "jaakko.hyytia@edu.hel.fi",
         },
@@ -239,8 +238,14 @@ export const fi = {
         {
           name: "Ulla Ijäs",
           title: "Työelämävalmentaja",
-          phone: "p. 09 310 35264",
+          phone: "p. 09 310 25104",
           email: "ulla.ijas@edu.hel.fi",
+        },
+        {
+          name: "Leea Hiltunen",
+          title: "Projektikoordinaattori, Uraohjain+ -hanke",
+          phone: "p. 09 310 35264",
+          email: "leea.r.hiltunen@edu.hel.fi",
         },
       ],
     },
