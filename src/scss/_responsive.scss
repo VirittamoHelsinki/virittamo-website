@@ -1,4 +1,16 @@
 @mixin responsive($breakpoint) {
+  @if $breakpoint==UHD_desktop {
+    @media only screen and (min-width: 3840px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==QHD_desktop {
+    @media only screen and (min-width: 2560px) {
+      @content;
+    }
+  }
+
   @if $breakpoint==large_desktop {
     @media only screen and (max-width: 1920px) {
       @content;

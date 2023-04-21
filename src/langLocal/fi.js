@@ -238,13 +238,13 @@ export const fi = {
         {
           name: "Ulla Ijäs",
           title: "Työelämävalmentaja",
-          phone: "p. 09 310 25104",
+          phone: "p. 09 310 35264",
           email: "ulla.ijas@edu.hel.fi",
         },
         {
           name: "Leea Hiltunen",
           title: "Projektikoordinaattori, Uraohjain+ -hanke",
-          phone: "p. 09 310 35264",
+          phone: "p. 09 310 25104",
           email: "leea.r.hiltunen@edu.hel.fi",
         },
       ],

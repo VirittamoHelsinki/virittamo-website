@@ -10,7 +10,7 @@ import { ReactComponent as Linkedin_icon } from "../assets/linkedin-icon.svg";
 import { ReactComponent as Instagram_icon } from "../assets/instagram-icon.svg";
 
 // import virittämö helsinki logo
-import StadinAOLogo from "./assets/stadinAO-logo.png";
+import StadinAOLogo from "./assets/stadinAO-logo.webp";
 
 // import background
 import { Background } from "../Background/Background";
