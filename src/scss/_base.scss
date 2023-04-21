@@ -10,8 +10,8 @@ $virittamo-light-violet: #e0deec;
 $dark-link-hover: #5e5e5e;
 
 // font sizing
-$font-size-h1: 82px;
-$font-size-h2: 48px;
+$font-size-h1: 102px;
+$font-size-h2: 64px;
 $font-size-h3: 36px;
 $font-size-li: 20px;
 $font-size-a: 18px;
@@ -81,19 +81,19 @@ body {
   h1 {
     font-size: $font-size-h1;
     font-weight: bold;
-    line-height: 60px;
+    line-height: $font-size-h1;
   }
 
   h2 {
     font-size: $font-size-h2;
     font-weight: bold;
-    line-height: 38px;
+    line-height: $font-size-h2;
   }
 
   h3 {
     font-size: $font-size-h3;
     font-weight: bold;
-    line-height: 30px;
+    line-height: $font-size-h3;
   }
 
   li {
@@ -107,6 +107,7 @@ body {
 
     @include responsive(large_mobile) {
       font-size: $font-size-mobile;
+      line-height: $font-size-mobile;
     }
   }
 }

@@ -13,8 +13,8 @@ export const slides = [
   {
     component: Feedback,
     number: 4.2,
-    scale_fi: "(Asteikko 1-5)",
-    scale_en: "(Spectrum 1-5)",
+    scale_fi: "(Asteikko 1—5)",
+    scale_en: "(Scale 1—5)",
     question_fi:
       "Miten tyytyväinen olet Virittämö- jaksoosi kokonaisuudessaan?",
     question_en: "How satisfied were you with your time at Virittämö?",

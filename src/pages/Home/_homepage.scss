@@ -10,6 +10,10 @@ main.homePage__wrapper {
   h2 {
     padding: 0 5% 0;
 
+    @include responsive(large_mobile) {
+      font-size: 48px;
+    }
+
     @include responsive(mobile) {
       font-size: 28px;
     }
@@ -35,7 +39,7 @@ main.homePage__wrapper {
   }
 
   div.homePage__img--container {
-    height: 80vh;
+    height: 50vh;
     width: 100%;
 
     @include responsive(mobile) {
@@ -56,16 +60,22 @@ main.homePage__wrapper {
     align-items: center;
     text-align: center;
     width: 100%;
-    gap: 25px;
+    gap: 45px;
+
+    @include responsive(mobile) {
+      gap: 25px;
+    }
 
     @include responsive(mobile) {
       h1 {
         font-size: 54px;
+        line-height: 56px;
       }
     }
 
     p {
-      font-size: $font-size-subtext;
+      font-size: 24px;
+      line-height: 26px;
       width: 600px;
 
       @include responsive(large_mobile) {
@@ -73,6 +83,8 @@ main.homePage__wrapper {
       }
 
       @include responsive(mobile) {
+        font-size: 18px;
+        line-height: 20px;
         width: 320px;
       }
     }
@@ -142,6 +154,11 @@ main.homePage__wrapper {
         width: 600px;
         min-width: 600px;
         gap: 32px;
+
+        @include responsive(desktop) {
+          align-items: center;
+          text-align: center;
+        }
 
         @include responsive(tablet) {
           width: 525px;
@@ -215,6 +232,10 @@ main.homePage__wrapper {
 
     p {
       font-size: $font-size-subtext;
+
+      @include responsive(large_mobile) {
+        line-height: 22px;
+      }
     }
 
     @media only screen and (max-width: 1722px) {
@@ -235,6 +256,12 @@ main.homePage__wrapper {
       }
     }
 
+    @include responsive(mobile) {
+      div.background__wrapper {
+        height: 87.5%;
+      }
+    }
+
     div.homePage__teams--containers {
       display: flex;
       justify-content: center;
@@ -242,6 +269,10 @@ main.homePage__wrapper {
       width: 100%;
       gap: 100px;
       padding: 0 5% 0;
+
+      @include responsive(QHD_desktop) {
+        gap: 175px;
+      }
 
       @include responsive(mobile) {
         gap: 50px;
@@ -257,13 +288,13 @@ main.homePage__wrapper {
         min-width: 450px;
 
         @include responsive(tablet) {
+          align-items: center;
+          text-align: center;
           width: 450px;
           min-width: 450px;
         }
 
         @include responsive(large_mobile) {
-          align-items: center;
-          text-align: center;
           width: 400px;
           min-width: 400px;
         }
@@ -338,6 +369,10 @@ main.homePage__wrapper {
 
     p {
       font-size: $font-size-subtext;
+
+      @include responsive(large_mobile) {
+        line-height: 22px;
+      }
     }
 
     div.homePage__apply--container {
