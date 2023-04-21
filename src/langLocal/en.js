@@ -80,9 +80,10 @@ export const en = {
     _comment: "Home page text variables",
     title: "Virittämö",
     text: "Virittämö is an employment service of the City of Helsinki that brings together individuals who need fresh work experience and companies looking for practical ICT-, software development-, and media experts.",
-    employed_to_text: "Our employees have move on to",
+    employed_to_text:
+      "Our colleagues have advanced to new employment opportunities:",
     companies_list: [
-      "Aalto Yliopisto",
+      "Aalto-yliopisto",
       "Ahlsell",
       "Apix Oy",
       "ATEA Finland",
@@ -130,7 +131,7 @@ export const en = {
     ],
     why_virittamo: "Why Virittämö?",
     for_an_employee: {
-      title: "For the employee",
+      title: "Benefits for employees",
       description: [
         "You will gain fresh work experience and maintain your professional skills with interesting tasks and customer projects.",
         "A 7-month subsidized employment that helps you move forward in your career.",
@@ -140,20 +141,19 @@ export const en = {
       ],
     },
     for_a_company: {
-      title: "For companies",
+      title: "Opportunities for companies",
       description: [
         "Skilled and professional ICT-, software development-, and media experts for your short or long-term projects, or as a permanent employee.",
         "The expertise and suitability of the professionals have been carefully determined in advance on your behalf.",
-        "You will make a concrete act of employment.",
         "You can benefit from the partnership in your marketing.",
       ],
     },
     teams: {
-      title: "Three teams",
+      title: "Teams",
       media_desc:
-        "Virittämö's Media team is an expert team of professionals who produce media productions for a wide range of needs. The work starts with identifying the client's wishes and planning the production. Together, we think about what we need to do and how to do it, plan the implementation with equipment, teams and post-production work, and draw up a schedule. The team includes experts in video, photography, sound, animation, and graphic design. We have produced promotional videos, training videos, interviews, animation, 3D modelling, livestreams, web and print photography.",
+        "Virittämö's Media team is a group of professionals who produce media productions for a wide range of needs. The work starts with identifying the client's wishes and planning the production. Together, we decide on how to proceed and plan the implementation with equipment, teams and post-production work, and draw up a schedule. The team includes experts in video, photography, sound, animation, and graphic design. We have produced promotional videos, training videos, interviews, animation, 3D modelling, livestreams and photography for web/print materials.",
       ict_desc:
-        "Through work experience and training, the Virittämö ICT team increases the skills of its employees and thus also meets the skill needs of companies, and on the other hand, serves the further employability of the ICT team's employees. Tasks are tailored to the individual's interests and skills. Employees have found their own specific areas of expertise in which they have been able to improve their skills. A variety of up-to-date technologies are available. Technical solutions are made for real use. Examples of the tasks include infrastructure development and local and remote technical support.",
+        "Through work experience and training, the Virittämö ICT team increases the skills of its employees and thus also meets the skill needs of companies. It also serves the further employability of the ICT team's employees. Tasks are tailored to the individual's interests and skills. Employees have found their own specific areas of expertise in which they have been able to improve their skills. A variety of up-to-date technologies are available. Technical solutions are made for real use. Examples of the tasks include infrastructure development and local and remote technical support.",
       software_desc:
         "The Softa team at Virittämö is an innovative and knowledgeable group of software developers. We implement both browser-based applications and mobile apps for our partners, using modern development tools and technologies. We have implemented booking systems, websites, and form systems for our clients. We use modern software development methods (Agile software development). Some keywords from technologies we use: React, Node.js, Python, Azure. Projects are carried out in teams of a few people.",
       read_more_btn: "Read more",
@@ -162,22 +162,22 @@ export const en = {
     apply: {
       title: "Who can apply?",
       description:
-        "You can apply for a job with us if you are a Helsinki resident and an unemployed job seeker eligible for a wage subsidy. At least three years must have passed since your previous wage-subsidized employment.",
+        "You can apply for a job with us if you are a Helsinki resident and an unemployed job seeker eligible for a pay subsidy. At least three years must have passed since your previous pay-subsidized employment.",
       qualifications: [
         {
-          title: "Under 25yo",
+          title: "Under 25 years old",
           desc: "You have completed vocational training or other than matriculation examination and have been unemployed for over 6 months.",
         },
         {
-          title: "25—29yo",
+          title: "25—29 years old",
           desc: "You have completed vocational training or other than matriculation examination and have been a jobseeker for over 12 months in the past 14 months.",
         },
         {
-          title: "+30 yo",
+          title: "+30 years old",
           desc: "You have been a jobseeker for at least 24 months in the past 28 months or have received over 300 days of labor market support.",
         },
         {
-          title: "+57 yo",
+          title: "+57 years old",
           desc: "The maximum duration of your earnings-related unemployment allowance or basic unemployment allowance has been reached.",
         },
         {
@@ -192,7 +192,7 @@ export const en = {
     },
     partners: "Partners",
     contact_details: {
-      title: "Contact details",
+      title: "Contact",
       team: [
         {
           name: "Tarja Kurvinen",
@@ -202,13 +202,13 @@ export const en = {
         },
         {
           name: "Anna-Mari Rouru",
-          title: "Training Manager",
+          title: "Education Manager",
           phone: "p. 09 310 81417",
           email: "anna-mari.rouru@edu.hel.fi",
         },
         {
           name: "Jaakko Hyytiä",
-          title: "Career Navigator, Project Manager",
+          title: "Project Manager, Uraohjain+",
           phone: "p. 09 310 28040",
           email: "jaakko.hyytia@edu.hel.fi",
         },
@@ -232,15 +232,21 @@ export const en = {
         },
         {
           name: "John Strandberg",
-          title: "Career Path Coach",
+          title: "Career Coach",
           phone: "p. 09 310 37370",
           email: "john.strandberg@edu.hel.fi",
         },
         {
           name: "Ulla Ijäs",
-          title: "Workplace Coach",
+          title: "Worklife Coach",
           phone: "p. 09 310 35264",
           email: "ulla.ijas@edu.hel.fi",
+        },
+        {
+          name: "Leea Hiltunen",
+          title: "Project Coordinator, Uraohjain+",
+          phone: "p. 09 310 25104",
+          email: "leea.r.hiltunen@edu.hel.fi",
         },
       ],
     },

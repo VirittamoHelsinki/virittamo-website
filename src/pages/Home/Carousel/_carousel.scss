@@ -57,40 +57,43 @@ section.carousel__wrapper {
         font-size: 224px;
         line-height: 224px;
         color: $virittamo-white;
+
+        @include responsive(large_mobile) {
+          font-size: 184px;
+          line-height: 184px;
+        }
+
+        @include responsive(mobile) {
+          font-size: 124px;
+          line-height: 124px;
+        }
       }
 
       h2 {
+        line-height: 56px !important;
+        font-size: 54px !important;
         color: $virittamo-white;
+
+        @include responsive(desktop) {
+          line-height: 48px !important;
+          font-size: 46px !important;
+        }
+
+        @include responsive(mobile) {
+          line-height: 24px !important;
+          font-size: 24px !important;
+        }
       }
 
       p {
         font-size: 34px;
         color: $virittamo-white;
-      }
 
-      @include responsive(large_mobile) {
-        h1 {
-          font-size: 184px;
-          line-height: 184px;
-        }
-
-        p {
+        @include responsive(large_mobile) {
           font-size: 30px;
         }
-      }
 
-      @include responsive(mobile) {
-        h1 {
-          font-size: 124px;
-          line-height: 124px;
-        }
-
-        h2 {
-          line-height: 24px !important;
-          font-size: 24px !important;
-        }
-
-        p {
+        @include responsive(mobile) {
           font-size: 24px;
         }
       }
@@ -130,11 +133,18 @@ section.carousel__wrapper {
         }
 
         @include responsive(tablet) {
+          font-size: 34px !important;
+          line-height: 34px !important;
           width: 70%;
         }
 
         @include responsive(large_mobile) {
           width: 75%;
+        }
+
+        @include responsive(mobile) {
+          font-size: 24px !important;
+          line-height: 24px !important;
         }
       }
     }
@@ -145,12 +155,13 @@ section.carousel__wrapper {
       background: $virittamo-light-violet;
       justify-content: center;
       align-items: center;
-      padding: 100px;
+      padding: 100px 175px;
       height: 100%;
       width: 100%;
       gap: 45px;
 
       @include responsive(desktop) {
+        padding: 100px 100px;
         width: 85%;
       }
 
