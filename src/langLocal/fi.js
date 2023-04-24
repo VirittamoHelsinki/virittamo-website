@@ -403,7 +403,7 @@ export const fi = {
             alt: "Tietoliikenne project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Laitettiin verkkokaapelit siistiin järjestykseen. Fyysistä verkkoa aina helpompi hahmottaa ja ylläpitää, kun kaikki tietoliikennekaapelit ovat siistissä järjestyksessä ja oikein kytkettynä.",
+              "Organisoimme verkkokaapelit siistiin järjestykseen. Fyysistä verkkoa aina helpompi hahmottaa ja ylläpitää, kun kaikki tietoliikennekaapelit ovat siistissä järjestyksessä ja oikein kytkettynä.",
           },
         ],
         softa: [
@@ -419,7 +419,7 @@ export const fi = {
             alt: "Digirasti project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Digirasti on tehtäväkokonaisuus nettisivu Helsingin työllisyyspalveluille, joka tukee ja kehittää suomalaisten digitaitoja ja osaamista älylaitteiden ja digitaalisten palvelujen käytössä. Digirastin tarkoituksena on mahdollisesti auttaa suomalaisia pysymään mukana nopeassa digitaalisessa muutoksessa ja parantamaan heidän taitonsa älylaitteiden ja digipalvelujen käytössä. Digirastissa tarjolla on erilaisia tehtäviä ja pelejä, joiden avulla käyttäjät voivat parantaa taitojaan älylaitteiden ja digitaalisten palvelujen käytössä. Nämä tehtävät ja pelit tarjoavat hauskan ja interaktiivisen tavan kehittää digitaitoja ja osaamista.",
+              "Digirasti on Helsingin työllisyyspalveluille tehty nettisivu joka tukee ja kehittää suomalaisten digitaitoja ja osaamista älylaitteiden ja digitaalisten palvelujen käytössä. Digirastin tarkoituksena on mahdollisesti auttaa suomalaisia pysymään mukana nopeassa digitaalisessa muutoksessa ja parantamaan heidän taitonsa älylaitteiden ja digipalvelujen käytössä. Digirastissa tarjolla on erilaisia tehtäviä ja pelejä, joiden avulla käyttäjät voivat parantaa taitojaan älylaitteiden ja digitaalisten palvelujen käytössä. Nämä tehtävät ja pelit tarjoavat hauskan ja interaktiivisen tavan kehittää digitaitoja ja osaamista.",
           },
           {
             _id: 2,

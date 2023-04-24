@@ -316,7 +316,7 @@ export const en = {
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Radio Helsinki has been a training place for Virittämö, where our sound designer has been able to become familiar with various radio work, including broadcasts, to familiarize themselves with production work and to speak radio commercials. Radio Helsinki has provided opportunities to develop their own skills and given them appropriate amounts of responsibility and support.",
+              "Radio Helsinki has been a training place for Virittämö, where our sound designer has been able to explore various radio work, including broadcasts, to familiarize themselves with production work and to speak radio commercials. Radio Helsinki has provided opportunities to develop skills and given appropriate amounts of responsibility and support.",
           },
           {
             _id: 3,
@@ -330,7 +330,7 @@ export const en = {
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "In our project with Q-teatteri, we made video recordings of, among other things, audience work and community theater acquired by educational institutions and social and health services. Story theater is applied and participatory improvisation based on the audience's thoughts, emotions, and stories. Actors make visible human interaction and give participants the opportunity to examine their situation from outside themselves and see alternative solutions. Video material produced by Virittämö is used, among other things, to encourage students to expand their skills, as well as in family coaching.",
+              "In our project with Q-teatteri, we made video recordings of audience work and community theater acquired by educational institutions and social and health services. Story theater is applied and participatory improvisation based on the audience's thoughts, emotions, and stories. Actors make visible human interaction and give participants the opportunity to examine their situation from outside themselves and see alternative solutions. Video material produced by Virittämö is used to encourage students to expand their skills, as well as in family coaching.",
           },
           {
             _id: 4,
@@ -350,7 +350,7 @@ export const en = {
             _id: 5,
             team: "media",
             component: Carousel_Item,
-            client_name: "Ohjaamo, City of Helsinki etc",
+            client_name: "Ohjaamo, City of Helsinki etc.",
             project_title: "Henkilökuvaus",
             completion_year: "2023",
             img_src: Henkilökuvaus,
@@ -358,7 +358,7 @@ export const en = {
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "One of Mediatiimi's recurring projects is portrait photography tailored to meet the client's needs, which we have carried out, for example, in the form of a CV photography booth. Our clients have included, among others, Ohjaamo Studia trade fair and the City of Helsinki's summer job recruitment event at Oodi.",
+              "One of Media team's recurring projects is portrait photography tailored to meet the client's needs, which we have carried out for example, in the form of a CV photography booth. Our clients have included Ohjaamo Studia trade fair and the City of Helsinki's summer job recruitment event at Oodi.",
           },
         ],
         ict: [
@@ -374,7 +374,7 @@ export const en = {
             alt: "Pilvipalvelu project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Our projects heavily rely on Microsoft's public cloud. We use Azure to run virtual machines, web applications, and databases, among others. Docker and CI/CD pipelines work closely with Azure. At the tuning room, you have the opportunity to participate in interesting projects and develop your skills in cloud technologies if you wish.",
+              "Our projects heavily rely on Microsoft's public cloud. We use Azure to run virtual machines, web applications, and databases. Docker and CI/CD pipelines work closely with Azure. At Virittämö, our team has the opportunity to participate in interesting projects and develop their skills in cloud technologies.",
           },
           {
             _id: 2,
@@ -418,7 +418,7 @@ export const en = {
             alt: "Digirasti project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Digirasti is a task package for the website of the Employment Services in Helsinki that supports and develops Finnish digital skills and competence in the use of smart devices and digital services. The purpose of Digirasti is to possibly help Finns keep up with the rapid digital change and improve their skills in using smart devices and digital services. Digirasti offers various tasks and games that users can use to improve their skills in using smart devices and digital services. These tasks and games provide a fun and interactive way to develop digital skills and competence.",
+              "Digirasti is a website produced for the employment services of Helsinki that supports and develops Finnish digital skills and competence in the use of smart devices and digital services. The purpose of Digirasti is to possibly help Finns keep up with the rapid digital change and improve their skills in using smart devices and digital services. Digirasti offers various tasks and games that users can use to improve their skills in using smart devices and digital services. These tasks and games provide a fun and interactive way to develop digital skills and competence.",
           },
           {
             _id: 2,
@@ -432,7 +432,7 @@ export const en = {
             alt: "Liikuntakoutsaus project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Liikuntakoutsaus App has been developed to support employees' physical activity and well-being. It offers individual guidance and advice as well as the possibility to track one's own progress. The app provides four sessions with a personal exercise coach, during which lifestyle and goals are discussed and a plan is created specifically for you to have a more active daily routine. The app has been developed in collaboration with occupational health care and is implemented in the company's staff exercise program.",
+              "Liikuntakoutsaus App has been developed to support physical activity and well-being in the workplace. It offers individual guidance and advice as well as the possibility to track one's own progress. The app provides four sessions with a personal exercise coach, during which lifestyle and goals are discussed and a plan is created specifically for you to have a more active daily routine. The app has been developed in collaboration with occupational health care and is implemented in the company's staff exercise program.",
           },
           {
             _id: 3,
@@ -474,7 +474,7 @@ export const en = {
             alt: "Muistojälki project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Muistojälki is a web application that guides you to the grave of your friend, relative or even a celebrity. The application also allows you to leave virtual candles on the desired grave. In addition, Muistojälki offers a paid service that enables you to record the life story of your friend or relative for future generations to read. The application has a user-friendly interface that makes it easy to find gravesites. You can search for the location of a grave by name, date of birth and death, and cemetery. You can also use the application to explore the history of different cemeteries. Muistojälki was developed for preserving and sharing memories with loved ones. We hope that the application helps users connect the past and present and keep the memory of their loved ones alive.",
+              "Muistojälki is a web application that guides you to the grave of your friend, relative or even a celebrity. The application also allows you to leave virtual candles on the graves. In addition, Muistojälki offers a paid service that enables you to record the life story of your friend or relative for future generations to read. The application has a user-friendly interface that makes it easy to find gravesites. You can search for the location of a grave by name, date of birth and death, and cemetery. You can also use the application to explore the history of different cemeteries. Muistojälki was developed for preserving and sharing memories with loved ones. We hope that the application helps users connect the past and present and keep the memory of their loved ones alive.",
           },
         ],
       },
