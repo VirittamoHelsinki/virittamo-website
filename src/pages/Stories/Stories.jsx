@@ -19,22 +19,27 @@ const Stories = () => {
   const { title, text, stories } = lang.stories_page;
 
   // Function to render stories as slides
-  const renderSlides = () => {
-    if (!stories) {
+  const renderFeaturedStory = () => {
+    if (!stories || stories.length === 0) {
+      // Check if stories array is empty
       // If there are no stories, return null
       return null;
     }
 
-    return stories.map((item, index) => (
-      // Render Stories_Item component for each story item
+    const featuredStoryIndex = Math.floor(Math.random() * stories.length);
+    const featuredStory = stories[featuredStoryIndex];
+
+    return (
+      // Render a single Stories_Item component for the randomly selected featured story
       <Stories_Item
-        key={index}
-        alt={item.alt}
-        img_src={item.img_src}
-        full_name={item.full_name}
-        story_text={item.story_text}
+        key={featuredStoryIndex}
+        alt={featuredStory.alt}
+        img_src={featuredStory.img_src}
+        full_name={featuredStory.full_name}
+        job_title={featuredStory.job_title}
+        story_text={featuredStory.story_text}
       />
-    ));
+    );
   };
 
   return (
@@ -47,7 +52,7 @@ const Stories = () => {
           <p>{text}</p>
         </div>
         <PinkBar />
-        <ul className="storiesPage__list">{renderSlides()}</ul>
+        <ul className="storiesPage__featuredStory">{renderFeaturedStory()}</ul>
         <Footer />
       </main>
     </Suspense>

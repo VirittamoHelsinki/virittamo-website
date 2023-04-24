@@ -33,6 +33,12 @@ main.storiesPage__wrapper {
       @include responsive(large_mobile) {
         width: 70%;
       }
+
+      @include responsive(mobile) {
+        font-size: 18px;
+        line-height: 20px;
+        width: 90%;
+      }
     }
   }
 
@@ -42,7 +48,7 @@ main.storiesPage__wrapper {
     height: 3px;
   }
 
-  ul.storiesPage__list {
+  ul.storiesPage__featuredStory {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -51,20 +57,18 @@ main.storiesPage__wrapper {
     width: 100%;
     gap: 60px;
 
-    li.storiesPage__list--item {
+    li.storiesPage__featuredStory--item {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
       position: relative;
-      border: 4px solid $virittamo-light-violet;
       text-align: left;
-      padding: 5%;
-      width: 50%;
-      gap: 30px;
+      width: 45%;
+      gap: 25px;
 
       @include responsive(desktop) {
-        width: 60%;
+        width: 55%;
       }
 
       @include responsive(tablet) {
@@ -91,10 +95,21 @@ main.storiesPage__wrapper {
         padding: 0 5% 0;
       }
 
-      div.storiesPage__list--item-text {
+      div.storiesPage__featuredStory--item-title {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 7.5px;
+      }
+
+      div.storiesPage__featuredStory--item-text {
+        display: flex;
+        background: $virittamo-light-violet;
+        flex-direction: column;
         text-align: justify;
+        padding: 5%;
         margin-bottom: 25px;
         gap: 25px;
 

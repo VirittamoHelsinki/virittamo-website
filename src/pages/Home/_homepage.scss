@@ -64,9 +64,7 @@ main.homePage__wrapper {
 
     @include responsive(mobile) {
       gap: 25px;
-    }
 
-    @include responsive(mobile) {
       h1 {
         font-size: 54px;
         line-height: 56px;

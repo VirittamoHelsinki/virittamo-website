@@ -495,6 +495,7 @@ export const en = {
         alt: "Picture of Andrei Vlassenko",
         img_src: Andrei,
         full_name: "Andrei Vlassenko",
+        job_title: "ICT Technician",
         story_text: [
           "My story with Virittämö Helsinki started before I even got hired. I first applied and didn't get the job, but thanks to the previous ICT team leaders advice, I studied cloud technologies more and applied again. Even though I still struggled with Finnish language in the interview, I got hired. At first I was pretty quiet, shy and unsure, but I got to work with one of our systems.",
           "I started to notice things we could improve, but I struggled about communicating. I shifted my focus to communication skills and language. I knew it wouldnt matter how well I can understand the systems if I can't make people to discuss about them. This way I got an opportunity to learn what I needed the most.\nEach week we had different team member responsible for certain weekly routines so everyone could practice presentation skills and help others. There were also advanced Finnish lessons and free courses from Metropolia University helping me to become more professional and healthy. I learned more job-seeking skills and even though I didn't find a suitable job for myself, many others did.",
@@ -505,6 +506,7 @@ export const en = {
         alt: "Picture of Eetu Lehmus, an ex Virittämö employee.",
         img_src: Eetu,
         full_name: "Eetu Lehmus",
+        job_title: "Software Developer",
         story_text: [
           "I graduated as a data clerk and then got into Oulu University of Applied Sciences to study information and communication technology. In the last year of my studies, I switched to the mobile gaming industry as a game designer and moved to Helsinki. After taking a break for a couple of years due to unfinished studies, I dreamt of a career as a programmer. By chance, I came across a job advertisement from Virittämö and got my first programming job. Virittämö's software team seemed like the perfect place to start in the desired position.",
           "I have nothing but good things to say about Virittämö. It was great to dive right into customer projects, where I was able to utilize what I had learned before. There wasn't too much pressure at work, and I had time to learn new programming languages. I learned a lot of new things and gained more confidence that I could implement client requests. I got a lot of help from other employees in joint projects. I feel that the social support network was good overall, and everyone helped each other.",
@@ -515,6 +517,7 @@ export const en = {
         alt: "Picture of Kari Loise, an ex Virittämö employee.",
         img_src: Kari,
         full_name: "Kari Loise",
+        job_title: "ICT Technician",
         story_text: [
           "My work at Virittämö began after I changed my career and studied to become an ICT technician. In the ICT team at Virittämö, I was able to broaden my expertise by performing various tasks such as local support, remote support, and maintaining the hardware and personnel registry. The work was diverse and I had a say in my job.",
           "I found Virittämö to be a pleasant work environment and received a lot of support regarding job searching. Especially the career counselor's tips were useful.",
