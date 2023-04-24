@@ -24,3 +24,15 @@ jobs:
         npm run prepare
     - name: Run Tests
       run: npm test
+    - name: Create Issue on Failed workflow
+      if: ${{ failure() }}
+      uses: dacbd/create-issue-action@main
+      with:
+        token: ${{ github.token }}
+        title: Job failed:${{ github.repository }} - ${{ github.workflow }}
+        body: |
+          ### Testin aikana tapahtui virhe, katso lisätietoja linkistä.
+          [Failed Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          Workflow name - `${{ github.workflow }}`
+          Job -           `${{ github.job }}`
+          status -        `${{ job.status }}`
