@@ -43,6 +43,8 @@ import Muistojalki_small from "../pages/Projects/assets/carousel/SOFTA_MUISTOJAL
 import Andrei from "../pages/Stories/assets/andrei.webp";
 import Eetu from "../pages/Stories/assets/eetu.webp";
 import Kari from "../pages/Stories/assets/kari.webp";
+import Leo from "../pages/Stories/assets/leo.webp";
+import Warda from "../pages/Stories/assets/warda.webp";
 
 export const fi = {
   /*
@@ -495,6 +497,7 @@ export const fi = {
     view_story_btn: "Lue tarina",
     stories: [
       {
+        index: 0,
         alt: "Kuva Andrei Vlassenko:sta",
         img_src: Andrei,
         full_name: "Andrei Vlassenko",
@@ -508,6 +511,7 @@ export const fi = {
         component: StoriesCarousel_Item,
       },
       {
+        index: 1,
         alt: "Kuva Eetu Lehmuksesta:sta, entinen Virittämön työntekijä.",
         img_src: Eetu,
         full_name: "Eetu Lehmus",
@@ -520,6 +524,7 @@ export const fi = {
         component: StoriesCarousel_Item,
       },
       {
+        index: 2,
         alt: "Kuva Kari:sta, entinen Virittämön työntekijä.",
         img_src: Kari,
         full_name: "Kari Loise",
@@ -528,6 +533,33 @@ export const fi = {
           "Työskentelyni Virittämöllä alkoi uranvaihtoni ja ICT-asentajaksi opiskeluideni jälkeen. Virittämön ICT-tiimissä sain kartuttaa osaamistani monipuolisesti eri työtehtävissä, kuten lähituessa, etätuessa sekä laiterekisterin- ja henkilöstörekisterin ylläpidossa. Työ oli vaihtelevaa ja sain vaikuttaa työhöni.",
           "Koin Virittämön mukavaksi työympäristöksi ja sain paljon tukea työnhakuun liittyvissä asioissa. Erityisesti uraohjaajan vinkit olivat hyödyllisiä.",
           "Työllistyin Virittämön työsuhteen aikana Helsingin kaupungille digitukihenkilöksi vakituiseen työsuhteeseen. Työ sisältää muun muassa laiterekisteriä ja laitteiden lainausta. Voin suositella Virittämöä kaikille, jotka haluavat päästä työelämässä eteenpäin.",
+        ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 3,
+        alt: "Kuva Leo:sta, entinen Virittämön työntekijä.",
+        img_src: Leo,
+        full_name: "Leo Jylhä",
+        job_title: "ICT Teknikko",
+        story_text: [
+          "Olen koulutukseltani datanomi ja valmistumisen jälkeen päädyin perheeni yritykseen ravintola-alalle. Vuosien päästä päätin yrittää työllistyä koulutustani vastaavaan työhön tai päästä opiskelemaan. En päässyt opiskelemaan, mutta vapaa paikka Virittämöstä tuli eteeni ja päätin tarttua tilaisuuteen.",
+          "Virittämön ICT-tiimissä pääsin muun muassa tekemään lähitukea, alustanhallintaa, sovellusten siirtämistä pilveen ja konfigurointia. Sain kerrytettyä paljon alan kokemusta ja uusia oppeja. Sain myös paljon tukea työnhakuun, joka auttoi selkeästi uuden työn löytämisessä. Lisäksi suoritin töiden ohessa Virittämön mahdollistamien Metropolia ammattikorkeakoulun polkuopintojen kautta 60 opintopistettä tieto- ja viestintätekniikan opintoja.",
+          "Kun Virittämön aika oli lopuillaan, sain kaksi työtarjousta eri ICT-alan yrityksiltä, joista toiseen työllistyin. Uusi työtehtäväni on pilvipalveluiden konsulttina pohjoismaisessa suuryrityksessä. Tämä vastasi hyvin uratoiveitani ja olen tyytyväinen lopputulokseen.",
+          "ICT-tiimissä oli hyvä yhteishenki ja mukava työskennellä. Suosittelen ehdottomasti Virittämöä varsinkin juuri valmistuneille tai alanvaihtajille.",
+        ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 4,
+        alt: "Kuva Wardasta:sta, entinen Virittämön työntekijä.",
+        img_src: Warda,
+        full_name: "Warda Mohamed",
+        job_title: "UI/UX Suunnittelija",
+        story_text: [
+          "Työni UI/UX-suunnittelijana keskittyy pääasiassa verkkosivustojen ja mobiilisovellusten suunnitteluun. Autan asiakkaitamme luomaan verkkosivustoja ja mobiilisovelluksia, jotka ovat helppokäyttöisiä, toimivia ja miellyttäviä käyttää. Keskityn siihen, miten käyttäjä voi helposti navigoida sivustolla, miten eri toiminnot toimivat ja miltä sivusto tai sovellus näyttää visuaalisesti. Lisäksi rakastan sitä, että pääsen käyttämään luovuuttani ja saan jatkuvasti kehittää taitojani ja oppia uutta.",
+          "Opiskelin yliopistossa muotisuunnittelua, jonka jälkeen työskentelin visuaalisena suunnittelijana ja aloin tehdä verkkosuunnittelua. Web-suunnittelun myötä kiinnostuin käyttäjäkokemuksesta ja siitä, miten suunnitteluvalinnat voivat vaikuttaa siihen, miten ihmiset ovat vuorovaikutuksessa sivuston tai sovelluksen kanssa.",
+          "Olen työskennellyt Virittämöllä nyt 4 kuukautta, jonka aikana olen erityisesti arvostanut mahdollisuutta tehdä yhteistyötä eri tiimien kanssa ja työskennellä erilaisten projektien parissa. UI/UX-suunnittelijana työskentelen tiiviisti ohjelmistokehittäjien kanssa varmistaakseni, että suunnittelumme ovat sekä visuaalisesti houkuttelevia että toimivia.",
         ],
         component: StoriesCarousel_Item,
       },

@@ -43,6 +43,8 @@ import Muistojalki_small from "../pages/Projects/assets/carousel/SOFTA_MUISTOJAL
 import Andrei from "../pages/Stories/assets/andrei.webp";
 import Eetu from "../pages/Stories/assets/eetu.webp";
 import Kari from "../pages/Stories/assets/kari.webp";
+import Leo from "../pages/Stories/assets/leo.webp";
+import Warda from "../pages/Stories/assets/warda.webp";
 
 export const en = {
   /*
@@ -494,6 +496,7 @@ export const en = {
     view_story_btn: "View story",
     stories: [
       {
+        index: 0,
         alt: "Picture of Andrei Vlassenko",
         img_src: Andrei,
         full_name: "Andrei Vlassenko",
@@ -506,6 +509,7 @@ export const en = {
         component: StoriesCarousel_Item,
       },
       {
+        index: 1,
         alt: "Picture of Eetu Lehmus, an ex Virittämö employee.",
         img_src: Eetu,
         full_name: "Eetu Lehmus",
@@ -518,6 +522,7 @@ export const en = {
         component: StoriesCarousel_Item,
       },
       {
+        index: 2,
         alt: "Picture of Kari Loise, an ex Virittämö employee.",
         img_src: Kari,
         full_name: "Kari Loise",
@@ -526,6 +531,33 @@ export const en = {
           "My work at Virittämö began after I changed my career and studied to become an ICT technician. In the ICT team at Virittämö, I was able to broaden my expertise by performing various tasks such as local support, remote support, and maintaining the hardware and personnel registry. The work was diverse and I had a say in my job.",
           "I found Virittämö to be a pleasant work environment and received a lot of support regarding job searching. Especially the career counselor's tips were useful.",
           "During my employment at Virittämö, I was employed by the City of Helsinki as a digital support person in a permanent position. The work includes maintaining the hardware registry and lending equipment. I can recommend Virittämö to anyone who wants to progress in their career.",
+        ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 3,
+        alt: "Photo of Leo, former employee of Virittämö.",
+        img_src: Leo,
+        full_name: "Leo Jylhä",
+        job_title: "ICT Technician",
+        story_text: [
+          "I am a data processing graduate and after graduation, I ended up working in my family's restaurant business. Years later, I decided to try to find a job in my field of study or to study further. I didn't get into school, but a job opening at Virittämö came up and I decided to seize the opportunity.",
+          "At Virittämö's ICT team, I was able to do on-site support, platform management, application migration to the cloud, and configuration, among other things. I gained a lot of industry experience and new knowledge. I also received a lot of support in job search, which clearly helped me in finding a new job. In addition, while working, I completed 60 credits of information and communication technology studies through Metropolia University of Applied Sciences' path studies, enabled by Virittämö.",
+          "When my time at Virittämö was coming to an end, I received two job offers from different ICT companies, one of which I accepted. My new job as a cloud services consultant at a Nordic multinational corporation was a good match for my career aspirations, and I am happy with the outcome.",
+          "There was a good team spirit in the ICT team and it was enjoyable to work there. I definitely recommend Virittämö, especially for recent graduates or career changers.",
+        ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 4,
+        alt: "Photo of Warda, former employee of Virittämö.",
+        img_src: Warda,
+        full_name: "Warda Mohamed",
+        job_title: "UI/UX Designer",
+        story_text: [
+          "As a UI/UX designer, my work mainly focuses on designing websites and mobile applications. I help our clients create websites and mobile applications that are easy to use, functional, and visually appealing. I focus on how users can easily navigate the site, how different functions work, and what the site or application looks like visually. Additionally, I love that I get to use my creativity and constantly develop my skills and learn new things.",
+          "I studied fashion design at university, after which I worked as a visual designer and started doing web design. Through web design, I became interested in user experience and how design choices can affect how people interact with a website or application.",
+          "I have been working at Virittämö for 4 months now, during which time I have particularly appreciated the opportunity to collaborate with different teams and work on various projects. As a UI/UX designer, I work closely with software developers to ensure that our designs are both visually appealing and functional.",
         ],
         component: StoriesCarousel_Item,
       },

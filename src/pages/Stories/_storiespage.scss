@@ -90,9 +90,8 @@ main.storiesPage__wrapper {
         width: 225px;
       }
 
-      h2 {
-        font-size: 36px;
-        padding: 0 5% 0;
+      h4 {
+        font-size: 20px;
       }
 
       div.storiesPage__featuredStory--item-title {
@@ -110,7 +109,6 @@ main.storiesPage__wrapper {
         flex-direction: column;
         text-align: justify;
         padding: 5%;
-        margin-bottom: 25px;
         gap: 25px;
 
         @include responsive(tablet) {
@@ -217,7 +215,7 @@ main.storiesPage__wrapper {
             }
 
             p {
-              font-size: 16px;
+              font-size: 18px;
               font-weight: 300;
             }
           }

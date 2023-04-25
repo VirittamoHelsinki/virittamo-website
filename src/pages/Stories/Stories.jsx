@@ -1,6 +1,7 @@
 // Import LanguageContext and useContext hook from react
 import { LanguageContext } from "../../langLocal/context/langContext";
-import { useContext, Suspense } from "react";
+import { FeaturedStoryContext } from "./context/featuredStoryContext";
+import { useContext, Suspense, useState, useEffect, useRef } from "react";
 
 // Import Loading component to be used while the page is loading
 import Loading from "../Loading/Loading";
@@ -19,6 +20,10 @@ const Stories = () => {
   // Extract the title, text, and stories from lang.stories_page
   const { title, text, stories } = lang.stories_page;
 
+  const [featStory, setFeatStory] = useState(
+    Math.floor(Math.random() * stories.length)
+  );
+
   // Function to render stories as slides
   const renderFeaturedStory = () => {
     if (!stories || stories.length === 0) {
@@ -27,13 +32,12 @@ const Stories = () => {
       return null;
     }
 
-    const featuredStoryIndex = Math.floor(Math.random() * stories.length);
-    const featuredStory = stories[featuredStoryIndex];
+    const featuredStory = stories[featStory];
 
     return (
       // Render a single Stories_Item component for the randomly selected featured story
       <Stories_Item
-        key={featuredStoryIndex}
+        key={featuredStory}
         alt={featuredStory.alt}
         img_src={featuredStory.img_src}
         full_name={featuredStory.full_name}
@@ -43,23 +47,31 @@ const Stories = () => {
     );
   };
 
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    scrollRef.current.scrollIntoView({ behavior: "smooth" });
+  }, [featStory]);
+
   return (
     // Use Suspense to show a loading component while the page is being loaded
     <Suspense fallback={<Loading />}>
-      <main className="storiesPage__wrapper">
-        <Header />
-        <div className="storiesPage__introduction">
-          <h2>{title}</h2>
-          <p>{text}</p>
-        </div>
-        <PinkBar />
-        <section className="storiesPage__featuredStory">
-          {renderFeaturedStory()}
-        </section>
-        <PinkBar />
-        <StoriesCarousel slides={stories} />
-        <Footer />
-      </main>
+      <FeaturedStoryContext.Provider value={{ featStory, setFeatStory }}>
+        <main className="storiesPage__wrapper">
+          <Header />
+          <div className="storiesPage__introduction">
+            <h2>{title}</h2>
+            <p>{text}</p>
+          </div>
+          <PinkBar />
+          <section className="storiesPage__featuredStory" ref={scrollRef}>
+            {renderFeaturedStory()}
+          </section>
+          <PinkBar />
+          <StoriesCarousel slides={stories} />
+          <Footer />
+        </main>
+      </FeaturedStoryContext.Provider>
     </Suspense>
   );
 };
