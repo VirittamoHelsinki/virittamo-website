@@ -1,4 +1,5 @@
 import { Carousel_Item } from "../pages/Projects/TeamProjects/ProjectCarousel/Carousel_Item";
+import { StoriesCarousel_Item } from "../pages/Stories/Carousel/StoriesCarousel_Item";
 
 import Qteatteri from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI.webp";
 import Qteatteri_small from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI_SMALL.webp";
@@ -491,6 +492,7 @@ export const fi = {
     _comment: "Tarinat sivun tekstikentät",
     title: "Tarinat",
     text: "Virittämö Helsingissä olemme saaneet vuosien varrella etuoikeuden työskennellä uskomattoman lahjakkaiden ihmisten kanssa. Tällä sivulla osa heistä jakaa kokemuksiaan ja tarinoitaan omasta matkastaan Virittämön työntekijöinä. Heidän kertomuksistaan tulee esille onnistumisia, haasteita ja henkilökohtaista kasvua, jotka kaikki ovat osa Virittämöä. Erilaiset ihmiset ja mahdollisuudet tekevät Virittämöstä ainutlaatuisen sekä inspiroivan työpaikan.",
+    view_story_btn: "Lue tarina",
     stories: [
       {
         alt: "Kuva Andrei Vlassenko:sta",
@@ -503,6 +505,7 @@ export const fi = {
           "Joka viikko eri tiimin jäsen oli vastuussa tietyn viikoittaisen rutiinin hoitamisesta, jotta kaikki voisivat harjoitella esitystaitoja ja auttaa muita. Oli myös edistyneitä suomen kielen oppitunteja ja ilmaisia kursseja Metropoliasta, jotka auttoivat minua kehittymään ammatillisesti ja henkisesti. Opin lisää työnhakutaitoja ja vaikka en löytänyt sopivaa työpaikkaa itselleni, monet muut löysivät.",
           "Olen kiitollinen kaikille, joihin törmäsin Virittämössä. Opin niin paljon aikani aikana ja minulla oli erittäin onnekas ensimmäinen työkokemukseni. Näin omilla silmilläni, kuinka ihmiset kasvoivat tämän tuen avulla ja saavuttivat lopulta haluamansa. Mukaan lukien minä. Kiitos Virittämö Helsinki. Tämä muutti elämäni varmasti.",
         ],
+        component: StoriesCarousel_Item,
       },
       {
         alt: "Kuva Eetu Lehmuksesta:sta, entinen Virittämön työntekijä.",
@@ -514,6 +517,7 @@ export const fi = {
           "Virittämöstä minulla on pelkästään hyvää sanottavaa. Oli mahtavaa päästä suoraan käsiksi asiakasprojekteihin, joissa pääsin hyödyntämään aiemmin oppimiani asioita. Työssä ei ollut liian kova kiire ja oli aikaa opetella uusia koodikieliä. Opin paljon uutta ja lisäksi sain lisää itsevarmuutta siihen, että pystyn toteuttamaan asiakkaan toiveiden mukaisia toimeksiantoja. Sain paljon apua muilta työntekijöiltä yhteisissä projekteissa. Koen, että sosiaalinen tukiverkosto oli kokonaisuudessaan hyvä; kaikki auttoivat toisiaan.",
           "Seuraavaksi palaan takaisin Ouluun tekemään ammattikorkeakoulututkintoni loppuun, jotta voin työllistyä ohjelmoijaksi tulevaisuudessakin. Virittämö auttoi asettamaan selkeitä päämääriä, toi tekemisen meininkiä ja paremman rytmin arkeen. Suosittelen Virittämöä lämpimästi!",
         ],
+        component: StoriesCarousel_Item,
       },
       {
         alt: "Kuva Kari:sta, entinen Virittämön työntekijä.",
@@ -525,6 +529,7 @@ export const fi = {
           "Koin Virittämön mukavaksi työympäristöksi ja sain paljon tukea työnhakuun liittyvissä asioissa. Erityisesti uraohjaajan vinkit olivat hyödyllisiä.",
           "Työllistyin Virittämön työsuhteen aikana Helsingin kaupungille digitukihenkilöksi vakituiseen työsuhteeseen. Työ sisältää muun muassa laiterekisteriä ja laitteiden lainausta. Voin suositella Virittämöä kaikille, jotka haluavat päästä työelämässä eteenpäin.",
         ],
+        component: StoriesCarousel_Item,
       },
     ],
   },

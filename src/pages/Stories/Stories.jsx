@@ -9,6 +9,7 @@ import { Header } from "../../components/Header/Header";
 import { PinkBar } from "../../components/PinkBar";
 import { Footer } from "../../components/Footer/Footer";
 
+import { StoriesCarousel } from "./Carousel/StoriesCarousel";
 import { Stories_Item } from "./Stories_Item";
 
 const Stories = () => {
@@ -52,7 +53,11 @@ const Stories = () => {
           <p>{text}</p>
         </div>
         <PinkBar />
-        <ul className="storiesPage__featuredStory">{renderFeaturedStory()}</ul>
+        <section className="storiesPage__featuredStory">
+          {renderFeaturedStory()}
+        </section>
+        <PinkBar />
+        <StoriesCarousel slides={stories} />
         <Footer />
       </main>
     </Suspense>
