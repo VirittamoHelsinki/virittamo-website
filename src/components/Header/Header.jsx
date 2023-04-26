@@ -83,7 +83,9 @@ export const Header = () => {
   return (
     <main className="header__wrapper">
       <div className="header__container">
-        <img src={VirittamoLogo} alt="Virittämö Helsinki" />
+        <a href="/">
+          <img src={VirittamoLogo} alt="Virittämö Helsinki" />
+        </a>
         <nav className="header__nav">{navLinks}</nav>
         {socialIcons}
         {isMenuOpen ? (

@@ -107,7 +107,7 @@ body {
 
     @include responsive(large_mobile) {
       font-size: $font-size-mobile;
-      line-height: $font-size-mobile;
+      line-height: 22px;
     }
   }
 }

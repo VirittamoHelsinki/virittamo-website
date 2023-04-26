@@ -1,19 +1,25 @@
 import PropTypes from "prop-types";
 
-import { PinkBar } from "../../components/PinkBar";
-
-export const Stories_Item = ({ alt, img_src, full_name, story_text }) => {
+export const Stories_Item = ({
+  alt,
+  img_src,
+  full_name,
+  story_text,
+  job_title,
+}) => {
   return (
-    <li className="storiesPage__list--item">
+    <div className="storiesPage__featuredStory--item">
       <img src={img_src} alt={alt} />
-      <h3>{full_name}</h3>
-      <div className="storiesPage__list--item-text">
+      <div className="storiesPage__featuredStory--item-title">
+        <h3>{full_name}</h3>
+        <h4>{job_title}</h4>
+      </div>
+      <div className="storiesPage__featuredStory--item-text">
         {story_text.map((text_part, index) => (
           <p key={index}>{text_part}</p>
         ))}
       </div>
-      <PinkBar />
-    </li>
+    </div>
   );
 };
 
@@ -21,5 +27,6 @@ Stories_Item.propTypes = {
   alt: PropTypes.string,
   img_src: PropTypes.string.isRequired,
   full_name: PropTypes.string.isRequired,
+  job_title: PropTypes.string.isRequired,
   story_text: PropTypes.array.isRequired,
 };
