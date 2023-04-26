@@ -1,4 +1,5 @@
 import { Carousel_Item } from "../pages/Projects/TeamProjects/ProjectCarousel/Carousel_Item";
+import { StoriesCarousel_Item } from "../pages/Stories/Carousel/StoriesCarousel_Item";
 
 import Qteatteri from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI.webp";
 import Qteatteri_small from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI_SMALL.webp";
@@ -42,6 +43,8 @@ import Muistojalki_small from "../pages/Projects/assets/carousel/SOFTA_MUISTOJAL
 import Andrei from "../pages/Stories/assets/andrei.webp";
 import Eetu from "../pages/Stories/assets/eetu.webp";
 import Kari from "../pages/Stories/assets/kari.webp";
+import Leo from "../pages/Stories/assets/leo.webp";
+import Warda from "../pages/Stories/assets/warda.webp";
 
 export const fi = {
   /*
@@ -491,37 +494,74 @@ export const fi = {
     _comment: "Tarinat sivun tekstikentät",
     title: "Tarinat",
     text: "Virittämö Helsingissä olemme saaneet vuosien varrella etuoikeuden työskennellä uskomattoman lahjakkaiden ihmisten kanssa. Tällä sivulla osa heistä jakaa kokemuksiaan ja tarinoitaan omasta matkastaan Virittämön työntekijöinä. Heidän kertomuksistaan tulee esille onnistumisia, haasteita ja henkilökohtaista kasvua, jotka kaikki ovat osa Virittämöä. Erilaiset ihmiset ja mahdollisuudet tekevät Virittämöstä ainutlaatuisen sekä inspiroivan työpaikan.",
+    view_story_btn: "Lue tarina",
     stories: [
       {
+        index: 0,
         alt: "Kuva Andrei Vlassenko:sta",
         img_src: Andrei,
         full_name: "Andrei Vlassenko",
+        job_title: "ICT Teknikko",
         story_text: [
           "Tarinani Virittämö Helsingissä alkoi ennen työn aloittamista. Hain ensin, mutta en saanut paikkaa. Edellisen ICT-tiimin johtajan neuvojen ansiosta opiskelin enemmän pilviteknologioita ja hain uudelleen. Vaikka haastattelussa kamppailin yhä suomen kielen kanssa, minut palkattiin. Aluksi olin melko hiljainen, ujo ja epävarma, mutta sain työskennellä yhden järjestelmämme kanssa.",
           "Huomasin asioita, joita voisimme parantaa, mutta minulla oli vaikeuksia viestinnän kanssa. Siirsin fokukseni viestintä- ja kielitaitoihin. Tiesin, ettei ole merkitystä, kuinka hyvin ymmärrän järjestelmät, jos en voi saada ihmisiä keskustelemaan niistä. Tämän avulla sain tilaisuuden oppia sitä, mitä tarvitsin eniten.",
           "Joka viikko eri tiimin jäsen oli vastuussa tietyn viikoittaisen rutiinin hoitamisesta, jotta kaikki voisivat harjoitella esitystaitoja ja auttaa muita. Oli myös edistyneitä suomen kielen oppitunteja ja ilmaisia kursseja Metropoliasta, jotka auttoivat minua kehittymään ammatillisesti ja henkisesti. Opin lisää työnhakutaitoja ja vaikka en löytänyt sopivaa työpaikkaa itselleni, monet muut löysivät.",
           "Olen kiitollinen kaikille, joihin törmäsin Virittämössä. Opin niin paljon aikani aikana ja minulla oli erittäin onnekas ensimmäinen työkokemukseni. Näin omilla silmilläni, kuinka ihmiset kasvoivat tämän tuen avulla ja saavuttivat lopulta haluamansa. Mukaan lukien minä. Kiitos Virittämö Helsinki. Tämä muutti elämäni varmasti.",
         ],
+        component: StoriesCarousel_Item,
       },
       {
+        index: 1,
         alt: "Kuva Eetu Lehmuksesta:sta, entinen Virittämön työntekijä.",
         img_src: Eetu,
         full_name: "Eetu Lehmus",
+        job_title: "Ohjelmistokehittäjä",
         story_text: [
           "Valmistuin aikoinaan datanomiksi, jonka jälkeen pääsin Oulun ammattikorkeakouluun opiskelemaan tieto- ja viestintätekniikkaa. Opiskelujen viimeisenä vuonna siirryin mobiilipelialalle pelisuunnittelijaksi ja muutin Helsinkiin. Kesken jääneiden opintojen jälkeen pidin parin vuoden tauon ja haaveilin urasta ohjelmoijana. Törmäsin sattumalta Virittämön rekryilmoitukseen, jonka kautta sain elämäni ensimmäisen ohjelmoijan työn. Virittämön softatiimi vaikutti juuri oikealta paikalta aloittaa toivomissani tehtävissä.",
           "Virittämöstä minulla on pelkästään hyvää sanottavaa. Oli mahtavaa päästä suoraan käsiksi asiakasprojekteihin, joissa pääsin hyödyntämään aiemmin oppimiani asioita. Työssä ei ollut liian kova kiire ja oli aikaa opetella uusia koodikieliä. Opin paljon uutta ja lisäksi sain lisää itsevarmuutta siihen, että pystyn toteuttamaan asiakkaan toiveiden mukaisia toimeksiantoja. Sain paljon apua muilta työntekijöiltä yhteisissä projekteissa. Koen, että sosiaalinen tukiverkosto oli kokonaisuudessaan hyvä; kaikki auttoivat toisiaan.",
           "Seuraavaksi palaan takaisin Ouluun tekemään ammattikorkeakoulututkintoni loppuun, jotta voin työllistyä ohjelmoijaksi tulevaisuudessakin. Virittämö auttoi asettamaan selkeitä päämääriä, toi tekemisen meininkiä ja paremman rytmin arkeen. Suosittelen Virittämöä lämpimästi!",
         ],
+        component: StoriesCarousel_Item,
       },
       {
+        index: 2,
         alt: "Kuva Kari:sta, entinen Virittämön työntekijä.",
         img_src: Kari,
         full_name: "Kari Loise",
+        job_title: "ICT Teknikko",
         story_text: [
           "Työskentelyni Virittämöllä alkoi uranvaihtoni ja ICT-asentajaksi opiskeluideni jälkeen. Virittämön ICT-tiimissä sain kartuttaa osaamistani monipuolisesti eri työtehtävissä, kuten lähituessa, etätuessa sekä laiterekisterin- ja henkilöstörekisterin ylläpidossa. Työ oli vaihtelevaa ja sain vaikuttaa työhöni.",
           "Koin Virittämön mukavaksi työympäristöksi ja sain paljon tukea työnhakuun liittyvissä asioissa. Erityisesti uraohjaajan vinkit olivat hyödyllisiä.",
           "Työllistyin Virittämön työsuhteen aikana Helsingin kaupungille digitukihenkilöksi vakituiseen työsuhteeseen. Työ sisältää muun muassa laiterekisteriä ja laitteiden lainausta. Voin suositella Virittämöä kaikille, jotka haluavat päästä työelämässä eteenpäin.",
         ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 3,
+        alt: "Kuva Leo:sta, entinen Virittämön työntekijä.",
+        img_src: Leo,
+        full_name: "Leo Jylhä",
+        job_title: "ICT Teknikko",
+        story_text: [
+          "Olen koulutukseltani datanomi ja valmistumisen jälkeen päädyin perheeni yritykseen ravintola-alalle. Vuosien päästä päätin yrittää työllistyä koulutustani vastaavaan työhön tai päästä opiskelemaan. En päässyt opiskelemaan, mutta vapaa paikka Virittämöstä tuli eteeni ja päätin tarttua tilaisuuteen.",
+          "Virittämön ICT-tiimissä pääsin muun muassa tekemään lähitukea, alustanhallintaa, sovellusten siirtämistä pilveen ja konfigurointia. Sain kerrytettyä paljon alan kokemusta ja uusia oppeja. Sain myös paljon tukea työnhakuun, joka auttoi selkeästi uuden työn löytämisessä. Lisäksi suoritin töiden ohessa Virittämön mahdollistamien Metropolia ammattikorkeakoulun polkuopintojen kautta 60 opintopistettä tieto- ja viestintätekniikan opintoja.",
+          "Kun Virittämön aika oli lopuillaan, sain kaksi työtarjousta eri ICT-alan yrityksiltä, joista toiseen työllistyin. Uusi työtehtäväni on pilvipalveluiden konsulttina pohjoismaisessa suuryrityksessä. Tämä vastasi hyvin uratoiveitani ja olen tyytyväinen lopputulokseen.",
+          "ICT-tiimissä oli hyvä yhteishenki ja mukava työskennellä. Suosittelen ehdottomasti Virittämöä varsinkin juuri valmistuneille tai alanvaihtajille.",
+        ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 4,
+        alt: "Kuva Wardasta:sta, entinen Virittämön työntekijä.",
+        img_src: Warda,
+        full_name: "Warda Mohamed",
+        job_title: "UI/UX Suunnittelija",
+        story_text: [
+          "Työni UI/UX-suunnittelijana keskittyy pääasiassa verkkosivustojen ja mobiilisovellusten suunnitteluun. Autan asiakkaitamme luomaan verkkosivustoja ja mobiilisovelluksia, jotka ovat helppokäyttöisiä, toimivia ja miellyttäviä käyttää. Keskityn siihen, miten käyttäjä voi helposti navigoida sivustolla, miten eri toiminnot toimivat ja miltä sivusto tai sovellus näyttää visuaalisesti. Lisäksi rakastan sitä, että pääsen käyttämään luovuuttani ja saan jatkuvasti kehittää taitojani ja oppia uutta.",
+          "Opiskelin yliopistossa muotisuunnittelua, jonka jälkeen työskentelin visuaalisena suunnittelijana ja aloin tehdä verkkosuunnittelua. Web-suunnittelun myötä kiinnostuin käyttäjäkokemuksesta ja siitä, miten suunnitteluvalinnat voivat vaikuttaa siihen, miten ihmiset ovat vuorovaikutuksessa sivuston tai sovelluksen kanssa.",
+          "Olen työskennellyt Virittämöllä nyt 4 kuukautta, jonka aikana olen erityisesti arvostanut mahdollisuutta tehdä yhteistyötä eri tiimien kanssa ja työskennellä erilaisten projektien parissa. UI/UX-suunnittelijana työskentelen tiiviisti ohjelmistokehittäjien kanssa varmistaakseni, että suunnittelumme ovat sekä visuaalisesti houkuttelevia että toimivia.",
+        ],
+        component: StoriesCarousel_Item,
       },
     ],
   },

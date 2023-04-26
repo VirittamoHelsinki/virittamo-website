@@ -1,4 +1,5 @@
 import { Carousel_Item } from "../pages/Projects/TeamProjects/ProjectCarousel/Carousel_Item";
+import { StoriesCarousel_Item } from "../pages/Stories/Carousel/StoriesCarousel_Item";
 
 import Qteatteri from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI.webp";
 import Qteatteri_small from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI_SMALL.webp";
@@ -42,6 +43,8 @@ import Muistojalki_small from "../pages/Projects/assets/carousel/SOFTA_MUISTOJAL
 import Andrei from "../pages/Stories/assets/andrei.webp";
 import Eetu from "../pages/Stories/assets/eetu.webp";
 import Kari from "../pages/Stories/assets/kari.webp";
+import Leo from "../pages/Stories/assets/leo.webp";
+import Warda from "../pages/Stories/assets/warda.webp";
 
 export const en = {
   /*
@@ -490,36 +493,73 @@ export const en = {
     _comment: "Text fields for the story page",
     title: "Stories",
     text: "At Virittämö Helsinki, we have had the privilege over the years to work with incredibly talented people. On this page, some of them share their experiences and stories of their journey as Virittämö employees. Their stories reveal successes, challenges, and personal growth, all of which are part of Virittämö. Different people and opportunities make Virittämö a unique and inspiring workplace.",
+    view_story_btn: "View story",
     stories: [
       {
+        index: 0,
         alt: "Picture of Andrei Vlassenko",
         img_src: Andrei,
         full_name: "Andrei Vlassenko",
+        job_title: "ICT Technician",
         story_text: [
           "My story with Virittämö Helsinki started before I even got hired. I first applied and didn't get the job, but thanks to the previous ICT team leaders advice, I studied cloud technologies more and applied again. Even though I still struggled with Finnish language in the interview, I got hired. At first I was pretty quiet, shy and unsure, but I got to work with one of our systems.",
           "I started to notice things we could improve, but I struggled about communicating. I shifted my focus to communication skills and language. I knew it wouldnt matter how well I can understand the systems if I can't make people to discuss about them. This way I got an opportunity to learn what I needed the most.\nEach week we had different team member responsible for certain weekly routines so everyone could practice presentation skills and help others. There were also advanced Finnish lessons and free courses from Metropolia University helping me to become more professional and healthy. I learned more job-seeking skills and even though I didn't find a suitable job for myself, many others did.",
           "I'm grateful for everyone I met at Virittämö. I learned so much during my time and I got very lucky with my first job experience. I saw with my own eyes, how people grew with this support and were able to achieve what they wanted in the end. Including me. Thank you Virittämö Helsinki. Life-changing for sure",
         ],
+        component: StoriesCarousel_Item,
       },
       {
+        index: 1,
         alt: "Picture of Eetu Lehmus, an ex Virittämö employee.",
         img_src: Eetu,
         full_name: "Eetu Lehmus",
+        job_title: "Software Developer",
         story_text: [
           "I graduated as a data clerk and then got into Oulu University of Applied Sciences to study information and communication technology. In the last year of my studies, I switched to the mobile gaming industry as a game designer and moved to Helsinki. After taking a break for a couple of years due to unfinished studies, I dreamt of a career as a programmer. By chance, I came across a job advertisement from Virittämö and got my first programming job. Virittämö's software team seemed like the perfect place to start in the desired position.",
           "I have nothing but good things to say about Virittämö. It was great to dive right into customer projects, where I was able to utilize what I had learned before. There wasn't too much pressure at work, and I had time to learn new programming languages. I learned a lot of new things and gained more confidence that I could implement client requests. I got a lot of help from other employees in joint projects. I feel that the social support network was good overall, and everyone helped each other.",
           "Next, I will return to Oulu to finish my university degree, so I can continue working as a programmer in the future. Virittämö helped me set clear goals, brought a sense of doing things, and a better rhythm to my daily life. I highly recommend Virittämö!",
         ],
+        component: StoriesCarousel_Item,
       },
       {
+        index: 2,
         alt: "Picture of Kari Loise, an ex Virittämö employee.",
         img_src: Kari,
         full_name: "Kari Loise",
+        job_title: "ICT Technician",
         story_text: [
           "My work at Virittämö began after I changed my career and studied to become an ICT technician. In the ICT team at Virittämö, I was able to broaden my expertise by performing various tasks such as local support, remote support, and maintaining the hardware and personnel registry. The work was diverse and I had a say in my job.",
           "I found Virittämö to be a pleasant work environment and received a lot of support regarding job searching. Especially the career counselor's tips were useful.",
           "During my employment at Virittämö, I was employed by the City of Helsinki as a digital support person in a permanent position. The work includes maintaining the hardware registry and lending equipment. I can recommend Virittämö to anyone who wants to progress in their career.",
         ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 3,
+        alt: "Photo of Leo, former employee of Virittämö.",
+        img_src: Leo,
+        full_name: "Leo Jylhä",
+        job_title: "ICT Technician",
+        story_text: [
+          "I am a data processing graduate and after graduation, I ended up working in my family's restaurant business. Years later, I decided to try to find a job in my field of study or to study further. I didn't get into school, but a job opening at Virittämö came up and I decided to seize the opportunity.",
+          "At Virittämö's ICT team, I was able to do on-site support, platform management, application migration to the cloud, and configuration, among other things. I gained a lot of industry experience and new knowledge. I also received a lot of support in job search, which clearly helped me in finding a new job. In addition, while working, I completed 60 credits of information and communication technology studies through Metropolia University of Applied Sciences' path studies, enabled by Virittämö.",
+          "When my time at Virittämö was coming to an end, I received two job offers from different ICT companies, one of which I accepted. My new job as a cloud services consultant at a Nordic multinational corporation was a good match for my career aspirations, and I am happy with the outcome.",
+          "There was a good team spirit in the ICT team and it was enjoyable to work there. I definitely recommend Virittämö, especially for recent graduates or career changers.",
+        ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 4,
+        alt: "Photo of Warda, former employee of Virittämö.",
+        img_src: Warda,
+        full_name: "Warda Mohamed",
+        job_title: "UI/UX Designer",
+        story_text: [
+          "As a UI/UX designer, my work mainly focuses on designing websites and mobile applications. I help our clients create websites and mobile applications that are easy to use, functional, and visually appealing. I focus on how users can easily navigate the site, how different functions work, and what the site or application looks like visually. Additionally, I love that I get to use my creativity and constantly develop my skills and learn new things.",
+          "I studied fashion design at university, after which I worked as a visual designer and started doing web design. Through web design, I became interested in user experience and how design choices can affect how people interact with a website or application.",
+          "I have been working at Virittämö for 4 months now, during which time I have particularly appreciated the opportunity to collaborate with different teams and work on various projects. As a UI/UX designer, I work closely with software developers to ensure that our designs are both visually appealing and functional.",
+        ],
+        component: StoriesCarousel_Item,
       },
     ],
   },
