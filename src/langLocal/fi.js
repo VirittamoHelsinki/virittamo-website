@@ -4,8 +4,8 @@ import { StoriesCarousel_Item } from "../pages/Stories/Carousel/StoriesCarousel_
 import Qteatteri from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI.webp";
 import Qteatteri_small from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI_SMALL.webp";
 
-import Oodi from "../pages/Projects/assets/carousel/MEDIA_OODI.webp";
-import Oodi_small from "../pages/Projects/assets/carousel/MEDIA_OODI_SMALL.webp";
+import Oodi from "../pages/Projects/assets/carousel/MEDIA_OODI_2.webp";
+import Oodi_small from "../pages/Projects/assets/carousel/MEDIA_OODI_2_SMALL.webp";
 
 import MoiPanda from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA.webp";
 import MoiPanda_small from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
