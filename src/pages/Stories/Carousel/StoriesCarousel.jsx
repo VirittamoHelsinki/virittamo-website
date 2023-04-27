@@ -8,12 +8,16 @@ import { SlideIndicator } from "../../../components/SlideIndicator/SlideIndicato
 // Returns the number of visible slides based on the width of the viewport
 const getNumVisibleSlides = (slides, width) => {
   switch (true) {
-    case width <= 900:
+    case width <= 720:
       return 1;
     case width <= 1280:
       return 2;
+    case width <= 1600:
+      return 3;
+    case width <= 1920:
+      return 4;
     default:
-      return Math.min(slides.length, 3);
+      return Math.min(slides.length, 5);
   }
 };
 
