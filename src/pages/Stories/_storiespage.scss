@@ -21,6 +21,10 @@ main.storiesPage__wrapper {
     width: 100%;
     gap: 25px;
 
+    @include responsive(mobile) {
+      margin-top: 100px;
+    }
+
     p {
       font-size: $font-size-subtext;
       text-align: center;
@@ -37,7 +41,7 @@ main.storiesPage__wrapper {
       @include responsive(mobile) {
         font-size: 18px;
         line-height: 20px;
-        width: 90%;
+        width: 85%;
       }
     }
   }
@@ -137,6 +141,14 @@ main.storiesPage__wrapper {
     height: auto;
     width: auto;
     gap: 35px;
+
+    @include responsive(large_mobile) {
+      margin-bottom: 50px;
+    }
+
+    @include responsive(mobile) {
+      margin-bottom: 25px;
+    }
 
     div.carousel-indicators {
       margin-top: 0px !important;
