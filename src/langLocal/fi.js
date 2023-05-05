@@ -530,7 +530,7 @@ export const fi = {
         full_name: "Kari Loise",
         job_title: "ICT Teknikko",
         story_text: [
-          "Kun aloitin työskentelyn Virittämöllä, olin vasta opiskellut ICT-alaa ja suorittanut uranvaihdon. Työskentely ICT-tiimissä oli ensimmäinen askeleeni tällä alalla ja sain kokea paljon monipuolisia tehtäviä, jotka kasvattivat osaamistani.",
+          "Kun aloitin työskentelyn Virittämöllä, olin sitä ennen opiskellut ICT-alaa ja suorittanut uranvaihdon. Työskentely ICT-tiimissä oli ensimmäinen askeleeni tällä alalla ja sain kokea paljon monipuolisia tehtäviä, jotka kasvattivat osaamistani.",
           "Aloitin lähituen tehtävissä, jossa autoin Virittämön muita työntekijöitä erilaisissa teknisissä ongelmissa. Tämä tehtävä oli erittäin tärkeä, koska se vaikutti suoraan muiden työkokemukseen ja tyytyväisyyteen teknologiaan. Seuraavaksi siirryin etätukitehtäviin, joka oli erittäin hyödyllistä oppimistani, sillä sain oppia käyttämään erilaisia tietoturvateknologioita. Työskentelin myös laiterekisterin ja henkilöstörekisterin ylläpidon parissa, mikä opetti minulle, miten organisaatio toimii teknologian näkökulmasta.",
           "Virittämö oli mukava työympäristö, jossa sain paljon tukea työnhakuun liittyvissä asioissa. Virittämön uraohjaaja tarjosi arvokasta neuvoa, joka auttoi minua navigoimaan työmaailmassa. Sain hyviä neuvoja muun muassa työnhausta, ansioluettelon kirjoittamisesta ja haastatteluista.",
           "Virittämön työsuhteen aikana onnistuin löytämään vakituisen työpaikan Helsingin kaupungilta digitukihenkilönä. Työtehtävät sisältävät laiterekisterin ylläpidon ja laitteiden lainaamisen. Virittämön avulla pääsin etenemään urallani ja sain arvokasta kokemusta ICT-alalta. Voin suositella Virittämöä kaikille, jotka etsivät työpaikkaa ICT-alalta ja haluavat kehittyä ammatillisesti.",
@@ -547,7 +547,7 @@ export const fi = {
           "Koulutukseltani olen datanomi, ja valmistumiseni jälkeen aloitin työskentelyn perheyrityksessämme ravintola-alalla. Jonkin ajan kuluttua päätin etsiä koulutustani vastaavaa työtä tai mahdollisuutta opiskella lisää. Vaikka opiskelupaikka ei auennutkaan, tartuin tilaisuuteen, kun vapaa paikka Virittämössä tuli vastaan.",
           "Virittämön ICT-tiimissä sain tehdä lähitukea, hallinnoida alustoja, siirtää sovelluksia pilveen ja määrittää niitä. Sain paljon kokemusta alalta ja opin paljon uutta. Sain myös paljon tukea työnhaussa, joka auttoi minua löytämään uuden työn selkeämmin. Lisäksi suoritin Virittämön mahdollistamien Metropolia ammattikorkeakoulun polkuopintojen aikana 60 opintopistettä tieto- ja viestintätekniikan opintoja.",
           "Kun aikani Virittämöllä loppui, minulle tarjottiin kahta työpaikkaa eri ICT-alan yrityksistä, joista valitsin toisen. Uusi roolini on pilvipalveluiden konsulttina pohjoismaisessa suuryrityksessä. Se vastasi täydellisesti urahaaveitani, ja olen erittäin tyytyväinen lopputulokseen.",
-          "ICT-tiimissä oli hyvä yhteishenki, ja oli miellyttävää työskennellä heidän kanssaan. Suosittelen ehdottomasti Virittämöä erityisesti juuri valmistuneille tai alaa vaihtaville..",
+          "ICT-tiimissä oli hyvä yhteishenki, ja oli miellyttävää työskennellä heidän kanssaan. Suosittelen ehdottomasti Virittämöä erityisesti juuri valmistuneille tai alaa vaihtaville.",
         ],
         component: StoriesCarousel_Item,
       },
