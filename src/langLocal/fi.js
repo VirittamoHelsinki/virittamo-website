@@ -10,9 +10,6 @@ import Oodi_small from "../pages/Projects/assets/carousel/MEDIA_OODI_2_SMALL.web
 import MoiPanda from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA.webp";
 import MoiPanda_small from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
 
-import RadioHelsinki from "../pages/Projects/assets/carousel/MEDIA_RADIOHELSINKI.webp";
-import RadioHelsinki_small from "../pages/Projects/assets/carousel/MEDIA_RADIOHELSINKI_SMALL.webp";
-
 import Henkilökuvaus from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
 import Henkilökuvaus_small from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
 
@@ -124,7 +121,8 @@ export const fi = {
       "RELEX Solutions",
       "Softico",
       "Solteq",
-      "Suomen Kiertovoima KIVO Suora Broadcast",
+      "Suomen Kiertovoima KIVO",
+      "Suora Broadcast",
       "Tietokeskus Finland Oy",
       "Valve Branding Oy",
       "Webhelp Finland Oy",
@@ -136,17 +134,17 @@ export const fi = {
       title: "Työntekijälle",
       description: [
         "Saat tuoretta työkokemusta ja ylläpidät ammattitaitoasi mielenkiintoisilla tehtävillä ja asiakasprojekteilla.",
-        "7 kuukauden tukityö, joka auttaa etenemään urallasi.",
+        "7 kuukauden palkkatukityö, joka auttaa etenemään urallasi.",
         "Kuntatyöntekijöiden (KVTES) työehtosopimuksen mukainen palkka.",
-        "Voit kehittää taitojasi monin eri tavoin työskennellessäsi, opiskellessaan ja ammattikorkeakoulussa insinööritutkintoon johtavia polkuopintoja suorittaessasi.",
-        "Olet osa kannustavaa ja mukavaa työyhteisöä. Virittämön ohjaustiimi kulkee mukanasi kokotyöllistämisjakson ajan, auttaen sinuakehittämään työnhaussa ja työelämässä tarvittavia taitoja kohti työelämää tai jatko-opintoja.",
+        "Ylläpidät ja päivität ammatillista osaamistasi tekemällä töitä ja opiskelemalla.",
+        "Olet osa kannustavaa ja mukavaa työyhteisöä. Virittämön ohjaustiimi kulkee mukanasi koko palkkatukijakson ajan, auttaen sinua kehittämään työnhaku- ja työelämätaitojasi kohti avoimia työmarkkinoita tai jatko-opintoja.",
       ],
     },
     for_a_company: {
       title: "Yritykselle",
       description: [
-        "Osaavat ja ammattitaitoiset ICT-, ohjelmistokehitys- ja mediatekijät lyhyt- tai pitkäaikaisiin projekteihisi tai vakituiseksi työntekijäksi.",
-        "Ammattilaisten asiantuntemus ja soveltuvuus on puolestasi etukäteen tarkasti määritelty.",
+        "Virittämö tarjoaa osaavia ja ammattitaitoisia ICT-, ohjelmistokehitys- ja mediatekijöitä lyhyt- tai pitkäaikaisiin projekteihin tai työntekijöiksi.",
+        "Ammattilaisten asiantuntemus ja soveltuvuus on etukäteen tarkasti määritelty.",
         "Voitte hyödyntää kumppanuutta markkinoinnissanne.",
       ],
     },
@@ -312,20 +310,6 @@ export const fi = {
             _id: 2,
             team: "media",
             component: Carousel_Item,
-            client_name: "Radio Helsinki",
-            project_title: "Sound Design",
-            completion_year: "2023",
-            img_src: RadioHelsinki,
-            img_src_small: RadioHelsinki_small,
-            alt: "placeholder image",
-            link: "https://virittamohelsinki.fi/",
-            description:
-              "Radio Helsinki on ollut Virittämön harjoittelupaikka, jossa äänisuunnittelijamme on päässyt tututustumaan monipuolisesti radiotyöhön, muun muassa lähetyksiin, perehtymään tuotantopuolen työskentelyyn sekä spiikkaamaan radiomainoksia. Radio Helsinki on tarjonnut mahdollisuuden kehittää omaa osaamista ja antanut sopivassa määrin vastuuta sekä tukea.",
-          },
-          {
-            _id: 3,
-            team: "media",
-            component: Carousel_Item,
             client_name: "Q-teatteri",
             project_title: "Tarinateatteri-video",
             completion_year: "2023",
@@ -337,7 +321,7 @@ export const fi = {
               "Projektissamme Q-teatterin kanssa teimme videotallenteita muun muassa oppilaitosten ja sosiaali- ja terveysalan palveluiden hankkimasta yleisötyö- ja yhteisöteatterista. Tarinateatteri on soveltavaa ja osallistavaa improvisaatiota, joka perustuu yleisön kertomiin ajatuksiin, tunteisiin ja tarinoihin. Näyttelijät tekevät näkyväksi ihmisen välisiä vuorovaikutussuhteita, antavat osallistujille mahdollisuuden tarkastella tilannettaan itsensä ulkopuolelta ja nähdä vaihtoehtoisia ratkaisuja. Virittämön tuottamaa videomateriaalia käytetään muun muassa rohkaistaessa opiskelijoita laajentamaan osaamistaan, sekä perhevalmennuksessa.",
           },
           {
-            _id: 4,
+            _id: 3,
             team: "media",
             component: Carousel_Item,
             client_name: "Moi Panda",
@@ -348,13 +332,14 @@ export const fi = {
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Virittämön Mediatiimi on tehnyt Moi Pandalle peligrafiikkaa, hahmosuunnittelua, animaatioita, äänisuunnittelua sekä mainosvideon. Moi Panda-sovelluksen kautta lapset voivat ystävystyä toistensa kautta ympäri maailman, oppia uusia kieliä, sosiaalisia taitoja, kommunikaatiotaitoja ja uutta toistensa kulttuureista pelien, videopuhelujen ja chattien välityksellä. Myös heidän vanhempansa voivat olla sovelluksen kautta ystäviä keskenään ja jakaa pedagogisia vinkkejä ja vanhemmuuteen liittyviä asioita, kokemuksia, tunteita ja ongelmia globaalisti.",
+              "Virittämön Mediatiimi on tehnyt mobiilipeli startup yritys Moi Pandalle peligrafiikkaa, hahmosuunnittelua, animaatioita, äänisuunnittelua sekä mainosvideon. Moi Panda-sovelluksen kautta lapset voivat ystävystyä toistensa kautta ympäri maailman, oppia uusia kieliä, sosiaalisia taitoja, kommunikaatiotaitoja ja uutta toistensa kulttuureista pelien, videopuhelujen ja chattien välityksellä. Heidän vanhempansa voivat olla myös sovelluksen kautta ystäviä keskenään ja jakaa pedagogisia vinkkejä ja vanhemmuuteen liittyviä asioita, kokemuksia, tunteita ja ongelmia globaalisti.",
           },
           {
-            _id: 5,
+            _id: 4,
             team: "media",
             component: Carousel_Item,
-            client_name: "Ohjaamo, Helsingin Kaupunki jne",
+            client_name:
+              "Ohjaamo Helsinki ja Helsingin kaupungin Oodi keskuskirjasto",
             project_title: "Henkilökuvaus",
             completion_year: "2023",
             img_src: Henkilökuvaus,
@@ -362,7 +347,7 @@ export const fi = {
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Mediatiimin toistuviin projekteihin kuuluu asiakkaan tarpeisiin soveltuva henkilökuvaus, jota olemme toteuttaneet esimerkiksi CV-kuvauspisteen muodossa. Asiakkaitamme ovat olleet muun muassa Ohjaamo Studia-messuilla ja Helsingin Kaupunki Oodin kesätyörekryssä.",
+              "Mediatiimin toistuviin projekteihin kuuluu asiakkaan tarpeisiin soveltuva henkilökuvaus, jota olemme toteuttaneet esimerkiksi CV-kuvauspisteen muodossa.",
           },
         ],
         ict: [
@@ -378,7 +363,7 @@ export const fi = {
             alt: "Pilvipalvelu project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Projekteissamme nojataan vahvasti Microsoftin julkipilveen. Azuressa pyörii mm. virtuaalikoneita, webbisovelluksia ja tietokantoja. Azuren kaverina tiivisti toimii konttiteknologiat (Docker) ja CI/CD putket. Virittämöllä  pääset halutessasi osallistumaan mielenkiintoisiin projekteihin ja kehittämään osaamistasi pilviteknologioiden parissa.",
+              "Projekteissamme nojataan vahvasti Microsoftin julkipilveen. Azuressa pyörii mm. virtuaalikoneita, webbisovelluksia ja tietokantoja. Azuren kaverina toimii konttiteknologiat (Docker) ja CI/CD putket. Virittämöllä  pääset halutessasi osallistumaan mielenkiintoisiin projekteihin ja kehittämään osaamistasi pilviteknologioiden parissa.",
           },
           {
             _id: 2,
@@ -392,21 +377,21 @@ export const fi = {
             alt: "Virtualisointi project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Palvelinympäristön vaihto Proxmoxista ESXi:in: IT-projekti, jonka tarkoituksena siirtyä yhden palveluntuottajan piiriin. Siirtymä tapahtui niin kutsuttuna migraatioprojektina. Tämä toteutettiin vaiheittain, jotta Virittämön verkko pysyy toiminnassa.",
+              "Palvelinympäristön vaihto Proxmoxista ESXi:in, jonka tarkoituksena on siirtyä yhden palveluntuottajan piiriin. Siirtymä tapahtui niin kutsuttuna migraatioprojektina. Tämä toteutettiin vaiheittain, jotta Virittämön verkko pysyy toiminnassa.",
           },
           {
             _id: 3,
             team: "ict",
             component: Carousel_Item,
             client_name: "Virittämö",
-            project_title: "Tietoliikennekaapin siistiminen",
+            project_title: "Tietoliikenteen laatuprojekti",
             completion_year: "2023",
             img_src: Tietoliikenne,
             img_src_small: Tietoliikenne_small,
             alt: "Tietoliikenne project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Organisoimme verkkokaapelit siistiin järjestykseen. Fyysistä verkkoa aina helpompi hahmottaa ja ylläpitää, kun kaikki tietoliikennekaapelit ovat siistissä järjestyksessä ja oikein kytkettynä.",
+              "Käydään läpi kaikki Virittämön tietoliikennekomponentit ja kaapeloinnit, jonka jälkeen selkiytetään ja optimoidaan niiden asennukset ja reititykset. Tavoitteena on katkeamattoman toiminnan turvaaminen sähkökatkojen varalta UPS- varavirtajärjestelmällä.",
           },
         ],
         softa: [
@@ -422,7 +407,7 @@ export const fi = {
             alt: "Digirasti project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Digirasti on Helsingin työllisyyspalveluille tehty nettisivu joka tukee ja kehittää suomalaisten digitaitoja ja osaamista älylaitteiden ja digitaalisten palvelujen käytössä. Digirastin tarkoituksena on mahdollisesti auttaa suomalaisia pysymään mukana nopeassa digitaalisessa muutoksessa ja parantamaan heidän taitonsa älylaitteiden ja digipalvelujen käytössä. Digirastissa tarjolla on erilaisia tehtäviä ja pelejä, joiden avulla käyttäjät voivat parantaa taitojaan älylaitteiden ja digitaalisten palvelujen käytössä. Nämä tehtävät ja pelit tarjoavat hauskan ja interaktiivisen tavan kehittää digitaitoja ja osaamista.",
+              "Digirasti on Helsingin kaupungin työllisyyspalveluille tehty nettisivu, joka tukee ja kehittää helsinkiläisten digitaitoja ja osaamista älylaitteiden sekä digitaalisten palvelujen käytössä. Tämä tapahtuu erilaisten tehtävien ja pelien avulla, jotka tarjoavat hauskan ja interaktiivisen tavan kehittää omia digitaitoja ja osaamista.",
           },
           {
             _id: 2,
@@ -436,21 +421,21 @@ export const fi = {
             alt: "Liikuntakoutsaus project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Liikuntakoutsaus-sovellus on kehitetty tukemaan henkilöstön liikuntaharrastuksia ja hyvinvointia. Se tarjoaa yksilöllistä ohjausta ja neuvontaa sekä mahdollisuuden seurata omaa edistymistä. Sovellus tarjoaa neljä tapaamiskertaa henkilökohtaisen liikuntakouluttajan kanssa, joissa keskustellaan elämäntavoista ja tavoitteista ja luodaan juuri sinulle sopiva suunnitelma aktiivisempaan arkeen. Sovellus on kehitetty yhteistyössä työterveyshuollon kanssa ja toteutus tapahtuu henkilöstöliikunnassa.",
+              "Liikuntakoutsaus-sovellus on kehitetty tukemaan henkilöstön liikuntaharrastuksia ja hyvinvointia. Se tarjoaa yksilöllistä ohjausta ja neuvontaa sekä mahdollisuuden seurata omaa edistymistä. Sovellus tarjoaa neljä tapaamiskertaa henkilökohtaisen liikuntakouluttajan kanssa, joissa keskustellaan elämäntavoista, tavoitteista ja luodaan juuri sinulle sopiva suunnitelma aktiivisempaan arkeen. Sovellus on kehitetty yhteistyössä työterveyshuollon kanssa ja toteutus tapahtuu henkilöstöliikunnassa.",
           },
           {
             _id: 3,
             team: "softa",
             component: Carousel_Item,
             client_name: "Helsingin kaupunki / SOTE",
-            project_title: "Aina mukana (SOTE-app)",
+            project_title: "Aina mukana",
             completion_year: "2023",
             img_src: SoteApp,
             img_src_small: SoteApp_small,
             alt: "Sote-App project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Sote-App on suunniteltu tarjoamaan terveydenhuollon työntekijöille mahdollisuuden arvioida potilaan tilannetta yksityiskohtaisesti. Sovellus kysyy työntekijältä potilaan tietoja, kuten sydämen sykettä, lämpötilaa ja muuta potilaan hyvinvointiin liittyvää tietoa, ja terveydenhuollon työntekijä voi arvioida potilaan tilan ja tarvittaessa tarjota tarvittavia hoitotoimenpiteitä. Sote-App on erittäin kätevä ja helppokäyttöinen, ja se tarjoaa terveydenhuollon työntekijöille mahdollisuuden tarjota parhaan mahdollisen hoidon potilailleen. Se on tärkeä apuväline terveydenhuollon työntekijöille, jotka haluavat tarjota tehokasta ja laadukasta hoitoa potilailleen.",
+              "Aina mukana -aplikaatio on suunniteltu tarjoamaan terveydenhuollon työntekijöille mahdollisuuden arvioida potilaan tilannetta yksityiskohtaisesti. Sovellus kysyy työntekijältä potilaan tietoja, kuten sydämen sykettä, lämpötilaa ja muuta potilaan hyvinvointiin liittyvää tietoa. Terveydenhuollon työntekijä voi arvioida potilaan tilan ja tehdä tarvittavat hoitotoimenpiteet. Aplikaatio on helppokäyttöinen apuväline, esimerkiksi kotihoidon tukeen.",
           },
           {
             _id: 4,
@@ -478,7 +463,7 @@ export const fi = {
             alt: "Muistojälki project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Muistojälki on verkkosovellus, joka opastaa sinut ystäväsi, sukulaisesi tai vaikkapa jonkun merkkihenkilön haudalle. Sovelluksessa on myös mahdollista jättää virtuaalikynttilöitä halutulle haudalle. Lisäksi Muistojälki tarjoaa maksullista palvelua, joka antaa mahdollisuuden tallentaa ystäväsi tai sukulaisesi elämäntarinan jälkipolvien luettavaksi. Sovelluksessa on käyttäjäystävällinen käyttöliittymä, joka helpottaa hautapaikkojen etsimistä. Voit etsiä haudan sijainnin nimen, syntymä- ja kuolinajan sekä hautausmaan perusteella. Voit myös käyttää sovellusta erilaisten hautausmaiden historiaan tutustumiseen. Muistojälki on kehitetty muistojen säilyttämiseksi ja jakamiseksi läheisten kanssa. Toivomme, että sovellus auttaa käyttäjiä yhdistämään menneisyyden ja nykyisyyden sekä pitämään muiston rakkaimmistaan elossa.",
+              "Muistojälki on verkkosovellus, joka opastaa sinut ystäväsi, sukulaisesi tai merkkihenkilön haudalle. Sovelluksessa on mahdollista jättää virtuaalikynttilöitä halutulle haudalle. Muistojälki tarjoaa maksullista palvelua, joka antaa mahdollisuuden tallentaa ystäväsi tai sukulaisesi elämäntarinan jälkipolvien luettavaksi. Sovelluksessa on käyttäjäystävällinen käyttöliittymä, joka helpottaa hautapaikkojen etsimistä. Voit etsiä vainajan haudan sen nimen, syntymä- tai kuolinajan sekä hautausmaan perusteella. Voit hyödyntää sovellusta myös erilaisten hautausmaiden historiaan tutustumiseen. Muistojälki on kehitetty muistojen säilyttämiseksi ja jakamiseksi läheisten kanssa. Toivomme, että sovellus auttaa käyttäjiä yhdistämään menneisyyden ja nykyisyyden sekä pitämään muiston rakkaimmistaan elossa.",
           },
         ],
       },
