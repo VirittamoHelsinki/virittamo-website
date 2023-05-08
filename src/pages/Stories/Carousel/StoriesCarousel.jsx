@@ -2,18 +2,22 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import { LoadingSlides } from "../../../Home/Carousel/SubComponents/LoadingSlides";
-import { SlideIndicator } from "../../../../components/SlideIndicator/SlideIndicator";
+import { LoadingSlides } from "../../Home/Carousel/SubComponents/LoadingSlides";
+import { SlideIndicator } from "../../../components/SlideIndicator/SlideIndicator";
 
 // Returns the number of visible slides based on the width of the viewport
-export const getNumVisibleSlides = (slides, width) => {
+const getNumVisibleSlides = (slides, width) => {
   switch (true) {
-    case width <= 1080:
+    case width <= 720:
       return 1;
-    case width <= 1440:
+    case width <= 1280:
       return 2;
+    case width <= 1600:
+      return 3;
+    case width <= 1920:
+      return 4;
     default:
-      return Math.min(slides.length, 3);
+      return Math.min(slides.length, 5);
   }
 };
 
@@ -27,7 +31,7 @@ Slide.propTypes = {
 };
 
 // The main component that renders the project carousel
-export const ProjectCarousel = ({ text = {}, slides = [] }) => {
+export const StoriesCarousel = ({ slides = [] }) => {
   // State variables to keep track of the active slide index and the number of visible slides
   const [activeIndex, setActiveIndex] = useState(0);
   const [numVisibleSlides, setNumVisibleSlides] = useState(
@@ -85,16 +89,10 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [slides]);
 
-  // Extract text data from the props
-  const { title = "", description = "", contact = "" } = text;
-
   return (
-    <div className="projectPage__teams--container-item">
-      {title && <h2>{title}</h2>}
-      {description && <p>{description}</p>}
-      {contact && <p>{contact}</p>}
+    <section className="storiesPage__carousel">
       <SlideIndicator numSlides={slides.length} activeIndex={activeIndex} />
-      <div className="projectPage__teams--carousel">
+      <div className="storiesPage__carousel--container">
         <button
           className="arrow-button"
           onClick={handlePrevClick}
@@ -102,7 +100,7 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
         >
           <SlArrowLeft className="arrow-button--icon" />
         </button>
-        <div className="projectPage__teams--carousel-list">
+        <div className="storiesPage__carousel--container-items">
           {slides.length > 0 ? renderActiveItems() : <LoadingSlides />}
         </div>
         <button
@@ -113,24 +111,18 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
           <SlArrowRight className="arrow-button--icon" />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
-ProjectCarousel.propTypes = {
-  text: PropTypes.shape({
-    title: PropTypes.string,
-    description: PropTypes.string,
-    contact: PropTypes.string,
-  }),
+StoriesCarousel.propTypes = {
   slides: PropTypes.arrayOf(
     PropTypes.shape({
-      component: PropTypes.elementType.isRequired,
-      img_src: PropTypes.string.isRequired,
-      client_name: PropTypes.string.isRequired,
-      project_title: PropTypes.string.isRequired,
-      completion_year: PropTypes.string.isRequired,
       alt: PropTypes.string,
+      img_src: PropTypes.string.isRequired,
+      full_name: PropTypes.string.isRequired,
+      job_title: PropTypes.string.isRequired,
+      component: PropTypes.elementType.isRequired,
     })
   ).isRequired,
 };

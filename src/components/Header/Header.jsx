@@ -8,7 +8,7 @@ import { ReactComponent as Linkedin_icon } from "../assets/linkedin-icon.svg";
 import { ReactComponent as Instagram_icon } from "../assets/instagram-icon.svg";
 
 // import virittämö helsinki logo
-import VirittamoLogo from "./assets/virittamo-helsinki.png";
+import VirittamoLogo from "./assets/virittamo-helsinki.webp";
 
 import { motion } from "framer-motion";
 
@@ -83,7 +83,9 @@ export const Header = () => {
   return (
     <main className="header__wrapper">
       <div className="header__container">
-        <img src={VirittamoLogo} alt="Virittämö Helsinki" />
+        <a href="/">
+          <img src={VirittamoLogo} alt="Virittämö Helsinki" />
+        </a>
         <nav className="header__nav">{navLinks}</nav>
         {socialIcons}
         {isMenuOpen ? (

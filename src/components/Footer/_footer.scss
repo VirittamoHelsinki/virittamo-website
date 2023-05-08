@@ -1,6 +1,6 @@
 main.footer__wrapper {
   display: flex;
-  padding: 25px 10% 75px;
+  padding: 50px 10% 75px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -14,9 +14,17 @@ main.footer__wrapper {
     text-align: center;
   }
 
+  @include responsive(tablet) {
+    gap: 75px;
+  }
+
   @include responsive(large_mobile) {
     padding: 10px 10% 50px;
     gap: 50px;
+  }
+
+  @include responsive(mobile) {
+    gap: 25px;
   }
 
   div.background__wrapper {
@@ -68,13 +76,24 @@ main.footer__wrapper {
       }
     }
 
+    p {
+      line-height: 22px;
+    }
+
+    @include responsive(mobile) {
+      p {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+
     ul.footer__contacts--list {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      height: 500px;
+      height: 625px;
       width: 100%;
       gap: 20px;
 
@@ -103,12 +122,6 @@ main.footer__wrapper {
 
         p:first-of-type {
           font-weight: 900;
-        }
-
-        @include responsive(mobile) {
-          p {
-            font-size: 18px;
-          }
         }
       }
     }

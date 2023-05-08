@@ -1,10 +1,11 @@
 import { Carousel_Item } from "../pages/Projects/TeamProjects/ProjectCarousel/Carousel_Item";
+import { StoriesCarousel_Item } from "../pages/Stories/Carousel/StoriesCarousel_Item";
 
 import Qteatteri from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI.webp";
 import Qteatteri_small from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI_SMALL.webp";
 
-import Oodi from "../pages/Projects/assets/carousel/MEDIA_OODI.webp";
-import Oodi_small from "../pages/Projects/assets/carousel/MEDIA_OODI_SMALL.webp";
+import Oodi from "../pages/Projects/assets/carousel/MEDIA_OODI_2.webp";
+import Oodi_small from "../pages/Projects/assets/carousel/MEDIA_OODI_2_SMALL.webp";
 
 import MoiPanda from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA.webp";
 import MoiPanda_small from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
@@ -42,8 +43,15 @@ import Muistojalki_small from "../pages/Projects/assets/carousel/SOFTA_MUISTOJAL
 import Andrei from "../pages/Stories/assets/andrei.webp";
 import Eetu from "../pages/Stories/assets/eetu.webp";
 import Kari from "../pages/Stories/assets/kari.webp";
+import Leo from "../pages/Stories/assets/leo.webp";
+import Warda from "../pages/Stories/assets/warda.webp";
 
 export const fi = {
+  /*
+  --------------------
+  Header text elements
+  --------------------
+  */
   header: {
     _comment: "Otsikkotekstimuuttujat",
     home_page: "Etusivu",
@@ -52,6 +60,11 @@ export const fi = {
     contact: "Ota yhteyttä",
   },
 
+  /*
+  --------------------
+  Footer text elements
+  --------------------
+  */
   footer: {
     _comment: "Alatunnisteen tekstimuuttujat",
     home_page: "Etusivu",
@@ -60,13 +73,19 @@ export const fi = {
     contact: "Ota yhteyttä",
     back_to_top: "Sivun alkuun",
   },
+
+  /*
+  --------------------
+  Home page text elements
+  --------------------
+  */
   home_page: {
     _comment: "Kotisivun tekstimuuttujat",
     title: "Virittämö",
     text: "Virittämö on Helsingin kaupungin työllistämispalvelu, joka yhdistää tuoretta työkokemusta tarvitsevat tekijät ja käytännön ICT-, ohjelmistokehitys- ja mediaosaajia etsivät yritykset.",
     employed_to_text: "Tänne meiltä on työllistytty",
     companies_list: [
-      "Aalto Yliopisto",
+      "Aalto-yliopisto",
       "Ahlsell",
       "Apix Oy",
       "ATEA Finland",
@@ -120,20 +139,19 @@ export const fi = {
         "7 kuukauden tukityö, joka auttaa etenemään urallasi.",
         "Kuntatyöntekijöiden (KVTES) työehtosopimuksen mukainen palkka.",
         "Voit kehittää taitojasi monin eri tavoin työskennellessäsi, opiskellessaan ja ammattikorkeakoulussa insinööritutkintoon johtavia polkuopintoja suorittaessasi.",
-        "Tulet osaksi kannustavaa ja ystävällistä työyhteisöä. ",
+        "Olet osa kannustavaa ja mukavaa työyhteisöä. Virittämön ohjaustiimi kulkee mukanasi kokotyöllistämisjakson ajan, auttaen sinuakehittämään työnhaussa ja työelämässä tarvittavia taitoja kohti työelämää tai jatko-opintoja.",
       ],
     },
     for_a_company: {
       title: "Yritykselle",
       description: [
-        "Osaavat ja ammattitaitoiset media- ja digiasiantuntijat lyhyt- tai pitkäaikaisiin projekteihisi tai vakituiseksi työntekijäksi.",
+        "Osaavat ja ammattitaitoiset ICT-, ohjelmistokehitys- ja mediatekijät lyhyt- tai pitkäaikaisiin projekteihisi tai vakituiseksi työntekijäksi.",
         "Ammattilaisten asiantuntemus ja soveltuvuus on puolestasi etukäteen tarkasti määritelty.",
-        "Teet konkreettisen työnteon.",
-        "Voit hyötyä kumppanuudesta markkinoinnissasi.",
+        "Voitte hyödyntää kumppanuutta markkinoinnissanne.",
       ],
     },
     teams: {
-      title: "Kolme tiimiä",
+      title: "Tiimit",
       media_desc:
         "Virittämön Mediatiimi on asiantunteva osaajajoukko, joka tekee mediatuotantoja monipuolisiin tarpeisiin. Työ lähtee tilaajan toiveiden kartoituksesta ja tuotannon suunnittelusta. Mietimme yhdessä, mitä ja miten kannattaa tehdä, suunnittelemme toteutuksen kalustoineen, työryhmineen ja jälkitöineen, sekä laadimme aikataulun. Tiimistä löytyy mm. videokuvauksen, valokuvauksen, äänityön, animaation ja graafisen suunnittelun osaajia. Olemme toteuttaneet esimerkiksi mainosvideoita, koulutusvideoita, haastatteluja, animaatioita, 3D-mallinnuksia, livestriimauksia, sekä valokuvanneet nettiin ja painotuotteisiin.",
       ict_desc:
@@ -192,7 +210,7 @@ export const fi = {
         },
         {
           name: "Jaakko Hyytiä",
-          title: "Uraohjain+- hanke, Projektipäällikkö",
+          title: "Projektipäällikkö, Uraohjain+ -hanke",
           phone: "p. 09 310 28040",
           email: "jaakko.hyytia@edu.hel.fi",
         },
@@ -226,6 +244,12 @@ export const fi = {
           phone: "p. 09 310 35264",
           email: "ulla.ijas@edu.hel.fi",
         },
+        {
+          name: "Leea Hiltunen",
+          title: "Projektikoordinaattori, Uraohjain+ -hanke",
+          phone: "p. 09 310 25104",
+          email: "leea.r.hiltunen@edu.hel.fi",
+        },
       ],
     },
     locations: [
@@ -237,6 +261,12 @@ export const fi = {
       },
     ],
   },
+
+  /*
+  --------------------
+  Projects page elements
+  --------------------
+  */
   projects_page: {
     title: "Projektit",
     desc: "Virittämön kautta yritykset voivat saada ammattitaitoista työvoimaa sekä mahdollisuuden tehdä yhteiskunnallista hyvää. Virittämön media-, IT- ja ohjelmistoalojen osaajat voivat olla mukana projekteissanne muutamasta päivästä useaan kuukauteen. Erilaisten projektien kautta työntekijät saavat kartutettua osaamistaan, päivitettyä työkokemusta ja työelämätaitoja ponnistaakseen takaisin omalle urapolulleen.",
@@ -376,7 +406,7 @@ export const fi = {
             alt: "Tietoliikenne project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Laitettiin verkkokaapelit siistiin järjestykseen. Fyysistä verkkoa aina helpompi hahmottaa ja ylläpitää, kun kaikki tietoliikennekaapelit ovat siistissä järjestyksessä ja oikein kytkettynä.",
+              "Organisoimme verkkokaapelit siistiin järjestykseen. Fyysistä verkkoa aina helpompi hahmottaa ja ylläpitää, kun kaikki tietoliikennekaapelit ovat siistissä järjestyksessä ja oikein kytkettynä.",
           },
         ],
         softa: [
@@ -392,7 +422,7 @@ export const fi = {
             alt: "Digirasti project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Digirasti on tehtäväkokonaisuus nettisivu Helsingin työllisyyspalveluille, joka tukee ja kehittää suomalaisten digitaitoja ja osaamista älylaitteiden ja digitaalisten palvelujen käytössä. Digirastin tarkoituksena on mahdollisesti auttaa suomalaisia pysymään mukana nopeassa digitaalisessa muutoksessa ja parantamaan heidän taitonsa älylaitteiden ja digipalvelujen käytössä. Digirastissa tarjolla on erilaisia tehtäviä ja pelejä, joiden avulla käyttäjät voivat parantaa taitojaan älylaitteiden ja digitaalisten palvelujen käytössä. Nämä tehtävät ja pelit tarjoavat hauskan ja interaktiivisen tavan kehittää digitaitoja ja osaamista.",
+              "Digirasti on Helsingin työllisyyspalveluille tehty nettisivu joka tukee ja kehittää suomalaisten digitaitoja ja osaamista älylaitteiden ja digitaalisten palvelujen käytössä. Digirastin tarkoituksena on mahdollisesti auttaa suomalaisia pysymään mukana nopeassa digitaalisessa muutoksessa ja parantamaan heidän taitonsa älylaitteiden ja digipalvelujen käytössä. Digirastissa tarjolla on erilaisia tehtäviä ja pelejä, joiden avulla käyttäjät voivat parantaa taitojaan älylaitteiden ja digitaalisten palvelujen käytössä. Nämä tehtävät ja pelit tarjoavat hauskan ja interaktiivisen tavan kehittää digitaitoja ja osaamista.",
           },
           {
             _id: 2,
@@ -454,41 +484,85 @@ export const fi = {
       },
     },
   },
+
+  /*
+  --------------------
+  Stories page elements
+  --------------------
+  */
   stories_page: {
     _comment: "Tarinat sivun tekstikentät",
     title: "Tarinat",
     text: "Virittämö Helsingissä olemme saaneet vuosien varrella etuoikeuden työskennellä uskomattoman lahjakkaiden ihmisten kanssa. Tällä sivulla osa heistä jakaa kokemuksiaan ja tarinoitaan omasta matkastaan Virittämön työntekijöinä. Heidän kertomuksistaan tulee esille onnistumisia, haasteita ja henkilökohtaista kasvua, jotka kaikki ovat osa Virittämöä. Erilaiset ihmiset ja mahdollisuudet tekevät Virittämöstä ainutlaatuisen sekä inspiroivan työpaikan.",
+    view_story_btn: "Lue tarina",
     stories: [
       {
+        index: 0,
         alt: "Kuva Andrei Vlassenko:sta",
         img_src: Andrei,
         full_name: "Andrei Vlassenko",
+        job_title: "ICT Teknikko",
         story_text: [
           "Tarinani Virittämö Helsingissä alkoi ennen työn aloittamista. Hain ensin, mutta en saanut paikkaa. Edellisen ICT-tiimin johtajan neuvojen ansiosta opiskelin enemmän pilviteknologioita ja hain uudelleen. Vaikka haastattelussa kamppailin yhä suomen kielen kanssa, minut palkattiin. Aluksi olin melko hiljainen, ujo ja epävarma, mutta sain työskennellä yhden järjestelmämme kanssa.",
           "Huomasin asioita, joita voisimme parantaa, mutta minulla oli vaikeuksia viestinnän kanssa. Siirsin fokukseni viestintä- ja kielitaitoihin. Tiesin, ettei ole merkitystä, kuinka hyvin ymmärrän järjestelmät, jos en voi saada ihmisiä keskustelemaan niistä. Tämän avulla sain tilaisuuden oppia sitä, mitä tarvitsin eniten.",
-          "Joka viikko eri tiimin jäsen oli vastuussa tietyn viikoittaisen rutiinin hoitamisesta, jotta kaikki voisivat harjoitella esitystaitoja ja auttaa muita. Oli myös edistyneitä suomen kielen oppitunteja ja ilmaisia kursseja Metropoliasta, jotka auttoivat minua kehittymään ammatillisesti ja henkisesti. Opin lisää työnhakutaitoja ja vaikka en löytänyt sopivaa työpaikkaa itselleni, monet muut löysivät.",
-          "Olen kiitollinen kaikille, joihin törmäsin Virittämössä. Opin niin paljon aikani aikana ja minulla oli erittäin onnekas ensimmäinen työkokemukseni. Näin omilla silmilläni, kuinka ihmiset kasvoivat tämän tuen avulla ja saavuttivat lopulta haluamansa. Mukaan lukien minä. Kiitos Virittämö Helsinki. Tämä muutti elämäni varmasti.",
+          "Joka viikko eri tiimin jäsen oli vastuussa tietyn viikoittaisen rutiinin hoitamisesta, jotta kaikki voisivat harjoitella esitystaitoja ja auttaa muita. Oli myös edistyneitä suomen kielen oppitunteja ja ilmaisia kursseja Metropoliasta, jotka auttoivat minua kehittymään ammatillisesti ja henkisesti. Opin lisää työnhakutaitoja, ja vaikka en löytänyt sopivaa työpaikkaa itselleni, monet muut löysivät.",
+          "Olen kiitollinen kaikille, joihin törmäsin Virittämössä. Opin niin paljon aikani aikana, ja minulla oli erittäin hyvä ensimmäinen työkokemukseni. Näin omilla silmilläni, kuinka ihmiset kasvoivat tämän tuen avulla ja saavuttivat lopulta haluamansa – mukaan lukien minä. Kiitos Virittämö Helsinki. Tämä muutti elämäni varmasti.",
         ],
+        component: StoriesCarousel_Item,
       },
       {
+        index: 1,
         alt: "Kuva Eetu Lehmuksesta:sta, entinen Virittämön työntekijä.",
         img_src: Eetu,
         full_name: "Eetu Lehmus",
+        job_title: "Ohjelmistokehittäjä",
         story_text: [
           "Valmistuin aikoinaan datanomiksi, jonka jälkeen pääsin Oulun ammattikorkeakouluun opiskelemaan tieto- ja viestintätekniikkaa. Opiskelujen viimeisenä vuonna siirryin mobiilipelialalle pelisuunnittelijaksi ja muutin Helsinkiin. Kesken jääneiden opintojen jälkeen pidin parin vuoden tauon ja haaveilin urasta ohjelmoijana. Törmäsin sattumalta Virittämön rekryilmoitukseen, jonka kautta sain elämäni ensimmäisen ohjelmoijan työn. Virittämön softatiimi vaikutti juuri oikealta paikalta aloittaa toivomissani tehtävissä.",
           "Virittämöstä minulla on pelkästään hyvää sanottavaa. Oli mahtavaa päästä suoraan käsiksi asiakasprojekteihin, joissa pääsin hyödyntämään aiemmin oppimiani asioita. Työssä ei ollut liian kova kiire ja oli aikaa opetella uusia koodikieliä. Opin paljon uutta ja lisäksi sain lisää itsevarmuutta siihen, että pystyn toteuttamaan asiakkaan toiveiden mukaisia toimeksiantoja. Sain paljon apua muilta työntekijöiltä yhteisissä projekteissa. Koen, että sosiaalinen tukiverkosto oli kokonaisuudessaan hyvä; kaikki auttoivat toisiaan.",
           "Seuraavaksi palaan takaisin Ouluun tekemään ammattikorkeakoulututkintoni loppuun, jotta voin työllistyä ohjelmoijaksi tulevaisuudessakin. Virittämö auttoi asettamaan selkeitä päämääriä, toi tekemisen meininkiä ja paremman rytmin arkeen. Suosittelen Virittämöä lämpimästi!",
         ],
+        component: StoriesCarousel_Item,
       },
       {
+        index: 2,
         alt: "Kuva Kari:sta, entinen Virittämön työntekijä.",
         img_src: Kari,
         full_name: "Kari Loise",
+        job_title: "ICT Teknikko",
         story_text: [
-          "Työskentelyni Virittämöllä alkoi uranvaihtoni ja ICT-asentajaksi opiskeluideni jälkeen. Virittämön ICT-tiimissä sain kartuttaa osaamistani monipuolisesti eri työtehtävissä, kuten lähituessa, etätuessa sekä laiterekisterin- ja henkilöstörekisterin ylläpidossa. Työ oli vaihtelevaa ja sain vaikuttaa työhöni.",
-          "Koin Virittämön mukavaksi työympäristöksi ja sain paljon tukea työnhakuun liittyvissä asioissa. Erityisesti uraohjaajan vinkit olivat hyödyllisiä.",
-          "Työllistyin Virittämön työsuhteen aikana Helsingin kaupungille digitukihenkilöksi vakituiseen työsuhteeseen. Työ sisältää muun muassa laiterekisteriä ja laitteiden lainausta. Voin suositella Virittämöä kaikille, jotka haluavat päästä työelämässä eteenpäin.",
+          "Kun aloitin työskentelyn Virittämöllä, olin sitä ennen opiskellut ICT-alaa ja suorittanut uranvaihdon. Työskentely ICT-tiimissä oli ensimmäinen askeleeni tällä alalla ja sain kokea paljon monipuolisia tehtäviä, jotka kasvattivat osaamistani.",
+          "Aloitin lähituen tehtävissä, jossa autoin Virittämön muita työntekijöitä erilaisissa teknisissä ongelmissa. Tämä tehtävä oli erittäin tärkeä, koska se vaikutti suoraan muiden työkokemukseen ja tyytyväisyyteen teknologiaan. Seuraavaksi siirryin etätukitehtäviin, joka oli erittäin hyödyllistä oppimistani, sillä sain oppia käyttämään erilaisia tietoturvateknologioita. Työskentelin myös laiterekisterin ja henkilöstörekisterin ylläpidon parissa, mikä opetti minulle, miten organisaatio toimii teknologian näkökulmasta.",
+          "Virittämö oli mukava työympäristö, jossa sain paljon tukea työnhakuun liittyvissä asioissa. Virittämön uraohjaaja tarjosi arvokasta neuvoa, joka auttoi minua navigoimaan työmaailmassa. Sain hyviä neuvoja muun muassa työnhausta, ansioluettelon kirjoittamisesta ja haastatteluista.",
+          "Virittämön työsuhteen aikana onnistuin löytämään vakituisen työpaikan Helsingin kaupungilta digitukihenkilönä. Työtehtävät sisältävät laiterekisterin ylläpidon ja laitteiden lainaamisen. Virittämön avulla pääsin etenemään urallani ja sain arvokasta kokemusta ICT-alalta. Voin suositella Virittämöä kaikille, jotka etsivät työpaikkaa ICT-alalta ja haluavat kehittyä ammatillisesti.",
         ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 3,
+        alt: "Kuva Leo:sta, entinen Virittämön työntekijä.",
+        img_src: Leo,
+        full_name: "Leo Jylhä",
+        job_title: "ICT Teknikko",
+        story_text: [
+          "Koulutukseltani olen datanomi, ja valmistumiseni jälkeen aloitin työskentelyn perheyrityksessämme ravintola-alalla. Jonkin ajan kuluttua päätin etsiä koulutustani vastaavaa työtä tai mahdollisuutta opiskella lisää. Vaikka opiskelupaikka ei auennutkaan, tartuin tilaisuuteen, kun vapaa paikka Virittämössä tuli vastaan.",
+          "Virittämön ICT-tiimissä sain tehdä lähitukea, hallinnoida alustoja, siirtää sovelluksia pilveen ja määrittää niitä. Sain paljon kokemusta alalta ja opin paljon uutta. Sain myös paljon tukea työnhaussa, joka auttoi minua löytämään uuden työn selkeämmin. Lisäksi suoritin Virittämön mahdollistamien Metropolia ammattikorkeakoulun polkuopintojen aikana 60 opintopistettä tieto- ja viestintätekniikan opintoja.",
+          "Kun aikani Virittämöllä loppui, minulle tarjottiin kahta työpaikkaa eri ICT-alan yrityksistä, joista valitsin toisen. Uusi roolini on pilvipalveluiden konsulttina pohjoismaisessa suuryrityksessä. Se vastasi täydellisesti urahaaveitani, ja olen erittäin tyytyväinen lopputulokseen.",
+          "ICT-tiimissä oli hyvä yhteishenki, ja oli miellyttävää työskennellä heidän kanssaan. Suosittelen ehdottomasti Virittämöä erityisesti juuri valmistuneille tai alaa vaihtaville.",
+        ],
+        component: StoriesCarousel_Item,
+      },
+      {
+        index: 4,
+        alt: "Kuva Wardasta:sta, entinen Virittämön työntekijä.",
+        img_src: Warda,
+        full_name: "Warda Mohamed",
+        job_title: "UI/UX Suunnittelija",
+        story_text: [
+          "Työtehtäväni UI/UX-suunnittelijana keskittyy lähinnä verkkosivustojen ja mobiilisovellusten suunnitteluun. Autan asiakkaitamme luomaan helppokäyttöisiä, toimivia ja miellyttäviä verkkosivustoja ja mobiilisovelluksia. Painotan käyttäjän helppoa navigointia, eri toimintojen toimivuutta ja visuaalista ilmettä. Rakastan myös luovaa työskentelyä ja jatkuvaa kehittymistä sekä uusien taitojen oppimista.",
+          "Opiskelin yliopistossa muotisuunnittelua ja työskentelin visuaalisena suunnittelijana, kun aloitin verkkosuunnittelun. Siinä yhteydessä aloin kiinnostua käyttäjäkokemuksesta ja miten suunnittelupäätökset voivat vaikuttaa käyttäjien vuorovaikutukseen verkkosivuston tai mobiilisovelluksen kanssa.",
+          "Olen työskennellyt Virittämöllä neljä kuukautta, ja olen erityisesti arvostanut mahdollisuutta tehdä yhteistyötä eri tiimien kanssa ja työskennellä erilaisten projektien parissa. UI/UX-suunnittelijana työskentelen tiiviisti ohjelmistokehittäjien kanssa varmistaakseni, että suunnittelumme ovat visuaalisesti houkuttelevia ja toimivia.",
+        ],
+        component: StoriesCarousel_Item,
       },
     ],
   },

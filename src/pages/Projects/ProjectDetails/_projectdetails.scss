@@ -127,27 +127,15 @@ main.projectDetails__wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: 80%;
     gap: 50px;
 
     img {
       border: 1px solid $virittamo-light-violet;
-      height: 85vh;
-      width: 80%;
       object-fit: cover;
-
-      @include responsive(tablet) {
-        height: 50vh;
-      }
-
-      @include responsive(large_mobile) {
-        height: 35vh;
-      }
-
-      @include responsive(mobile) {
-        height: 25vh;
-      }
+      height: 100%;
+      width: 100%;
     }
   }
 

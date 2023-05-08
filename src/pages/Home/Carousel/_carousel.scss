@@ -1,341 +1,430 @@
-section.carousel__container {
+section.carousel__wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  max-height: 700px;
-  height: 700px;
-  padding: 0 2% 0;
+  flex-direction: column;
+  height: auto;
   width: 100%;
-  gap: 25px;
+  gap: 12.5px;
 
-  @include responsive(desktop) {
-    padding: 0 4% 0;
-    max-height: 750px;
-    height: 750px;
-  }
-
-  @include responsive(large_mobile) {
-    text-align: center;
-    padding: 0 0% 0;
-    max-height: 500px;
-    height: 500px;
-    gap: 0px;
-  }
-
-  @include responsive(mobile) {
-    text-align: center;
-    max-height: 360px;
-    height: 360px;
-  }
-
-  div.carousel__item--feedback {
+  div.carousel__container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     position: relative;
-    height: 100%;
+    padding: 0 2% 0;
+    max-height: 700px;
+    height: 700px;
     width: 100%;
+    gap: 25px;
 
-    h1 {
-      font-size: 200px;
-      line-height: 200px;
-      color: $virittamo-white;
+    @include responsive(desktop) {
+      padding: 0 4% 0;
+      max-height: 750px;
+      height: 750px;
     }
 
-    h2 {
-      color: $virittamo-white;
-    }
-
-    p {
-      font-size: 28px;
-      color: $virittamo-white;
-    }
-
-    div.carousel__item--feedback-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      left: 150px;
-      top: 150px;
-    }
-
-    h2 {
+    @include responsive(large_mobile) {
       text-align: center;
-      line-height: 54px;
-      right: 150px;
-      bottom: 150px;
-      padding: 0;
-      width: 40%;
-      position: absolute;
-    }
-  }
-
-  div.carousel__item--companies {
-    display: flex;
-    flex-direction: column;
-    background: $virittamo-light-violet;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
-    height: 100%;
-    width: 100%;
-    gap: 45px;
-
-    @include responsive(desktop) {
-      width: 85%;
-    }
-
-    @include responsive(large_mobile) {
-      padding: 50px;
-      width: 100%;
-    }
-
-    h3 {
-      font-size: 24px;
-      font-weight: bold;
-      line-height: 24px;
-    }
-
-    ul.carousel__item--companies-list {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      padding-bottom: 30px;
-      overflow-y: hidden;
-      overflow-x: scroll;
-      flex-wrap: wrap;
+      padding: 0 0% 0;
+      max-height: 500px;
       height: 500px;
-      width: 100%;
-      gap: 15px;
-
-      @include responsive(desktop) {
-        height: 550px;
-      }
-
-      @include responsive(laptop) {
-        width: auto;
-        height: 600px;
-      }
-
-      @include responsive(large_mobile) {
-        max-height: 450px;
-        height: 450px;
-      }
-
-      li.carousel__item--companies-list-item {
-        height: auto;
-        width: 30%;
-        line-height: 22px;
-
-        @include responsive(laptop) {
-          width: 50%;
-        }
-
-        @include responsive(large_mobile) {
-          width: 100%;
-        }
-      }
-
-      h4 {
-        font-weight: bold;
-      }
-    }
-
-    /* width */
-    ::-webkit-scrollbar {
-      height: 10px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-      background: #adadad3f;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: $virittamo-white;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: $virittamo-pink;
-    }
-  }
-
-  img.carousel__item--image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-    @include responsive(desktop) {
-      width: 95%;
-    }
-
-    @include responsive(laptop) {
-      width: 85%;
-    }
-
-    @include responsive(tablet) {
-      width: 82.5%;
-    }
-
-    @include responsive(large_mobile) {
-      width: 100%;
-    }
-  }
-
-  a.carousel__item--article {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-    @include responsive(large_mobile) {
-      h3 {
-        font-size: 26px;
-      }
+      gap: 0px;
     }
 
     @include responsive(mobile) {
-      padding: 22.5px;
+      text-align: center;
+      max-height: 360px;
+      height: 360px;
     }
 
-    div.carousel__item--article-text {
+    div.carousel__item--feedback {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      height: 100%;
+      width: 100%;
+
+      @include responsive(laptop) {
+        gap: 50px;
+      }
+
+      @include responsive(large_mobile) {
+        gap: 25px;
+      }
+
+      h1 {
+        font-size: 224px;
+        line-height: 224px;
+        color: $virittamo-white;
+
+        @include responsive(large_mobile) {
+          font-size: 184px;
+          line-height: 184px;
+        }
+
+        @include responsive(mobile) {
+          font-size: 124px;
+          line-height: 124px;
+        }
+      }
+
+      h2 {
+        line-height: 56px !important;
+        font-size: 54px !important;
+        color: $virittamo-white;
+
+        @include responsive(desktop) {
+          line-height: 48px !important;
+          font-size: 46px !important;
+        }
+
+        @include responsive(mobile) {
+          line-height: 24px !important;
+          font-size: 24px !important;
+        }
+      }
+
+      p {
+        font-size: 34px;
+        color: $virittamo-white;
+
+        @include responsive(large_mobile) {
+          font-size: 30px;
+        }
+
+        @include responsive(mobile) {
+          font-size: 24px;
+        }
+      }
+
+      div.carousel__item--feedback-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 150px;
+        top: 150px;
+
+        @include responsive(laptop) {
+          position: initial;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        line-height: 54px;
+        right: 150px;
+        bottom: 150px;
+        padding: 0;
+        width: 40%;
+        position: absolute;
+
+        @include responsive(laptop) {
+          font-size: 36px;
+          line-height: 36px;
+          position: initial;
+          width: 60%;
+          bottom: 0;
+          right: 0;
+        }
+
+        @include responsive(tablet) {
+          font-size: 34px !important;
+          line-height: 34px !important;
+          width: 70%;
+        }
+
+        @include responsive(large_mobile) {
+          width: 75%;
+        }
+
+        @include responsive(mobile) {
+          font-size: 24px !important;
+          line-height: 24px !important;
+        }
+      }
+    }
+
+    div.carousel__item--companies {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      background: linear-gradient(
-        to left,
-        transparent 0%,
-        $virittamo-black 100%
-      );
-      border-radius: 0 15px 0 0;
-      position: absolute;
-      padding: 100px;
-      max-height: 100%;
-      max-width: 50%;
-      gap: 11.25px;
+      background: $virittamo-light-violet;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 175px;
       height: 100%;
-      width: auto;
-      bottom: 0;
-      left: 0;
+      width: 100%;
+      gap: 45px;
+
+      @include responsive(desktop) {
+        padding: 100px 100px;
+        width: 85%;
+      }
+
+      @include responsive(large_mobile) {
+        padding: 50px;
+        width: 100%;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 24px;
+      }
+
+      ul.carousel__item--companies-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-bottom: 30px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        flex-wrap: wrap;
+        height: 500px;
+        width: 100%;
+        gap: 15px;
+
+        @include responsive(desktop) {
+          height: 550px;
+        }
+
+        @include responsive(laptop) {
+          width: auto;
+          height: 600px;
+        }
+
+        @include responsive(large_mobile) {
+          max-height: 450px;
+          height: 450px;
+        }
+
+        @include responsive(mobile) {
+          height: auto;
+        }
+
+        li.carousel__item--companies-list-item {
+          height: auto;
+          width: 30%;
+          line-height: 22px;
+
+          @include responsive(laptop) {
+            width: 50%;
+          }
+
+          @include responsive(large_mobile) {
+            width: 100%;
+          }
+
+          @include responsive(mobile) {
+            height: auto;
+          }
+        }
+
+        h4 {
+          font-weight: bold;
+        }
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        height: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #adadad3f;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: $virittamo-white;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: $virittamo-pink;
+      }
+    }
+
+    img.carousel__item--image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      @include responsive(desktop) {
+        width: 95%;
+      }
+
+      @include responsive(laptop) {
+        width: 85%;
+      }
+
+      @include responsive(tablet) {
+        width: 82.5%;
+      }
+
+      @include responsive(large_mobile) {
+        width: 100%;
+      }
+    }
+
+    a.carousel__item--article {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      height: 100%;
+      width: 100%;
+
+      @include responsive(large_mobile) {
+        h3 {
+          font-size: 26px;
+        }
+      }
 
       @include responsive(mobile) {
         padding: 22.5px;
       }
 
-      @include responsive(desktop) {
-        max-width: 65%;
-      }
-
-      @include responsive(laptop) {
-        max-width: 100%;
-        text-align: center;
+      div.carousel__item--article-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         background: linear-gradient(
-          to bottom,
+          to left,
           transparent 0%,
           $virittamo-black 100%
         );
-        border-bottom: 6px solid $virittamo-pink;
-      }
+        border-radius: 0 15px 0 0;
+        position: absolute;
+        padding: 100px;
+        max-height: 100%;
+        max-width: 50%;
+        gap: 11.25px;
+        height: 100%;
+        width: auto;
+        bottom: 0;
+        left: 0;
 
-      p,
-      h3 {
-        padding-left: 11.25px;
-        border-left: 3px solid $virittamo-pink;
-        color: $virittamo-white;
+        @include responsive(large_mobile) {
+          padding: 50px;
+        }
+
+        @include responsive(mobile) {
+          padding: 60px;
+        }
+
+        @include responsive(desktop) {
+          max-width: 65%;
+        }
 
         @include responsive(laptop) {
-          padding-left: 0;
-          border-left: 0;
+          max-width: 100%;
+          text-align: center;
+          background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            $virittamo-black 100%
+          );
+          border-bottom: 6px solid $virittamo-pink;
+        }
+
+        p,
+        h3 {
+          padding-left: 11.25px;
+          border-left: 3px solid $virittamo-pink;
+          color: $virittamo-white;
+
+          @include responsive(laptop) {
+            padding-left: 0;
+            border-left: 0;
+          }
         }
       }
     }
-  }
 
-  video.carousel__item--video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-    @include responsive(desktop) {
-      width: 90%;
-    }
-
-    @include responsive(laptop) {
-      width: 85%;
-    }
-
-    @include responsive(tablet) {
-      width: 82.5%;
-    }
-
-    @include responsive(large_mobile) {
-      width: 100%;
-    }
-  }
-
-  iframe.carousel__item--instagram {
-    border: 0;
-    height: 100%;
-    width: 100%;
-  }
-
-  div.carousel__item--loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-  }
-
-  button.arrow-button {
-    cursor: pointer;
-    height: 35px;
-    width: 35px;
-    z-index: 2;
-
-    @include responsive(large_mobile) {
-      background: rgba(0, 0, 0, 0.1);
-    }
-
-    svg.arrow-button--icon {
-      color: $dark-link-hover;
+    video.carousel__item--video {
       height: 100%;
       width: 100%;
-      // transition
-      transition: 0.1s ease-in-out;
+      object-fit: cover;
+
+      @include responsive(desktop) {
+        width: 90%;
+      }
+
+      @include responsive(laptop) {
+        width: 85%;
+      }
+
+      @include responsive(tablet) {
+        width: 82.5%;
+      }
 
       @include responsive(large_mobile) {
-        height: 50%;
-        width: 50%;
-        fill: $virittamo-white;
+        width: 100%;
       }
     }
 
-    svg.arrow-button--icon:hover {
-      color: $virittamo-black;
-    }
-  }
-
-  @include responsive(large_mobile) {
-    button:first-of-type {
-      position: absolute;
-      top: 50%;
-      left: 25px;
+    iframe.carousel__item--instagram {
+      border: 0;
+      height: 100%;
+      width: 100%;
     }
 
-    button:last-of-type {
-      position: absolute;
-      top: 50%;
-      right: 25px;
+    div.carousel__item--loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    button.arrow-button {
+      cursor: pointer;
+      height: 35px;
+      width: 35px;
+      z-index: 2;
+
+      @include responsive(large_mobile) {
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      svg.arrow-button--icon {
+        color: $dark-link-hover;
+        height: 100%;
+        width: 100%;
+        // transition
+        transition: 0.1s ease-in-out;
+
+        @include responsive(large_mobile) {
+          height: 50%;
+          width: 50%;
+          fill: $virittamo-white;
+        }
+      }
+
+      svg.arrow-button--icon:hover {
+        color: $virittamo-black;
+      }
+    }
+
+    @include responsive(large_mobile) {
+      button:first-of-type {
+        position: absolute;
+        top: 50%;
+        left: 25px;
+      }
+
+      button:last-of-type {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+      }
     }
   }
 }

@@ -5,18 +5,13 @@ import { FaCircle, FaRegCircle } from "react-icons/fa";
 export const SlideIndicator = ({ numSlides, activeIndex }) => {
   const indicators = Array.from({ length: numSlides }).map((_, i) =>
     i === activeIndex ? (
-      <FaCircle
-        key={i}
-        className="projectPage__teams--carousel-indicator active"
-      />
+      <FaCircle key={i} className="carousel-indicator active" />
     ) : (
-      <FaRegCircle key={i} className="projectPage__teams--carousel-indicator" />
+      <FaRegCircle key={i} className="carousel-indicator" />
     )
   );
 
-  return (
-    <div className="projectPage__teams--carousel-indicators">{indicators}</div>
-  );
+  return <div className="carousel-indicators">{indicators}</div>;
 };
 
 SlideIndicator.propTypes = {

@@ -56,6 +56,7 @@ main.projectPage__wrapper {
       }
 
       @include responsive(large_mobile) {
+        line-height: 24px;
         width: 350px;
       }
 
@@ -95,20 +96,6 @@ main.projectPage__wrapper {
 
         @include responsive(large_mobile) {
           width: 75%;
-        }
-      }
-
-      div.projectPage__teams--carousel-indicators {
-        display: none;
-      }
-
-      @include responsive(large_mobile) {
-        div.projectPage__teams--carousel-indicators {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 25px;
-          gap: 6px;
         }
       }
     }

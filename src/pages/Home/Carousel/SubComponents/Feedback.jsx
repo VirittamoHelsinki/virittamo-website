@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import bg_image from "../../assets/carousel/carousel-feedback-bg.webp";
+import { LanguageContext } from "../../../../langLocal/context/langContext";
 
-const Feedback = ({ number, scale, question }) => {
+const Feedback = ({ number, scale_fi, scale_en, question_fi, question_en }) => {
+  const { lang, fi } = useContext(LanguageContext);
+
   return (
     <motion.div
       style={{
@@ -22,17 +26,19 @@ const Feedback = ({ number, scale, question }) => {
     >
       <div className="carousel__item--feedback-text">
         <h1>{number}</h1>
-        <p>{scale}</p>
+        <p>{lang === fi ? scale_fi : scale_en}</p>
       </div>
-      <h2>{question}</h2>
+      <h2>{lang === fi ? question_fi : question_en}</h2>
     </motion.div>
   );
 };
 
 Feedback.propTypes = {
   number: PropTypes.number.isRequired,
-  scale: PropTypes.string.isRequired,
-  question: PropTypes.string.isRequired,
+  scale_fi: PropTypes.string.isRequired,
+  scale_en: PropTypes.string.isRequired,
+  question_fi: PropTypes.string.isRequired,
+  question_en: PropTypes.string.isRequired,
 };
 
 export default Feedback;
