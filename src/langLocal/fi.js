@@ -441,15 +441,15 @@ export const fi = {
             _id: 4,
             team: "softa",
             component: Carousel_Item,
-            client_name: "Virittämö",
-            project_title: "Virittämö CRM",
+            client_name: "Virittämö CRM",
+            project_title: "Asiakastietojärjestelmä",
             completion_year: "2023",
             img_src: VirittamoCRM,
             img_src_small: VirittamoCRM_small,
             alt: "Virittämö CRM projektikuva",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Virittämö CRM on digitaalinen palvelu, joka on suunniteltu avuksi Virittämön uraohjaajille. Palvelu tarjoaa erilaisia työkaluja ja toimintoja, jotka auttavat uraohjaajia tehtävässään. Virittämö CRM:n avulla uraohjaajat voivat tarjota verkossa toimivaa uraohjausta ja -valmennusta yksilöille sekä organisaatioille. Virittämö CRM:n tavoitteena on helpottaa uravalintoja ja urasuunnittelua tarjoamalla digitaalisia työkaluja ja henkilökohtaista tukea.",
+              "Virittämön oma CRM-asiakastietojärjestelmä syntyi tarpeesta hallinnoida ja tarkastella Virittämön yrityskontaktien yhteystietoja ja näille tehtyjen projektien edistymistä.",
           },
           {
             _id: 5,
