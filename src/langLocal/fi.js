@@ -13,6 +13,9 @@ import MoiPanda_small from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMA
 import Henkilökuvaus from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
 import Henkilökuvaus_small from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
 
+import Uraohjain from "../pages/Projects/assets/carousel/MEDIA_URAOHJAIN.webp";
+import Uraohjain_small from "../pages/Projects/assets/carousel/MEDIA_URAOHJAIN_SMALL.webp";
+
 import Pilvipalvelu from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU.webp";
 import Pilvipalvelu_small from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
 
@@ -296,6 +299,20 @@ export const fi = {
             _id: 1,
             team: "media",
             component: Carousel_Item,
+            client_name: "Uraohjain+",
+            project_title: "Uraohjain+ -hanke",
+            completion_year: "2023",
+            img_src: Uraohjain,
+            img_src_small: Uraohjain_small,
+            alt: "Uraohjain+ -hanke project image",
+            link: "https://virittamohelsinki.fi/",
+            description:
+              "Uraohjain+ -hankkeen tavoitteena on luoda uudenlainen kestävän työllistymisen malli. Oppilaitokset luovat yhdessä palvelukokonaisuuden, jossa työ- ja toimintakyvyn, työelämätaitojen ja ammatillisen osaamisen kehittäminen tapahtuu yhtäaikaisesti työllistymispolkuja tehostaen ja nopeuttaen. Hankkeen kohderyhmänä ovat IT- ja media-alojen työttömät työnhakijat.",
+          },
+          {
+            _id: 2,
+            team: "media",
+            component: Carousel_Item,
             client_name: "Oodi",
             project_title: "Valokuvaus",
             completion_year: "2023",
@@ -307,7 +324,7 @@ export const fi = {
               "Toteutimme Oodille tuotannolliset valokuvat heidän laitteistaan nettisivua ja somea varten. Oodi on Helsingin keskustakirjasto, jonka palveluihin ja laitteisiin kuuluu monipuolisesti niin ompelukoneita, keittiö kuin valokuvastudiokin.",
           },
           {
-            _id: 2,
+            _id: 3,
             team: "media",
             component: Carousel_Item,
             client_name: "Q-teatteri",
@@ -321,7 +338,7 @@ export const fi = {
               "Projektissamme Q-teatterin kanssa teimme videotallenteita muun muassa oppilaitosten ja sosiaali- ja terveysalan palveluiden hankkimasta yleisötyö- ja yhteisöteatterista. Tarinateatteri on soveltavaa ja osallistavaa improvisaatiota, joka perustuu yleisön kertomiin ajatuksiin, tunteisiin ja tarinoihin. Näyttelijät tekevät näkyväksi ihmisen välisiä vuorovaikutussuhteita, antavat osallistujille mahdollisuuden tarkastella tilannettaan itsensä ulkopuolelta ja nähdä vaihtoehtoisia ratkaisuja. Virittämön tuottamaa videomateriaalia käytetään muun muassa rohkaistaessa opiskelijoita laajentamaan osaamistaan, sekä perhevalmennuksessa.",
           },
           {
-            _id: 3,
+            _id: 4,
             team: "media",
             component: Carousel_Item,
             client_name: "Moi Panda",
@@ -335,7 +352,7 @@ export const fi = {
               "Virittämön Mediatiimi on tehnyt mobiilipeli startup yritys Moi Pandalle peligrafiikkaa, hahmosuunnittelua, animaatioita, äänisuunnittelua sekä mainosvideon. Moi Panda-sovelluksen kautta lapset voivat ystävystyä toistensa kautta ympäri maailman, oppia uusia kieliä, sosiaalisia taitoja, kommunikaatiotaitoja ja uutta toistensa kulttuureista pelien, videopuhelujen ja chattien välityksellä. Heidän vanhempansa voivat olla myös sovelluksen kautta ystäviä keskenään ja jakaa pedagogisia vinkkejä ja vanhemmuuteen liittyviä asioita, kokemuksia, tunteita ja ongelmia globaalisti.",
           },
           {
-            _id: 4,
+            _id: 5,
             team: "media",
             component: Carousel_Item,
             client_name:

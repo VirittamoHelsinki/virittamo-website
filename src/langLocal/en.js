@@ -10,11 +10,11 @@ import Oodi_small from "../pages/Projects/assets/carousel/MEDIA_OODI_2_SMALL.web
 import MoiPanda from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA.webp";
 import MoiPanda_small from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
 
-import RadioHelsinki from "../pages/Projects/assets/carousel/MEDIA_RADIOHELSINKI.webp";
-import RadioHelsinki_small from "../pages/Projects/assets/carousel/MEDIA_RADIOHELSINKI_SMALL.webp";
-
 import Henkilökuvaus from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
 import Henkilökuvaus_small from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
+
+import Uraohjain from "../pages/Projects/assets/carousel/MEDIA_URAOHJAIN.webp";
+import Uraohjain_small from "../pages/Projects/assets/carousel/MEDIA_URAOHJAIN_SMALL.webp";
 
 import Pilvipalvelu from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU.webp";
 import Pilvipalvelu_small from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
@@ -297,6 +297,20 @@ export const en = {
             _id: 1,
             team: "media",
             component: Carousel_Item,
+            client_name: "Uraohjain+",
+            project_title: "Uraohjain+ -project",
+            completion_year: "2023",
+            img_src: Uraohjain,
+            img_src_small: Uraohjain_small,
+            alt: "Uraohjain+ -hanke project image",
+            link: "https://virittamohelsinki.fi/",
+            description:
+              "The aim of the Uraohjain+ project is to create a new model for sustainable employment. Together, educational institutions will create a service package in which work and functional capacity, working life skills, and vocational competencies are developed simultaneously, making employment pathways more efficient and faster. The project targets unemployed jobseekers in the IT and media sectors.",
+          },
+          {
+            _id: 2,
+            team: "media",
+            component: Carousel_Item,
             client_name: "Oodi",
             project_title: "Photoshoot",
             completion_year: "2023",
@@ -306,20 +320,6 @@ export const en = {
             link: "https://virittamohelsinki.fi/",
             description:
               "We produced production photos for Oodi for their website and social media. Oodi is Helsinki's central library, which offers a variety of services and devices, including sewing machines, kitchen equipment, and even a photo studio.",
-          },
-          {
-            _id: 2,
-            team: "media",
-            component: Carousel_Item,
-            client_name: "Radio Helsinki",
-            project_title: "Sound Design",
-            completion_year: "2023",
-            img_src: RadioHelsinki,
-            img_src_small: RadioHelsinki_small,
-            alt: "placeholder image",
-            link: "https://virittamohelsinki.fi/",
-            description:
-              "Radio Helsinki has been a training place for Virittämö, where our sound designer has been able to explore various radio work, including broadcasts, to familiarize themselves with production work and to speak radio commercials. Radio Helsinki has provided opportunities to develop skills and given appropriate amounts of responsibility and support.",
           },
           {
             _id: 3,
