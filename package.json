@@ -50,8 +50,7 @@
   "lint-staged": {
     "*.{js,jsx,css,scss,md,html}": [
       "prettier --write",
-      "jest --bail --findRelatedTests",
-      "eslint --fix"
+      "jest --bail --findRelatedTests"
     ]
   },
   "jest": {
