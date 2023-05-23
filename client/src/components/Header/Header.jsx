@@ -1,14 +1,13 @@
 // import context
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { LanguageContext } from "../../langLocal/context/langContext";
+
+import axios from "axios";
 
 // import icons from assets
 import { ReactComponent as Facebook_icon } from "../assets/facebook-icon.svg";
 import { ReactComponent as Linkedin_icon } from "../assets/linkedin-icon.svg";
 import { ReactComponent as Instagram_icon } from "../assets/instagram-icon.svg";
-
-// import virittämö helsinki logo
-import VirittamoLogo from "./assets/virittamo-helsinki.webp";
 
 import { motion } from "framer-motion";
 
@@ -19,8 +18,37 @@ export const Header = () => {
   const { lang, setLocale, fi } = useContext(LanguageContext);
   const { home_page, projects, stories, contact } = lang.header;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [headerLogo, setHeaderLogo] = useState(null);
 
   const handleClick = () => setIsMenuOpen(!isMenuOpen);
+
+  const token = import.meta.env.VITE_STRAPI_API_TOKEN;
+
+  const pullData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:1337/api/headers?populate=*",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      console.log("Data:", response.data);
+      if (response.data && response.data.length > 0) {
+        const headerLogoUrl =
+          response.data[0].attributes.headerlogo?.data?.formats?.thumbnail?.url;
+        setHeaderLogo(headerLogoUrl);
+        console.log(headerLogo);
+      }
+    } catch (error) {
+      console.log("An error occurred:", error.response);
+    }
+  };
+
+  useEffect(() => {
+    pullData();
+  }, []);
 
   const navLinks = (
     <ul className="header__nav--list">
@@ -84,7 +112,7 @@ export const Header = () => {
     <main className="header__wrapper">
       <div className="header__container">
         <a href="/">
-          <img src={VirittamoLogo} alt="Virittämö Helsinki" />
+          <img src={headerLogo} alt="Virittämö Helsinki" />
         </a>
         <nav className="header__nav">{navLinks}</nav>
         {socialIcons}
