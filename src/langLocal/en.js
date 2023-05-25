@@ -240,12 +240,6 @@ export const en = {
           email: "john.strandberg@edu.hel.fi",
         },
         {
-          name: "Ulla Ijäs",
-          title: "Worklife Coach",
-          phone: "p. 09 310 35264",
-          email: "ulla.ijas@edu.hel.fi",
-        },
-        {
           name: "Leea Hiltunen",
           title: "Project Coordinator, Uraohjain+",
           phone: "p. 09 310 25104",

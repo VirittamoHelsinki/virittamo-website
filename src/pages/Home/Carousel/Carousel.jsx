@@ -50,7 +50,7 @@ export const Carousel = ({ slides }) => {
   };
 
   // Set the interval duration for autoplay
-  const INTERVAL_DURATION = 750000;
+  const INTERVAL_DURATION = 7500000;
 
   // Set up an effect to autoplay the carousel
   useEffect(() => {
@@ -110,6 +110,7 @@ Carousel.propTypes = {
       alt: PropTypes.string,
       bg_image: PropTypes.string,
       link: PropTypes.string,
+      logo: PropTypes.string,
     })
   ).isRequired,
 };

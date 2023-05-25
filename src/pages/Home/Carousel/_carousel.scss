@@ -376,6 +376,119 @@ section.carousel__wrapper {
       width: 100%;
     }
 
+    div.carousel__item--uraohjain {
+      position: relative;
+      padding: 50px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      @include responsive(desktop) {
+        width: 95%;
+      }
+
+      @include responsive(laptop) {
+        width: 85%;
+      }
+
+      @include responsive(tablet) {
+        width: 82.5%;
+      }
+
+      @include responsive(large_mobile) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      img.carousel__item--uraohjain-logo {
+        position: absolute;
+        width: 150px;
+        height: auto;
+      }
+    }
+
+    div.carousel__item--uraohjain_2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2.5px solid #ffeef2;
+      align-items: center;
+      position: relative;
+      padding: 50px;
+      height: 100%;
+      width: 100%;
+      gap: 25px;
+
+      h2,
+      h3 {
+        color: #6c1741;
+        font-family: "Aharoni", sans-serif;
+      }
+
+      p {
+        font-family: "Avenir book", sans-serif;
+      }
+
+      @include responsive(desktop) {
+        width: 95%;
+      }
+
+      @include responsive(laptop) {
+        width: 85%;
+      }
+
+      @include responsive(tablet) {
+        width: 82.5%;
+      }
+
+      @include responsive(large_mobile) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      img.carousel__item--uraohjain_2-logo {
+        position: absolute;
+        width: 75px;
+        height: auto;
+        left: 50px;
+        top: 50px;
+      }
+
+      section.carousel__item--uraohjain_2-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 100%;
+        gap: 50px;
+
+        div.carousel__item--uraohjain_2-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          width: 550px;
+          gap: 25px;
+        }
+
+        img.carousel__item--uraohjain_2-img {
+          object-fit: cover;
+          width: 750px;
+          height: 100%;
+        }
+      }
+
+      div.carousel__item--uraohjain_2-bar {
+        background: #e7bdc7;
+        height: 25px;
+        width: 100%;
+      }
+    }
+
     div.carousel__item--loading {
       display: flex;
       justify-content: center;

@@ -3,22 +3,17 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { LanguageContext } from "../../../../langLocal/context/langContext";
 
+// import helper function
+import { getTextLimit } from "./functions/textLimiter";
+
 const Article = ({ title_fi, title_en, text_fi, text_en, bg_image, link }) => {
   const { lang, fi } = useContext(LanguageContext);
 
-  const getTitleLimit = (title) => {
-    return title.length > 150 ? `${title.substring(0, 150)}..` : title;
-  };
+  const titleLimit_fi = getTextLimit(title_fi, 150);
+  const textLimit_fi = getTextLimit(text_fi, 225);
 
-  const getTextLimit = (text) => {
-    return text.length > 225 ? `${text.substring(0, 225)}..` : text;
-  };
-
-  const titleLimit_fi = getTitleLimit(title_fi);
-  const textLimit_fi = getTextLimit(text_fi);
-
-  const titleLimit_en = getTitleLimit(title_en);
-  const textLimit_en = getTextLimit(text_en);
+  const titleLimit_en = getTextLimit(title_en, 150);
+  const textLimit_en = getTextLimit(text_en, 225);
 
   return (
     <motion.a
@@ -51,6 +46,8 @@ const Article = ({ title_fi, title_en, text_fi, text_en, bg_image, link }) => {
 Article.propTypes = {
   title_fi: PropTypes.string.isRequired,
   title_en: PropTypes.string.isRequired,
+  subtitle_fi: PropTypes.string.isRequired,
+  subtitle_en: PropTypes.string.isRequired,
   text_fi: PropTypes.string.isRequired,
   text_en: PropTypes.string.isRequired,
   bg_image: PropTypes.string.isRequired,

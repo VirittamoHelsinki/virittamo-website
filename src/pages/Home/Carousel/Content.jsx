@@ -4,10 +4,17 @@ import Companies from "./SubComponents/Companies";
 // import Video from "./SubComponents/Video";
 import Image from "./SubComponents/Image";
 import Feedback from "./SubComponents/Feedback";
+import Uraohjain from "./SubComponents/Uraohjain";
+import Uraohjain_2 from "./SubComponents/Uraohjain_2";
 
 // import Mock_Video from "../../Home/assets/carousel/mock-video.mp4";
 import Image_1 from "../../Home/assets/carousel/carousel-img-1.webp";
 import Image_2 from "../../Home/assets/carousel/carousel-img-2.webp";
+
+import Uraohjain_Img from "../../Home/assets/carousel/uraohjain-1.webp";
+import Uraohjain_Logo from "../../Home/assets/carousel/uraohjain-logo.webp";
+
+import Uraohjain_Img_2 from "../../Home/assets/carousel/uraohjain-2.webp";
 
 export const slides = [
   {
@@ -31,6 +38,26 @@ export const slides = [
     component: Image,
     src: Image_2,
     alt: "Image taken by Emilia Rautio",
+  },
+  {
+    component: Uraohjain,
+    bg_image: Uraohjain_Img,
+    alt: "Uraohjain image taken by Jesse Ahonen",
+    logo: Uraohjain_Logo,
+  },
+  {
+    component: Uraohjain_2,
+    title_fi: "Hankkeen tavoite",
+    title_en: "Hankkeen tavoite",
+    subtitle_fi: "Kestävän työllistymisen malli",
+    subtitle_en: "Kestävän työllistymisen malli",
+    text_fi:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, modi voluptatibus, praesentium minus quibusdam ipsam ullam quaerat, tempore distinctio ab possimus architecto voluptates. Deserunt earum optio accusamus, aperiam delectus facilis maxime ipsum ab hic corrupti saepe at beatae omnis vel ullam, consequatur nulla, magnam necessitatibus suscipit. Fugiat, cupiditate quod dolorem sequi tempore assumenda dicta consectetur inventore maiores soluta sed labore harum alias deleniti nostrum, iste facere? Fugiat voluptatibus vitae repudiandae, inventore voluptates aliquam explicabo! Veritatis nesciunt hic corporis earum odio quas, laudantium atque totam ex ab unde maxime placeat molestias. Aliquid, incidunt fugit repellat consectetur voluptates quam atque facilis cupiditate?",
+    text_en:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, modi voluptatibus, praesentium minus quibusdam ipsam ullam quaerat, tempore distinctio ab possimus architecto voluptates. Deserunt earum optio accusamus, aperiam delectus facilis maxime ipsum ab hic corrupti saepe at beatae omnis vel ullam, consequatur nulla, magnam necessitatibus suscipit. Fugiat, cupiditate quod dolorem sequi tempore assumenda dicta consectetur inventore maiores soluta sed labore harum alias deleniti nostrum, iste facere? Fugiat voluptatibus vitae repudiandae, inventore voluptates aliquam explicabo! Veritatis nesciunt hic corporis earum odio quas, laudantium atque totam ex ab unde maxime placeat molestias. Aliquid, incidunt fugit repellat consectetur voluptates quam atque facilis cupiditate?",
+    src: Uraohjain_Img_2,
+    alt: "Uraohjain image taken by Jesse Ahonen",
+    logo: Uraohjain_Logo,
   },
   /*
   {
