@@ -16,13 +16,12 @@ import { Hamburger_X } from "./Hamburger";
 
 export const Header = () => {
   const { lang, setLocale, fi } = useContext(LanguageContext);
-  const { home_page, projects, stories, contact } = lang.header;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [headerLogo, setHeaderLogo] = useState(null);
-
-  const handleClick = () => setIsMenuOpen(!isMenuOpen);
+  const [textLanguage, setTextLanguage] = useState(null);
 
   const token = import.meta.env.VITE_STRAPI_API_TOKEN;
+  const url = "http://localhost:1337";
 
   const pullData = async () => {
     try {
@@ -34,37 +33,58 @@ export const Header = () => {
           },
         }
       );
-      console.log("Data:", response.data);
-      if (response.data && response.data.length > 0) {
+
+      const res = response.data;
+      console.log(res);
+
+      if (res && res.data.length > 0) {
         const headerLogoUrl =
-          response.data[0].attributes.headerlogo?.data?.formats?.thumbnail?.url;
+          url +
+          res.data[0]?.attributes?.headerlogo?.data?.attributes?.formats
+            ?.thumbnail?.url;
+        console.log("Header logo URL:", headerLogoUrl);
         setHeaderLogo(headerLogoUrl);
-        console.log(headerLogo);
+
+        const headerNavLinksFI = res.data[0]?.attributes;
+        const headerNavLinksEN =
+          res.data[0]?.attributes?.localizations.data[0]?.attributes;
+
+        if (lang === fi) {
+          setTextLanguage(headerNavLinksFI);
+        } else {
+          setTextLanguage(headerNavLinksEN);
+        }
       }
     } catch (error) {
       console.log("An error occurred:", error.response);
     }
   };
 
+  const handleClick = () => setIsMenuOpen(!isMenuOpen);
+
   useEffect(() => {
     pullData();
-  }, []);
+  }, [lang]);
 
   const navLinks = (
-    <ul className="header__nav--list">
-      <li className="header__nav--list-item">
-        <a href="/">{home_page}</a>
-      </li>
-      <li className="header__nav--list-item">
-        <a href="/projects">{projects}</a>
-      </li>
-      <li className="header__nav--list-item">
-        <a href="/stories">{stories}</a>
-      </li>
-      <li className="header__nav--list-item">
-        <a href="/:contact">{contact}</a>
-      </li>
-    </ul>
+    <>
+      {textLanguage && (
+        <ul className="header__nav--list">
+          <li className="header__nav--list-item">
+            <a href="/">{textLanguage.headerNavLink1}</a>
+          </li>
+          <li className="header__nav--list-item">
+            <a href="/projects">{textLanguage.headerNavLink2}</a>
+          </li>
+          <li className="header__nav--list-item">
+            <a href="/stories">{textLanguage.headerNavLink3}</a>
+          </li>
+          <li className="header__nav--list-item">
+            <a href="/:contact">{textLanguage.headerNavLink4}</a>
+          </li>
+        </ul>
+      )}
+    </>
   );
 
   const languageButton = (
