@@ -1,0 +1,21 @@
+video.carousel__item--video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  @include responsive(desktop) {
+    width: 90%;
+  }
+
+  @include responsive(laptop) {
+    width: 85%;
+  }
+
+  @include responsive(tablet) {
+    width: 82.5%;
+  }
+
+  @include responsive(large_mobile) {
+    width: 100%;
+  }
+}

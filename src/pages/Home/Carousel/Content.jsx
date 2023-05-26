@@ -1,11 +1,11 @@
-import Companies from "./SubComponents/Companies";
+import Companies from "./SubComponents/Companies/Companies";
 // import Instagram from "./SubComponents/Instagram";
 // import Article from "./SubComponents/Article";
 // import Video from "./SubComponents/Video";
-import Image from "./SubComponents/Image";
-import Feedback from "./SubComponents/Feedback";
-import Uraohjain from "./SubComponents/Uraohjain";
-import Uraohjain_2 from "./SubComponents/Uraohjain_2";
+import Image from "./SubComponents/Image/Image";
+import Feedback from "./SubComponents/Feedback/Feedback";
+import Uraohjain from "./SubComponents/Uraohjain/Uraohjain";
+import Uraohjain_2 from "./SubComponents/Uraohjain/Uraohjain_2";
 
 // import Mock_Video from "../../Home/assets/carousel/mock-video.mp4";
 import Image_1 from "../../Home/assets/carousel/carousel-img-1.webp";

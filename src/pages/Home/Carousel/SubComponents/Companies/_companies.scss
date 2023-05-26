@@ -1,0 +1,100 @@
+div.carousel__item--companies {
+  display: flex;
+  flex-direction: column;
+  background: $virittamo-light-violet;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 175px;
+  height: 100%;
+  width: 100%;
+  gap: 45px;
+
+  @include responsive(desktop) {
+    padding: 100px 100px;
+    width: 85%;
+  }
+
+  @include responsive(large_mobile) {
+    padding: 50px;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+
+  ul.carousel__item--companies-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 100%;
+    gap: 15px;
+
+    @include responsive(desktop) {
+      height: 550px;
+    }
+
+    @include responsive(laptop) {
+      width: auto;
+      height: 600px;
+    }
+
+    @include responsive(large_mobile) {
+      max-height: 450px;
+      height: 450px;
+    }
+
+    @include responsive(mobile) {
+      height: auto;
+    }
+
+    li.carousel__item--companies-list-item {
+      height: auto;
+      width: 30%;
+      line-height: 22px;
+
+      @include responsive(laptop) {
+        width: 50%;
+      }
+
+      @include responsive(large_mobile) {
+        width: 100%;
+      }
+
+      @include responsive(mobile) {
+        height: auto;
+      }
+    }
+
+    h4 {
+      font-weight: bold;
+    }
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #adadad3f;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $virittamo-white;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $virittamo-pink;
+  }
+}

@@ -1,5 +1,5 @@
 // Importing required modules
-import { LanguageContext } from "../../../../langLocal/context/langContext";
+import { LanguageContext } from "../../../../../langLocal/context/langContext";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 

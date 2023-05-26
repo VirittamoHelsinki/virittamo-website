@@ -1,0 +1,112 @@
+div.carousel__item--feedback {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  @include responsive(laptop) {
+    gap: 50px;
+  }
+
+  @include responsive(large_mobile) {
+    gap: 25px;
+  }
+
+  h1 {
+    font-size: 224px;
+    line-height: 224px;
+    color: $virittamo-white;
+
+    @include responsive(large_mobile) {
+      font-size: 184px;
+      line-height: 184px;
+    }
+
+    @include responsive(mobile) {
+      font-size: 124px;
+      line-height: 124px;
+    }
+  }
+
+  h2 {
+    line-height: 56px !important;
+    font-size: 54px !important;
+    color: $virittamo-white;
+
+    @include responsive(desktop) {
+      line-height: 48px !important;
+      font-size: 46px !important;
+    }
+
+    @include responsive(mobile) {
+      line-height: 24px !important;
+      font-size: 24px !important;
+    }
+  }
+
+  p {
+    font-size: 34px;
+    color: $virittamo-white;
+
+    @include responsive(large_mobile) {
+      font-size: 30px;
+    }
+
+    @include responsive(mobile) {
+      font-size: 24px;
+    }
+  }
+
+  div.carousel__item--feedback-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 150px;
+    top: 150px;
+
+    @include responsive(laptop) {
+      position: initial;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    line-height: 54px;
+    right: 150px;
+    bottom: 150px;
+    padding: 0;
+    width: 40%;
+    position: absolute;
+
+    @include responsive(laptop) {
+      font-size: 36px;
+      line-height: 36px;
+      position: initial;
+      width: 60%;
+      bottom: 0;
+      right: 0;
+    }
+
+    @include responsive(tablet) {
+      font-size: 34px !important;
+      line-height: 34px !important;
+      width: 70%;
+    }
+
+    @include responsive(large_mobile) {
+      width: 75%;
+    }
+
+    @include responsive(mobile) {
+      font-size: 24px !important;
+      line-height: 24px !important;
+    }
+  }
+}

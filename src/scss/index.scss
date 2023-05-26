@@ -7,8 +7,11 @@
 // font imports
 @import "fonts";
 
-// import page styling
+// homepage & carousel
 @import "../pages/Home/homepage";
+@import "../pages/Home/Carousel/carousel";
+
+// import page styling
 @import "../pages/Projects/projectspage";
 @import "../pages/Loading/loading";
 @import "../pages/Projects/ProjectDetails/projectdetails";
@@ -18,5 +21,4 @@
 @import "../components/Header/header";
 @import "../components/Background/background";
 @import "../components/Footer/footer";
-@import "../pages/Home/Carousel/carousel";
 @import "../components/SlideIndicator/slideindicator";

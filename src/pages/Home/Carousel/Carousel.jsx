@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import { LoadingSlides } from "./SubComponents/LoadingSlides";
+import { LoadingSlides } from "./SubComponents/Loading/LoadingSlides";
 import { SlideIndicator } from "../../../components/SlideIndicator/SlideIndicator";
 
 // Create a carousel component

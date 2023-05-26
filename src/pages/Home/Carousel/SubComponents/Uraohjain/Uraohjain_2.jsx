@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import { LanguageContext } from "../../../../langLocal/context/langContext";
+import { LanguageContext } from "../../../../../langLocal/context/langContext";
 
 // import helper function
-import { getTextLimit } from "./functions/textLimiter";
+import { getTextLimit } from "../__functions__/textLimiter";
 
 const Uraohjain_2 = ({
   src,
@@ -43,9 +43,9 @@ const Uraohjain_2 = ({
         alt="uraohjain logo"
         className="carousel__item--uraohjain_2-logo"
       />
-      <h2>{lang === fi ? titleLimit_fi : titleLimit_en}</h2>
       <section className="carousel__item--uraohjain_2-content">
         <div className="carousel__item--uraohjain_2-text">
+          <h2>{lang === fi ? titleLimit_fi : titleLimit_en}</h2>
           <h3>{lang === fi ? subtitleLimit_fi : subtitleLimit_en}</h3>
           <p>{lang === fi ? textLimit_fi : textLimit_en}</p>
         </div>
