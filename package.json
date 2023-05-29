@@ -24,7 +24,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "test": "concurrently \"npx jest\" \"eslint . --ext .js,.jsx\""
+    "test": "concurrently \"npx vitest\" \"eslint . --ext .js,.jsx\""
   },
   "eslintConfig": {
     "extends": [
@@ -60,12 +60,13 @@
     "vite": "^4.1.4",
     "vite-plugin-svgr": "^2.4.0",
     "vite-tsconfig-paths": "^4.0.5",
+    "vitest": "^0.31.1",
     "webpack": "^5.79.0"
   },
   "lint-staged": {
     "*.{js,jsx,css,scss,md,html}": [
       "prettier --write",
-      "jest --bail --findRelatedTests",
+      "vitest run",
       "eslint --fix"
     ]
   },

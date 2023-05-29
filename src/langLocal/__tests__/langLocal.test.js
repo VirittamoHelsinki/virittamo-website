@@ -1,3 +1,4 @@
+import { test, expect } from "vitest";
 import { en } from "../en";
 import { fi } from "../fi";
 
