@@ -48,13 +48,13 @@ export const slides = [
   {
     component: Uraohjain_2,
     title_fi: "Hankkeen tavoite",
-    title_en: "Hankkeen tavoite",
+    title_en: "The aim of the project",
     subtitle_fi: "Kestävän työllistymisen malli",
-    subtitle_en: "Kestävän työllistymisen malli",
+    subtitle_en: "A model for sustainable employment",
     text_fi:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, modi voluptatibus, praesentium minus quibusdam ipsam ullam quaerat, tempore distinctio ab possimus architecto voluptates. Deserunt earum optio accusamus, aperiam delectus facilis maxime ipsum ab hic corrupti saepe at beatae omnis vel ullam, consequatur nulla, magnam necessitatibus suscipit. Fugiat, cupiditate quod dolorem sequi tempore assumenda dicta consectetur inventore maiores soluta sed labore harum alias deleniti nostrum, iste facere? Fugiat voluptatibus vitae repudiandae, inventore voluptates aliquam explicabo! Veritatis nesciunt hic corporis earum odio quas, laudantium atque totam ex ab unde maxime placeat molestias. Aliquid, incidunt fugit repellat consectetur voluptates quam atque facilis cupiditate?",
+      "Hanke keskittyy nuorten ja pitkäaikaistyöttömien työ- ja toimintakyvyn sekä työllistymisedellytysten vahvistamiseen. Hankkeella haastetaan työnhakijat, työnantajat, työllisyyspalvelut ja oppilaitokset yhdessä pohtimaan, kehittämään ja mallintamaan kestäviä työllisyysratkaisuja, joissa asiakkaan osaaminen ja työnantajan tarpeet aidosti kohtaavat ja työllistyminen helpottuu. Hankkeen tavoitteena on luoda uudenlainen kestävän työllistymisen malli.",
     text_en:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, modi voluptatibus, praesentium minus quibusdam ipsam ullam quaerat, tempore distinctio ab possimus architecto voluptates. Deserunt earum optio accusamus, aperiam delectus facilis maxime ipsum ab hic corrupti saepe at beatae omnis vel ullam, consequatur nulla, magnam necessitatibus suscipit. Fugiat, cupiditate quod dolorem sequi tempore assumenda dicta consectetur inventore maiores soluta sed labore harum alias deleniti nostrum, iste facere? Fugiat voluptatibus vitae repudiandae, inventore voluptates aliquam explicabo! Veritatis nesciunt hic corporis earum odio quas, laudantium atque totam ex ab unde maxime placeat molestias. Aliquid, incidunt fugit repellat consectetur voluptates quam atque facilis cupiditate?",
+      "The project focuses on the work and functional capacity of young people and the long-term unemployed and their employment opportunities. The project will challenge job seekers, employers, employment services, and educational institutions to jointly reflect, develop and model sustainable employment solutions that genuinely match the skills of the client with the needs of the employer and facilitate employment. The project aims to create a new model for sustainable employment.",
     src: Uraohjain_Img_2,
     alt: "Uraohjain image taken by Jesse Ahonen",
     logo: Uraohjain_Logo,
