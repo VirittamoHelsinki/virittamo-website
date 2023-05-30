@@ -93,9 +93,9 @@ main.footer__wrapper {
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      height: 625px;
+      height: 550px;
       width: 100%;
-      gap: 20px;
+      gap: 50px;
 
       @include responsive(tablet) {
         text-align: center;
