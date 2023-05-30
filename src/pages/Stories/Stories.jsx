@@ -13,6 +13,8 @@ import { Footer } from "../../components/Footer/Footer";
 import { StoriesCarousel } from "./Carousel/StoriesCarousel";
 import { Stories_Item } from "./Stories_Item";
 
+import { ScrollToTop } from "../../components/ScrollToTop";
+
 const Stories = () => {
   // Get the current language from LanguageContext
   const { lang } = useContext(LanguageContext);
@@ -56,6 +58,7 @@ const Stories = () => {
   return (
     // Use Suspense to show a loading component while the page is being loaded
     <Suspense fallback={<Loading />}>
+      <ScrollToTop />
       <FeaturedStoryContext.Provider value={{ featStory, setFeatStory }}>
         <main className="storiesPage__wrapper">
           <Header />

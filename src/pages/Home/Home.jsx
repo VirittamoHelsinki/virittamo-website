@@ -23,6 +23,8 @@ import { Partners } from "../../components/Partners/Partners";
 import { Contacts } from "../../components/Footer/Contacts";
 import { Footer } from "../../components/Footer/Footer";
 
+import { ScrollToTop } from "../../components/ScrollToTop";
+
 // Import slide data
 import { slides } from "./Carousel/Content";
 
@@ -61,6 +63,7 @@ const HomePage = () => {
 
   return (
     <Suspense fallback={<Loading />}>
+      <ScrollToTop />
       <main className="homePage__wrapper">
         <Header />
         <div className="homePage__img--container">

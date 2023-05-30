@@ -13,6 +13,8 @@ import { Footer } from "../../components/Footer/Footer";
 // Import the TeamProjects component
 import { TeamProjects } from "./TeamProjects/TeamProjects";
 
+import { ScrollToTop } from "../../components/ScrollToTop";
+
 const Projects = () => {
   // Get the language data from the context
   const { lang } = useContext(LanguageContext);
@@ -22,6 +24,7 @@ const Projects = () => {
 
   return (
     <Suspense fallback={<Loading />}>
+      <ScrollToTop />
       <main className="projectPage__wrapper">
         <Header />
         <section className="projectPage__introduction">
