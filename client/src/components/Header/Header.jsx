@@ -17,12 +17,14 @@ import { Hamburger_X } from "./Hamburger";
 export const Header = () => {
   const { lang, setLocale, fi } = useContext(LanguageContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [apiResponse, setApiResponse] = useState(null);
   const [headerLogo, setHeaderLogo] = useState(null);
   const [textLanguage, setTextLanguage] = useState(null);
 
   const token = import.meta.env.VITE_STRAPI_API_TOKEN;
   const url = "http://localhost:1337";
 
+  // fetching data from Strapi
   const pullData = async () => {
     try {
       const response = await axios.get(
@@ -34,37 +36,44 @@ export const Header = () => {
         }
       );
 
-      const res = response.data;
-      console.log(res);
-
-      if (res && res.data.length > 0) {
-        const headerLogoUrl =
-          url +
-          res.data[0]?.attributes?.headerlogo?.data?.attributes?.formats
-            ?.thumbnail?.url;
-        console.log("Header logo URL:", headerLogoUrl);
-        setHeaderLogo(headerLogoUrl);
-
-        const headerNavLinksFI = res.data[0]?.attributes;
-        const headerNavLinksEN =
-          res.data[0]?.attributes?.localizations.data[0]?.attributes;
-
-        if (lang === fi) {
-          setTextLanguage(headerNavLinksFI);
-        } else {
-          setTextLanguage(headerNavLinksEN);
-        }
-      }
+      setApiResponse(response.data);
     } catch (error) {
       console.log("An error occurred:", error.response);
     }
   };
 
-  const handleClick = () => setIsMenuOpen(!isMenuOpen);
-
+  // trigger the pullData function only once when the component mounts
   useEffect(() => {
     pullData();
-  }, [lang]);
+  }, []);
+
+  // update header logo and text based on API response and language context
+  useEffect(() => {
+    if (apiResponse && apiResponse.data.length > 0) {
+      // virittamö logo url
+      const headerLogoUrl =
+        url +
+        apiResponse.data[0]?.attributes?.headerlogo?.data?.attributes?.formats
+          ?.thumbnail?.url;
+      console.log("Header logo URL:", headerLogoUrl);
+      setHeaderLogo(headerLogoUrl);
+
+      // finnish language
+      const headerNavLinksFI = apiResponse.data[0]?.attributes;
+      // english language
+      const headerNavLinksEN =
+        apiResponse.data[0]?.attributes?.localizations.data[0]?.attributes;
+
+      // check languagecontext and change text language accordingly.
+      if (lang === fi) {
+        setTextLanguage(headerNavLinksFI);
+      } else {
+        setTextLanguage(headerNavLinksEN);
+      }
+    }
+  }, [lang, apiResponse]);
+
+  const handleClick = () => setIsMenuOpen(!isMenuOpen);
 
   const navLinks = (
     <>
