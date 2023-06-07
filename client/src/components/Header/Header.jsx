@@ -27,18 +27,15 @@ export const Header = () => {
   // fetching data from Strapi
   const pullData = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:1337/api/headers?populate=*",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await axios.get(`${url}/api/headers?populate=*`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
       setApiResponse(response.data);
     } catch (error) {
-      console.log("An error occurred:", error.response);
+      console.log("An error occurred:", error);
     }
   };
 
@@ -55,7 +52,6 @@ export const Header = () => {
         url +
         apiResponse.data[0]?.attributes?.headerlogo?.data?.attributes?.formats
           ?.thumbnail?.url;
-      console.log("Header logo URL:", headerLogoUrl);
       setHeaderLogo(headerLogoUrl);
 
       // finnish language
