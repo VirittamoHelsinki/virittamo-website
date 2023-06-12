@@ -63,6 +63,36 @@
           "localized": true
         }
       }
+    },
+    "facebookURL": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "instagramURL": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "minLength": 1,
+      "required": true
+    },
+    "linkedinURL": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "minLength": 1
     }
   }
 }
