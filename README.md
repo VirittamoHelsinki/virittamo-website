@@ -1,9 +1,9 @@
 # **Virittämö Helsinki**
 
-This is the new homepage for Virittämö Helsinki, an employment service run by the City of Helsinki that connects jobseekers and companies seeking ICT, software development, and media experts. The website has been created using React.js, JavaScript and SCSS (view specific packages in the package.json file).
+This is the new homepage for Virittämö Helsinki, an employment service run by the City of Helsinki that connects jobseekers and companies seeking ICT, software development, and media experts. The website has been created using React.js (vite + million.js for improved speed), JavaScript, SCSS for the frontend and the [Strapi Content Management System](https://strapi.io/) for the backend (view specific packages in the package.json file).
 <br><br>
 
-![Repo Preview Image](/public/repo-preview.webp?raw=true "preview image")
+![Repo Preview Image](client/public/repo-preview.webp?raw=true "preview image")
 
 ## **Introduction**
 
@@ -12,26 +12,46 @@ Virittämö Helsinki is a groundbreaking employment service that benefits everyo
 
 ## **Usage**
 
-```
+```ts
 git clone https://github.com/VirittamoHelsinki/virittamo-website.git
 
 cd virittamo-website
 
 npm install
 
-npm start
+// strapi  cms setup
+cd /server
+npm install
+type nul > .env (add contents from Teams)
+npm run develop
+
+// react frontend setup
+cd /client
+npm install
+type nul > .env (add contents from Teams)
+npm run dev
 ```
 
 Runs the app in the development mode.\
-Open **[http://localhost:5173](http://localhost:5173)** to view it in your browser.
+Open **[http://localhost:5173](http://localhost:5173)** to view the frontend in your browser.
+\
+Open **[http://localhost:1337/admin](http://localhost:1337/admin)** to access the Strapi CMS dashboard.
+
+.env file contents can be found @
+
+```ts
+Virittämö Teams > Softa > General > Files > Projektit > Virittämön Nettisivut + CMS
+```
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 <br><br>
 
-## **Changing Text Content**
+## **Changing Text Content (for now)**
 
-The text contents for the site can be found and changed at:
+The text contents for the site can be found and changed at:\
+
+- Note: Once the Strapi CMS has been fully implemented, these will no longer be used and will become legacy/deprecated.
 
 ```js
 virittamo-website/src/langLocal/fi.js (finnish translation)
@@ -65,21 +85,15 @@ virittamo-website/src/pages/Home/Carousel/SubComponents/
 
 ## **Future Features / Improvements**
 
-- Full-Stack Expansion:
-  - Building a backend (most likely express/node)
-  - Adding a database to store page contents (fi.js/en.js)
-- Login System & Auth
-  - Controlled access using Virittämö edu.hel.fi details
-  - Ability for selected employees to manage page content
-- Content Dashboard (UI)
-  - Modify and change each text field on the site
-  - Add, modify and remove slides from Home page carousel
-  - Control the contents of the Project page carousels for each team
+- Strapi CMS Implementation:
+  - Modify and change each text- & image field on the site
+  - Add, modify and remove slides from carousels + modify their contents
+  - Being done to save the developers' time so that content teams can edit the contents of the site without having to ask the developer to hard code said changes
     <br><br>
 
 ## **Other / Miscellaneous**
 
-Husky, lint-staged, jest, eslint and prettier are used together to enforce code quality and consistency in a project. They are typically configured to run on every commit, so any code changes will go through the pipeline of checks.
+Husky, lint-staged, vitest, eslint and prettier are used together to enforce code quality and consistency in a project. They are typically configured to run on every commit, so any code changes will go through the pipeline of checks.
 
 ### **Here is what happens on each commit:**
 
@@ -87,7 +101,7 @@ Husky, lint-staged, jest, eslint and prettier are used together to enforce code 
 
 - **Lint-staged** is a tool that runs linters on git-staged files. It is configured in package.json under the lint-staged property, which lists the file types to be checked, and the commands to run on each file. In this case, the commands are to run Prettier, Jest, and Eslint on the changed files.
 
-- **Jest** is a testing framework for JavaScript that is used to run automated tests. Jest is set up to run tests on changed files only, to save time on each commit.
+- **Vitest** is a testing framework for JavaScript that is used to run automated tests. Vitest is set up to run tests on changed files only, to save time on each commit.
 
 - **Eslint** is a linter for JavaScript and is used to enforce code quality and consistency. Eslint is set up to fix any issues that it can automatically fix, such as code formatting.
 

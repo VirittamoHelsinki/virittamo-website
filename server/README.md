@@ -7,6 +7,7 @@ Strapi comes with a full featured [Command Line Interface](https://docs.strapi.i
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
 
 ```
+(don't forget the .env file from Teams)
 npm run develop
 # or
 yarn develop
@@ -17,6 +18,7 @@ yarn develop
 Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
 
 ```
+(don't forget the .env file from Teams)
 npm run start
 # or
 yarn start
@@ -32,9 +34,32 @@ npm run build
 yarn build
 ```
 
-## ⚙️ Deployment
+### `Strapi Images`
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+![Strapi Content Builder Preview Image](public/previews/content-builder-preview.webp?raw=true "Strapi Content Builder Preview Image")
+Used to build the forms/template for parts of the side that need content changed through Strapi CMS.
+
+![Strapi Content Manager Preview Image](public/previews/content-manager-preview.webp?raw=true "Strapi Content Manager Preview Image")
+Added content to the forms/templates built in the previous image.
+
+![Strapi Media Library Preview Image](public/previews/media-library-preview.webp?raw=true "Strapi Media Library Preview Image")
+Where all the media inserted into the CMS gets stored
+
+## ⚙️ Using Strapi / Connecting to Strapi's API
+
+### `example code for the Header component`
+
+![Code Example](public/previews/example-implementation.webp?raw=true "Code Example")
+
+And for example, we can continue integrating it like so:
+
+![Code Example](public/previews/example-implementation-2.webp?raw=true "Code Example")
+
+You can find the full component here:
+
+```ts
+virittamo-website\client\src\components\Header\Header.jsx
+```
 
 ## 📚 Learn more
 
