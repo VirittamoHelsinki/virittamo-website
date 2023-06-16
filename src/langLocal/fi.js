@@ -216,10 +216,10 @@ export const fi = {
           email: "jaakko.hyytia@edu.hel.fi",
         },
         {
-          name: "Kai Rintamaa",
+          name: "John Strandberg",
           title: "Mediatiimin vastaava",
           phone: "p. 09 310 81403",
-          email: "kai.rintamaa@edu.hel.fi",
+          email: "john.strandberg@edu.hel.fi",
         },
         {
           name: "Ari Tuomi",
@@ -232,12 +232,6 @@ export const fi = {
           title: "Softatiimin vastaava",
           phone: "p. 09 3102 7555",
           email: "arto.aitta@hel.fi",
-        },
-        {
-          name: "John Strandberg",
-          title: "Työelämävalmentaja",
-          phone: "p. 09 310 37370",
-          email: "john.strandberg@edu.hel.fi",
         },
         {
           name: "Leea Hiltunen",
