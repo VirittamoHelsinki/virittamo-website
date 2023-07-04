@@ -237,7 +237,7 @@ export const fi = {
           name: "Leea Hiltunen",
           title: "Projektikoordinaattori, Uraohjain+ -hanke",
           phone: "p. 09 310 25104",
-          email: "leea.r.hiltunen@edu.hel.fi",
+          email: "leea.hiltunen@hel.fi",
         },
       ],
     },
