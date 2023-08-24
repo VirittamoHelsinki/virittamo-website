@@ -48,13 +48,13 @@ export const slides = [
   {
     component: Uraohjain_2,
     title_fi: "Hankkeen tavoite",
-    title_en: "The aim of the project",
+    title_en: "The goal of the project",
     subtitle_fi: "Kestävän työllistymisen malli",
-    subtitle_en: "A model for sustainable employment",
+    subtitle_en: "To create a new model of sustainable employment",
     text_fi:
       "Hanke keskittyy nuorten ja pitkäaikaistyöttömien työ- ja toimintakyvyn sekä työllistymisedellytysten vahvistamiseen. Hankkeella haastetaan työnhakijat, työnantajat, työllisyyspalvelut ja oppilaitokset yhdessä pohtimaan, kehittämään ja mallintamaan kestäviä työllisyysratkaisuja, joissa asiakkaan osaaminen ja työnantajan tarpeet aidosti kohtaavat ja työllistyminen helpottuu. Hankkeen tavoitteena on luoda uudenlainen kestävän työllistymisen malli.",
     text_en:
-      "The project focuses on the work and functional capacity of young people and the long-term unemployed and their employment opportunities. The project will challenge job seekers, employers, employment services, and educational institutions to jointly reflect, develop and model sustainable employment solutions that genuinely match the skills of the client with the needs of the employer and facilitate employment. The project aims to create a new model for sustainable employment.",
+      "The project focuses on strengthening the work and functional capacity and employment conditions of young people and the long-term unemployed. The project challenges job seekers, employers, employment services, and educational institutions to jointly consider, develop and model sustainable employment solutions, where the customer's and the employer's needs truly meet and employment become easier. The project aims to create a new model for sustainable employment.",
     src: Uraohjain_Img_2,
     alt: "Uraohjain image taken by Jesse Ahonen",
     logo: Uraohjain_Logo,
