@@ -13,9 +13,6 @@ import MoiPanda_small from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMA
 import Henkilökuvaus from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
 import Henkilökuvaus_small from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
 
-import Uraohjain from "../pages/Projects/assets/carousel/MEDIA_URAOHJAIN.webp";
-import Uraohjain_small from "../pages/Projects/assets/carousel/MEDIA_URAOHJAIN_SMALL.webp";
-
 import Pilvipalvelu from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU.webp";
 import Pilvipalvelu_small from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
 
@@ -281,20 +278,6 @@ export const en = {
       },
       slides: {
         media: [
-          {
-            _id: 1,
-            team: "media",
-            component: Carousel_Item,
-            client_name: "Uraohjain+",
-            project_title: "Uraohjain+ -project",
-            completion_year: "2023",
-            img_src: Uraohjain,
-            img_src_small: Uraohjain_small,
-            alt: "Uraohjain+ -hanke project image",
-            link: "https://virittamohelsinki.fi/",
-            description:
-              "The aim of the Uraohjain+ project is to create a new model for sustainable employment. Together, educational institutions will create a service package in which work and functional capacity, working life skills, and vocational competencies are developed simultaneously, making employment pathways more efficient and faster. The project targets unemployed jobseekers in the IT and media sectors.",
-          },
           {
             _id: 2,
             team: "media",
