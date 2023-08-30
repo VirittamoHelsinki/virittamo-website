@@ -1,9 +1,29 @@
 div.carousel__item--uraohjain {
   position: relative;
-  padding: 50px;
   height: 100%;
   width: 100%;
   object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .carousel__item--uraohjain-logo {
+    margin: 50px;
+  }
+
+  .carousel__item--bottom-row-logos {
+    margin: 5px;
+    display: flex;
+
+    img {
+      border-radius: 50%;
+    }
+  }
 
   @include responsive(desktop) {
     width: 95%;
@@ -15,18 +35,40 @@ div.carousel__item--uraohjain {
 
   @include responsive(tablet) {
     width: 82.5%;
+
+    img {
+      width: 110px;
+      height: 110px;
+    }
   }
 
   @include responsive(large_mobile) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+
+    img {
+      width: 90px;
+      height: 90px;
+    }
+
+    .carousel__item--bottom-row-logos {
+      margin-left: 20px;
+    }
   }
 
-  img.carousel__item--uraohjain-logo {
-    position: absolute;
-    width: 150px;
-    height: auto;
+  @include responsive(mobile) {
+    width: 100%;
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .carousel__item--uraohjain-logo {
+      margin: 30px;
+    }
+
+    .carousel__item--bottom-row-logos {
+      margin-left: 10px;
+    }
   }
 }

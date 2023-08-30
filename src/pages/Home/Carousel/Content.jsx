@@ -13,6 +13,10 @@ import Image_2 from "../../Home/assets/carousel/carousel-img-2.webp";
 
 import Uraohjain_Img from "../../Home/assets/carousel/uraohjain-1.webp";
 import Uraohjain_Logo from "../../Home/assets/carousel/uraohjain-logo.webp";
+import EU_Logo from "../../Home/assets/carousel/eu_funding.png";
+import Laurea_Logo from "../../Home/assets/carousel/laurea.png";
+import Metropolia_Logo from "../../Home/assets/carousel/metropolia.png";
+import Stadin_AO_Logo from "../../Home/assets/carousel/stadinao.png";
 
 import Uraohjain_Img_2 from "../../Home/assets/carousel/uraohjain-2.webp";
 
@@ -44,6 +48,10 @@ export const slides = [
     bg_image: Uraohjain_Img,
     alt: "Uraohjain image taken by Jesse Ahonen",
     logo: Uraohjain_Logo,
+    eu_logo: EU_Logo,
+    laurea_logo: Laurea_Logo,
+    metropolia_logo: Metropolia_Logo,
+    stadinao_logo: Stadin_AO_Logo,
   },
   {
     component: Uraohjain_2,
