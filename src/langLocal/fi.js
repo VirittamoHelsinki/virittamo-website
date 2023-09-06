@@ -261,7 +261,8 @@ export const fi = {
         media: {
           title: "Media",
           description: "Etsitkö media-alan osaajaa projektiisi? Ota yhteyttä!",
-          contact: "Kai Rintamaa / p. 09 310 81403 / kai.rintamaa@edu.hel.fi",
+          contact:
+            "John Strandberg / p. 09 310 37370 / john.strandberg@edu.hel.fi",
         },
 
         ict: {
