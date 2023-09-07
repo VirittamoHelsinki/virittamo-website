@@ -207,12 +207,6 @@ export const fi = {
           email: "anna-mari.rouru@edu.hel.fi",
         },
         {
-          name: "Jaakko Hyytiä",
-          title: "Projektipäällikkö, Uraohjain+ -hanke",
-          phone: "p. 09 310 28040",
-          email: "jaakko.hyytia@edu.hel.fi",
-        },
-        {
           name: "John Strandberg",
           title: "Mediatiimin vastaava",
           phone: "p. 09 310 81403",
@@ -231,8 +225,14 @@ export const fi = {
           email: "arto.aitta@hel.fi",
         },
         {
+          name: "Jaakko Hyytiä",
+          title: "Projektipäällikkö,\n Uraohjain+ -hanke",
+          phone: "p. 09 310 28040",
+          email: "jaakko.hyytia@edu.hel.fi",
+        },
+        {
           name: "Leea Hiltunen",
-          title: "Projektikoordinaattori, Uraohjain+ -hanke",
+          title: "Projektikoordinaattori,\n Uraohjain+ -hanke",
           phone: "p. 09 310 25104",
           email: "leea.hiltunen@hel.fi",
         },

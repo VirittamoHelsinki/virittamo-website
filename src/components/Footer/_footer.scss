@@ -93,19 +93,22 @@ main.footer__wrapper {
       justify-content: space-between;
       flex-wrap: wrap;
       height: 550px;
-      max-width: 800px;
+      width: 800px;
 
       @include responsive(large_mobile) {
         height: auto;
+        width: auto;
         gap: 10px;
       }
 
       li.footer__contacts--list-item {
+        white-space: pre-wrap;
         padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         width: 33.3%;
 
         @include responsive(tablet) {
@@ -121,8 +124,8 @@ main.footer__wrapper {
         }
       }
 
+      // First row has 2 items
       li.footer__contacts--list-item:nth-child(-n + 2) {
-        // First row has 2 items
         width: 50%;
 
         @include responsive(large_mobile) {
@@ -130,8 +133,8 @@ main.footer__wrapper {
         }
       }
 
+      // Last row has 2 items
       li.footer__contacts--list-item:nth-last-child(-n + 2) {
-        // Last row has 2 items
         width: 50%;
 
         @include responsive(large_mobile) {

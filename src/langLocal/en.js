@@ -226,13 +226,13 @@ export const en = {
         },
         {
           name: "Jaakko Hyytiä",
-          title: "Project Manager, Careerdriver+",
+          title: "Project Manager,\n Careerdriver+",
           phone: "p. 09 310 28040",
           email: "jaakko.hyytia@edu.hel.fi",
         },
         {
           name: "Leea Hiltunen",
-          title: "Project Coordinator, Careerdriver+",
+          title: "Project Coordinator,\n Careerdriver+",
           phone: "p. 09 310 25104",
           email: "leea.hiltunen@hel.fi",
         },
