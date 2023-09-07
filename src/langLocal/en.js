@@ -207,12 +207,6 @@ export const en = {
           email: "anna-mari.rouru@edu.hel.fi",
         },
         {
-          name: "Jaakko Hyytiä",
-          title: "Project Manager, Careerdriver+",
-          phone: "p. 09 310 28040",
-          email: "jaakko.hyytia@edu.hel.fi",
-        },
-        {
           name: "John Strandberg",
           title: "Head of Media Team",
           phone: "p. 09 310 81403",
@@ -229,6 +223,12 @@ export const en = {
           title: "Head of Softa Team",
           phone: "p. 09 3102 7555",
           email: "arto.aitta@hel.fi",
+        },
+        {
+          name: "Jaakko Hyytiä",
+          title: "Project Manager, Careerdriver+",
+          phone: "p. 09 310 28040",
+          email: "jaakko.hyytia@edu.hel.fi",
         },
         {
           name: "Leea Hiltunen",
