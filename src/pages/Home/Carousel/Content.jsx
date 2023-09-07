@@ -55,14 +55,12 @@ export const slides = [
   },
   {
     component: Uraohjain_2,
-    title_fi: "Hankkeen tavoite",
-    title_en: "The goal of the project",
-    subtitle_fi: "Kestävän työllistymisen malli",
-    subtitle_en: "To create a new model of sustainable employment",
-    text_fi:
-      "Hanke keskittyy nuorten ja pitkäaikaistyöttömien työ- ja toimintakyvyn sekä työllistymisedellytysten vahvistamiseen. Hankkeella haastetaan työnhakijat, työnantajat, työllisyyspalvelut ja oppilaitokset yhdessä pohtimaan, kehittämään ja mallintamaan kestäviä työllisyysratkaisuja, joissa asiakkaan osaaminen ja työnantajan tarpeet aidosti kohtaavat ja työllistyminen helpottuu. Hankkeen tavoitteena on luoda uudenlainen kestävän työllistymisen malli.",
-    text_en:
-      "The project focuses on strengthening the work and functional capacity and employment conditions of young people and the long-term unemployed. The project challenges job seekers, employers, employment services, and educational institutions to jointly consider, develop and model sustainable employment solutions, where the customer's and the employer's needs truly meet and employment become easier. The project aims to create a new model for sustainable employment.",
+    title_fi: "URAOHJAIN+",
+    title_en: "URAOHJAIN+",
+    subtitle_fi: "Kirkasta uratavoitteesi ja vahvista osaamistasi",
+    subtitle_en: "Clarify your career goals and improve your skills",
+    text_fi: `Uraohjain+ on palvelu, joka tukee työpaikan saamista.\nPalvelussa voi:\n\n• Täydentää osaamista\n• Suunnitella työuraa\n• Oppia markkinoimaan osaamista\n• Vahvistaa hyvinvointia\n\nUraohjain+ palvelussa voi suorittaa ICT-, ohjelmistokehitys- ja media-alan täydentäviä opintoja. Opinnot kestävät 3-6 kuukautta. Laurea ammattikorkeakoulu ja Metropolia ammattikorkeakoulu järjestävät opinnot.`,
+    text_en: `Uraohjain+ is a service that supports you in getting a job.\nIn the service you can:\n\n• Improve your skills\n• Plan your career\n• Learn to market your skills\n• Strengthen your well-being\n\nThe service offers complementary studies in ICT, software development and media. The studies last 3-6 months. The studies are organized by Laurea University of Applied Sciences and Metropolia University of Applied Sciences.`,
     src: Uraohjain_Img_2,
     alt: "Uraohjain image taken by Jesse Ahonen",
     logo: Uraohjain_Logo,

@@ -2,13 +2,12 @@ div.carousel__item--uraohjain_2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2.5px solid #ffeef2;
   align-items: center;
   position: relative;
-  padding: 50px 10%;
+  padding: 50px;
   height: 100%;
   width: 100%;
-  gap: 25px;
+  gap: 20px;
 
   @include responsive(desktop) {
     width: 95%;
@@ -19,35 +18,61 @@ div.carousel__item--uraohjain_2 {
   }
 
   @include responsive(tablet) {
-    border: none;
     width: 82.5%;
+    justify-content: space-between;
   }
 
   @include responsive(large_mobile) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
   }
 
-  img.carousel__item--uraohjain_2-logo {
-    position: absolute;
-    width: 75px;
-    height: auto;
-    left: 50px;
-    top: 50px;
+  .carousel__item--uraohjain_2-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
     @include responsive(tablet) {
-      left: unset;
+      margin: 50px;
     }
 
     @include responsive(large_mobile) {
-      width: 50px;
+      margin: 10px;
     }
 
-    @include responsive(mobile) {
-      top: 25px;
-      width: 25px;
+    img.carousel__item--uraohjain_2-logo {
+      width: 90px;
+      height: auto;
+
+      @include responsive(large_mobile) {
+        margin-top: 10px;
+        width: 80px;
+      }
+
+      @include responsive(mobile) {
+        width: 45px;
+        height: 50px;
+      }
+    }
+
+    .carousel__item--uraohjain_2-title {
+      margin: 0 auto;
+      color: #6c1741;
+      font-family: "Aharoni", sans-serif;
+      font-size: 34px;
+      font-weight: 800;
+      padding: 0;
+
+      @include responsive(tablet) {
+        color: white;
+      }
+
+      @include responsive(large_mobile) {
+        font-size: 25px;
+      }
+
+      @include responsive(mobile) {
+        font-size: 20px;
+      }
     }
   }
 
@@ -71,11 +96,9 @@ div.carousel__item--uraohjain_2 {
         hsla(0, 0%, 0%, 0.534) 75%
       );
       justify-content: center;
-      align-items: center;
       position: absolute;
       height: 100%;
       width: 100%;
-      gap: 0px;
     }
 
     div.carousel__item--uraohjain_2-text {
@@ -85,40 +108,33 @@ div.carousel__item--uraohjain_2 {
       align-items: flex-start;
       text-align: start;
       width: 650px;
-      gap: 20px;
+      gap: 25px;
 
       @include responsive(large_desktop) {
         gap: 15px;
       }
 
-      @include responsive(large_mobile) {
-        gap: 10px;
-      }
-
       @include responsive(tablet) {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        align-items: left;
         width: 75%;
       }
 
       @include responsive(large_mobile) {
         width: 70%;
+        margin-top: 50px;
+        gap: 10px;
       }
 
       @include responsive(mobile) {
         width: 70%;
       }
 
-      h2,
-      h3 {
-        color: #6c1741;
-        font-family: "Aharoni", sans-serif;
-      }
-
       p {
-        font-family: "Avenir book", sans-serif;
+        margin-top: 10px;
+        white-space: pre-wrap;
+        font-family: "Aharoni", sans-serif;
         font-size: 18px;
+        color: #6c1741;
 
         @include responsive(laptop) {
           font-size: 14px !important;
@@ -126,6 +142,7 @@ div.carousel__item--uraohjain_2 {
         }
 
         @include responsive(tablet) {
+          text-align: left;
           font-size: 16px !important;
           line-height: 18px;
         }
@@ -176,6 +193,10 @@ div.carousel__item--uraohjain_2 {
       }
 
       h3 {
+        color: #6c1741;
+        font-family: "Aharoni", sans-serif;
+        font-weight: 800;
+
         @include responsive(large_desktop) {
           font-size: 26px !important;
           line-height: 28px;
@@ -218,8 +239,7 @@ div.carousel__item--uraohjain_2 {
 
     img.carousel__item--uraohjain_2-img {
       object-fit: cover;
-      width: 900px;
-      height: 500px;
+      width: 800px;
 
       @include responsive(desktop) {
         height: 400px;
@@ -260,11 +280,11 @@ div.carousel__item--uraohjain_2 {
     @include responsive(large_mobile) {
       height: 10px;
       width: 80%;
+      bottom: 0px;
     }
 
     @include responsive(mobile) {
-      width: 100%;
-      bottom: 0px;
+      display: none;
     }
   }
 }
