@@ -56,11 +56,11 @@ export const slides = [
   {
     component: Uraohjain_2,
     title_fi: "URAOHJAIN+",
-    title_en: "URAOHJAIN+",
+    title_en: "CAREERDRIVER+",
     subtitle_fi: "Kirkasta uratavoitteesi ja vahvista osaamistasi",
     subtitle_en: "Clarify your career goals and improve your skills",
     text_fi: `Uraohjain+ on palvelu, joka tukee työpaikan saamista.\nPalvelussa voi:\n\n• Täydentää osaamista\n• Suunnitella työuraa\n• Oppia markkinoimaan osaamista\n• Vahvistaa hyvinvointia\n\nUraohjain+ palvelussa voi suorittaa ICT-, ohjelmistokehitys- ja media-alan täydentäviä opintoja. Opinnot kestävät 3-6 kuukautta. Laurea ammattikorkeakoulu ja Metropolia ammattikorkeakoulu järjestävät opinnot.`,
-    text_en: `Uraohjain+ is a service that supports you in getting a job.\nIn the service you can:\n\n• Improve your skills\n• Plan your career\n• Learn to market your skills\n• Strengthen your well-being\n\nThe service offers complementary studies in ICT, software development and media. The studies last 3-6 months. The studies are organized by Laurea University of Applied Sciences and Metropolia University of Applied Sciences.`,
+    text_en: `Careerdriver+ is a service that supports you in getting a job.\nIn the service you can:\n\n• Improve your skills\n• Plan your career\n• Learn to market your skills\n• Strengthen your well-being\n\nThe service offers complementary studies in ICT, software development and media. The studies last 3-6 months. The studies are organized by Laurea University of Applied Sciences and Metropolia University of Applied Sciences.`,
     src: Uraohjain_Img_2,
     alt: "Uraohjain image taken by Jesse Ahonen",
     logo: Uraohjain_Logo,
