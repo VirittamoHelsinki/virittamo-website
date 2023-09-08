@@ -38,14 +38,18 @@ const Uraohjain_2 = ({
         duration: 1,
       }}
     >
-      <img
-        src={logo}
-        alt="uraohjain logo"
-        className="carousel__item--uraohjain_2-logo"
-      />
+      <section className="carousel__item--uraohjain_2-header">
+        <img
+          src={logo}
+          alt="uraohjain logo"
+          className="carousel__item--uraohjain_2-logo"
+        />
+        <h2 className="carousel__item--uraohjain_2-title">
+          {lang === fi ? titleLimit_fi : titleLimit_en}
+        </h2>
+      </section>
       <section className="carousel__item--uraohjain_2-content">
         <div className="carousel__item--uraohjain_2-text">
-          <h2>{lang === fi ? titleLimit_fi : titleLimit_en}</h2>
           <h3>{lang === fi ? subtitleLimit_fi : subtitleLimit_en}</h3>
           <p>{lang === fi ? textLimit_fi : textLimit_en}</p>
         </div>

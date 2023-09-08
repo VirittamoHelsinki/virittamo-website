@@ -13,6 +13,10 @@ import Image_2 from "../../Home/assets/carousel/carousel-img-2.webp";
 
 import Uraohjain_Img from "../../Home/assets/carousel/uraohjain-1.webp";
 import Uraohjain_Logo from "../../Home/assets/carousel/uraohjain-logo.webp";
+import EU_Logo from "../../Home/assets/carousel/eu_funding.png";
+import Laurea_Logo from "../../Home/assets/carousel/laurea.png";
+import Metropolia_Logo from "../../Home/assets/carousel/metropolia.png";
+import Stadin_AO_Logo from "../../Home/assets/carousel/stadinao.png";
 
 import Uraohjain_Img_2 from "../../Home/assets/carousel/uraohjain-2.webp";
 
@@ -44,17 +48,19 @@ export const slides = [
     bg_image: Uraohjain_Img,
     alt: "Uraohjain image taken by Jesse Ahonen",
     logo: Uraohjain_Logo,
+    eu_logo: EU_Logo,
+    laurea_logo: Laurea_Logo,
+    metropolia_logo: Metropolia_Logo,
+    stadinao_logo: Stadin_AO_Logo,
   },
   {
     component: Uraohjain_2,
-    title_fi: "Hankkeen tavoite",
-    title_en: "The aim of the project",
-    subtitle_fi: "Kestävän työllistymisen malli",
-    subtitle_en: "A model for sustainable employment",
-    text_fi:
-      "Hanke keskittyy nuorten ja pitkäaikaistyöttömien työ- ja toimintakyvyn sekä työllistymisedellytysten vahvistamiseen. Hankkeella haastetaan työnhakijat, työnantajat, työllisyyspalvelut ja oppilaitokset yhdessä pohtimaan, kehittämään ja mallintamaan kestäviä työllisyysratkaisuja, joissa asiakkaan osaaminen ja työnantajan tarpeet aidosti kohtaavat ja työllistyminen helpottuu. Hankkeen tavoitteena on luoda uudenlainen kestävän työllistymisen malli.",
-    text_en:
-      "The project focuses on the work and functional capacity of young people and the long-term unemployed and their employment opportunities. The project will challenge job seekers, employers, employment services, and educational institutions to jointly reflect, develop and model sustainable employment solutions that genuinely match the skills of the client with the needs of the employer and facilitate employment. The project aims to create a new model for sustainable employment.",
+    title_fi: "URAOHJAIN+",
+    title_en: "CAREERDRIVER+",
+    subtitle_fi: "Kirkasta uratavoitteesi ja vahvista osaamistasi",
+    subtitle_en: "Clarify your career goals and improve your skills",
+    text_fi: `Uraohjain+ on palvelu, joka tukee työpaikan saamista.\nPalvelussa voi:\n\n• Täydentää osaamista\n• Suunnitella työuraa\n• Oppia markkinoimaan osaamista\n• Vahvistaa hyvinvointia\n\nUraohjain+ palvelussa voi suorittaa ICT-, ohjelmistokehitys- ja media-alan täydentäviä opintoja. Opinnot kestävät 3-6 kuukautta. Laurea ammattikorkeakoulu ja Metropolia ammattikorkeakoulu järjestävät opinnot.`,
+    text_en: `Careerdriver+ is a service that supports you in getting a job.\nIn the service you can:\n\n• Improve your skills\n• Plan your career\n• Learn to market your skills\n• Strengthen your well-being\n\nThe service offers complementary studies in ICT, software development and media. The studies last 3-6 months. The studies are organized by Laurea University of Applied Sciences and Metropolia University of Applied Sciences.`,
     src: Uraohjain_Img_2,
     alt: "Uraohjain image taken by Jesse Ahonen",
     logo: Uraohjain_Logo,

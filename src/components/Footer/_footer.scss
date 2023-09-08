@@ -88,40 +88,57 @@ main.footer__wrapper {
     }
 
     ul.footer__contacts--list {
+      align-self: center;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
       height: 550px;
-      width: 100%;
-      gap: 50px;
-
-      @include responsive(tablet) {
-        text-align: center;
-        height: auto;
-        gap: 35px;
-      }
+      width: 800px;
 
       @include responsive(large_mobile) {
-        gap: 25px;
+        height: auto;
+        width: auto;
+        gap: 10px;
       }
 
       li.footer__contacts--list-item {
+        white-space: pre-wrap;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 50%;
+        width: 33.3%;
+
+        @include responsive(tablet) {
+          width: 50%;
+        }
 
         @include responsive(large_mobile) {
-          text-align: center;
           width: 100%;
         }
 
         p:first-of-type {
           font-weight: 900;
+        }
+      }
+
+      // First row has 2 items
+      li.footer__contacts--list-item:nth-child(-n + 2) {
+        width: 50%;
+
+        @include responsive(large_mobile) {
+          width: 100%;
+        }
+      }
+
+      // Last row has 2 items
+      li.footer__contacts--list-item:nth-last-child(-n + 2) {
+        width: 50%;
+
+        @include responsive(large_mobile) {
+          width: 100%;
         }
       }
     }

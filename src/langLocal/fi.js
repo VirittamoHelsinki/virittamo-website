@@ -13,9 +13,6 @@ import MoiPanda_small from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMA
 import Henkilökuvaus from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
 import Henkilökuvaus_small from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
 
-import Uraohjain from "../pages/Projects/assets/carousel/MEDIA_URAOHJAIN.webp";
-import Uraohjain_small from "../pages/Projects/assets/carousel/MEDIA_URAOHJAIN_SMALL.webp";
-
 import Pilvipalvelu from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU.webp";
 import Pilvipalvelu_small from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
 
@@ -87,50 +84,50 @@ export const fi = {
     companies_list: [
       "Aalto-yliopisto",
       "Ahlsell",
-      "Apix Oy",
+      "Apix",
       "ATEA Finland",
       "Business College Helsinki",
       "Barona / Infocare / HUS",
-      "Barona Oy",
+      "Barona",
       "CaseNine",
       "Capgemini",
       "CGI",
-      "CSC- tieteen tietotekniikan keskus Oy",
+      "CSC – Tieteen tietotekniikan keskus",
       "Eficode",
       "Elisa",
       "Espoon kaupunki",
-      "FCG",
-      "Fellow Fiance",
-      "flyAR Augmented Reality Studio Oy",
+      "Finnish Consulting Group",
+      "Fellow Finance",
+      "flyAR Augmented Reality Studio",
       "Fujitsu Finland",
       "G-Works",
       "Gofore",
       "Helsingin kaupunki / Stadin ammatti- ja aikuisopisto, Oodi, Kanslia ja Taloushallintopalvelu",
-      "Helvar Oy",
+      "Helvar",
       "iTaito",
-      "Icareus Oy",
-      "JackFinder Oy",
+      "Icareus",
+      "JackFinder",
       "Kuehne + Nagel",
-      "Kuntien Tiera Oy",
-      "Kuuhubb Oy",
-      "M-Files MOST Digital Oy",
+      "Kuntien Tiera",
+      "Kuuhubb",
+      "M-Files MOST Digital",
       "Nixu Corporation Helsinki",
       "NOJA Rahoitus",
-      "OPR-Finance Oy",
-      "Patentti- ja rekisterihallinto",
+      "OPR-Finance",
+      "Patentti- ja rekisterihallitus",
       "Playmore Games",
       "Reaktor",
-      "Redland Oy",
+      "Redland",
       "RELEX Solutions",
       "Softico",
       "Solteq",
       "Suomen Kiertovoima KIVO",
       "Suora Broadcast",
-      "Tietokeskus Finland Oy",
-      "Valve Branding Oy",
-      "Webhelp Finland Oy",
-      "Woolman Oy",
-      "Yleisradio Oy",
+      "Tietokeskus Finland",
+      "Valve Branding",
+      "Webhelp Finland",
+      "Woolman",
+      "Yleisradio",
     ],
     why_virittamo: "Miksi valita Virittämö?",
     for_an_employee: {
@@ -154,11 +151,11 @@ export const fi = {
     teams: {
       title: "Tiimit",
       media_desc:
-        "Virittämön Mediatiimi on asiantunteva osaajajoukko, joka tekee mediatuotantoja monipuolisiin tarpeisiin. Työ lähtee tilaajan toiveiden kartoituksesta ja tuotannon suunnittelusta. Mietimme yhdessä, mitä ja miten kannattaa tehdä, suunnittelemme toteutuksen kalustoineen, työryhmineen ja jälkitöineen, sekä laadimme aikataulun. Tiimistä löytyy mm. videokuvauksen, valokuvauksen, äänityön, animaation ja graafisen suunnittelun osaajia. Olemme toteuttaneet esimerkiksi mainosvideoita, koulutusvideoita, haastatteluja, animaatioita, 3D-mallinnuksia, livestriimauksia, sekä valokuvanneet nettiin ja painotuotteisiin.",
+        "Virittämön Mediatiimi on asiantunteva osaajajoukko, joka tekee mediatuotantoja monipuolisiin tarpeisiin. Työ lähtee tilaajan toiveiden kartoituksesta ja tuotannon suunnittelusta. Suunnittelemme joka tuotannon tilaajan kanssa, ja toteutamme sen haluttaessa alusta loppuun. Meillä on kattava kalusto sekä oma työryhmä, jolla on taitoa projektiin kuin projektiin. Tiimistä löytyy mm. videokuvauksen, valokuvauksen, äänityön, animaation ja graafisen suunnittelun osaajia. Olemme toteuttaneet esimerkiksi mainosvideoita, koulutusvideoita, haastatteluja, animaatioita, 3D-mallinnuksia, livestriimauksia ja valokuvanneet nettiin sekä painotuotteisiin. ",
       ict_desc:
-        "Virittämön ICT-tiimi lisää työkokemuksen ja koulutuksen kautta työntekijöidensä ammattitaitoa ja vastaa siten myös yritysten osaajatarpeeseen, sekä toisaalta palvelee ICT-tiimin työntekijöiden jatkotyöllistymistä. Tehtävät räätälöidään kiinnostuksen ja osaamisen mukaan. Työntekijöille on löytynyt omia erityisalueitaan, joiden osaamista he ovat päässeet parantamaan. Tarjolla on erilaisia, ajankohtaisia teknologioita. Tekniset ratkaisut tehdään oikeaa käyttöä varten. Esimerkkeinä työtehtävistä ovat infrastruktuurin kehittäminen sekä lähi- ja etätuki.",
+        "Virittämön ICT-tiimi lisää työkokemuksen ja koulutuksen kautta työntekijöidensä ammattitaitoa ja vastaa siten myös yritysten osaajatarpeeseen, samalla se palvelee ICT-tiimin työntekijöiden jatkotyöllistymistä. Tehtävät räätälöidään kiinnostuksen ja osaamisen mukaan, jolloin työntekijät ovat päässeet parantamaan omia erityisalueitaan. Tarjolla on erilaisia ajankohtaisia teknologioita. Tekniset ratkaisut tehdään oikeaa käyttöä varten. Esimerkkeinä työtehtävistä ovat infrastruktuurin kehittäminen sekä lähi- ja etätuki.",
       software_desc:
-        "Virittämön Softa-tiimi on innovatiivinen sekä asiantunteva joukko ohjelmistokehittäjiä. Toteutamme kumppaneillemme niin selainpohjaisia sovelluksia kuin mobiiliappejakin hyödyntäen moderneja kehitystyökaluja ja teknologioita. Olemme toteuttaneet asiakkaillemme mm.varausjärjestelmiä, verkkosivuja sekä lomakejärjestelmiä. Sovelluskehitystä toteutamme modernein ohjelmistokehityksen menetelmin (Agile software development). Muutamia avainsanoja käyttämistämme teknologioista: React, Node.js, Python, Azure. Projektit toteutetaan muutaman hengen tiimeissä.",
+        "Virittämön Softa-tiimi on innovatiivinen sekä asiantunteva joukko ohjelmistokehittäjiä. Toteutamme kumppaneillemme niin selainpohjaisia sovelluksia kuin mobiiliappejakin hyödyntäen moderneja kehitystyökaluja ja teknologioita. Olemme toteuttaneet asiakkaillemme mm. varausjärjestelmiä, verkkosivuja sekä lomakejärjestelmiä. Sovelluskehitystä toteutamme modernein ohjelmistokehityksen menetelmin (Agile software development). Muutamia avainsanoja käyttämistämme teknologioista: React, Node.js, Python, Azure. Projektit toteutetaan muutaman hengen tiimeissä.",
       read_more_btn: "Lue lisää",
       read_less_btn: "Lue vähemmän",
     },
@@ -210,12 +207,6 @@ export const fi = {
           email: "anna-mari.rouru@edu.hel.fi",
         },
         {
-          name: "Jaakko Hyytiä",
-          title: "Projektipäällikkö, Uraohjain+ -hanke",
-          phone: "p. 09 310 28040",
-          email: "jaakko.hyytia@edu.hel.fi",
-        },
-        {
           name: "John Strandberg",
           title: "Mediatiimin vastaava",
           phone: "p. 09 310 81403",
@@ -234,8 +225,14 @@ export const fi = {
           email: "arto.aitta@hel.fi",
         },
         {
+          name: "Jaakko Hyytiä",
+          title: "Projektipäällikkö,\n Uraohjain+ -hanke",
+          phone: "p. 09 310 28040",
+          email: "jaakko.hyytia@edu.hel.fi",
+        },
+        {
           name: "Leea Hiltunen",
-          title: "Projektikoordinaattori, Uraohjain+ -hanke",
+          title: "Projektikoordinaattori,\n Uraohjain+ -hanke",
           phone: "p. 09 310 25104",
           email: "leea.hiltunen@hel.fi",
         },
@@ -258,13 +255,14 @@ export const fi = {
   */
   projects_page: {
     title: "Projektit",
-    desc: "Virittämön kautta yritykset voivat saada ammattitaitoista työvoimaa sekä mahdollisuuden tehdä yhteiskunnallista hyvää. Virittämön media-, IT- ja ohjelmistoalojen osaajat voivat olla mukana projekteissanne muutamasta päivästä useaan kuukauteen. Erilaisten projektien kautta työntekijät saavat kartutettua osaamistaan, päivitettyä työkokemusta ja työelämätaitoja ponnistaakseen takaisin omalle urapolulleen.",
+    desc: "Virittämön kautta yritykset voivat saada ammattitaitoista työvoimaa sekä mahdollisuuden tehdä yhteiskunnallista hyvää. Virittämön media-, ICT- ja ohjelmistoalojen osaajat voivat olla mukana projekteissanne muutamasta päivästä useaan kuukauteen. Erilaisten projektien kautta työntekijät saavat kartutettua osaamistaan, päivitettyä työkokemusta ja työelämätaitoja ponnistaakseen takaisin omalle urapolulleen.",
     carousels: {
       text: {
         media: {
           title: "Media",
           description: "Etsitkö media-alan osaajaa projektiisi? Ota yhteyttä!",
-          contact: "Kai Rintamaa / p. 09 310 81403 / kai.rintamaa@edu.hel.fi",
+          contact:
+            "John Strandberg / p. 09 310 37370 / john.strandberg@edu.hel.fi",
         },
 
         ict: {
@@ -284,20 +282,6 @@ export const fi = {
       slides: {
         media: [
           {
-            _id: 1,
-            team: "media",
-            component: Carousel_Item,
-            client_name: "Uraohjain+",
-            project_title: "Uraohjain+ -hanke",
-            completion_year: "2023",
-            img_src: Uraohjain,
-            img_src_small: Uraohjain_small,
-            alt: "Uraohjain+ -hanke project image",
-            link: "https://virittamohelsinki.fi/",
-            description:
-              "Uraohjain+ -hankkeen tavoitteena on luoda uudenlainen kestävän työllistymisen malli. Oppilaitokset luovat yhdessä palvelukokonaisuuden, jossa työ- ja toimintakyvyn, työelämätaitojen ja ammatillisen osaamisen kehittäminen tapahtuu yhtäaikaisesti työllistymispolkuja tehostaen ja nopeuttaen. Hankkeen kohderyhmänä ovat IT- ja media-alojen työttömät työnhakijat.",
-          },
-          {
             _id: 2,
             team: "media",
             component: Carousel_Item,
@@ -309,7 +293,7 @@ export const fi = {
             alt: "Oodi photography project image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Toteutimme Oodille tuotannolliset valokuvat heidän laitteistaan nettisivua ja somea varten. Oodi on Helsingin keskustakirjasto, jonka palveluihin ja laitteisiin kuuluu monipuolisesti niin ompelukoneita, keittiö kuin valokuvastudiokin.",
+              "Toteutimme Oodille tuotannolliset valokuvat heidän laitteistaan nettisivua ja somea varten. Oodi on Helsingin keskustakirjasto, jonka palveluihin ja laitteisiin kuuluu monipuolisesti niin ompelukoneita, keittiö kuin valokuvausstudiokin.",
           },
           {
             _id: 3,
@@ -337,7 +321,7 @@ export const fi = {
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Virittämön Mediatiimi on tehnyt mobiilipeli startup yritys Moi Pandalle peligrafiikkaa, hahmosuunnittelua, animaatioita, äänisuunnittelua sekä mainosvideon. Moi Panda-sovelluksen kautta lapset voivat ystävystyä toistensa kautta ympäri maailman, oppia uusia kieliä, sosiaalisia taitoja, kommunikaatiotaitoja ja uutta toistensa kulttuureista pelien, videopuhelujen ja chattien välityksellä. Heidän vanhempansa voivat olla myös sovelluksen kautta ystäviä keskenään ja jakaa pedagogisia vinkkejä ja vanhemmuuteen liittyviä asioita, kokemuksia, tunteita ja ongelmia globaalisti.",
+              "Virittämön Mediatiimi on tehnyt mobiilipeli startup yritys Moi Pandalle peligrafiikkaa, hahmosuunnittelua, animaatioita, äänisuunnittelua sekä mainosvideon. Moi Panda-sovelluksen kautta lapset voivat ystävystyä toistensa kanssa ympäri maailman, oppia uusia kieliä, sosiaalisia taitoja, kommunikaatiotaitoja ja uutta toistensa kulttuureista pelien, videopuhelujen ja chattien välityksellä. Heidän vanhempansa voivat olla myös sovelluksen kautta ystäviä keskenään ja jakaa pedagogisia vinkkejä ja vanhemmuuteen liittyviä asioita, kokemuksia, tunteita ja ongelmia globaalisti.",
           },
           {
             _id: 5,
@@ -361,7 +345,7 @@ export const fi = {
             team: "ict",
             component: Carousel_Item,
             client_name: "Virittämö",
-            project_title: "Azure-pilvipalvelu",
+            project_title: "Azure -pilvipalvelu",
             completion_year: "2023",
             img_src: Pilvipalvelu,
             img_src_small: Pilvipalvelu_small,
@@ -454,7 +438,7 @@ export const fi = {
             alt: "Virittämö CRM projektikuva",
             link: "https://virittamohelsinki.fi/",
             description:
-              "Virittämön oma CRM-asiakastietojärjestelmä syntyi tarpeesta hallinnoida ja tarkastella Virittämön yrityskontaktien yhteystietoja ja näille tehtyjen projektien edistymistä.",
+              "Virittämön oma CRM -asiakastietojärjestelmä syntyi tarpeesta hallinnoida ja tarkastella Virittämön yrityskontaktien yhteystietoja ja näille tehtyjen projektien edistymistä.",
           },
           {
             _id: 5,
@@ -495,7 +479,7 @@ export const fi = {
         story_text: [
           "Matkani Virittämölle alkoi jo ennen kuin pääsin sinne töihin. Hain IT-suunnittelijan paikkaa ICT-tiimistä, mutten ensimmäisellä kerralla tullut valituksi. Sain palautetta ICT-tiimin tiimivastaavalta, että minun olisi hyödyllistä opiskella lisää pilvipalveluteknologiaa ja hän kannusti minua hakemaan uudestaan Virittämölle. Työhaastattelussa jouduin kamppailemaan suomen kieleni kanssa, mutta lopulta minulle tarjoutui mahdollisuus työllistyä Virittämöön.",
           "Olin aluksi hieman ujo, epävarma ja pysyttelin omissa oloissani. Aloin työskennellä yhden IT-järjestelmän ympärillä ja ilokseni huomasin kehittyneeni ja oppineeni koko ajan lisää. Valitettavasti minulla oli haasteellista kommunikoida sekä ilmaista ajatuksiani selkeästi suomen kielellä ja siksi päätinkin keskittyä kommunikointi- ja kielitaitojeni hiomiseen. Ymmärsin hyvin pian, että vaikka hallitsisin erilaisia järjestelmiä, kuinka hyvin, haasteeksi muodostui se, etten voinut tehokkaasti kommunikoida työkavereideni kanssa suomeksi.",
-          "Parantaakseni kielitaitoani, minulle tarjottiin mahdollisuus osallistua työpaikalla viikoittain kieliryhmään, jossa sain suomen kielen opetusta. Sain tästä työyhteisöltä rohkaisevaa palautetta. Tämän lisäksi Metropolian ammattikorkeakoulu tarjosi edistyneitä suomen kielen kursseja sekä ilmaisia ICT-alan kursseja ammatillisen osaamiseni kehittämiseen. Näiden lisäksi työnhakutaitoni kehittyivät, huolimatta siitä, että en heti löytänyt itselleni sopivaa työpaikkaa Virittämöllä ollessani, vaikka muut kollegat löysivät.",
+          "Parantaakseni kielitaitoani, minulle tarjottiin mahdollisuus osallistua työpaikalla viikoittain kieliryhmään, jossa sain suomen kielen opetusta. Sain tästä työyhteisöltä rohkaisevaa palautetta. Tämän lisäksi Metropolian ammattikorkeakoulu tarjosi edistyneitä suomen kielen kursseja sekä ilmaisia ICT-alan kursseja ammatillisen osaamiseni kehittämiseen. Näiden lisäksi työnhakutaitoni kehittyivät huolimatta siitä, että en heti löytänyt itselleni sopivaa työpaikkaa Virittämöllä ollessani, vaikka muut kollegat löysivät.",
           "Olen erittäin kiitollinen kaikille Virittämöltä saamastani tuesta ja mahdollisuuksista. Opin paljon uusia asioita ja olen tyytyväinen saatuani positiivisen työkokemuksen. Näin omin silmin, miten ihmiset pystyivät kasvamaan ja saavuttamaan tavoitteensa koko organisaation tuella, minä mukaan lukien.",
         ],
         component: StoriesCarousel_Item,
@@ -518,7 +502,7 @@ export const fi = {
         alt: "Kuva Kari:sta, entinen Virittämön työntekijä.",
         img_src: Kari,
         full_name: "Kari Loise",
-        job_title: "ICT Teknikko",
+        job_title: "IT Suunnittelija",
         story_text: [
           "Kun aloitin työskentelyn Virittämöllä, olin sitä ennen opiskellut ICT-alaa ja suorittanut uranvaihdon. Työskentely ICT-tiimissä oli ensimmäinen askeleeni tällä alalla ja sain kokea paljon monipuolisia tehtäviä, jotka kasvattivat osaamistani.",
           "Aloitin lähituen tehtävissä, jossa autoin Virittämön muita työntekijöitä erilaisissa teknisissä ongelmissa. Tämä tehtävä oli erittäin tärkeä, koska se vaikutti suoraan muiden työkokemukseen ja tyytyväisyyteen teknologiaan. Seuraavaksi siirryin etätukitehtäviin, joka oli erittäin hyödyllistä oppimistani, sillä sain oppia käyttämään erilaisia tietoturvateknologioita. Työskentelin myös laiterekisterin ja henkilöstörekisterin ylläpidon parissa, mikä opetti minulle, miten organisaatio toimii teknologian näkökulmasta.",
