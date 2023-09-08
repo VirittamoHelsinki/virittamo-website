@@ -3,12 +3,11 @@ import { useContext, useEffect } from "react";
 import { LanguageContext } from "../../../langLocal/context/langContext";
 import { useParams } from "react-router-dom";
 import { Suspense } from "react";
-import { Header } from "../../../components/Header/Header";
 import { PinkBar } from "../../../components/PinkBar";
-import { Footer } from "../../../components/Footer/Footer";
-import Loading from "../../Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
+import { Image } from "../../../components/Image";
 
-const ProjectDetails = () => {
+export default function ProjectDetails() {
   // Extract id and team from URL params
   const { id, team } = useParams();
 
@@ -32,7 +31,6 @@ const ProjectDetails = () => {
   return (
     <Suspense fallback={<Loading />}>
       <main className="projectDetails__wrapper">
-        <Header />
         <section className="projectDetails__title">
           <h1>{project?.project_title}</h1>
           <h2 id="projectDetails__title--client">{project?.client_name}</h2>
@@ -40,13 +38,11 @@ const ProjectDetails = () => {
           <p id="projectDetails__title--desc">{project?.description}</p>
         </section>
         <section className="projectDetails__image--container">
-          <img src={project?.img_src} alt={project?.alt} />
+          <Image src={project?.img_src} alt={project?.alt} />
         </section>
         <PinkBar />
-        <Footer />
       </main>
     </Suspense>
-  );
-};
+  )
+}
 
-export default ProjectDetails;

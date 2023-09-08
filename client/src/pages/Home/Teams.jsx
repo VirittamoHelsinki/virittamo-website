@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 // Importing Background component
 import { Background } from "../../components/Background/Background";
+import { Image } from "../../components/Image";
 
 // A functional component for the individual team item
 const TeamsItem = (props) => {
@@ -17,7 +18,7 @@ const TeamsItem = (props) => {
 
   // Slicing the text into a preview and the rest
   const textPreview = props.text
-    ? props.text.slice(0, props.text.indexOf(".") + 1)
+    ? props.text.slice(0, props.text.length / 5)
     : "";
   const textAll = props.text
     ? props.text.slice(props.text.indexOf(".") + 1)
@@ -26,7 +27,7 @@ const TeamsItem = (props) => {
   // Rendering the individual team item with the relevant props and state
   return (
     <div className="homePage__teams--containers-item ">
-      <img src={props.img} alt={props.alt} />
+      <Image src={props.img} alt={props.alt} />
       <h3>{props.title}</h3>
       <p>
         {textPreview}

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const Contacts = ({ scrollRef, contact_details, locations }) => {
+export function Contacts({ scrollRef, contact_details, locations }){
   return (
     <>
       <h2 ref={scrollRef}>{contact_details.title}</h2>
@@ -30,8 +30,8 @@ export const Contacts = ({ scrollRef, contact_details, locations }) => {
         </ul>
       </div>
     </>
-  );
-};
+  )
+}
 
 Contacts.propTypes = {
   scrollRef: PropTypes.oneOfType([
@@ -57,4 +57,4 @@ Contacts.propTypes = {
       postalCode: PropTypes.string.isRequired,
     })
   ).isRequired,
-};
+}

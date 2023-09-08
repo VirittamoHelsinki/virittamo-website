@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Image } from "../../../../components/Image";
 
 export const Carousel_Item = ({
   _id,
@@ -13,7 +14,7 @@ export const Carousel_Item = ({
     <div className="projectPage__teams--carousel-item">
       <div className="carousel-img-container">
         <Link to={`/projects/${team}/${_id}`}>
-          <img src={img_src_small} alt="temp image" />
+          <Image src={img_src_small} alt="temp image" />
         </Link>
       </div>
       <div className="carousel-title-container">

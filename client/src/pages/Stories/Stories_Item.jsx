@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Image } from "../../components/Image";
 
 export const Stories_Item = ({
   alt,
@@ -9,7 +10,7 @@ export const Stories_Item = ({
 }) => {
   return (
     <div className="storiesPage__featuredStory--item">
-      <img src={img_src} alt={alt} />
+      <Image src={img_src} alt={alt} />
       <div className="storiesPage__featuredStory--item-title">
         <h3>{full_name}</h3>
         <h4>{job_title}</h4>

@@ -1,50 +1,47 @@
 import { Carousel_Item } from "../pages/Projects/TeamProjects/ProjectCarousel/Carousel_Item";
 import { StoriesCarousel_Item } from "../pages/Stories/Carousel/StoriesCarousel_Item";
 
-import Qteatteri from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI.webp";
-import Qteatteri_small from "../pages/Projects/assets/carousel/MEDIA_QTEATTERI_SMALL.webp";
+import Qteatteri from "../assets/carousel/MEDIA_QTEATTERI.webp";
+import Qteatteri_small from "../assets/carousel/MEDIA_QTEATTERI_SMALL.webp";
 
-import Oodi from "../pages/Projects/assets/carousel/MEDIA_OODI_2.webp";
-import Oodi_small from "../pages/Projects/assets/carousel/MEDIA_OODI_2_SMALL.webp";
+import Oodi from "../assets/carousel/MEDIA_OODI_2.webp";
+import Oodi_small from "../assets/carousel/MEDIA_OODI_2_SMALL.webp";
 
-import MoiPanda from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA.webp";
-import MoiPanda_small from "../pages/Projects/assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
+import MoiPanda from "../assets/carousel/MEDIA_MOIPANDA.webp";
+import MoiPanda_small from "../assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
 
-import RadioHelsinki from "../pages/Projects/assets/carousel/MEDIA_RADIOHELSINKI.webp";
-import RadioHelsinki_small from "../pages/Projects/assets/carousel/MEDIA_RADIOHELSINKI_SMALL.webp";
+import Henkilökuvaus from "../assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
+import Henkilökuvaus_small from "../assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
 
-import Henkilökuvaus from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
-import Henkilökuvaus_small from "../pages/Projects/assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
+import Pilvipalvelu from "../assets/carousel/ICT_PILVIPALVELU.webp";
+import Pilvipalvelu_small from "../assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
 
-import Pilvipalvelu from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU.webp";
-import Pilvipalvelu_small from "../pages/Projects/assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
+import Virtualisointi from "../assets/carousel/ICT_VIRTUALISOINTIPROJEKTI.webp";
+import Virtualisointi_small from "../assets/carousel/ICT_VIRTUALISOINTIPROJEKTI_SMALL.webp";
 
-import Virtualisointi from "../pages/Projects/assets/carousel/ICT_VIRTUALISOINTIPROJEKTI.webp";
-import Virtualisointi_small from "../pages/Projects/assets/carousel/ICT_VIRTUALISOINTIPROJEKTI_SMALL.webp";
+import Tietoliikenne from "../assets/carousel/ICT_TIETOLIIKENNEKAAPPI.webp";
+import Tietoliikenne_small from "../assets/carousel/ICT_TIETOLIIKENNEKAAPPI_SMALL.webp";
 
-import Tietoliikenne from "../pages/Projects/assets/carousel/ICT_TIETOLIIKENNEKAAPPI.webp";
-import Tietoliikenne_small from "../pages/Projects/assets/carousel/ICT_TIETOLIIKENNEKAAPPI_SMALL.webp";
+import Digirasti from "../assets/carousel/SOFTA_DIGIRASTI.webp";
+import Digirasti_small from "../assets/carousel/SOFTA_DIGIRASTI_SMALL.webp";
 
-import Digirasti from "../pages/Projects/assets/carousel/SOFTA_DIGIRASTI.webp";
-import Digirasti_small from "../pages/Projects/assets/carousel/SOFTA_DIGIRASTI_SMALL.webp";
+import Liikuntakoutsaus from "../assets/carousel/SOFTA_LIIKUNTAKOUTSAUS.webp";
+import Liikuntakoutsaus_small from "../assets/carousel/SOFTA_LIIKUNTAKOUTSAUS_SMALL.webp";
 
-import Liikuntakoutsaus from "../pages/Projects/assets/carousel/SOFTA_LIIKUNTAKOUTSAUS.webp";
-import Liikuntakoutsaus_small from "../pages/Projects/assets/carousel/SOFTA_LIIKUNTAKOUTSAUS_SMALL.webp";
+import SoteApp from "../assets/carousel/SOFTA_SOTEAPP.webp";
+import SoteApp_small from "../assets/carousel/SOFTA_SOTEAPP_SMALL.webp";
 
-import SoteApp from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP.webp";
-import SoteApp_small from "../pages/Projects/assets/carousel/SOFTA_SOTEAPP_SMALL.webp";
+import VirittamoCRM from "../assets/carousel/SOFTA_VIRITTAMO-CRM.webp";
+import VirittamoCRM_small from "../assets/carousel/SOFTA_VIRITTAMO-CRM_SMALL.webp";
 
-import VirittamoCRM from "../pages/Projects/assets/carousel/SOFTA_VIRITTAMO-CRM.webp";
-import VirittamoCRM_small from "../pages/Projects/assets/carousel/SOFTA_VIRITTAMO-CRM_SMALL.webp";
+import Muistojalki from "../assets/carousel/SOFTA_MUISTOJALKI.webp";
+import Muistojalki_small from "../assets/carousel/SOFTA_MUISTOJALKI_SMALL.webp";
 
-import Muistojalki from "../pages/Projects/assets/carousel/SOFTA_MUISTOJALKI.webp";
-import Muistojalki_small from "../pages/Projects/assets/carousel/SOFTA_MUISTOJALKI_SMALL.webp";
-
-import Andrei from "../pages/Stories/assets/andrei.webp";
-import Eetu from "../pages/Stories/assets/eetu.webp";
-import Kari from "../pages/Stories/assets/kari.webp";
-import Leo from "../pages/Stories/assets/leo.webp";
-import Warda from "../pages/Stories/assets/warda.webp";
+import Andrei from "../assets/andrei.webp";
+import Eetu from "../assets/eetu.webp";
+import Kari from "../assets/kari.webp";
+import Leo from "../assets/leo.webp";
+import Warda from "../assets/warda.webp";
 
 export const en = {
   /*
@@ -82,62 +79,62 @@ export const en = {
   home_page: {
     _comment: "Home page text variables",
     title: "Virittämö",
-    text: "Virittämö is an employment service of the City of Helsinki that brings together individuals who need fresh work experience and companies looking for practical ICT-, software development-, and media experts.",
+    text: "Virittämö is an employment service of the City of Helsinki that brings together individuals who need fresh work experience and companies looking for practical ICT, software development, and media experts.",
     employed_to_text:
       "Our colleagues have advanced to new employment opportunities:",
     companies_list: [
       "Aalto-yliopisto",
       "Ahlsell",
-      "Apix Oy",
+      "Apix",
       "ATEA Finland",
       "Business College Helsinki",
       "Barona / Infocare / HUS",
-      "Barona Oy",
+      "Barona",
       "CaseNine",
       "Capgemini",
       "CGI",
-      "CSC- tieteen tietotekniikan keskus Oy",
+      "CSC – Tieteen tietotekniikan keskus",
       "Eficode",
       "Elisa",
       "Espoon kaupunki",
-      "FCG",
-      "Fellow Fiance",
-      "flyAR Augmented Reality Studio Oy",
+      "Finnish Consulting Group",
+      "Fellow Finance",
+      "flyAR Augmented Reality Studio",
       "Fujitsu Finland",
       "G-Works",
       "Gofore",
       "Helsingin kaupunki / Stadin ammatti- ja aikuisopisto, Oodi, Kanslia ja Taloushallintopalvelu",
-      "Helvar Oy",
+      "Helvar",
       "iTaito",
-      "Icareus Oy",
-      "JackFinder Oy",
+      "Icareus",
+      "JackFinder",
       "Kuehne + Nagel",
-      "Kuntien Tiera Oy",
-      "Kuuhubb Oy",
-      "M-Files MOST Digital Oy",
+      "Kuntien Tiera",
+      "Kuuhubb",
+      "M-Files MOST Digital",
       "Nixu Corporation Helsinki",
       "NOJA Rahoitus",
-      "OPR-Finance Oy",
-      "Patentti- ja rekisterihallinto",
+      "OPR-Finance",
+      "Patentti- ja rekisterihallitus",
       "Playmore Games",
       "Reaktor",
-      "Redland Oy",
+      "Redland",
       "RELEX Solutions",
       "Softico",
       "Solteq",
       "Suomen Kiertovoima KIVO Suora Broadcast",
-      "Tietokeskus Finland Oy",
-      "Valve Branding Oy",
-      "Webhelp Finland Oy",
-      "Woolman Oy",
-      "Yleisradio Oy",
+      "Tietokeskus Finland",
+      "Valve Branding",
+      "Webhelp Finland",
+      "Woolman",
+      "Yleisradio",
     ],
     why_virittamo: "Why Virittämö?",
     for_an_employee: {
       title: "Benefits for employees",
       description: [
         "You will gain fresh work experience and maintain your professional skills with interesting tasks and customer projects.",
-        "A 7-month subsidized employment that helps you move forward in your career.",
+        "A 7-month subsidized employment, whereby the city of Helsinki supports your employment directly and helps you move forward in your career.",
         "Salary according to the collective agreement for local government employees (KVTES).",
         "You can develop your skills in various ways while working, studying and completing pathway studies leading to a degree in engineering at a university of applied sciences.",
         "You will be part of a supportive and friendly work community. The guidance team of Virittämö will be with you throughout the employment period, helping you develop the skills needed for your job search and work life.",
@@ -146,7 +143,7 @@ export const en = {
     for_a_company: {
       title: "Opportunities for companies",
       description: [
-        "Skilled and professional ICT-, software development-, and media experts for your short or long-term projects, or as a permanent employee.",
+        "Skilled and professional ICT, software development, and media experts for your short or long-term projects, or as a permanent employee.",
         "The expertise and suitability of the professionals have been carefully determined in advance on your behalf.",
         "You can benefit from the partnership in your marketing.",
       ],
@@ -154,9 +151,9 @@ export const en = {
     teams: {
       title: "Teams",
       media_desc:
-        "Virittämö's Media team is a group of professionals who produce media productions for a wide range of needs. The work starts with identifying the client's wishes and planning the production. Together, we decide on how to proceed and plan the implementation with equipment, teams and post-production work, and draw up a schedule. The team includes experts in video, photography, sound, animation, and graphic design. We have produced promotional videos, training videos, interviews, animation, 3D modelling, livestreams and photography for web/print materials.",
+        "Virittämö's Media team is a group of professionals who produce media productions for a wide range of needs. The work starts with identifying the client's wishes and planning the production. We plan out each production together with the client, and are able to carry it out from start to finish. We have a comprehensive set of equipment and a team that is ready for any project. The team includes experts in video, photography, sound, animation, and graphic design. We have produced promotional videos, training videos, interviews, animation, 3D modelling, livestreams and photography for web/print materials.",
       ict_desc:
-        "Through work experience and training, the Virittämö ICT team increases the skills of its employees and thus also meets the skill needs of companies. It also serves the further employability of the ICT team's employees. Tasks are tailored to the individual's interests and skills. Employees have found their own specific areas of expertise in which they have been able to improve their skills. A variety of up-to-date technologies are available. Technical solutions are made for real use. Examples of the tasks include infrastructure development and local and remote technical support.",
+        "Through work experience and training, the Virittämö ICT team increases the skills of its employees and thus also meets the skill needs of companies. Tasks are tailored to the individual's interests and skills. Employees have found their own specific areas of expertise in which they have been able to improve their skills. A variety of up-to-date technologies are available. Technical solutions are made for real use. Examples of the tasks include infrastructure development and local and remote technical support.",
       software_desc:
         "The Softa team at Virittämö is an innovative and knowledgeable group of software developers. We implement both browser-based applications and mobile apps for our partners, using modern development tools and technologies. We have implemented booking systems, websites, and form systems for our clients. We use modern software development methods (Agile software development). Some keywords from technologies we use: React, Node.js, Python, Azure. Projects are carried out in teams of a few people.",
       read_more_btn: "Read more",
@@ -210,16 +207,10 @@ export const en = {
           email: "anna-mari.rouru@edu.hel.fi",
         },
         {
-          name: "Jaakko Hyytiä",
-          title: "Project Manager, Uraohjain+",
-          phone: "p. 09 310 28040",
-          email: "jaakko.hyytia@edu.hel.fi",
-        },
-        {
-          name: "Kai Rintamaa",
+          name: "John Strandberg",
           title: "Head of Media Team",
           phone: "p. 09 310 81403",
-          email: "kai.rintamaa@edu.hel.fi",
+          email: "john.strandberg@edu.hel.fi",
         },
         {
           name: "Ari Tuomi",
@@ -234,22 +225,16 @@ export const en = {
           email: "arto.aitta@hel.fi",
         },
         {
-          name: "John Strandberg",
-          title: "Career Coach",
-          phone: "p. 09 310 37370",
-          email: "john.strandberg@edu.hel.fi",
-        },
-        {
-          name: "Ulla Ijäs",
-          title: "Worklife Coach",
-          phone: "p. 09 310 35264",
-          email: "ulla.ijas@edu.hel.fi",
+          name: "Jaakko Hyytiä",
+          title: "Project Manager,\n Careerdriver+",
+          phone: "p. 09 310 28040",
+          email: "jaakko.hyytia@edu.hel.fi",
         },
         {
           name: "Leea Hiltunen",
-          title: "Project Coordinator, Uraohjain+",
+          title: "Project Coordinator,\n Careerdriver+",
           phone: "p. 09 310 25104",
-          email: "leea.r.hiltunen@edu.hel.fi",
+          email: "leea.hiltunen@hel.fi",
         },
       ],
     },
@@ -277,7 +262,8 @@ export const en = {
           title: "Media",
           description:
             "Looking for a media professional for your project? Contact us!",
-          contact: "Kai Rintamaa / p. 09 310 81403 / kai.rintamaa@edu.hel.fi",
+          contact:
+            "John Strandberg / p. 09 310 37370 / john.strandberg@edu.hel.fi",
         },
         ict: {
           title: "ICT",
@@ -294,7 +280,7 @@ export const en = {
       slides: {
         media: [
           {
-            _id: 1,
+            _id: 2,
             team: "media",
             component: Carousel_Item,
             client_name: "Oodi",
@@ -306,20 +292,6 @@ export const en = {
             link: "https://virittamohelsinki.fi/",
             description:
               "We produced production photos for Oodi for their website and social media. Oodi is Helsinki's central library, which offers a variety of services and devices, including sewing machines, kitchen equipment, and even a photo studio.",
-          },
-          {
-            _id: 2,
-            team: "media",
-            component: Carousel_Item,
-            client_name: "Radio Helsinki",
-            project_title: "Sound Design",
-            completion_year: "2023",
-            img_src: RadioHelsinki,
-            img_src_small: RadioHelsinki_small,
-            alt: "placeholder image",
-            link: "https://virittamohelsinki.fi/",
-            description:
-              "Radio Helsinki has been a training place for Virittämö, where our sound designer has been able to explore various radio work, including broadcasts, to familiarize themselves with production work and to speak radio commercials. Radio Helsinki has provided opportunities to develop skills and given appropriate amounts of responsibility and support.",
           },
           {
             _id: 3,
@@ -502,10 +474,10 @@ export const en = {
         full_name: "Andrei Vlassenko",
         job_title: "ICT Technician",
         story_text: [
-          "My journey with Virittämö Helsinki started before I was even hired. I applied for a job, but unfortunately, I was rejected. However, the previous ICT team leader advised me to study cloud technologies more and encouraged me to apply again. Even though I was still struggling with the Finnish language during the interview, I was eventually offered the job.",
-          "Initially, I was a bit timid, unsure, and kept to myself. However, as I started working on one of our systems, I began to notice areas for improvement. Unfortunately, I struggled with communicating my ideas effectively. Therefore, I decided to focus on improving my communication skills and language proficiency. I realized that even if I understood the system well, it would be pointless if I couldn't effectively communicate with others about it.",
-          "To improve my skills, I was given the opportunity to attend weekly presentations and offer feedback to my colleagues. Additionally, there were advanced Finnish language courses and free professional development courses offered by Metropolia University. I was able to learn more about job-seeking skills and although I didn't find a job that suited me, many others did.",
-          "I am grateful for the support and opportunities provided by everyone at Virittämö. I learned so much during my time there and was lucky to have such a positive first job experience. I saw firsthand how people were able to grow and achieve their goals with the support of the organization. Including myself. Thank you Virittämö Helsinki, it was truly life-changing.",
+          "My journey to Virittämö started even before I got to work there. I applied for a job as an IT designer in the ICT team, but I didn't get it the first time. I received feedback from the ICT team leader that I would benefit from learning more about cloud computing and he encouraged me to apply again to Virittämo. I struggled with my Finnish during the interview, but eventually, I was offered the opportunity to work at Virittämo.",
+          "At first, I was a bit shy, unsure and kept to myself. I started working around one IT system and to my delight I found myself developing and learning more and more. Unfortunately, I found it challenging to communicate and express my thoughts clearly in Finnish, and therefore decided to focus on honing my communication and language skills.  I realized very soon that no matter how well I could manage different systems, the challenge was that I could not communicate effectively with my colleagues in Finnish.",
+          "To improve my language skills, I was offered the opportunity to participate in a weekly language group at work, where I received Finnish language tuition. I received encouraging feedback from the work community. In addition, Metropolia University of Applied Sciences offered advanced Finnish language courses and free ICT courses to develop my professional skills. In addition to these, my job searching skills improved despite the fact that I did not immediately find a suitable job when working at Virittämö, although other team members did.",
+          "I am very grateful for all the support and opportunities I received from Virittämö. I learned many new things and am happy to have had a positive work experience. I saw firsthand how people could grow and achieve their goals with the support of the whole organization, including myself.",
         ],
         component: StoriesCarousel_Item,
       },
@@ -527,12 +499,12 @@ export const en = {
         alt: "Picture of Kari Loise, an ex Virittämö employee.",
         img_src: Kari,
         full_name: "Kari Loise",
-        job_title: "ICT Technician",
+        job_title: "IT Architect",
         story_text: [
-          "When I started working at Virittämö, I had previously studied ICT and made a career change. Working in the ICT team was my first step in this field and I experienced a lot of diverse tasks that helped me grow my skills.",
-          "I started in the local support tasks where I assisted other Virittämö employees with various technical issues. This task was very important because it directly affected the work experience and satisfaction of others with technology. Next, I moved on to remote support tasks, which was very useful for my learning as I got to learn about different security technologies. I also worked on maintaining the hardware and personnel register, which taught me how the organization operates from a technology perspective.",
-          "Virittämö was a pleasant work environment where I received a lot of support in job search-related matters. Virittämö's career counselor provided valuable advice that helped me navigate the world of work. I received good advice on job searching, resume writing, and interviews.",
-          "During my time at Virittämö, I was able to find a permanent job as a digital support person for the City of Helsinki. The tasks include maintaining the hardware register and loaning out devices. With Virittämö's help, I was able to progress in my career and gain valuable experience in the ICT field. I can recommend Virittämö to anyone looking for a job in the ICT industry and who wants to develop professionally.",
+          "When I started working at Virittämö, I had previously studied ICT and undergone a career change. Working in the ICT team was my first step in this field, and I was given a wide range of tasks that helped me grow my skills.",
+          "I started in onsite support tasks, assisting other employees of Virittämö with various technical issues. These tasks were very important to me, as they directly impacted the work experience of other employees and their satisfaction with technologies. Next, I moved on to remote support tasks, which was extremely beneficial as I learned to use various cybersecurity technologies. I also worked on maintaining the hardware and personnel register, which taught me how the organization operates from a technology perspective.",
+          "Virittämö was a pleasant work environment where I received a lot of support in matters related to job searching. Virittämö's career counselor provided valuable advice that helped me navigate the world of work. I received good advice on job searching, resume writing, and interviews.",
+          "During my time at Virittämö, I was able to find a permanent job as a digital support person for the City of Helsinki. The tasks include maintaining the hardware register and loaning out devices. With Virittämö's help, I was able to progress in my career and gain valuable experience in the ICT field. I can recommend Virittämö to everyone who is looking for a job in the ICT field and wants to develop professionally.",
         ],
         component: StoriesCarousel_Item,
       },
@@ -543,10 +515,10 @@ export const en = {
         full_name: "Leo Jylhä",
         job_title: "ICT Technician",
         story_text: [
-          "I am a data processing graduate and after graduation, I ended up working in my family's restaurant business. Years later, I decided to try to find a job in my field of study or to study further. I didn't get into school, but a job opening at Virittämö came up and I decided to seize the opportunity.",
-          "At Virittämö's ICT team, I was able to do on-site support, platform management, application migration to the cloud, and configuration, among other things. I gained a lot of industry experience and new knowledge. I also received a lot of support in job search, which clearly helped me in finding a new job. In addition, while working, I completed 60 credits of information and communication technology studies through Metropolia University of Applied Sciences' path studies, enabled by Virittämö.",
-          "When my time at Virittämö was coming to an end, I received two job offers from different ICT companies, one of which I accepted. My new job as a cloud services consultant at a Nordic multinational corporation was a good match for my career aspirations, and I am happy with the outcome.",
-          "There was a good team spirit in the ICT team and it was enjoyable to work there. I definitely recommend Virittämö, especially for recent graduates or career changers.",
+          "I am a data processing graduate and after graduation, I ended up working in my family's restaurant business. Some time later, I decided to search for a job in my actual field of study or a chance to study further. After not ending up as a student, I grabbed the chance when I ran into a job opening at Virittämö.",
+          "At Virittämö's ICT team, I was able to do on-site support, platform management, application migration to the cloud plus configuration, among other things. I gained a lot of industry experience and new knowledge. I also received a lot of support in job search, which clearly helped me find a new job. In addition, while working, I completed 60 credits of information and communication technology studies through Metropolia University of Applied Sciences' path studies, enabled by Virittämö.",
+          "As my time at Virittämö was coming to an end, I received two job offers from different ICT companies, one of which I accepted. My new job as a cloud services consultant at a Nordic multinational corporation was a good match for my career aspirations, and I am very happy with the outcome.",
+          "The ICT team had a good group spirit and I enjoyed my time with everyone there. I definitely recommend Virittämö, especially for recent graduates or career changers.",
         ],
         component: StoriesCarousel_Item,
       },
@@ -566,3 +538,4 @@ export const en = {
     ],
   },
 };
+

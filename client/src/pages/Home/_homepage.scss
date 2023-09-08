@@ -1,8 +1,9 @@
-main.homePage__wrapper {
+.homePage__wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
   width: 100%;
   height: auto;
   gap: 100px;
@@ -374,14 +375,14 @@ main.homePage__wrapper {
     }
 
     div.homePage__apply--container {
-      ul.homePage__apply--container-list {
+      .homePage__apply--container-list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         width: 100%;
         gap: 32px;
 
-        div.homePage__apply--container-list-item {
+        .homePage__apply--container-list-item {
           display: flex;
           flex-direction: column;
           height: auto;
@@ -420,13 +421,13 @@ main.homePage__wrapper {
       text-align: center;
     }
 
-    div.homePage__partners--container {
+    .homePage__partners--container {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
 
-      div.homePage__partners--container-images {
+      .homePage__partners--container-images {
         display: flex;
         justify-content: space-evenly;
         align-items: center;

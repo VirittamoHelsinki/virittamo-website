@@ -6,7 +6,7 @@ import { LoadingSlides } from "./SubComponents/LoadingSlides";
 import { SlideIndicator } from "../../../components/SlideIndicator/SlideIndicator";
 
 // Create a carousel component
-export const Carousel = ({ slides }) => {
+export function Carousel({ slides }) {
   // Set initial states for activeIndex, isHovering, and isPlaying
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
@@ -23,7 +23,7 @@ export const Carousel = ({ slides }) => {
   };
 
   // Function to render the active item in the carousel
-  const renderActiveItem = () => {
+  const RenderActiveItem = () => {
     const activeItem = slides[activeIndex];
     const ActiveItem = activeItem.component;
 
@@ -44,7 +44,7 @@ export const Carousel = ({ slides }) => {
           videoEl.removeEventListener("pause", () => setIsHovering(false));
         };
       }
-    }, [activeIndex]);
+    }, []);
 
     return <ActiveItem key={activeIndex} {...activeItem} />;
   };
@@ -60,7 +60,7 @@ export const Carousel = ({ slides }) => {
       }
     }, INTERVAL_DURATION);
     return () => clearInterval(interval);
-  }, [activeIndex, isHovering, isPlaying]);
+  }, [ isHovering, isPlaying]);
 
   // Function to handle mouse entering the carousel
   const handleMouseEnter = () => {
@@ -87,7 +87,7 @@ export const Carousel = ({ slides }) => {
             onClick={handlePrevClick}
           />
         </button>
-        {slides ? renderActiveItem() : <LoadingSlides />}
+        {slides ? <RenderActiveItem /> : <LoadingSlides />}
         <button className="arrow-button">
           <SlArrowRight
             className="arrow-button--icon"
@@ -96,8 +96,8 @@ export const Carousel = ({ slides }) => {
         </button>
       </div>
     </section>
-  );
-};
+  )
+}
 
 // Define prop types for the carousel component
 Carousel.propTypes = {
@@ -112,4 +112,4 @@ Carousel.propTypes = {
       link: PropTypes.string,
     })
   ).isRequired,
-};
+}

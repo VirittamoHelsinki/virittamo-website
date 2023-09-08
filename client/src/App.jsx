@@ -8,7 +8,13 @@ import { LanguageContext } from "./langLocal/context/langContext";
 import Router from "./components/Router";
 import { useState, useEffect } from "react";
 
-const App = () => {
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Header } from "./components/Header/Header.jsx";
+import { Footer } from "./components/Footer/Footer.jsx";
+
+const queryClient = new QueryClient();
+
+export default function App() {
   const [locale, setLocale] = useState("fi");
   const [lang, setLang] = useState(fi);
 
@@ -23,12 +29,12 @@ const App = () => {
   }, [locale]);
 
   return (
-    <main className="app__wrapper">
+    <QueryClientProvider client={queryClient}>
       <LanguageContext.Provider value={{ lang, setLocale, fi }}>
+        <Header />
         <Router />
+        <Footer />
       </LanguageContext.Provider>
-    </main>
+    </QueryClientProvider>
   );
-};
-
-export default App;
+}

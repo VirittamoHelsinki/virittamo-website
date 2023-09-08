@@ -5,9 +5,9 @@ import Companies from "./SubComponents/Companies";
 import Image from "./SubComponents/Image";
 import Feedback from "./SubComponents/Feedback";
 
-// import Mock_Video from "../../Home/assets/carousel/mock-video.mp4";
-import Image_1 from "../../Home/assets/carousel/carousel-img-1.webp";
-import Image_2 from "../../Home/assets/carousel/carousel-img-2.webp";
+// import Mock_Video from "../../../assets/mock-video.mp4";
+import Image_1 from "../../../assets/carousel/carousel-img-1.webp";
+import Image_2 from "../../../assets/carousel/carousel-img-2.webp";
 
 export const slides = [
   {
@@ -32,13 +32,16 @@ export const slides = [
     src: Image_2,
     alt: "Image taken by Emilia Rautio",
   },
-  /*
   {
-    component: Video,
-    src: Mock_Video,
-    alt: "placeholder video",
+    component: Image,
+    src: 'http://localhost:1337/uploads/kuutio_booking_53c0c61d0f.png',
+    alt: "placeholder",
   },
-  */
+    {
+    component: Image,
+    src: 'http://localhost:1337/uploads/kuutio_manage_d12772c7a6.png',
+    alt: "placeholder",
+  },
   /*
   {
     component: Article,

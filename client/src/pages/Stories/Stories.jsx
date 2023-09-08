@@ -4,16 +4,13 @@ import { FeaturedStoryContext } from "./context/featuredStoryContext";
 import { useContext, Suspense, useState, useEffect, useRef } from "react";
 
 // Import Loading component to be used while the page is loading
-import Loading from "../Loading/Loading";
-
-import { Header } from "../../components/Header/Header";
+import Loading from "../../components/Loading/Loading";
 import { PinkBar } from "../../components/PinkBar";
-import { Footer } from "../../components/Footer/Footer";
 
 import { StoriesCarousel } from "./Carousel/StoriesCarousel";
 import { Stories_Item } from "./Stories_Item";
 
-const Stories = () => {
+export default function Stories(){
   // Get the current language from LanguageContext
   const { lang } = useContext(LanguageContext);
 
@@ -58,7 +55,6 @@ const Stories = () => {
     <Suspense fallback={<Loading />}>
       <FeaturedStoryContext.Provider value={{ featStory, setFeatStory }}>
         <main className="storiesPage__wrapper">
-          <Header />
           <div className="storiesPage__introduction">
             <h2>{title}</h2>
             <p>{text}</p>
@@ -69,11 +65,8 @@ const Stories = () => {
           </section>
           <PinkBar />
           <StoriesCarousel slides={stories} />
-          <Footer />
         </main>
       </FeaturedStoryContext.Provider>
     </Suspense>
   );
 };
-
-export default Stories;

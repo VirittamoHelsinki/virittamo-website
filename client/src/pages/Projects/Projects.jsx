@@ -3,12 +3,10 @@ import { LanguageContext } from "../../langLocal/context/langContext";
 import { useContext, Suspense } from "react";
 
 // Import the Loading component
-import Loading from "../Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 
 // Import the Header, PinkBar, and Footer components
-import { Header } from "../../components/Header/Header";
 import { PinkBar } from "../../components/PinkBar";
-import { Footer } from "../../components/Footer/Footer";
 
 // Import the TeamProjects component
 import { TeamProjects } from "./TeamProjects/TeamProjects";
@@ -23,7 +21,6 @@ const Projects = () => {
   return (
     <Suspense fallback={<Loading />}>
       <main className="projectPage__wrapper">
-        <Header />
         <section className="projectPage__introduction">
           <h2>{title}</h2>
           <p>{desc}</p>
@@ -31,7 +28,6 @@ const Projects = () => {
         <PinkBar />
         <TeamProjects />
         <PinkBar />
-        <Footer />
       </main>
     </Suspense>
   );

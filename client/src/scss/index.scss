@@ -10,7 +10,6 @@
 // import page styling
 @import "../pages/Home/homepage";
 @import "../pages/Projects/projectspage";
-@import "../pages/Loading/loading";
 @import "../pages/Projects/ProjectDetails/projectdetails";
 @import "../pages/Stories/storiespage";
 
@@ -18,5 +17,20 @@
 @import "../components/Header/header";
 @import "../components/Background/background";
 @import "../components/Footer/footer";
+@import "../components//Loading/loading";
 @import "../pages/Home/Carousel/carousel";
 @import "../components/SlideIndicator/slideindicator";
+
+#root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 100px;
+}
+article div h1, article div h2, article div h3 {
+    padding: 0;
+    margin: 0;
+}

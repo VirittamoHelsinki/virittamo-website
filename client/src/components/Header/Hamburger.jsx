@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import { motion } from "framer-motion";
 
-export const Hamburger = ({ onClick }) => {
+export function Hamburger({ onClick }) {
   return (
     <motion.svg
       viewBox="0 0 100 80"
@@ -22,14 +22,14 @@ export const Hamburger = ({ onClick }) => {
       <rect y="30" width="100" height="16"></rect>
       <rect y="60" width="100" height="16"></rect>
     </motion.svg>
-  );
-};
+  )
+}
 
 Hamburger.propTypes = {
   onClick: PropTypes.func.isRequired,
-};
+}
 
-export const Hamburger_X = ({ onClick }) => {
+export function Hamburger_X({ onClick }) {
   return (
     <motion.svg
       viewBox="0 0 100 100"
@@ -60,9 +60,9 @@ export const Hamburger_X = ({ onClick }) => {
         transform="rotate(-45 50 50)"
       ></rect>
     </motion.svg>
-  );
-};
+  )
+}
 
 Hamburger_X.propTypes = {
   onClick: PropTypes.func.isRequired,
-};
+}

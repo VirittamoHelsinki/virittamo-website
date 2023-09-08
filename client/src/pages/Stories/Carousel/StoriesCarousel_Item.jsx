@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { FeaturedStoryContext } from "../context/featuredStoryContext";
 
 import PropTypes from "prop-types";
+import { Image } from "../../../components/Image";
 
 export const StoriesCarousel_Item = ({
   index,
@@ -24,7 +25,7 @@ export const StoriesCarousel_Item = ({
   return (
     <div className="storiesPage__carousel--container-item">
       <div className="storiesPage__carousel--container-img">
-        <img src={img_src} alt={alt} />
+        <Image src={img_src} alt={alt} />
       </div>
       <div className="storiesPage__carousel--container-title">
         <h3>{full_name}</h3>
