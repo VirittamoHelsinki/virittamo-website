@@ -1,16 +1,14 @@
 // import context
 import { useContext, useState } from "react";
-import { LanguageContext } from "../../langLocal/context/langContext";
+import { LanguageContext } from "../utils/langContext";
 
-import { ReactComponent as Facebook_icon } from "../../assets/facebook-icon.svg";
-import { ReactComponent as Linkedin_icon } from "../../assets/linkedin-icon.svg";
-import { ReactComponent as Instagram_icon } from "../../assets/instagram-icon.svg";
-import headerLogo from "../../assets/virittamo-helsinki.webp"
+import { FacebookIcon,InstagramIcon, LinkedinIcon } from "./social-icons.tsx"
+import headerLogo from "../assets/virittamo-helsinki.webp"
 
 import { motion } from "framer-motion";
 
 import { Hamburger, Hamburger_X } from "./Hamburger";
-import { Image } from "../Image";
+import { Image } from "./Image";
 
 export function Header() {
     const { lang, setLocale, fi } = useContext(LanguageContext);
@@ -55,27 +53,24 @@ export function Header() {
                 <section className="header__socials">
                     <a
                         href="https://www.facebook.com/virittamohelsinki/"
-                        alt="Virittämö Facebook Link"
                         rel="noreferrer"
                         target="_blank"
                     >
-                        <Facebook_icon className="social-icon" />
+                        <FacebookIcon />
                     </a>
                     <a
                         href="https://www.linkedin.com/company/virittamohelsinki/"
-                        alt="Virittämö Linkedin Link"
                         rel="noreferrer"
                         target="_blank"
                     >
-                        <Linkedin_icon className="social-icon" />
+                        <LinkedinIcon/>
                     </a>
                     <a
                         href="https://www.instagram.com/virittamohelsinki/"
-                        alt="Virittämö Instagram Link"
                         rel="noreferrer"
                         target="_blank"
                     >
-                        <Instagram_icon className="social-icon" />
+                        <InstagramIcon />
                     </a>
                     <div className="header__language">{languageButton}</div>
                 </section>

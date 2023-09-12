@@ -1,8 +1,6 @@
-import PropTypes from "prop-types";
-
 import { motion } from "framer-motion";
 
-export function Hamburger({ onClick }) {
+export function Hamburger({ onClick }: {onClick: () => void}) {
   return (
     <motion.svg
       viewBox="0 0 100 80"
@@ -25,11 +23,7 @@ export function Hamburger({ onClick }) {
   )
 }
 
-Hamburger.propTypes = {
-  onClick: PropTypes.func.isRequired,
-}
-
-export function Hamburger_X({ onClick }) {
+export function Hamburger_X({ onClick }: {onClick: () => void}) {
   return (
     <motion.svg
       viewBox="0 0 100 100"
@@ -61,8 +55,4 @@ export function Hamburger_X({ onClick }) {
       ></rect>
     </motion.svg>
   )
-}
-
-Hamburger_X.propTypes = {
-  onClick: PropTypes.func.isRequired,
 }

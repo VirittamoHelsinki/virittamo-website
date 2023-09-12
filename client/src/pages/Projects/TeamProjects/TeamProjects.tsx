@@ -1,5 +1,5 @@
 // Importing LanguageContext and useContext hooks from React
-import { LanguageContext } from "../../../langLocal/context/langContext";
+import { LanguageContext } from "../../../utils/langContext";
 import { useContext } from "react";
 
 // Importing the ProjectCarousel component

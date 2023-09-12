@@ -1,8 +1,8 @@
 // Import LanguageContext and useContext hook from react
-import { LanguageContext } from "../../../langLocal/context/langContext";
+import { LanguageContext } from "../../../utils/langContext";
 import { useContext } from "react";
 
-import { FeaturedStoryContext } from "../context/featuredStoryContext";
+import { FeaturedStoryContext } from "../../../utils/featuredStoryContext";
 
 import PropTypes from "prop-types";
 import { Image } from "../../../components/Image";

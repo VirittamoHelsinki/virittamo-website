@@ -1,16 +1,15 @@
 // Import LanguageContext and useContext hook from react
-import { LanguageContext } from "../../langLocal/context/langContext";
-import { FeaturedStoryContext } from "./context/featuredStoryContext";
-import { useContext, Suspense, useState, useEffect, useRef } from "react";
+import { LanguageContext } from "../../utils/langContext";
+import { FeaturedStoryContext } from "../../utils/featuredStoryContext";
+import { useContext, useState, useEffect, useRef } from "react";
 
 // Import Loading component to be used while the page is loading
-import Loading from "../../components/Loading/Loading";
 import { PinkBar } from "../../components/PinkBar";
 
 import { StoriesCarousel } from "./Carousel/StoriesCarousel";
 import { Stories_Item } from "./Stories_Item";
 
-export default function Stories(){
+export function StoriesPage(){
   // Get the current language from LanguageContext
   const { lang } = useContext(LanguageContext);
 
@@ -52,7 +51,6 @@ export default function Stories(){
 
   return (
     // Use Suspense to show a loading component while the page is being loaded
-    <Suspense fallback={<Loading />}>
       <FeaturedStoryContext.Provider value={{ featStory, setFeatStory }}>
         <main className="storiesPage__wrapper">
           <div className="storiesPage__introduction">
@@ -67,6 +65,5 @@ export default function Stories(){
           <StoriesCarousel slides={stories} />
         </main>
       </FeaturedStoryContext.Provider>
-    </Suspense>
   );
 };

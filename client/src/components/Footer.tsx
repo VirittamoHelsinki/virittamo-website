@@ -1,24 +1,30 @@
 import { useContext } from "react";
-import { LanguageContext } from "../../langLocal/context/langContext";
+import { LanguageContext } from "../utils/langContext";
 
-import { ReactComponent as Facebook_icon } from "../../assets/facebook-icon.svg";
-import { ReactComponent as Linkedin_icon } from "../../assets/linkedin-icon.svg";
-import { ReactComponent as Instagram_icon } from "../../assets/instagram-icon.svg";
-import footerLogo from "../../assets/stadinAO-logo.webp"
-import { Background } from "../Background/Background";
-import {Image } from '../Image'
+import { FacebookIcon, InstagramIcon, LinkedinIcon } from "./social-icons.tsx";
+import footerLogo from "../assets/stadinAO-logo.webp"
+import { Background } from "./Background/Background";
+import { Image } from './Image'
 
-export function Footer({ children }) {
-    const { lang } = useContext(LanguageContext);
-    const { home_page, projects, stories, contact, back_to_top } = lang.footer;
 
-    // scroll to top of page on button click
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
+type FooterLang = {
+    home_page: string
+    projects: string
+    stories: string
+    contact: string
+}
+
+export function Footer({ children }: { children?: React.ReactNode }) {
+    const { lang } = useContext(LanguageContext)
+    const { home_page, projects, stories, contact } = lang.footer as FooterLang;
+
+    // // scroll to top of page on button click
+    // const scrollToTop = () => {
+    //     window.scrollTo({
+    //         top: 0,
+    //         behavior: "smooth",
+    //     });
+    // };
 
     return (
         <footer className="footer__wrapper">
@@ -47,27 +53,24 @@ export function Footer({ children }) {
                 <section className="footer__socials">
                     <a
                         href="https://www.facebook.com/virittamohelsinki/"
-                        alt="Virittämö Facebook Link"
                         rel="noreferrer"
                         target="_blank"
                     >
-                        <Facebook_icon className="social-icon" />
+                        <FacebookIcon/>
                     </a>
                     <a
                         href="https://www.linkedin.com/company/virittamohelsinki/"
-                        alt="Virittämö Linkedin Link"
                         rel="noreferrer"
                         target="_blank"
                     >
-                        <Linkedin_icon className="social-icon" />
+                        <LinkedinIcon />
                     </a>
                     <a
                         href="https://www.instagram.com/virittamohelsinki/"
-                        alt="Virittämö Instagram Link"
                         rel="noreferrer"
                         target="_blank"
                     >
-                        <Instagram_icon className="social-icon" />
+                        <InstagramIcon/>
                     </a>
                     {/*            <button
                                 onClick={() => scrollToTop()}

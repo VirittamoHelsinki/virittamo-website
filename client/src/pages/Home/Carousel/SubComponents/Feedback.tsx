@@ -2,7 +2,7 @@ import { useContext } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import bg_image from "../../../../assets/carousel/carousel-feedback-bg.webp";
-import { LanguageContext } from "../../../../langLocal/context/langContext";
+import { LanguageContext } from "../../../../utils/langContext";
 
 const Feedback = ({ number, scale_fi, scale_en, question_fi, question_en }) => {
   const { lang, fi } = useContext(LanguageContext);

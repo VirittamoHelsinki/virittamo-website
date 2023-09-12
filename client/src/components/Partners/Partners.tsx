@@ -1,4 +1,4 @@
-import { LanguageContext } from "../../langLocal/context/langContext";
+import { LanguageContext } from "../../utils/langContext";
 import { useContext, useEffect } from "react";
 
 import Helsinki from "../../assets/helsinki-logo.webp";

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import { LanguageContext } from "../../../../langLocal/context/langContext";
+import { LanguageContext } from "../../../../utils/langContext";
 
 const Article = ({ title_fi, title_en, text_fi, text_en, bg_image, link }) => {
   const { lang, fi } = useContext(LanguageContext);

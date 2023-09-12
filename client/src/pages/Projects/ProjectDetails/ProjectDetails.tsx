@@ -1,13 +1,11 @@
 // Import necessary modules
 import { useContext, useEffect } from "react";
-import { LanguageContext } from "../../../langLocal/context/langContext";
+import { LanguageContext } from "../../../utils/langContext";
 import { useParams } from "react-router-dom";
-import { Suspense } from "react";
 import { PinkBar } from "../../../components/PinkBar";
-import Loading from "../../../components/Loading/Loading";
 import { Image } from "../../../components/Image";
 
-export default function ProjectDetails() {
+export function ProjectDetails() {
   // Extract id and team from URL params
   const { id, team } = useParams();
 
@@ -29,7 +27,6 @@ export default function ProjectDetails() {
   }, []);
 
   return (
-    <Suspense fallback={<Loading />}>
       <main className="projectDetails__wrapper">
         <section className="projectDetails__title">
           <h1>{project?.project_title}</h1>
@@ -42,7 +39,6 @@ export default function ProjectDetails() {
         </section>
         <PinkBar />
       </main>
-    </Suspense>
   )
 }
 
