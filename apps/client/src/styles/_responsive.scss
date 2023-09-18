@@ -1,0 +1,55 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==UHD_desktop {
+    @media only screen and (min-width: 3840px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==QHD_desktop {
+    @media only screen and (min-width: 2560px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==large_desktop {
+    @media only screen and (max-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptop {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 1080px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==large_mobile {
+    @media only screen and (max-width: 720px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==small_mobile {
+    @media only screen and (max-width: 360px) {
+      @content;
+    }
+  }
+}
