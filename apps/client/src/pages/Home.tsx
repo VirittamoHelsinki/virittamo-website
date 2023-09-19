@@ -19,7 +19,6 @@ import Laurea from "../assets/laurea-logo.webp";
 import TyöPalv from "../assets/työpalv-logo.webp";
 import Europe from "../assets/eu-logo.webp";
 
-
 // A functional component for the individual team item
 function TeamsItem(props) {
   // Defining the showMore state and its setState function using useState hook
@@ -52,7 +51,7 @@ function TeamsItem(props) {
       </button>
     </div>
   );
-};
+}
 
 // The Teams component that renders all the teams on the home page
 export function Teams({ teams, mediaImg, ictImg, softaImg }) {
@@ -162,7 +161,7 @@ export default function HomePage() {
         <PinkBar />
       </section>
       {slides && <Carousel slides={slides} />}
-        {/*<Carousels slides={slides} preview={1} /> */}
+      {/*<Carousels slides={slides} preview={1} /> */}
       <section className="homePage__why">
         <Background />
         <h2>{why_virittamo}</h2>

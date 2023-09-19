@@ -1,14 +1,11 @@
 import { useContext } from "react";
 import { LanguageContext } from "../utils/langContext";
 
-export function Contacts(){
-   const { lang } = useContext(LanguageContext);
- const {
-    contact_details,
-    locations,
-  } = lang.home_page;
+export function Contacts() {
+  const { lang } = useContext(LanguageContext);
+  const { contact_details, locations } = lang.home_page;
   return (
-     <>
+    <>
       <h2 id="contacts">{contact_details.title}</h2>
       <div className="footer__contacts">
         <ul className="footer__contacts--list">
@@ -36,5 +33,5 @@ export function Contacts(){
         </ul>
       </div>
     </>
-  )
+  );
 }

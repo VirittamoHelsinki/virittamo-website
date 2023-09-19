@@ -15,4 +15,4 @@ export function LoadingSlides() {
       <p>Loading slides..</p>
     </motion.div>
   );
-};
+}

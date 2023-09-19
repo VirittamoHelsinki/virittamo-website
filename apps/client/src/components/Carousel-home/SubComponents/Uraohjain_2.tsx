@@ -4,7 +4,7 @@ import { LanguageContext } from "../../../utils/langContext";
 
 function getTextLimit(text: string, length: number) {
   return text.length > length ? `${text.substring(0, length)}..` : text;
-};
+}
 
 export function Uraohjain_2({
   src,
@@ -58,4 +58,4 @@ export function Uraohjain_2({
       <div className="carousel__item--uraohjain_2-bar"></div>
     </motion.div>
   );
-};
+}

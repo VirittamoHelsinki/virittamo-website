@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 export function Video({
-    src,
-    onPlayStatusChange
-    }: {
-        src: string,
-        onPlayStatusChange: (value: boolean)=> void
-        }) {
+  src,
+  onPlayStatusChange,
+}: {
+  src: string;
+  onPlayStatusChange: (value: boolean) => void;
+}) {
   const handlePlay = () => {
     onPlayStatusChange(true);
   };

@@ -15,7 +15,7 @@ import Stadin_AO_Logo from "../../assets/carousel/stadinao.png";
 import Uraohjain_Img_2 from "../../assets/carousel/uraohjain-2.webp";
 
 export const slides = [
-{
+  {
     component: Feedback,
     number: 4.2,
     scale_fi: "(Asteikko 1—5)",

@@ -52,4 +52,4 @@ export function Uraohjain({
       </div>
     </motion.div>
   );
-};
+}

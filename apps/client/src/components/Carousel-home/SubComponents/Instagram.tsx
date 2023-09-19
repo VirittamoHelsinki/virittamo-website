@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
-export function Instagram(){
+export function Instagram() {
   const setCookieAttributes = () => {
     document.cookie = "mid=value; SameSite=None; Secure";
     document.cookie = "ig_did=value; SameSite=None; Secure";

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export function Image({ src, alt }: {src: string, alt: string}) {
+export function Image({ src, alt }: { src: string; alt: string }) {
   return (
     <motion.img
       className="carousel__item--image"
@@ -15,4 +15,4 @@ export function Image({ src, alt }: {src: string, alt: string}) {
       }}
     />
   );
-};
+}

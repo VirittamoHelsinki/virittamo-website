@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { motion } from "framer-motion";
 import { LanguageContext } from "../../../utils/langContext";
 
-export function Companies(){
+export function Companies() {
   // Accessing language context using 'useContext' hook
   const { lang } = useContext(LanguageContext);
 
@@ -24,7 +24,7 @@ export function Companies(){
     <motion.div
       className="carousel__item--companies"
       layout
-      initial={{ opacity: 0}}
+      initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{
         ease: "easeInOut",

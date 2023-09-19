@@ -327,8 +327,7 @@ export const fi = {
             _id: 5,
             team: "media",
             component: Carousel_Item,
-            client_name:
-              "Ohjaamo Helsinki ja Oodi",
+            client_name: "Ohjaamo Helsinki ja Oodi",
             project_title: "Henkilökuvaus",
             completion_year: "2023",
             img_src: Henkilökuvaus,
@@ -541,4 +540,3 @@ export const fi = {
     ],
   },
 };
-

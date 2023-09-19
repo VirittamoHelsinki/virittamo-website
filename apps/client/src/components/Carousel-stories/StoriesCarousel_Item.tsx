@@ -11,13 +11,13 @@ export function StoriesCarousel_Item({
   img_src,
   full_name,
   job_title,
-}:{
-    index: number,
-    alt: string,
-    img_src: string,
-    full_name: string,
-    job_title: string
-}){
+}: {
+  index: number;
+  alt: string;
+  img_src: string;
+  full_name: string;
+  job_title: string;
+}) {
   // Get the current language from LanguageContext
   const { lang } = useContext(LanguageContext);
 
@@ -35,7 +35,9 @@ export function StoriesCarousel_Item({
         <h3>{full_name}</h3>
         <p className="text-lg font-thin">{job_title}</p>
       </div>
-      <button className="hover:underline"  onClick={() => setFeatStory(index)}>{view_story_btn}</button>
+      <button className="hover:underline" onClick={() => setFeatStory(index)}>
+        {view_story_btn}
+      </button>
     </div>
   );
 }

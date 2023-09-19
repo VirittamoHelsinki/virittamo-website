@@ -15,7 +15,7 @@ export function ProjectDetails() {
 
   // Get project data using id and team
   const project = projects_page.carousels.slides[team]?.find(
-    (item) => item._id == id
+    (item) => item._id == id,
   );
 
   // Scroll to top of page on mount

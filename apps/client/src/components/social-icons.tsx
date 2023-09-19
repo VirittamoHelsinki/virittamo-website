@@ -75,4 +75,4 @@ function LinkedinIcon() {
   );
 }
 
-export {FacebookIcon, InstagramIcon, LinkedinIcon }
+export { FacebookIcon, InstagramIcon, LinkedinIcon };
