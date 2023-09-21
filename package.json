@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "start": "turbo run start",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
@@ -17,5 +18,10 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/VirittamoHelsinki/virittamo-website.git",
+  "author": "abhi1988sharma <abhi1988.sharma@gmail.com>",
+  "license": "MIT"
 }
