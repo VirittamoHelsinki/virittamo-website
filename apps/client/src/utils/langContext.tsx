@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 export type LangData = {
-  headeri: Footer;
+  header: Footer;
   footer: Footer;
   home_page: HomePage;
   projects_page: ProjectsPage;
@@ -140,7 +140,7 @@ export type Story = {
 
 export type Lang = {
   lang: LangData;
-  seLocale: (value: string) => void;
+  setLocale: (value: string) => void;
   fi: LangData;
   en: LangData;
 };

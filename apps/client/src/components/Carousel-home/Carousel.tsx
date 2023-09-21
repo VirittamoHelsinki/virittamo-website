@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { LoadingSlides } from "./SubComponents/LoadingSlides";
+import { Slides } from "../../utils/langContext";
 
 // Function to render the active item in the carousel
 const RenderActiveItem = ({
@@ -9,10 +10,10 @@ const RenderActiveItem = ({
   setIsHovering,
   setIsPlaying,
 }: {
-    slides: string[],
-    activeIndex: number,
-    setIsHovering: (value: boolean) => void,
-    setIsPlaying: (value: boolean) => void
+  slides;
+  activeIndex: number;
+  setIsHovering: (value: boolean) => void;
+  setIsPlaying: (value: boolean) => void;
 }) => {
   const activeItem = slides[activeIndex];
   const ActiveItem = activeItem.component;

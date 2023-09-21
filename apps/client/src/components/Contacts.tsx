@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { LanguageContext } from "../utils/langContext";
+import { type Lang, LanguageContext } from "../utils/langContext";
 
 export function Contacts() {
-  const { lang } = useContext(LanguageContext);
+  const { lang } = useContext(LanguageContext) as Lang;
   const { contact_details, locations } = lang.home_page;
   return (
     <>

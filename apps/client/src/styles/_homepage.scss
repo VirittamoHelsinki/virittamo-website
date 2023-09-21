@@ -329,12 +329,10 @@
 
         button {
           display: flex;
-          width: auto;
-          color: $virittamo-pink;
+          color: $virittamo-black;
           font-weight: bold;
           font-style: italic;
           font-size: 20px;
-          cursor: pointer;
 
           @include responsive(large_mobile) {
             justify-content: center;
@@ -343,7 +341,7 @@
         }
 
         button:hover {
-          color: $virittamo-black;
+          color: $virittamo-pink;
         }
       }
     }
@@ -438,8 +436,12 @@
 
         img {
           width: 175px;
-        }
+
+          @include responsive(mobile) {
+              width: 100px;
+          }
       }
+       }
     }
   }
 }

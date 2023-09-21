@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LanguageContext } from "../utils/langContext.tsx";
+import { type Lang, LanguageContext } from "../utils/langContext.tsx";
 
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from "./social-icons.tsx";
 import footerLogo from "../assets/stadinAO-logo.webp";
@@ -7,16 +7,9 @@ import { Background } from "./Background.tsx";
 import { Image } from "./Image.tsx";
 import { Link } from "react-router-dom";
 
-type FooterLang = {
-  home_page: string;
-  projects: string;
-  stories: string;
-  contact: string;
-};
-
 export function Footer({ children }: { children?: React.ReactNode }) {
-  const { lang } = useContext(LanguageContext);
-  const { home_page, projects, stories, contact } = lang.footer as FooterLang;
+  const { lang } = useContext(LanguageContext) as Lang;
+  const { home_page, projects, stories, contact } = lang.footer;
 
   // // scroll to top of page on button click
   // const scrollToTop = () => {

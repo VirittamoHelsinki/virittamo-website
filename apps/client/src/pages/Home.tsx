@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { LanguageContext } from "../utils/langContext";
+import { Lang, LanguageContext, type Teams } from "../utils/langContext";
 import { Carousel } from "../components/Carousel-home/Carousel";
 import { slides } from "../components/Carousel-home/Content";
 import { PinkBar } from "../components/PinkBar";
@@ -20,7 +20,21 @@ import TyöPalv from "../assets/työpalv-logo.webp";
 import Europe from "../assets/eu-logo.webp";
 
 // A functional component for the individual team item
-function TeamsItem(props) {
+function TeamsItem({
+  title,
+  text,
+  img,
+  alt,
+  less,
+  more,
+}: {
+  title: string;
+  text: string;
+  img: string;
+  alt: string;
+  less: string;
+  more: string;
+}) {
   // Defining the showMore state and its setState function using useState hook
   const [showMore, setShowMore] = useState(false);
 
@@ -30,31 +44,35 @@ function TeamsItem(props) {
   };
 
   // Slicing the text into a preview and the rest
-  const textPreview = props.text
-    ? props.text.slice(0, props.text.length / 5)
-    : "";
-  const textAll = props.text
-    ? props.text.slice(props.text.indexOf(".") + 1)
-    : "";
+  const textPreview = text ? text.slice(0, text.length / 5) : "";
+  const textAll = text ? text.slice(text.indexOf(".") + 1) : "";
 
   // Rendering the individual team item with the relevant props and state
   return (
     <div className="homePage__teams--containers-item ">
-      <Image src={props.img} alt={props.alt} />
-      <h3>{props.title}</h3>
+      <Image src={img} alt={alt} />
+      <h3>{title}</h3>
       <p>
         {textPreview}
         {showMore ? textAll : ".."}
       </p>
-      <button onClick={toggleShowMore}>
-        {showMore ? props.less : props.more}
-      </button>
+      <button onClick={toggleShowMore}>{showMore ? less : more}</button>
     </div>
   );
 }
 
 // The Teams component that renders all the teams on the home page
-export function Teams({ teams, mediaImg, ictImg, softaImg }) {
+export function Teams({
+  teams,
+  mediaImg,
+  ictImg,
+  softaImg,
+}: {
+  teams: Teams;
+  mediaImg: string;
+  ictImg: string;
+  softaImg: string;
+}) {
   // Defining the teams data that will be passed to the TeamsItem components
   const teamsData = [
     {
@@ -103,7 +121,7 @@ export function Teams({ teams, mediaImg, ictImg, softaImg }) {
 }
 
 function Partners() {
-  const { lang } = useContext(LanguageContext);
+  const { lang } = useContext(LanguageContext) as Lang;
 
   const { partners } = lang.home_page;
 
@@ -137,7 +155,7 @@ function Partners() {
 
 export default function HomePage() {
   // Get the current language from the LanguageContext
-  const { lang } = useContext(LanguageContext);
+  const { lang } = useContext(LanguageContext) as Lang;
 
   // Destructure the language data for the home page
   const {
@@ -161,7 +179,6 @@ export default function HomePage() {
         <PinkBar />
       </section>
       {slides && <Carousel slides={slides} />}
-      {/*<Carousels slides={slides} preview={1} /> */}
       <section className="homePage__why">
         <Background />
         <h2>{why_virittamo}</h2>

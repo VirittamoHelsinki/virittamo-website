@@ -1,22 +1,18 @@
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { LanguageContext, type Lang } from "../utils/langContext.tsx";
 
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from "./social-icons.tsx";
 import headerLogo from "../assets/virittamo-helsinki.webp";
 
-import { motion } from "framer-motion";
-
 import { Hamburger, Hamburger_X } from "./mobileMenu-icons.tsx";
 import { Image } from "./Image.tsx";
-import { Link } from "react-router-dom";
 
 function MobileNav() {
   const { lang, setLocale, fi } = useContext(LanguageContext) as Lang;
-  const ds = useContext(LanguageContext);
   const { home_page, projects, stories, contact } = lang.header;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  console.log("data struct", ds);
 
   const handleClick = () => setIsMenuOpen(!isMenuOpen);
 
@@ -62,7 +58,7 @@ function MobileNav() {
                 </Link>
               </li>
               <li className="header__nav--list-item">
-                <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/#contacts" onClick={() => setIsMenuOpen(false)}>
                   {contact}
                 </Link>
               </li>
@@ -99,11 +95,8 @@ function MobileNav() {
 }
 
 export function Header() {
-  const { lang, setLocale, fi } = useContext(LanguageContext);
-  const ds = useContext(LanguageContext);
+  const { lang, setLocale, fi } = useContext(LanguageContext) as Lang;
   const { home_page, projects, stories, contact } = lang.header;
-
-  console.log("data", ds);
 
   const languageButton = (
     <button
