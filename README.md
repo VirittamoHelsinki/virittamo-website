@@ -12,24 +12,13 @@ Virittämö Helsinki is a groundbreaking employment service that benefits everyo
 
 ## **Usage**
 
-```ts
+```bash
 git clone https://github.com/VirittamoHelsinki/virittamo-website.git
-
 cd virittamo-website
 
 npm install
-
-// strapi  cms setup
-cd /server
-npm install
-type nul > .env (add contents from Teams)
-npm run develop
-
-// react frontend setup
-cd /client
-npm install
-type nul > .env (add contents from Teams)
 npm run dev
+
 ```
 
 Runs the app in the development mode.\
@@ -39,7 +28,7 @@ Open **[http://localhost:1337/admin](http://localhost:1337/admin)** to access th
 
 .env file contents can be found @
 
-```ts
+```
 Virittämö Teams > Softa > General > Files > Projektit > Virittämön Nettisivut + CMS
 ```
 

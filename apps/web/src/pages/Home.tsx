@@ -16,7 +16,7 @@ import Helsinki from "../assets/helsinki-logo.webp";
 import Metropolia from "../assets/metropolia-logo.webp";
 import Ohjaamo from "../assets/ohjaamo-logo.webp";
 import Laurea from "../assets/laurea-logo.webp";
-import TyöPalv from "../assets/työpalv-logo.webp";
+// import TyöPalv from "../assets/työpalv-logo.webp";
 import Europe from "../assets/eu-logo.webp";
 
 // A functional component for the individual team item
@@ -130,7 +130,7 @@ function Partners() {
     Metropolia,
     Ohjaamo,
     Laurea,
-    TyöPalv,
+    // TyöPalv,
     Europe,
   ];
 

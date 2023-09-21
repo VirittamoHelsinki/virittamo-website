@@ -10,8 +10,8 @@ import Oodi_small from "../assets/carousel/MEDIA_OODI_2_SMALL.webp";
 import MoiPanda from "../assets/carousel/MEDIA_MOIPANDA.webp";
 import MoiPanda_small from "../assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
 
-import Henkilökuvaus from "../assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
-import Henkilökuvaus_small from "../assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
+// import Henkilökuvaus from "../assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
+// import Henkilökuvaus_small from "../assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
 
 import Pilvipalvelu from "../assets/carousel/ICT_PILVIPALVELU.webp";
 import Pilvipalvelu_small from "../assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
@@ -328,8 +328,8 @@ export const en = {
             client_name: "Ohjaamo, City of Helsinki etc.",
             project_title: "Henkilökuvaus",
             completion_year: "2023",
-            img_src: Henkilökuvaus,
-            img_src_small: Henkilökuvaus_small,
+            // img_src: Henkilökuvaus,
+            // img_src_small: Henkilökuvaus_small,
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
