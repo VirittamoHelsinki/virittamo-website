@@ -9,8 +9,8 @@ RUN apk add --no-cache libc6-compat
 RUN apk update
 # Set working directory
 WORKDIR /app
-RUN yarn global add turbo
-RUN yarn global add @strapi/strapi
+RUN npm install -g turbo
+RUN npm install -g @strapi/strapi
 COPY . .
 RUN turbo prune --scope=api --docker
 
@@ -23,8 +23,8 @@ WORKDIR /app
 # First install dependencies (as they change less often)
 COPY .gitignore .gitignore
 COPY --from=builder /app/out/json/ .
-COPY --from=builder /app/out/yarn.lock ./yarn.lock
-RUN yarn install
+COPY --from=builder /app/out/package-lock.json ./package-lock.json
+RUN npm install
 
 # Build the project and its dependencies
 COPY --from=builder /app/out/full/ .
@@ -37,7 +37,7 @@ COPY turbo.json turbo.json
 # ARG TURBO_TOKEN
 # ENV TURBO_TOKEN=$TURBO_TOKEN
 
-RUN yarn turbo run build --filter=api...
+RUN npx turbo run build --filter=api...
 
 FROM base AS runner
 WORKDIR /app
@@ -48,4 +48,4 @@ WORKDIR /app
 # USER strapi
 COPY --from=installer /app .
 
-CMD ["yarn", "dev"]
+CMD ["npm", "run", "dev"]
