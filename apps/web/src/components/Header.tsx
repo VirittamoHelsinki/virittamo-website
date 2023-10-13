@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { LanguageContext, type Lang } from "../utils/langContext.tsx";
 
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from "./social-icons.tsx";
-import headerLogo from "../assets/virittamo-helsinki.webp";
+import headerLogo from "../assets/virittamo-helsinki.webp?format=avif";
 
 import { Hamburger, Hamburger_X } from "./mobileMenu-icons.tsx";
 import { Image } from "./Image.tsx";

@@ -1,5 +1,5 @@
 // import responsive mixins
-@import "./responsive";
+@import "responsive";
 
 // boilerplate styling
 @import "base";
@@ -9,20 +9,16 @@
 
 // import page styling
 @import "homepage";
-@import "../pages/Projects/projectspage";
-@import "../pages/Projects/ProjectDetails/projectdetails";
-@import "../pages/Stories/storiespage";
+@import "projectspage";
+@import "projectdetails";
+@import "storiespage";
 
 // import component styling
-@import "../components/header";
-@import "../components/background";
-@import "../components/footer";
-@import "../components/Carousel-home/carousel";
-@import "../components/slideindicator";
-
-body {
-    display: flex;
-}
+@import "header";
+@import "background";
+@import "footer";
+@import "carousel";
+@import "slideindicator";
 
 #root {
   display: flex;
@@ -30,7 +26,5 @@ body {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: auto;
 }
 

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_contact_info_contact_infos",
+  "info": {
+    "displayName": "contact-info",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "head": {
+      "type": "string",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}

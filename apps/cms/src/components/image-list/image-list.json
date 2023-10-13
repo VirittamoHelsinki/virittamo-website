@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_image_list_image_lists",
+  "info": {
+    "displayName": "image_list",
+    "icon": "car"
+  },
+  "options": {},
+  "attributes": {
+    "image_list_item": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

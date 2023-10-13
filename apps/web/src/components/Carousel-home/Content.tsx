@@ -8,10 +8,10 @@ import Image_1 from "../../assets/carousel/carousel-img-1.webp";
 import Image_2 from "../../assets/carousel/carousel-img-2.webp";
 import Uraohjain_Img from "../../assets/carousel/uraohjain-1.webp";
 import Uraohjain_Logo from "../../assets/carousel/uraohjain-logo.webp";
-import EU_Logo from "../../assets/carousel/eu_funding.png";
-import Laurea_Logo from "../../assets/carousel/laurea.png";
-import Metropolia_Logo from "../../assets/carousel/metropolia.png";
-import Stadin_AO_Logo from "../../assets/carousel/stadinao.png";
+import EU_Logo from "../../assets/carousel/eu_funding.png?format=avif";
+import Laurea_Logo from "../../assets/carousel/laurea.png?format=avif";
+import Metropolia_Logo from "../../assets/carousel/metropolia.png?format=avif";
+import Stadin_AO_Logo from "../../assets/carousel/stadinao.png?format=avif";
 import Uraohjain_Img_2 from "../../assets/carousel/uraohjain-2.webp";
 
 export const slides = [

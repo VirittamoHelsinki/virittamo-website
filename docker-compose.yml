@@ -9,21 +9,21 @@ services:
     restart: always
     ports:
       - 8000:8000
-    networks:
-      - app_network
-  api:
-    container_name: api
+    # networks:
+    #   - app_network
+  cms:
+    container_name: cms
     build:
       context: .
-      dockerfile: ./apps/api/Dockerfile
+      dockerfile: ./apps/cms/Dockerfile
     restart: unless-stopped
     ports:
       - 1337:1337
-    networks:
-      - app_network
+    # networks:
+    #   - app_network
 
 # Define a network, which allows containers to communicate
 # with each other, by using their container name as a hostname
-networks:
-  app_network:
-    external: true
+# networks:
+#   app_network:
+#     external: true

@@ -1,0 +1,233 @@
+.header__wrapper {
+  display: flex;
+  position: relative;
+  padding: 2rem 10%;
+  background: $virittamo-white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @include responsive(large_mobile) {
+    padding: 1.6rem 10%;
+  }
+
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+
+    img {
+        max-height: 75px;
+      height: 100%;
+    @include responsive(large_mobile){
+        max-height: 50px;
+    }
+  }
+
+    // nav links
+    .header__nav {
+      margin-bottom: 3px;
+      .header__nav--list {
+        display: flex;
+        gap: 42px;
+
+        @include responsive(tablet) {
+          display: none;
+        }
+
+        .header__nav--list-item {
+          a {
+            font-weight: bolder;
+            font-size: $font-size-a;
+            color: $virittamo-black;
+            // transition
+            transition: 0.1s ease-in-out;
+          }
+
+          a:hover {
+            color: $virittamo-pink;
+          }
+        }
+      }
+    }
+
+    // virittämö social icons
+    .header__socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3px;
+      height: 30px;
+      gap: 16px;
+
+      @include responsive(tablet) {
+        display: none;
+      }
+
+      a {
+        height: 100%;
+        width: 30px;
+
+        .social-icon {
+          color: $virittamo-black;
+          height: 100%;
+          width: auto;
+          // transition
+          transition: 0.1s ease-in-out;
+        }
+
+        .social-icon:hover {
+          color: $dark-link-hover;
+        }
+      }
+
+      // fi/en language switch button
+     .header__language {
+        margin-left: 12px;
+
+        button {
+          display: flex;
+          width: auto;
+          color: $virittamo-black;
+          font-weight: bold;
+          font-size: 20px;
+          cursor: pointer;
+          // transition
+          transition: 0.1s ease-in-out;
+        }
+
+        button:hover {
+          color: $virittamo-pink;
+        }
+      }
+    }
+
+    #header__hamburger {
+      display: none;
+    }
+
+    @include responsive(tablet) {
+      #header__hamburger {
+        display: block;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+      }
+
+      #header__hamburger:hover {
+        fill: $virittamo-pink;
+      }
+    }
+  }
+
+  .header__hamburgerMenu {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 3px solid $virittamo-light-violet;
+    background: $virittamo-white;
+    padding: 45px 10%;
+    align-items: center;
+    bottom: -175px;
+    height: 175px;
+    width: 100%;
+    z-index: 1;
+
+    @media only screen and (min-width: 1080px) {
+      display: none;
+    }
+
+    @include responsive(tablet) {
+        left: 0;
+        right: 0;
+    }
+
+    @include responsive(mobile) {
+      left: 0;
+      right: 0;
+      bottom: -325px;
+      height: 325px;
+    }
+
+    // nav links
+    .header__nav {
+      margin-bottom: 3px;
+      .header__nav--list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 42px;
+
+        @include responsive(large_mobile) {
+          gap: 21px;
+        }
+
+        @include responsive(mobile) {
+          flex-direction: column;
+        }
+
+        .header__nav--list-item {
+          a {
+            font-weight: bolder;
+            font-size: $font-size-a;
+            color: $virittamo-black;
+            // transition
+            transition: 0.1s ease-in-out;
+          }
+
+          a:hover {
+            color: $virittamo-pink;
+          }
+        }
+      }
+    }
+
+    // virittämö social icons
+    .header__socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3px;
+      height: 30px;
+      gap: 16px;
+
+      a {
+        height: 100%;
+        width: 30px;
+
+        .social-icon {
+          color: $virittamo-black;
+          height: 100%;
+          width: auto;
+          // transition
+          transition: 0.1s ease-in-out;
+        }
+
+        .social-icon:hover {
+          color: $dark-link-hover;
+        }
+      }
+
+      // fi/en language switch button
+      .header__language {
+        margin-left: 12px;
+
+        button {
+          color: $virittamo-black;
+          font-weight: bolder;
+          font-size: 20px;
+          cursor: pointer;
+
+          // transition
+          transition: 0.1s ease-in-out;
+        }
+
+        button:hover {
+          color: $virittamo-pink;
+        }
+      }
+    }
+  }
+}

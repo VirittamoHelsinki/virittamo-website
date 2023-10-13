@@ -1,18 +1,16 @@
 # **Virittämö Helsinki**
 
 This is the new homepage for Virittämö Helsinki, an employment service run by the City of Helsinki that connects jobseekers and companies seeking ICT, software development, and media experts. The website has been created using React.js (vite + million.js for improved speed), JavaScript, SCSS for the frontend and the [Strapi Content Management System](https://strapi.io/) for the backend (view specific packages in the package.json file).
-<br><br>
 
 ![Repo Preview Image](client/public/repo-preview.webp?raw=true "preview image")
 
 ## **Introduction**
 
 Virittämö Helsinki is a groundbreaking employment service that benefits everyone. For jobseekers, it provides an opportunity to gain new work experience and develop their skills while earning a fair wage. For companies, it offers access to skilled digital and media professionals to work on short or long-term projects. The service is also a way for companies to demonstrate their social responsibility. In addition, the partnership provides skilled labor to society and helps jobseekers re-enter the workforce.
-<br><br>
 
 ## **Usage**
 
-```bash
+```sh
 git clone https://github.com/VirittamoHelsinki/virittamo-website.git
 cd virittamo-website
 

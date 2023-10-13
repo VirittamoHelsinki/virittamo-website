@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_text_list_text_lists",
+  "info": {
+    "displayName": "text-list",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "text_title": {
+      "type": "string"
+    },
+    "text_decription": {
+      "type": "text"
+    }
+  }
+}

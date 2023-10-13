@@ -56,4 +56,4 @@ WORKDIR /app
 # COPY --from=installer --chown=nextjs:nodejs /app/apps/web/public ./apps/web/public
 COPY --from=installer /app .
 
-CMD ["npm", "run",  "dev"]
+CMD ["npm", "run", "dev"]

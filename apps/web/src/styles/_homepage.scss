@@ -4,9 +4,7 @@
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
-  width: 100%;
-  height: auto;
-  gap: 100px;
+  gap: 6.25rem;
 
   h2 {
     padding: 0 5% 0;
@@ -33,17 +31,19 @@
     }
   }
 
-  div#pink-bar {
+  #pink-bar {
     background: $virittamo-pink;
     width: 200px;
     height: 3px;
   }
 
-  div.homePage__img--container {
+  .homePage__img--container {
+    max-height: 488px;
     height: 50vh;
     width: 100%;
 
     @include responsive(mobile) {
+      max-height: 284px;
       height: 45vh;
     }
 
@@ -54,7 +54,7 @@
     }
   }
 
-  section.homePage__introduction {
+  .homePage__introduction {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -89,7 +89,7 @@
     }
   }
 
-  section.homePage__why {
+  .homePage__why {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -109,18 +109,18 @@
     }
 
     @media only screen and (max-width: 1499px) {
-      div.background__wrapper {
+      .background__wrapper {
         height: 77.5%;
       }
     }
 
     @include responsive(mobile) {
-      div.background__wrapper {
+      .background__wrapper {
         height: 80%;
       }
     }
 
-    div.homePage__why--containers {
+    .homePage__why--containers {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -144,7 +144,7 @@
         gap: 50px;
       }
 
-      div.homePage__why--containers-item {
+      .homePage__why--containers-item {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -155,8 +155,7 @@
         gap: 32px;
 
         @include responsive(desktop) {
-          align-items: center;
-          text-align: center;
+          align-items: flex-start;
         }
 
         @include responsive(tablet) {
@@ -196,20 +195,21 @@
           }
         }
 
-        img#employee-img {
+        #employee-img {
           object-position: 32% 50%;
         }
 
-        ul.homePage__why--containers-list {
+        .homePage__why--containers-list {
           display: flex;
           flex-direction: column;
           gap: 16px;
+          list-style: disclosure-closed;
         }
       }
     }
   }
 
-  section.homePage__teams {
+  .homePage__teams {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -238,30 +238,30 @@
     }
 
     @media only screen and (max-width: 1722px) {
-      div.background__wrapper {
+      .background__wrapper {
         height: 72.5%;
       }
     }
 
     @media only screen and (max-width: 1111px) {
-      div.background__wrapper {
+      .background__wrapper {
         height: 82.5%;
       }
     }
 
     @include responsive(large_mobile) {
-      div.background__wrapper {
+      .background__wrapper {
         height: 82.5%;
       }
     }
 
     @include responsive(mobile) {
-      div.background__wrapper {
+      .background__wrapper {
         height: 87.5%;
       }
     }
 
-    div.homePage__teams--containers {
+    .homePage__teams--containers {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -277,7 +277,7 @@
         gap: 50px;
       }
 
-      div.homePage__teams--containers-item {
+      .homePage__teams--containers-item {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -347,7 +347,7 @@
     }
   }
 
-  section.homePage__apply {
+  .homePage__apply {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -372,7 +372,7 @@
       }
     }
 
-    div.homePage__apply--container {
+    .homePage__apply--container {
       .homePage__apply--container-list {
         display: flex;
         justify-content: space-between;
@@ -402,7 +402,7 @@
     }
   }
 
-  section.homePage__partners {
+  .homePage__partners {
     display: flex;
     justify-content: center;
     flex-direction: column;

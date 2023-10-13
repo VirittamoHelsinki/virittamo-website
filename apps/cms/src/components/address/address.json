@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_address_addresses",
+  "info": {
+    "displayName": "address",
+    "icon": "scissors"
+  },
+  "options": {},
+  "attributes": {
+    "company_name": {
+      "type": "string",
+      "required": true
+    },
+    "spot": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "po_box": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

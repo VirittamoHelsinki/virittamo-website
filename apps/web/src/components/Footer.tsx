@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { type Lang, LanguageContext } from "../utils/langContext.tsx";
 
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from "./social-icons.tsx";
-import footerLogo from "../assets/stadinAO-logo.webp";
+import footerLogo from "../assets/stadinAO-logo.webp?format=avif";
 import { Background } from "./Background.tsx";
 import { Image } from "./Image.tsx";
 import { Link } from "react-router-dom";

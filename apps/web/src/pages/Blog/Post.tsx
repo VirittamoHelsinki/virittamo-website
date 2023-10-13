@@ -35,17 +35,18 @@ export default function Post() {
                   .description}
           </p>
           <img
-            className="pb-2"
+            className="pb-2 object-cover w-full"
             style={{ height: "300px" }}
-            src={`http://localhost:1337${imageData.data.attributes.banner.data.attributes.url}`}
+           // src={`http://localhost:1337${imageData.data.attributes.banner.data.attributes.url}`}
+            src='https://via.placeholder.com/300'
             alt="banner image"
           />
           <div className="prose-lg">
             <ReactMarkdown className="prose-lg">
               {lang === fi
-                ? postData.data.attributes.body
+                ? postData.data.attributes.content
                 : postData.data.attributes.localizations.data[0].attributes
-                    .body}
+                    .content}
             </ReactMarkdown>
           </div>
         </article>

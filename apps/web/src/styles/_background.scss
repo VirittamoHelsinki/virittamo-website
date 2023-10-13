@@ -1,0 +1,16 @@
+.background__wrapper {
+  background: $virittamo-light-violet;
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+
+  svg {
+    fill: $virittamo-light-violet;
+    height: 100%;
+    width: 100%;
+    margin-top: -60px;
+    top: 0;
+  }
+}

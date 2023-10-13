@@ -1,47 +1,47 @@
 import { Carousel_Item } from "../components/Carousel-project/Carousel_Item";
 import { StoriesCarousel_Item } from "../components/Carousel-stories/StoriesCarousel_Item";
 
-import Qteatteri from "../assets/carousel/MEDIA_QTEATTERI.webp";
-import Qteatteri_small from "../assets/carousel/MEDIA_QTEATTERI_SMALL.webp";
+import Qteatteri from "../assets/carousel/MEDIA_QTEATTERI.webp?format=avif";
+import Qteatteri_small from "../assets/carousel/MEDIA_QTEATTERI_SMALL.webp?format=avif";
 
-import Oodi from "../assets/carousel/MEDIA_OODI_2.webp";
-import Oodi_small from "../assets/carousel/MEDIA_OODI_2_SMALL.webp";
+import Oodi from "../assets/carousel/MEDIA_OODI_2.webp?format=avif";
+import Oodi_small from "../assets/carousel/MEDIA_OODI_2_SMALL.webp?format=avif";
 
-import MoiPanda from "../assets/carousel/MEDIA_MOIPANDA.webp";
-import MoiPanda_small from "../assets/carousel/MEDIA_MOIPANDA_SMALL.webp";
+import MoiPanda from "../assets/carousel/MEDIA_MOIPANDA.webp?format=avif";
+import MoiPanda_small from "../assets/carousel/MEDIA_MOIPANDA_SMALL.webp?format=avif";
 
-// import Henkilökuvaus from "../assets/carousel/MEDIA_HENKILÖKUVAUS.webp";
-// import Henkilökuvaus_small from "../assets/carousel/MEDIA_HENKILÖKUVAUS_SMALL.webp";
+import Henkilokuvaus from "../assets/carousel/MEDIA_HENKILOKUVAUS.webp?format=avif";
+import Henkilokuvaus_small from "../assets/carousel/MEDIA_HENKILOKUVAUS_SMALL.webp?format=avif";
 
-import Pilvipalvelu from "../assets/carousel/ICT_PILVIPALVELU.webp";
-import Pilvipalvelu_small from "../assets/carousel/ICT_PILVIPALVELU_SMALL.webp";
+import Pilvipalvelu from "../assets/carousel/ICT_PILVIPALVELU.webp?format=avif";
+import Pilvipalvelu_small from "../assets/carousel/ICT_PILVIPALVELU_SMALL.webp?format=avif";
 
-import Virtualisointi from "../assets/carousel/ICT_VIRTUALISOINTIPROJEKTI.webp";
-import Virtualisointi_small from "../assets/carousel/ICT_VIRTUALISOINTIPROJEKTI_SMALL.webp";
+import Virtualisointi from "../assets/carousel/ICT_VIRTUALISOINTIPROJEKTI.webp?format=avif";
+import Virtualisointi_small from "../assets/carousel/ICT_VIRTUALISOINTIPROJEKTI_SMALL.webp?format=avif";
 
-import Tietoliikenne from "../assets/carousel/ICT_TIETOLIIKENNEKAAPPI.webp";
-import Tietoliikenne_small from "../assets/carousel/ICT_TIETOLIIKENNEKAAPPI_SMALL.webp";
+import Tietoliikenne from "../assets/carousel/ICT_TIETOLIIKENNEKAAPPI.webp?format=avif";
+import Tietoliikenne_small from "../assets/carousel/ICT_TIETOLIIKENNEKAAPPI_SMALL.webp?format=avif";
 
-import Digirasti from "../assets/carousel/SOFTA_DIGIRASTI.webp";
-import Digirasti_small from "../assets/carousel/SOFTA_DIGIRASTI_SMALL.webp";
+import Digirasti from "../assets/carousel/SOFTA_DIGIRASTI.webp?format=avif";
+import Digirasti_small from "../assets/carousel/SOFTA_DIGIRASTI_SMALL.webp?format=avif";
 
-import Liikuntakoutsaus from "../assets/carousel/SOFTA_LIIKUNTAKOUTSAUS.webp";
-import Liikuntakoutsaus_small from "../assets/carousel/SOFTA_LIIKUNTAKOUTSAUS_SMALL.webp";
+import Liikuntakoutsaus from "../assets/carousel/SOFTA_LIIKUNTAKOUTSAUS.webp?format=avif";
+import Liikuntakoutsaus_small from "../assets/carousel/SOFTA_LIIKUNTAKOUTSAUS_SMALL.webp?format=avif";
 
-import SoteApp from "../assets/carousel/SOFTA_SOTEAPP.webp";
-import SoteApp_small from "../assets/carousel/SOFTA_SOTEAPP_SMALL.webp";
+import SoteApp from "../assets/carousel/SOFTA_SOTEAPP.webp?format=avif";
+import SoteApp_small from "../assets/carousel/SOFTA_SOTEAPP_SMALL.webp?format=avif";
 
-import VirittamoCRM from "../assets/carousel/SOFTA_VIRITTAMO-CRM.webp";
-import VirittamoCRM_small from "../assets/carousel/SOFTA_VIRITTAMO-CRM_SMALL.webp";
+import VirittamoCRM from "../assets/carousel/SOFTA_VIRITTAMO-CRM.webp?format=avif";
+import VirittamoCRM_small from "../assets/carousel/SOFTA_VIRITTAMO-CRM_SMALL.webp?format=avif";
 
-import Muistojalki from "../assets/carousel/SOFTA_MUISTOJALKI.webp";
-import Muistojalki_small from "../assets/carousel/SOFTA_MUISTOJALKI_SMALL.webp";
+import Muistojalki from "../assets/carousel/SOFTA_MUISTOJALKI.webp?format=avif";
+import Muistojalki_small from "../assets/carousel/SOFTA_MUISTOJALKI_SMALL.webp?format=avif";
 
-import Andrei from "../assets/andrei.webp";
-import Eetu from "../assets/eetu.webp";
-import Kari from "../assets/kari.webp";
-import Leo from "../assets/leo.webp";
-import Warda from "../assets/warda.webp";
+import Andrei from "../assets/andrei.webp?format=avif";
+import Eetu from "../assets/eetu.webp?format=avif";
+import Kari from "../assets/kari.webp?format=avif";
+import Leo from "../assets/leo.webp?format=avif";
+import Warda from "../assets/warda.webp?format=avif";
 
 export const fi = {
   /*
@@ -204,19 +204,19 @@ export const fi = {
           name: "Anna-Mari Rouru",
           title: "Koulutuspäällikkö",
           phone: "p. 09 310 81417",
-          email: "anna-mari.rouru@edu.hel.fi",
+          email: "anna-mari.rouru@hel.fi",
         },
         {
           name: "John Strandberg",
           title: "Mediatiimin vastaava",
           phone: "p. 09 310 37370",
-          email: "john.strandberg@edu.hel.fi",
+          email: "john.strandberg@hel.fi",
         },
         {
           name: "Ari Tuomi",
           title: "ICT-tiimin vastaava",
           phone: "p. 09 310 27571",
-          email: "ari.tuomi@edu.hel.fi",
+          email: "ari.tuomi@hel.fi",
         },
         {
           name: "Arto Aitta",
@@ -228,7 +228,7 @@ export const fi = {
           name: "Jaakko Hyytiä",
           title: "Projektipäällikkö,\n Uraohjain+ -hanke",
           phone: "p. 09 310 28040",
-          email: "jaakko.hyytia@edu.hel.fi",
+          email: "jaakko.hyytia@hel.fi",
         },
         {
           name: "Leea Hiltunen",
@@ -330,8 +330,8 @@ export const fi = {
             client_name: "Ohjaamo Helsinki ja Oodi",
             project_title: "Henkilökuvaus",
             completion_year: "2023",
-            // img_src: Henkilökuvaus,
-            // img_src_small: Henkilökuvaus_small,
+            img_src: Henkilokuvaus,
+            img_src_small: Henkilokuvaus_small,
             alt: "placeholder image",
             link: "https://virittamohelsinki.fi/",
             description:
