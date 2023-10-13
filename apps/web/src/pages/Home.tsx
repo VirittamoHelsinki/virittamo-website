@@ -1,23 +1,10 @@
 import { useState, useContext } from "react";
-import { Lang, LanguageContext, type Teams } from "../utils/langContext";
+import { Lang, LanguageContext } from "../utils/langContext";
 import { Carousel } from "../components/Carousel-home/Carousel";
 import { slides } from "../components/Carousel-home/Content";
 import { PinkBar } from "../components/PinkBar";
 import { Background } from "../components/Background";
 import { Image } from "../components/Image";
-
-import HeaderImg from "../assets/main-header-img.webp?format=avif";
-import ForEmployeeImg from "../assets/why-section-employee.webp?format=avif";
-import ForCompanyImg from "../assets/why-section-company.webp?format=avif";
-import MediaImg from "../assets/teams-section-media.webp?format=avif";
-import IctImg from "../assets/teams-section-ict.webp?format=avif";
-import SoftaImg from "../assets/teams-section-softa.webp?format=avif";
-import Helsinki from "../assets/helsinki-logo.webp?format=avif";
-import Metropolia from "../assets/metropolia-logo.webp?format=avif";
-import Ohjaamo from "../assets/ohjaamo-logo.webp?format=avif";
-import Laurea from "../assets/laurea-logo.webp?format=avif";
-import TyoPalv from "../assets/tyopalv-logo.webp?format=avif";
-import Europe from "../assets/eu-logo.webp?format=avif";
 import { useQuery } from "@tanstack/react-query";
 import { getMe } from "../utils/getStrapiData";
 
@@ -51,7 +38,7 @@ function TeamsItem({
 
     // Rendering the individual team item with the relevant props and state
     return (
-        <div className="homePage__teams--containers-item ">
+        <li className="homePage__teams--containers-item ">
             <Image src={img} alt={alt} />
             <h3>{title}</h3>
             <p>
@@ -59,110 +46,62 @@ function TeamsItem({
                 {showMore ? textAll : ".."}
             </p>
             <button onClick={toggleShowMore}>{showMore ? less : more}</button>
-        </div>
-    );
-}
-
-// The Teams component that renders all the teams on the home page
-function Teams({
-    teams,
-    mediaImg,
-    ictImg,
-    softaImg,
-}: {
-    teams: Teams;
-    mediaImg: string;
-    ictImg: string;
-    softaImg: string;
-}) {
-    // Defining the teams data that will be passed to the TeamsItem components
-    const teamsData = [
-        {
-            id: "media",
-            img: mediaImg,
-            title: "Media",
-            text: teams.media_desc,
-            alt: "Virittämö's Media Team",
-        },
-        {
-            id: "ict",
-            img: ictImg,
-            title: "ICT",
-            text: teams.ict_desc,
-            alt: "Virittämö's ICT Team",
-        },
-        {
-            id: "softa",
-            img: softaImg,
-            title: "Softa",
-            text: teams.software_desc,
-            alt: "Virittämö's Software Team",
-        },
-    ];
-
-    // Rendering the Teams component with the relevant props and state
-    return (
-        <section className="homePage__teams">
-            <Background />
-            <h2>{teams.title}</h2>
-            <div className="homePage__teams--containers">
-                {teamsData.map((team) => (
-                    <TeamsItem
-                        key={team.id}
-                        img={team.img}
-                        title={team.title}
-                        text={team.text}
-                        alt={team.alt}
-                        more={teams.read_more_btn}
-                        less={teams.read_less_btn}
-                    />
-                ))}
-            </div>
-            {/*<Background up={false} />*/}
-        </section>
+        </li>
     );
 }
 
 export default function HomePage() {
     // Get the current language from the LanguageContext
-    const { lang } = useContext(LanguageContext) as Lang;
+    const { lang, fi } = useContext(LanguageContext) as Lang;
 
-    const { isLoading: isHomeLoading, data: homeData } = useQuery({
-        queryKey: ["homeData"],
-        queryFn: () => getMe("http://localhost:1337/api/homepages?populate=*"),
+    const { isLoading: isHomeFiLoading, data: homeFiData } = useQuery({
+        queryKey: ["homeFiData"],
+        queryFn: () => getMe("http://localhost:1337/api/homepages?locale=fi&populate=*"),
     });
 
-    const { isLoading: isHomeTeamLoading, data: homeTeamData } = useQuery({
-        queryKey: ["homeTeamData"],
-        queryFn: () => getMe("http://localhost:1337/api/homepages?populate[team_content][populate]=*"),
+    const { isLoading: isHomeEnLoading, data: homeEnData } = useQuery({
+        queryKey: ["homeEnData"],
+        queryFn: () => getMe("http://localhost:1337/api/homepages?locale=en&populate=*"),
     });
 
-    const { isLoading: isHomeWhyLoading, data: homeWhyData } = useQuery({
-        queryKey: ["homeWhyData"],
-        queryFn: () => getMe("http://localhost:1337/api/homepages?populate[why_content][populate]=*"),
+    const { isLoading: isHomeTeamFiLoading, data: homeTeamFiData } = useQuery({
+        queryKey: ["homeTeamFiData"],
+        queryFn: () => getMe("http://localhost:1337/api/homepages?locale=fi&populate[team_content][populate]=*"),
     });
 
+    const { isLoading: isHomeTeamEnLoading, data: homeTeamEnData } = useQuery({
+        queryKey: ["homeTeamEnData"],
+        queryFn: () => getMe("http://localhost:1337/api/homepages?locale=en&populate[team_content][populate]=*"),
+    });
+
+
+    const { isLoading: isHomeWhyFiLoading, data: homeWhyFiData } = useQuery({
+        queryKey: ["homeWhyFiData"],
+        queryFn: () => getMe("http://localhost:1337/api/homepages?locale=fi&populate[why_content][populate]=*"),
+    });
+
+    const { isLoading: isHomeWhyEnLoading, data: homeWhyEnData } = useQuery({
+        queryKey: ["homeWhyEnData"],
+        queryFn: () => getMe("http://localhost:1337/api/homepages?locale=en&populate[why_content][populate]=*"),
+    });
 
     const { isLoading: isHomeImgLoading, data: homeImgData } = useQuery({
         queryKey: ["homeImgData"],
         queryFn: () => getMe("http://localhost:1337/api/homepages?populate[image_content][populate]=*"),
     });
 
+    const homeData = lang === fi ? homeFiData : homeEnData;
+    const isHomeLoading = lang === fi ? isHomeFiLoading : isHomeEnLoading;
+
+    const homeTeamData = lang === fi ? homeTeamFiData : homeTeamEnData;
+    const isHomeTeamLoading = lang === fi ? isHomeTeamFiLoading : isHomeTeamEnLoading;
+
+    const homeWhyData = lang === fi ? homeWhyFiData : homeWhyEnData;
+    const isHomeWhyLoading = lang === fi ? isHomeWhyFiLoading : isHomeWhyEnLoading;
+
     if (isHomeLoading || !homeData) {
         return "loading...";
     }
-    console.log("data", homeData);
-
-    // Destructure the language data for the home page
-    const {
-        title,
-        text,
-        why_virittamo,
-        for_an_employee,
-        for_a_company,
-        teams,
-        apply,
-    } = lang.home_page;
 
     return (
         <main className="homePage__wrapper">
@@ -172,7 +111,7 @@ export default function HomePage() {
             </div>
             <section className="homePage__introduction">
                 <h1 className="text-red-300">{homeData?.data[0].attributes.heading}</h1>
-                <p>{homeData.data[0].attributes.description}</p>
+                <p>{homeData?.data[0].attributes.description}</p>
                 <PinkBar />
             </section>
             {slides && <Carousel slides={slides} />}
@@ -211,16 +150,11 @@ export default function HomePage() {
                             title={content.title}
                             text={content.why_list[0].list_item}
                             img={content.img.data.attributes.url}
-                            alt="Virittämö's Media Team"
-                            more="Lue lisää"
-                            less="Lue vähemmän"
+                            alt={`Virittämö's ${content.title} Team`}
+                            more={lang === fi ? "Lue lisää" : "Read more"}
+                            less={lang === fi ? "Lue vähemmän" : "Read less"}
                         />
                     ))}
-                    {/* <li key={index} className="homePage__teams--containers-item ">
-                         <Image src={content.img.data.attributes.url} alt="Home page main image" />
-                         <h3>{content.title}</h3>
-                         <p>{content.why_list[0].list_item}</p>
-                         </li>*/}
                 </ul>
             </section>
             {/*apply */}
@@ -232,7 +166,9 @@ export default function HomePage() {
                         {homeData.data[0].attributes.apply_content.map((content, index) => (
                             <li key={index} className="homePage__apply--container-list-item">
                                 <h3>{content.text_title}</h3>
-                                <li style={{ listStyle: "disclosure-closed" }}>{content.text_decription}</li>
+                                <ul>
+                                    <li style={{ listStyle: "disclosure-closed" }}>{content.text_decription}</li>
+                                </ul>
                             </li>
                         ))}
                     </ul>

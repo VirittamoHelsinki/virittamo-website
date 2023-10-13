@@ -3,27 +3,27 @@ import { useQuery } from "@tanstack/react-query";
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
 import { getMe } from "../../utils/getStrapiData";
-import { LanguageContext } from "../../utils/langContext";
+import { type Lang, LanguageContext } from "../../utils/langContext";
 
 export default function Post() {
-  const { lang, fi } = useContext(LanguageContext);
+  const { lang, fi } = useContext(LanguageContext) as Lang;
   const { id } = useParams();
   const { isLoading, data: postData } = useQuery({
-    queryKey: ["postData"],
+    queryKey: ["postData", lang],
     queryFn: () => getMe(`http://localhost:1337/api/articles/${id}?populate=*`),
   });
   const { isLoading: imgIsLoading, data: imageData } = useQuery({
     queryKey: ["imageData"],
     queryFn: () => getMe(`http://localhost:1337/api/articles/${id}?populate=*`),
   });
-  console.log("data", postData);
+
   return (
     <>
       {isLoading || imgIsLoading ? (
         "loading..."
       ) : (
-        <article style={{ marginBlock: "1rem", maxWidth: "75ch" }}>
-          <h1>
+        <article style={{ paddingBlock: "1rem", maxWidth: "75ch" }}>
+          <h1 className="text-6xl">
             {lang === fi
               ? postData.data.attributes.title
               : postData.data.attributes.localizations.data[0].attributes.title}
