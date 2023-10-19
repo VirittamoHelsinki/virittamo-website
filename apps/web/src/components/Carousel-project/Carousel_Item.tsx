@@ -17,8 +17,8 @@ export const Carousel_Item = ({
   completion_year: string;
 }) => {
   return (
-    <div className="flex flex-col w-full h-full">
-      <div className="w-full h-[300px] border border-gray-200 rounded">
+    <div className="flex h-full w-full flex-col">
+      <div className="h-[300px] w-full rounded border border-gray-200">
         <Link to={`/projects/${team}/${_id}`}>
           <Image
             src={img_src_small}

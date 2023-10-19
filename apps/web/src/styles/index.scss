@@ -14,7 +14,6 @@
 @import "storiespage";
 
 // import component styling
-@import "header";
 @import "background";
 @import "footer";
 @import "carousel";
@@ -22,8 +21,6 @@
 
 #root {
   display: flex;
-  flex: 1;
-  justify-content: space-between;
   flex-direction: column;
   align-items: center;
 }

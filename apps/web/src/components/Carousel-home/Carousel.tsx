@@ -90,9 +90,9 @@ export function Carousel({ slides }) {
       >
         <button
           onClick={handlePrevClick}
-          className="z-20 p-2 bg-black/10 hover:bg-black/50 md:bg-transparent md:hover:bg-transparent"
+          className="z-20 bg-black/10 p-2 hover:bg-black/50 md:bg-transparent md:hover:bg-transparent"
         >
-          <SlArrowLeft className="arrow-button--icon w-6 h-6 text-white md:text-black" />
+          <SlArrowLeft className="arrow-button--icon h-6 w-6 text-white md:text-black" />
         </button>
         {slides ? (
           <RenderActiveItem
@@ -106,9 +106,9 @@ export function Carousel({ slides }) {
         )}
         <button
           onClick={handleNextClick}
-          className="p-2 bg-black/10 hover:bg-black/50 md:bg-transparent md:hover:bg-transparent"
+          className="bg-black/10 p-2 hover:bg-black/50 md:bg-transparent md:hover:bg-transparent"
         >
-          <SlArrowRight className="arrow-button--icon w-6 h-6 text-white md:text-black" />
+          <SlArrowRight className="arrow-button--icon h-6 w-6 text-white md:text-black" />
         </button>
       </div>
     </section>

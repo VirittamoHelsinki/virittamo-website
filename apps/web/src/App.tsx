@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
     Outlet,
     Link,
@@ -6,7 +6,6 @@ import {
     RouterProvider,
     useNavigation,
     ScrollRestoration,
-    useLocation,
 } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -16,9 +15,6 @@ import { LanguageContext } from "./utils/langContext.tsx";
 import { Header } from "./components/Header.tsx";
 import { Footer } from "./components/Footer.tsx";
 import HomePage from "./pages/Home";
-import { Contacts } from "./components/Contacts.tsx";
-import Blog from "./pages/Blog/index.tsx";
-import Post from "./pages/Blog/Post.tsx";
 
 const router = createBrowserRouter([
     {
@@ -30,25 +26,12 @@ const router = createBrowserRouter([
                 element: <HomePage />,
             },
             {
-                path: "blog",
-                children: [
-                    {
-                        index: true,
-                        element: <Blog />
-                    },
-                    {
-                        path: ":id",
-                        element: <Post />
-                    }
-                ],
-            },
-            {
                 path: "projects",
                 children: [
                     {
                         index: true,
                         async lazy() {
-                            const { ProjectsPage } = await import("./pages/Projects");
+                            const { ProjectsPage } = await import("./pages/project");
                             return { Component: ProjectsPage };
                         },
                     },
@@ -59,7 +42,7 @@ const router = createBrowserRouter([
                                 path: ":id",
                                 async lazy() {
                                     const { ProjectDetails } = await import(
-                                        "./pages/Projects/ProjectDetails/ProjectDetails"
+                                        "./pages/project/ProjectDetails.tsx"
                                     );
                                     return { Component: ProjectDetails };
                                 },
@@ -71,8 +54,36 @@ const router = createBrowserRouter([
             {
                 path: "stories",
                 async lazy() {
-                    const { StoriesPage } = await import("./pages/Stories");
+                    const { StoriesPage } = await import("./pages/story");
                     return { Component: StoriesPage };
+                },
+            },
+            {
+                path: "news",
+                children: [
+                    {
+                        index: true,
+                        async lazy() {
+                            const { NewsPage } = await import("./pages/news");
+                            return { Component: NewsPage };
+                        },
+                    },
+                    {
+                        path: ":id",
+                        async lazy() {
+                            const { Post } = await import(
+                                "./pages/news/Post.tsx"
+                            );
+                            return { Component: Post };
+                        },
+                    },
+                ],
+            },
+            {
+                path: "contact",
+                async lazy() {
+                    const { ContactPage } = await import("./pages/contact");
+                    return { Component: ContactPage };
                 },
             },
             {
@@ -94,36 +105,40 @@ function NoMatch() {
     );
 }
 
+const queryClient = new QueryClient();
+
 function Layout() {
-    const { pathname } = useLocation();
     const navigation = useNavigation();
-    const [locale, setLocale] = useState("fi");
+    const [locale, setLocale] = useState(() => {
+        // Get locale from local storage only once during initial render
+        return localStorage.getItem("virittamo-lang") || "fi";
+    });
     const [lang, setLang] = useState(fi);
 
     useEffect(() => {
-        const storedLocale = localStorage.getItem("virittamo-lang");
-
-        storedLocale && setLocale(storedLocale);
-    }, []);
-
-    useEffect(() => {
-        locale && locale === "fi" ? setLang(fi) : setLang(en);
+        // Sync locale with local storage
+        localStorage.setItem("virittamo-lang", locale);
+        // Only update lang when locale changes
+        setLang(locale === "fi" ? fi : en);
     }, [locale]);
+
+    const langContext = useMemo(
+        () => ({ lang, setLocale, fi }),
+        [lang, setLocale, fi],
+    );
 
     return (
         <QueryClientProvider client={queryClient}>
-            <LanguageContext.Provider value={{ lang, setLocale, fi }}>
+            <LanguageContext.Provider value={langContext}>
                 <Header />
                 <ScrollRestoration />
                 {navigation.state !== "idle" && <p>Navigation in progress...</p>}
                 <Outlet />
-                <Footer>{pathname === "/" && <Contacts />}</Footer>
+                <Footer />
             </LanguageContext.Provider>
         </QueryClientProvider>
     );
 }
-
-const queryClient = new QueryClient();
 
 export default function App() {
     return <RouterProvider router={router} fallbackElement={<p>loading...</p>} />;

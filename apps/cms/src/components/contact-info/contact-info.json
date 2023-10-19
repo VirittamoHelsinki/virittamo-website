@@ -2,7 +2,8 @@
   "collectionName": "components_contact_info_contact_infos",
   "info": {
     "displayName": "contact-info",
-    "icon": "user"
+    "icon": "user",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,7 @@
       "type": "string",
       "required": true
     },
-    "head": {
+    "title": {
       "type": "string",
       "required": true
     },

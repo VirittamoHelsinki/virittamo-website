@@ -107,13 +107,13 @@ export function StoriesCarousel({ slides = [] }) {
   return (
     <>
       <SlideIndicator numSlides={slides.length} activeIndex={activeIndex} />
-      <div className="relative flex justify-center items-center gap-3">
+      <div className="relative flex items-center justify-center gap-3">
         <button
           className={activeIndex === 0 ? "hidden" : "absolute -left-10 p-3"}
           onClick={handlePrevClick}
           disabled={activeIndex === 0}
         >
-          <SlArrowLeft className="w-6 h-6" />
+          <SlArrowLeft className="h-6 w-6" />
         </button>
         <div className="flex gap-10">
           {slides.length > 0 ? (
@@ -136,7 +136,7 @@ export function StoriesCarousel({ slides = [] }) {
           onClick={handleNextClick}
           disabled={activeIndex >= slides.length - numVisibleSlides}
         >
-          <SlArrowRight className="w-6 h-6" />
+          <SlArrowRight className="h-6 w-6" />
         </button>
       </div>
     </>

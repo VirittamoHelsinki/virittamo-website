@@ -1,142 +1,129 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { LoadingSlides } from "../Carousel-home/SubComponents/LoadingSlides";
 import { SlideIndicator } from "../SlideIndicator";
+import { Link } from "react-router-dom";
+import { Image } from "../Image";
 
-// Function that returns an array of active slide components
-function RenderActiveItems({
-  slides,
-  activeIndex,
-  setActiveIndex,
-  numVisibleSlides,
-}: {
-  slides: string[];
-  activeIndex: number;
-  setActiveIndex: (value: number) => void;
-  numVisibleSlides: number;
-}) {
-  let activeItems = slides
-    .slice(activeIndex, activeIndex + numVisibleSlides)
-    .filter(Boolean);
-
-  // If the last slide is active, set the active index to the previous slide
-  if (activeIndex === slides.length) {
-    setActiveIndex(activeIndex - 1);
-    activeItems = slides
-      .slice(activeIndex - 1, activeIndex - 1 + numVisibleSlides)
-      .filter(Boolean);
-  }
-
-  // Render the active slides
-  return activeItems.map((activeItem, index) => {
-    return <Slide key={index} {...activeItem} />;
-  });
-}
-
-// Returns the number of visible slides based on the width of the viewport
-function getNumVisibleSlides(slides: string[], width: number) {
-  switch (true) {
-    case width <= 1080:
-      return 1;
-    case width <= 1440:
-      return 2;
-    default:
-      return Math.min(slides.length, 3);
-  }
-}
-
-// A helper component that renders the active slides
-function Slide({ component: Component, ...props }) {
-  return <Component {...props} />;
+function getRandomInt(min: number, max: number): number {
+  // The maximum is exclusive and the minimum is inclusive
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 // The main component that renders the project carousel
 export function ProjectCarousel({
-  text = {},
-  slides = [],
+    name,
+    description,
+    slides = [],
+    autoPlay = false,
+    autoPlayInterval = 5000,
 }: {
-  text: { title?: string; description?: string };
-  slides: string[];
+    name: string;
+    description: string;
+    slides: { component: React.ComponentType<any>;[key: string]: any }[];
+    autoPlay?: boolean;
+    autoPlayInterval?: number;
 }) {
-  // State variables to keep track of the active slide index and the number of visible slides
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [numVisibleSlides, setNumVisibleSlides] = useState(
-    getNumVisibleSlides(slides, window.innerWidth),
-  );
+    const [activeIndex, setActiveIndex] = useState(0);
+    const timeoutRef = useRef<NodeJS.Timeout>();
 
-  // Handler function for the previous arrow button
-  const handlePrevClick = () => {
-    if (activeIndex > 0) {
-      setActiveIndex(activeIndex - 1);
+    const nextSlide = useCallback(() => {
+        setActiveIndex((prevIndex) =>
+            prevIndex === slides.length - 1 ? 0 : prevIndex + 1,
+        );
+    }, [slides]);
+
+    const prevSlide = useCallback(() => {
+        setActiveIndex((prevIndex) =>
+            prevIndex === 0 ? slides.length - 1 : prevIndex - 1,
+        );
+    }, [slides]);
+
+    useEffect(() => {
+        if (autoPlay) {
+            timeoutRef.current = setTimeout(nextSlide, autoPlayInterval);
+
+            return () => {
+                if (timeoutRef.current) {
+                    clearTimeout(timeoutRef.current);
+                }
+            };
+        }
+    }, [activeIndex, autoPlay, autoPlayInterval, nextSlide]);
+
+    if (!slides || slides.length === 0) {
+        return null;
     }
-  };
 
-  // Handler function for the next arrow button
-  const handleNextClick = () => {
-    setActiveIndex(activeIndex + 1);
-  };
+    // Create a new array of slides to maintain a continuous flow when reaching the end
+    const allSlides = [...slides, ...slides, ...slides];
 
-  // Ensure that the active index and the number of visible slides are within valid ranges
-  useEffect(() => {
-    if (activeIndex < 0) {
-      setActiveIndex(0);
-    } else if (activeIndex + numVisibleSlides > slides.length) {
-      setActiveIndex(slides.length - numVisibleSlides);
-    }
-  }, [activeIndex, numVisibleSlides, slides]);
+    // Calculate the starting index of the slides to show
+    const startIndex = activeIndex + slides.length;
 
-  // Update the number of visible slides on window resize
-  useEffect(() => {
-    const handleResize = () => {
-      setNumVisibleSlides(getNumVisibleSlides(slides, window.innerWidth));
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, [slides]);
+    // Select three slides from the array starting from the 'startIndex'
+    const displaySlides = allSlides.slice(startIndex, startIndex + 3);
 
-  // Extract text data from the props
-  const { title = "", description = "" } = text;
-
-  return (
-    <div className="projectPage__teams--container-item relative px-[10%]">
-      {title && <h2>{title}</h2>}
-      {description && <p>{description}</p>}
-      <SlideIndicator numSlides={slides.length} activeIndex={activeIndex} />
-      <div className="projectPage__teams--carousel">
-        <button
-          className={
-            activeIndex === 0 ? "hidden" : "absolute -left-10 md:left-0 p-2"
-          }
-          onClick={handlePrevClick}
-          disabled={activeIndex === 0}
-        >
-          <SlArrowLeft className="arrow-button--icon h-5 w-5" />
-        </button>
-        <div className="projectPage__teams--carousel-list">
-          {slides.length > 0 ? (
-            <RenderActiveItems
-              slides={slides}
-              activeIndex={activeIndex}
-              setActiveIndex={setActiveIndex}
-              numVisibleSlides={numVisibleSlides}
-            />
-          ) : (
-            <LoadingSlides />
-          )}
+    return (
+        <div className="flex flex-col w-full justify-center items-center gap-3 px-[10%]">
+            {name && <h2 className="">{name}</h2>}
+            {description && (
+            <div className="flex items-center gap-3">
+            <p>{description}</p>
+            <a href="mailto:arto.aitta@hel.fi" className="py-2 px-3 uppercase font-bold bg-[#f4a3c5]">Ota Yhteyttä</a>
+            <Link to="/#contacts" className="py-2 px-3 uppercase font-bold bg-[#f4a3c5]">Ota Yhteyttä</Link>
+            </div>
+            )}
+            <div className="projectPage__teams--carousel relative">
+                <ul
+                    className="z-0 flex w-full translate-x-0 transform items-center justify-between gap-3 transition-all duration-1000 ease-in-out"
+                    style={{ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0.2) 100%)' }}
+                >
+                    {displaySlides.map((slide, index) => (
+                        <li
+                        key={index}
+                            className="group relative flex h-full w-full md:w-1/3 transition-all duration-700 ease-in-out transform translate-x-0 pointer-events-auto"
+                        >
+                        <Link
+                        className="w-full"
+                        to={`/projects/${name.toLowerCase()}/${getRandomInt(1, 4)}`}
+                        >
+                            <div className="h-[400px] w-full rounded border border-gray-200">
+                                <Image
+                                    src={slide.image.data.attributes.url}
+                                    alt={slide.title}
+                                    className="h-full w-full rounded object-cover"
+                                />
+                            </div>
+                            <div className="hidden absolute bottom-0 left-0 group-hover:flex w-full flex-wrap items-center bg-white/70 p-3">
+                                <h3 className="w-full flex-[1_1_100%] text-2xl leading-8">
+                                    {slide.title}
+                                </h3>
+                                <p className="flex-[1_1_80%] text-lg font-thin">
+                                    {slide.description}
+                                </p>
+                            </div>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                <div className="absolute inset-0 pointer-events-none flex justify-between items-center">
+                    <button
+                        className="z-10 pointer-events-auto cursor-pointer"
+                        onClick={prevSlide}
+                    >
+                        <SlArrowLeft className="h-6 w-6" />
+                    </button>
+                    <button
+                        className="z-10 pointer-events-auto cursor-pointer"
+                        onClick={nextSlide}
+                    >
+                        <SlArrowRight className="h-6 w-6" />
+                    </button>
+                </div>
+            </div>
         </div>
-        <button
-          className={
-            activeIndex >= slides.length - numVisibleSlides
-              ? "hidden"
-              : "absolute -right-10 lg:right-0 p-2"
-          }
-          onClick={handleNextClick}
-          disabled={activeIndex >= slides.length - numVisibleSlides}
-        >
-          <SlArrowRight className="arrow-button--icon h-5 w-5" />
-        </button>
-      </div>
-    </div>
-  );
+    );
 }

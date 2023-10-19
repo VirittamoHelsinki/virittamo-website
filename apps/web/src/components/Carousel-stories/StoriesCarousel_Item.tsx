@@ -28,7 +28,7 @@ export function StoriesCarousel_Item({
 
   return (
     <div className="">
-      <figure className="max-w-[200px] max-h-[200px]">
+      <figure className="max-h-[200px] max-w-[200px]">
         <Image src={img_src} alt={alt} className="rounded" />
       </figure>
       <div className="max-w-[200px]">
