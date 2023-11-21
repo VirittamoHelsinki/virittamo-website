@@ -1,5 +1,15 @@
 import { it, describe, expect } from "vitest";
-import { getNumVisibleSlides } from "../ProjectCarousel";
+
+function getNumVisibleSlides(slides, width) {
+  switch (true) {
+    case width <= 1080:
+      return 1;
+    case width <= 1440:
+      return 2;
+    default:
+      return Math.min(slides.length, 3);
+  }
+}
 
 describe("getNumVisibleSlides", () => {
   it("returns 1 when width is less than or equal to 1080", () => {

@@ -6,7 +6,7 @@ import { LoadingSlides } from "../../../Home/Carousel/SubComponents/Loading/Load
 import { SlideIndicator } from "../../../../components/SlideIndicator/SlideIndicator";
 
 // Returns the number of visible slides based on the width of the viewport
-export function getNumVisibleSlides(slides, width) {
+function getNumVisibleSlides(slides, width) {
   switch (true) {
     case width <= 1080:
       return 1;
