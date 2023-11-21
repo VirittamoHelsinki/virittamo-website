@@ -38,15 +38,8 @@ jobs:
           password: ${{ secrets.AzureAppService_ContainerPassword_1bdbc1ae6c9a47249c618e3506d6294f }}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Cache Docker layers
-        uses: actions/cache@v2
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
       - run: |
-          docker build . --push --tag virittamo.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_49abf5e34a6d4975914435a0fdf397a2 }}/virittamodev:${{ github.sha }} --cache-from=type=local,src=/tmp/.buildx-cache --cache-to=type=local,dest=/tmp/.buildx-cache
+          docker build . --push --tag virittamo.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_49abf5e34a6d4975914435a0fdf397a2 }}/virittamodev:${{ github.sha }}
 
   deploy:
     runs-on: ubuntu-latest
