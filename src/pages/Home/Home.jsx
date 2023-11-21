@@ -14,7 +14,6 @@ import SoftaImg from "./assets/teams-section-softa.webp";
 
 // Import components
 import { Header } from "../../components/Header/Header";
-import { Introduction } from "./Introduction";
 import { Carousel } from "./Carousel/Carousel";
 import { Why } from "./Why";
 import { Teams } from "./Teams";
@@ -27,6 +26,7 @@ import { ScrollToTop } from "../../components/ScrollToTop";
 
 // Import slide data
 import { slides } from "./Carousel/Content";
+import { PinkBar } from "../../components/PinkBar";
 
 // Define HomePage component
 const HomePage = () => {
@@ -41,12 +41,21 @@ const HomePage = () => {
 
   // On page load, scroll to the Contact section if the "contact" parameter is present in the URL
   useEffect(() => {
-    window.onload = () => {
-      if (contact == ":contact") {
-        scrollRef.current.scrollIntoView();
-      }
-    };
-  }, []);
+    if (contact === ":contact" && scrollRef.current) {
+      // Use setTimeout to ensure the scroll happens after the page has rendered
+      setTimeout(() => {
+        // Check if the browser supports scrollIntoView with options
+        if (typeof scrollRef.current.scrollIntoView === 'function') {
+          // If supported, use smooth scroll
+          scrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          // Fallback for browsers that do not support scrollIntoView with options
+          const scrollY = scrollRef.current.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: scrollY, behavior: 'smooth' });
+        }
+      }, 0);
+    }
+  }, [contact]);
 
   // Destructure the language data for the home page
   const {
@@ -69,7 +78,11 @@ const HomePage = () => {
         <div className="homePage__img--container">
           <img src={HeaderImg} alt="Home page main image" />
         </div>
-        <Introduction title={title} text={text} />
+        <section className="homePage__introduction">
+          <h1>{title}</h1>
+          <p>{text}</p>
+          <PinkBar />
+        </section>
         {slides && <Carousel slides={slides} />}
         <Why
           title={why_virittamo}

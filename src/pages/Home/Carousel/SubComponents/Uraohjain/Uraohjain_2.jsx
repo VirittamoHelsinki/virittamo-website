@@ -39,11 +39,13 @@ const Uraohjain_2 = ({
       }}
     >
       <section className="carousel__item--uraohjain_2-header">
-        <img
-          src={logo}
-          alt="uraohjain logo"
-          className="carousel__item--uraohjain_2-logo"
-        />
+        <figure className="carousel__item--uraohjain_2-figure">
+          <img
+            src={logo}
+            alt="uraohjain logo"
+            className="carousel__item--uraohjain_2-logo"
+          />
+        </figure>
         <h2 className="carousel__item--uraohjain_2-title">
           {lang === fi ? titleLimit_fi : titleLimit_en}
         </h2>
@@ -53,7 +55,9 @@ const Uraohjain_2 = ({
           <h3>{lang === fi ? subtitleLimit_fi : subtitleLimit_en}</h3>
           <p>{lang === fi ? textLimit_fi : textLimit_en}</p>
         </div>
-        <img src={src} alt={alt} className="carousel__item--uraohjain_2-img" />
+        <figure className="carousel__item--uraohjain_2-figure">
+          <img src={src} alt={alt} className="carousel__item--uraohjain_2-img" />
+        </figure>
       </section>
       <div className="carousel__item--uraohjain_2-bar"></div>
     </motion.div>

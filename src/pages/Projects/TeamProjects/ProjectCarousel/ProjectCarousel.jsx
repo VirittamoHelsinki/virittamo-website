@@ -6,7 +6,7 @@ import { LoadingSlides } from "../../../Home/Carousel/SubComponents/Loading/Load
 import { SlideIndicator } from "../../../../components/SlideIndicator/SlideIndicator";
 
 // Returns the number of visible slides based on the width of the viewport
-export const getNumVisibleSlides = (slides, width) => {
+export function getNumVisibleSlides(slides, width) {
   switch (true) {
     case width <= 1080:
       return 1;
@@ -15,7 +15,7 @@ export const getNumVisibleSlides = (slides, width) => {
     default:
       return Math.min(slides.length, 3);
   }
-};
+}
 
 // A helper component that renders the active slides
 const Slide = ({ component: Component, ...props }) => {
@@ -24,6 +24,48 @@ const Slide = ({ component: Component, ...props }) => {
 
 Slide.propTypes = {
   component: PropTypes.elementType.isRequired,
+};
+
+// Function that returns an array of active slide components
+function RenderActiveItems({
+  activeIndex,
+  setActiveIndex,
+  slides,
+  numVisibleSlides,
+}) {
+  let activeItems = slides
+    .slice(activeIndex, activeIndex + numVisibleSlides)
+    .filter(Boolean);
+
+  // If the last slide is active, set the active index to the previous slide
+  if (activeIndex === slides.length) {
+    setActiveIndex(activeIndex - 1);
+    activeItems = slides
+      .slice(activeIndex - 1, activeIndex - 1 + numVisibleSlides)
+      .filter(Boolean);
+  }
+
+  // Render the active slides
+  return activeItems.map((activeItem, index) => {
+    return <Slide key={index} {...activeItem} />;
+  });
+}
+
+// Define prop types for the RenderActiveItems component
+RenderActiveItems.propTypes = {
+  activeIndex: PropTypes.number.isRequired,
+  setActiveIndex: PropTypes.func.isRequired,
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      component: PropTypes.elementType.isRequired,
+      img_src: PropTypes.string.isRequired,
+      client_name: PropTypes.string.isRequired,
+      project_title: PropTypes.string.isRequired,
+      completion_year: PropTypes.string.isRequired,
+      alt: PropTypes.string,
+    })
+  ).isRequired,
+  numVisibleSlides: PropTypes.number.isRequired,
 };
 
 // The main component that renders the project carousel
@@ -44,26 +86,6 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
   // Handler function for the next arrow button
   const handleNextClick = () => {
     setActiveIndex(activeIndex + 1);
-  };
-
-  // Function that returns an array of active slide components
-  const renderActiveItems = () => {
-    let activeItems = slides
-      .slice(activeIndex, activeIndex + numVisibleSlides)
-      .filter(Boolean);
-
-    // If the last slide is active, set the active index to the previous slide
-    if (activeIndex === slides.length) {
-      setActiveIndex(activeIndex - 1);
-      activeItems = slides
-        .slice(activeIndex - 1, activeIndex - 1 + numVisibleSlides)
-        .filter(Boolean);
-    }
-
-    // Render the active slides
-    return activeItems.map((activeItem, index) => {
-      return <Slide key={index} {...activeItem} />;
-    });
   };
 
   // Ensure that the active index and the number of visible slides are within valid ranges
@@ -103,7 +125,16 @@ export const ProjectCarousel = ({ text = {}, slides = [] }) => {
           <SlArrowLeft className="arrow-button--icon" />
         </button>
         <div className="projectPage__teams--carousel-list">
-          {slides.length > 0 ? renderActiveItems() : <LoadingSlides />}
+          {slides.length > 0 ? (
+            <RenderActiveItems
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+              slides={slides}
+              numVisibleSlides={numVisibleSlides}
+            />
+          ) : (
+            <LoadingSlides />
+          )}
         </div>
         <button
           className="arrow-button"

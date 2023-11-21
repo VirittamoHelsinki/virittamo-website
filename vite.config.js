@@ -1,14 +1,10 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import viteTsconfigPaths from "vite-tsconfig-paths";
+import react from "@vitejs/plugin-react-swc";
 import svgrPlugin from "vite-plugin-svgr";
 
 export default defineConfig({
-  plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
+  plugins: [react(), svgrPlugin()],
   server: {
-    watch: {
-      usePolling: true,
-    },
     host: true,
     strictPort: true,
     port: 5173,

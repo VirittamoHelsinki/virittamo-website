@@ -1,9 +1,60 @@
 // Import necessary libraries and components
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import PropTypes from "prop-types";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { LoadingSlides } from "./SubComponents/Loading/LoadingSlides";
 import { SlideIndicator } from "../../../components/SlideIndicator/SlideIndicator";
+
+// Function to render the active item in the carousel
+function RenderActiveItem({
+  activeIndex,
+  slides,
+  setIsHovering,
+  setIsPlaying,
+}) {
+  const activeItem = slides[activeIndex];
+  const ActiveItem = activeItem.component;
+
+  // Set up an effect to add event listeners to the video element
+  useEffect(() => {
+    const videoEl = document.querySelector(".carousel__item--video");
+    if (videoEl) {
+      videoEl.addEventListener("play", () => {
+        setIsHovering(true);
+        setIsPlaying(true); // set isPlaying to true when video starts playing
+      });
+      videoEl.addEventListener("pause", () => {
+        setIsHovering(false);
+        setIsPlaying(false); // set isPlaying to false when video is paused
+      });
+      return () => {
+        videoEl.removeEventListener("play", () => setIsHovering(true));
+        videoEl.removeEventListener("pause", () => setIsHovering(false));
+      };
+    }
+  }, [activeIndex, setIsHovering, setIsPlaying]);
+
+  return <ActiveItem key={activeIndex} {...activeItem} />;
+}
+
+// Define prop types for the RenderActiveItem component
+RenderActiveItem.propTypes = {
+  activeIndex: PropTypes.number.isRequired,
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      component: PropTypes.elementType.isRequired,
+      title: PropTypes.string,
+      text: PropTypes.string,
+      src: PropTypes.string,
+      alt: PropTypes.string,
+      bg_image: PropTypes.string,
+      link: PropTypes.string,
+      logo: PropTypes.string,
+    })
+  ).isRequired,
+  setIsHovering: PropTypes.func.isRequired,
+  setIsPlaying: PropTypes.func.isRequired,
+};
 
 // Create a carousel component
 export const Carousel = ({ slides }) => {
@@ -13,41 +64,14 @@ export const Carousel = ({ slides }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Function to handle clicking on the previous button
-  const handlePrevClick = () => {
+  const handlePrevClick = useCallback(() => {
     setActiveIndex(activeIndex === 0 ? slides.length - 1 : activeIndex - 1);
-  };
+  }, [activeIndex, slides.length]);
 
   // Function to handle clicking on the next button
-  const handleNextClick = () => {
+  const handleNextClick = useCallback(() => {
     setActiveIndex(activeIndex === slides.length - 1 ? 0 : activeIndex + 1);
-  };
-
-  // Function to render the active item in the carousel
-  const renderActiveItem = () => {
-    const activeItem = slides[activeIndex];
-    const ActiveItem = activeItem.component;
-
-    // Set up an effect to add event listeners to the video element
-    useEffect(() => {
-      const videoEl = document.querySelector(".carousel__item--video");
-      if (videoEl) {
-        videoEl.addEventListener("play", () => {
-          setIsHovering(true);
-          setIsPlaying(true); // set isPlaying to true when video starts playing
-        });
-        videoEl.addEventListener("pause", () => {
-          setIsHovering(false);
-          setIsPlaying(false); // set isPlaying to false when video is paused
-        });
-        return () => {
-          videoEl.removeEventListener("play", () => setIsHovering(true));
-          videoEl.removeEventListener("pause", () => setIsHovering(false));
-        };
-      }
-    }, [activeIndex]);
-
-    return <ActiveItem key={activeIndex} {...activeItem} />;
-  };
+  }, [activeIndex, slides.length]);
 
   // Set the interval duration for autoplay
   const INTERVAL_DURATION = 7500;
@@ -60,7 +84,7 @@ export const Carousel = ({ slides }) => {
       }
     }, INTERVAL_DURATION);
     return () => clearInterval(interval);
-  }, [activeIndex, isHovering, isPlaying]);
+  }, [activeIndex, handleNextClick, isHovering, isPlaying]);
 
   // Function to handle mouse entering the carousel
   const handleMouseEnter = () => {
@@ -87,7 +111,16 @@ export const Carousel = ({ slides }) => {
             onClick={handlePrevClick}
           />
         </button>
-        {slides ? renderActiveItem() : <LoadingSlides />}
+        {slides ? (
+          <RenderActiveItem
+            activeIndex={activeIndex}
+            slides={slides}
+            setIsPlaying={setIsPlaying}
+            setIsHovering={setIsHovering}
+          />
+        ) : (
+          <LoadingSlides />
+        )}
         <button className="arrow-button">
           <SlArrowRight
             className="arrow-button--icon"

@@ -8,10 +8,8 @@ export const ScrollToTop = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const { scrollY, innerHeight } = window;
-      if (scrollY > innerHeight / 2) {
+      if (window.scrollY > window.innerHeight / 2) {
         setShowArrow(true);
-        console.log("At Half the screen");
       } else {
         setShowArrow(false);
       }

@@ -8,28 +8,28 @@ export const Why = ({ title, employee, employeeImg, company, companyImg }) => {
       <h2>{title}</h2>
       <div className="homePage__why--containers">
         <div className="homePage__why--containers-item">
-          <img
-            id="employee-img"
-            src={employeeImg}
-            alt="Why choose Virittämö employee picture"
-          />
+            <img
+              id="employee-img"
+              src={employeeImg}
+              alt="Why choose Virittämö employee picture"
+            />
           <h3>{employee.title}</h3>
           <ul className="homePage__why--containers-list">
             {employee.description.map((item, index) => (
-              <li key={index}>&#9656; {item}</li>
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
         <div className="homePage__why--containers-item">
-          <img
-            id="company-img"
-            src={companyImg}
-            alt="Why choose Virittämö company picture"
-          />
+            <img
+              id="company-img"
+              src={companyImg}
+              alt="Why choose Virittämö company picture"
+            />
           <h3>{company.title}</h3>
           <ul className="homePage__why--containers-list">
             {company.description.map((item, index) => (
-              <li key={index}>&#9656; {item}</li>
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </div>

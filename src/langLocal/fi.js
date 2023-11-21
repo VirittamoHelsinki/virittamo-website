@@ -162,33 +162,30 @@ export const fi = {
     apply: {
       title: "Kuka voi hakea?",
       description:
-        "Meille voit hakea töihin, jos olet helsinkiläinen ja palkkatukioikeuden omaava työtön työnhakija. Edellisestä palkkatukijaksosta on pitänyt kulua kolme vuotta.",
+        "Palkkatukityöjaksolle Helsingin kaupungille voi työllistyä helsinkiläinen työtön työnhakija, jolla on mahdollisuus palkkatukeen, ja joka on ollut:",
       qualifications: [
         {
-          title: "Alle 25v.",
-          desc: "Olet suorittanut ammatillisen koulutuksen tai muun kuin ylioppilastutkinnon ja olet ollut työttömänä yli 6 kuukautta.",
+          title: "Työttömänä vähintään 24 kk / 28 kk",
+          desc: ["30-vuotta täyttänyt, saanut työmarkkinatukea työttömyyden perusteella vähintään 300 päivää"],
         },
         {
-          title: "25—29v.",
-          desc: "Olet suorittanut ammatillisen koulutuksen tai muun kuin ylioppilastutkinnon ja olet ollut työnhakijana yli 12 kuukautta viimeisen 14 kuukauden aikana.",
+          title: "Työttömänä vähintään 12 kk / 14 kk",
+          desc: [
+            "Ammattiin valmistunut tai tutkinnon (ei yo) suorittanut 25-29 -vuotias",
+            "Osatyökykyinen kyseiseen työtehtävään vaikuttavan diagnosoidun terveydellisen seikan perusteella",
+            "Maahanmuuttaja, jolla on oleskelulupa tai jonka oleskelu on rekisteröity"
+          ],
         },
         {
-          title: "+30v.",
-          desc: "Olet ollut työnhakijana vähintään 24 kuukautta viimeisen 28 kuukauden aikana tai saanut yli 300 päivää työmarkkinatukea.",
+          title: "Työtön vähintään 6 kk",
+          desc: ["Ammattiin valmistunut tai tutkinnon (ei yo) suorittanut alle 25-vuotias"],
         },
         {
-          title: "+57v.",
-          desc: "Ansiosidonnaisen työttömyyspäivärahan tai peruspäivärahan enimmäiskesto on saavutettu.",
-        },
-        {
-          title: "TAI",
-          desc: "Sinulla on työtehtävään vaikuttavan terveydellisen syyn vuoksi osittainen työkyky.",
-        },
-        {
-          title: "TAI",
-          desc: "Olet maahanmuuttaja, jolla on oleskelulupa tai oleskelusi on rekisteröity.",
+          title: "Oikeutettu velvoitetyöhön",
+          desc: ["57-vuotias tai vanhempi, ja jonka ansiosidonnaisen tai peruspäivärahan enimmäispäivät ovat täyttyneet hänen täytettyään 57 vuotta"],
         },
       ],
+      qual_desc: "Edellisen palkkatukijakson päättymisestä kaupungilla tulee olla kulunut vähintään 3 vuotta, jotta voi työllistyä uudelleen palkkatuella kaupungille."
     },
     partners: "Yhteistyökumppanit",
     contact_details: {
@@ -197,43 +194,43 @@ export const fi = {
         {
           name: "Tarja Kurvinen",
           title: "Tiimikoordinaattori",
-          phone: "p. 09 310 27553",
+          phone: "09 310 27553",
           email: "tarja.kurvinen@hel.fi",
         },
         {
           name: "Anna-Mari Rouru",
           title: "Koulutuspäällikkö",
-          phone: "p. 09 310 81417",
-          email: "anna-mari.rouru@edu.hel.fi",
+          phone: "09 310 81417",
+          email: "anna-mari.rouru@hel.fi",
         },
         {
           name: "John Strandberg",
           title: "Mediatiimin vastaava",
-          phone: "p. 09 310 81403",
-          email: "john.strandberg@edu.hel.fi",
+          phone: "09 310 81403",
+          email: "john.strandberg@hel.fi",
         },
         {
           name: "Ari Tuomi",
           title: "ICT-tiimin vastaava",
-          phone: "p. 09 310 27571",
-          email: "ari.tuomi@edu.hel.fi",
+          phone: "09 310 27571",
+          email: "ari.tuomi@hel.fi",
         },
         {
           name: "Arto Aitta",
           title: "Softatiimin vastaava",
-          phone: "p. 09 3102 7555",
+          phone: "09 3102 7555",
           email: "arto.aitta@hel.fi",
         },
         {
           name: "Jaakko Hyytiä",
           title: "Projektipäällikkö,\n Uraohjain+ -hanke",
-          phone: "p. 09 310 28040",
-          email: "jaakko.hyytia@edu.hel.fi",
+          phone: "09 310 28040",
+          email: "jaakko.hyytia@hel.fi",
         },
         {
           name: "Leea Hiltunen",
           title: "Projektikoordinaattori,\n Uraohjain+ -hanke",
-          phone: "p. 09 310 25104",
+          phone: "09 310 25104",
           email: "leea.hiltunen@hel.fi",
         },
       ],
@@ -242,7 +239,7 @@ export const fi = {
       {
         name: "Virittämö",
         title: "Metropolian kampus",
-        address: "Osoite: Myllypurontie 1",
+        address: "Myllypurontie 1, 00920 Helsinki",
         postalCode: "PL 92305, 00099 Helsingin kaupunki",
       },
     ],
@@ -262,14 +259,14 @@ export const fi = {
           title: "Media",
           description: "Etsitkö media-alan osaajaa projektiisi? Ota yhteyttä!",
           contact:
-            "John Strandberg / p. 09 310 37370 / john.strandberg@edu.hel.fi",
+            "John Strandberg / p. 09 310 37370 / john.strandberg@hel.fi",
         },
 
         ict: {
           title: "ICT",
           description:
             "Meiltä löydät osaavia ICT-ammattilaisia monenlaisiin toimeksiantoihin. Ota yhteyttä!",
-          contact: "Ari Tuomi / p. 09 310 27571 / ari.tuomi@edu.hel.fi",
+          contact: "Ari Tuomi / p. 09 310 27571 / ari.tuomi@hel.fi",
         },
 
         softa: {

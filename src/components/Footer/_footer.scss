@@ -1,4 +1,4 @@
-main.footer__wrapper {
+.footer__wrapper {
   display: flex;
   padding: 50px 10% 75px;
   justify-content: center;
@@ -44,7 +44,7 @@ main.footer__wrapper {
     }
   }
 
-  div.footer__contacts {
+ .footer__contacts {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -87,7 +87,7 @@ main.footer__wrapper {
       }
     }
 
-    ul.footer__contacts--list {
+    .footer__contacts--list {
       align-self: center;
       display: flex;
       justify-content: space-between;
@@ -101,7 +101,7 @@ main.footer__wrapper {
         gap: 10px;
       }
 
-      li.footer__contacts--list-item {
+      .footer__contacts--list-item {
         white-space: pre-wrap;
         padding: 10px;
         display: flex;
@@ -119,13 +119,13 @@ main.footer__wrapper {
           width: 100%;
         }
 
-        p:first-of-type {
-          font-weight: 900;
+            p:first-of-type {
+          font-weight: 700;
         }
       }
 
       // First row has 2 items
-      li.footer__contacts--list-item:nth-child(-n + 2) {
+      .footer__contacts--list-item:nth-child(-n + 2) {
         width: 50%;
 
         @include responsive(large_mobile) {
@@ -134,7 +134,7 @@ main.footer__wrapper {
       }
 
       // Last row has 2 items
-      li.footer__contacts--list-item:nth-last-child(-n + 2) {
+      .footer__contacts--list-item:nth-last-child(-n + 2) {
         width: 50%;
 
         @include responsive(large_mobile) {
@@ -143,7 +143,7 @@ main.footer__wrapper {
       }
     }
 
-    ul.footer__locations--list {
+      .footer__locations--list {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -158,7 +158,7 @@ main.footer__wrapper {
         height: auto;
       }
 
-      li.footer__locations--list-item {
+      .footer__locations--list-item {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -171,7 +171,7 @@ main.footer__wrapper {
         }
 
         p:first-of-type {
-          font-weight: 900;
+          font-weight: 700;
         }
 
         @include responsive(mobile) {
@@ -183,7 +183,7 @@ main.footer__wrapper {
     }
   }
 
-  div.footer__container {
+  .footer__container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

@@ -162,39 +162,36 @@ export const en = {
     apply: {
       title: "Who can apply?",
       description:
-        "You can apply for a job with us if you are a Helsinki resident and an unemployed job seeker eligible for a pay subsidy. At least three years must have passed since your previous pay-subsidized employment.",
+        "An unemployed jobseeker in Helsinki who is eligible for wage subsidy and who has been:",
       qualifications: [
         {
-          title: "Under 25 years old",
-          desc: "You have completed vocational training or other than matriculation examination and have been unemployed for over 6 months.",
+          title: "Unemployed for at least 24 months / 28 months",
+          desc: ["30 years of age or older, received at least 300 days of labour market benefit for unemployment."],
         },
         {
-          title: "25—29 years old",
-          desc: "You have completed vocational training or other than matriculation examination and have been a jobseeker for over 12 months in the past 14 months.",
+          title: "Unemployed for at least 12 months / 14 months",
+          desc: [
+            "25 - 29 years old with a vocational qualification or a degree (not matriculation).",
+            "Partially fit for work on the basis of a diagnosed medical condition affecting the job in question.",
+            "Immigrant with a residence permit or whose stay is registered"
+          ],
         },
         {
-          title: "+30 years old",
-          desc: "You have been a jobseeker for at least 24 months in the past 28 months or have received over 300 days of labor market support.",
+          title: "Unemployed for at least 6 months",
+          desc: ["Under 25 years old with a vocational qualification or a degree (not matriculation)."],
         },
         {
-          title: "+57 years old",
-          desc: "The maximum duration of your earnings-related unemployment allowance or basic unemployment allowance has been reached.",
-        },
-        {
-          title: "OR",
-          desc: "You have a partial work ability due to a health reason affecting the work tasks.",
-        },
-        {
-          title: "OR",
-          desc: "You are an immigrant with a residence permit or your stay has been registered.",
+          title: "Entitled to compulsory work",
+          desc: ["57 years of age or older, and whose maximum number of days of earnings-related or basic daily allowance has been reached after the age of 57."],
         },
       ],
+      qual_desc: "At least 3 years must have passed since the end of the previous period of wage subsidy in the city in order to be re-employed with wage subsidy in the city.",
     },
     partners: "Partners",
     contact_details: {
       title: "Contact",
       team: [
-        {
+       {
           name: "Tarja Kurvinen",
           title: "Team Coordinator",
           phone: "p. 09 310 27553",
@@ -203,37 +200,37 @@ export const en = {
         {
           name: "Anna-Mari Rouru",
           title: "Education Manager",
-          phone: "p. 09 310 81417",
-          email: "anna-mari.rouru@edu.hel.fi",
+          phone: "09 310 81417",
+          email: "anna-mari.rouru@hel.fi",
         },
         {
           name: "John Strandberg",
           title: "Head of Media Team",
-          phone: "p. 09 310 81403",
-          email: "john.strandberg@edu.hel.fi",
+          phone: "09 310 81403",
+          email: "john.strandberg@hel.fi",
         },
         {
           name: "Ari Tuomi",
           title: "Head of ICT Team",
-          phone: "p. 09 310 27571",
-          email: "ari.tuomi@edu.hel.fi",
+          phone: "09 310 27571",
+          email: "ari.tuomi@hel.fi",
         },
         {
           name: "Arto Aitta",
           title: "Head of Softa Team",
-          phone: "p. 09 3102 7555",
+          phone: "09 3102 7555",
           email: "arto.aitta@hel.fi",
         },
         {
           name: "Jaakko Hyytiä",
           title: "Project Manager,\n Careerdriver+",
-          phone: "p. 09 310 28040",
-          email: "jaakko.hyytia@edu.hel.fi",
+          phone: "09 310 28040",
+          email: "jaakko.hyytia@hel.fi",
         },
         {
           name: "Leea Hiltunen",
           title: "Project Coordinator,\n Careerdriver+",
-          phone: "p. 09 310 25104",
+          phone: "09 310 25104",
           email: "leea.hiltunen@hel.fi",
         },
       ],
@@ -242,7 +239,7 @@ export const en = {
       {
         name: "Virittämö",
         title: "Metropolia Campus",
-        address: "Address: Myllypurontie 1",
+        address: "Myllypurontie 1, 00920 Helsinki",
         postalCode: "PO Box 92305, 00099 City of Helsinki",
       },
     ],
@@ -263,13 +260,13 @@ export const en = {
           description:
             "Looking for a media professional for your project? Contact us!",
           contact:
-            "John Strandberg / p. 09 310 37370 / john.strandberg@edu.hel.fi",
+            "John Strandberg / p. 09 310 37370 / john.strandberg@hel.fi",
         },
         ict: {
           title: "ICT",
           description:
             "We provide skilled ICT professionals for various assignments. Contact us!",
-          contact: "Ari Tuomi / p. 09 310 27571 / ari.tuomi@edu.hel.fi",
+          contact: "Ari Tuomi / p. 09 310 27571 / ari.tuomi@hel.fi",
         },
         softa: {
           title: "Softa",
