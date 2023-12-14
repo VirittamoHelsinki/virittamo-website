@@ -1,10 +1,7 @@
 {
   "name": "virittamo-website",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "workspaces": ["apps/*"],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -13,14 +10,13 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint": "^8.49.0",
-    "prettier": "^3.0.3",
-    "tsconfig": "*",
+    "eslint": "8.55.0",
+    "prettier": "3.1.1",
     "turbo": "latest"
   },
-  "packageManager": "npm@9.8.1",
+  "packageManager": "npm@10.2.4",
   "engines": {
-    "node": ">=14.0.0",
+    "node": ">=18.0.0",
     "npm": ">=7.0.0"
   }
 }
