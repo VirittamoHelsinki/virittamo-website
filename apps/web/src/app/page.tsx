@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "~/@/components/ui/accordion";
-import { Carousel } from "~/components/carousel";
+import { Carousel } from "~/@/components/carousel";
 
 function HeroSection() {
   return (
@@ -114,63 +114,25 @@ function TODO() {
   );
 }
 
-function ChevronDownIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m6 9 6 6 6-6" />
-    </svg>
-  );
-}
-
-function ChevronUpIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m18 15-6-6-6 6" />
-    </svg>
-  );
-}
-
 function OurTeams() {
   return (
-    <div className="flex flex-col gap-10 pt-[9.375rem]">
+    <div id="teams" className="flex flex-col gap-10 pt-[9.375rem]">
       <h2 className="text-[6.25rem] font-bold">Our Teams</h2>
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
             Media
           </AccordionTrigger>
-          <AccordionContent className="flex flex-col gap-5 leading-tight">
+          <AccordionContent className="flex flex-col items-start gap-5 leading-tight">
             <p className="text-[2.5rem]">
               An innovative software developers. We implement both Web apps and
               mobile apps with modern development tools and technologies for our
               partners. We have implemented for our customers e.g., reservation
               systems, websites and form system.
             </p>
-            <Link className="text-[2.5rem]" href="mailto:email@email.com">
+            <Link className="group text-[2.5rem]" href="mailto:email@email.com">
               Lets talk
-              <div className="w-16 self-start border-b-2 border-black" />
+              <div className="w-16 self-start border-b-2 border-black transition-all duration-300 group-hover:w-full" />
             </Link>
           </AccordionContent>
         </AccordionItem>
@@ -178,16 +140,16 @@ function OurTeams() {
           <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
             ICT
           </AccordionTrigger>
-          <AccordionContent className="flex flex-col gap-5 leading-tight">
+          <AccordionContent className="flex flex-col items-start gap-5 leading-tight">
             <p className="text-[2.5rem]">
               An innovative software developers. We implement both Web apps and
               mobile apps with modern development tools and technologies for our
               partners. We have implemented for our customers e.g., reservation
               systems, websites and form system.
             </p>
-            <Link className="text-[2.5rem]" href="mailto:email@email.com">
+            <Link className="group text-[2.5rem]" href="mailto:email@email.com">
               Lets talk
-              <div className="w-16 self-start border-b-2 border-black" />
+              <div className="w-16 self-start border-b-2 border-black transition-all duration-300 group-hover:w-full" />
             </Link>
           </AccordionContent>
         </AccordionItem>
@@ -195,16 +157,16 @@ function OurTeams() {
           <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
             Softa
           </AccordionTrigger>
-          <AccordionContent className="flex flex-col gap-5 leading-tight">
+          <AccordionContent className="flex flex-col items-start gap-5 leading-tight">
             <p className="text-[2.5rem]">
               An innovative software developers. We implement both Web apps and
               mobile apps with modern development tools and technologies for our
               partners. We have implemented for our customers e.g., reservation
               systems, websites and form system.
             </p>
-            <Link className="text-[2.5rem]" href="mailto:email@email.com">
+            <Link className="group text-[2.5rem]" href="mailto:email@email.com">
               Lets talk
-              <div className="w-16 self-start border-b-2 border-black" />
+              <div className="w-16 self-start border-b-2 border-black transition-all duration-300 group-hover:w-full" />
             </Link>
           </AccordionContent>
         </AccordionItem>
@@ -237,20 +199,44 @@ function OurProject() {
       <ul className="flex gap-[62px]">
         {projects.map((project, index) => (
           <li key={index} className="flex flex-col py-[1.875rem]">
-            <Image
-              className="h-[661px] w-full rounded-xl object-cover"
-              src={project.imageUrl}
-              alt={project.name}
-              width={553}
-              height={661}
-            />
-            <span className="hidden text-6xl font-bold">{project.name}</span>
+            <Link href={`/blog/${index + 1}`} passHref>
+              <Image
+                className="h-[661px] w-full rounded-xl object-cover"
+                src={project.imageUrl}
+                alt={project.name}
+                width={553}
+                height={661}
+              />
+              <span className="hidden text-6xl font-bold">{project.name}</span>
+            </Link>
           </li>
         ))}
       </ul>
-      <Link href="/projects" className="text-[2.5rem]">
+      <Link href="/blog" className="text-[2.5rem]">
         All Projects &gt;
       </Link>
+    </div>
+  );
+}
+
+function Marquee() {
+  return (
+    <div className="relative flex overflow-x-hidden">
+      <div className="animate-marquee whitespace-nowrap py-12">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <span key={index} className="mx-4 text-4xl">
+            Arto Aitta Ltd {index + 1}
+          </span>
+        ))}
+      </div>
+
+      <div className="animate-marquee2 absolute top-0 whitespace-nowrap py-12">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <span key={index} className="mx-4 text-4xl">
+            Arto Aitta Ltd {index + 1}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
@@ -258,15 +244,15 @@ function OurProject() {
 function WorkBanner() {
   return (
     <div className="flex flex-col pt-[9.375rem]">
-      <p>lodo</p>
-      <p>lodo</p>
+      <Marquee />
+      <Marquee />
     </div>
   );
 }
 
 function ApplyToWork() {
   return (
-    <div className="flex flex-col pt-[9.375rem]">
+    <div id="work" className="flex flex-col pt-[9.375rem]">
       <h2 className="text-[6.25rem] font-bold">Apply to Us</h2>
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
@@ -353,8 +339,7 @@ function PreviousEmployees() {
       <h2 className="text-[2.5rem] font-bold">
         Who has employed are previous employeess
       </h2>
-      <p>lodo</p>
-      <p>lodo</p>
+      <Marquee />
     </div>
   );
 }

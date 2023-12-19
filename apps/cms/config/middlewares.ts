@@ -29,7 +29,6 @@ export default [
              * If using a CDN URL make sure to include that url in the CSP headers process.env.STORAGE_CDN_URL
              */
             `https://${process.env.STORAGE_ACCOUNT}.blob.core.windows.net`,
-
           ],
           upgradeInsecureRequests: null,
         },

@@ -1,11 +1,11 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Schema, Attribute } from "@strapi/strapi";
 
 export interface ContactInfoContactInfo extends Schema.Component {
-  collectionName: 'components_contact_info_contact_infos';
+  collectionName: "components_contact_info_contact_infos";
   info: {
-    displayName: 'contact-info';
-    icon: 'user';
-    description: '';
+    displayName: "contact-info";
+    icon: "user";
+    description: "";
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
@@ -16,24 +16,24 @@ export interface ContactInfoContactInfo extends Schema.Component {
 }
 
 export interface ContentWhy extends Schema.Component {
-  collectionName: 'components_why_whies';
+  collectionName: "components_why_whies";
   info: {
-    displayName: 'content';
-    icon: 'alien';
-    description: '';
+    displayName: "content";
+    icon: "alien";
+    description: "";
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
     img: Attribute.Media;
-    why_list: Attribute.Component<'list.list', true>;
+    why_list: Attribute.Component<"list.list", true>;
   };
 }
 
 export interface ImageListImageList extends Schema.Component {
-  collectionName: 'components_image_list_image_lists';
+  collectionName: "components_image_list_image_lists";
   info: {
-    displayName: 'image_list';
-    icon: 'car';
+    displayName: "image_list";
+    icon: "car";
   };
   attributes: {
     image_list_item: Attribute.Media;
@@ -41,11 +41,11 @@ export interface ImageListImageList extends Schema.Component {
 }
 
 export interface ListList extends Schema.Component {
-  collectionName: 'components_list_lists';
+  collectionName: "components_list_lists";
   info: {
-    displayName: 'list';
-    icon: 'collapse';
-    description: '';
+    displayName: "list";
+    icon: "collapse";
+    description: "";
   };
   attributes: {
     list_item: Attribute.Text & Attribute.Required;
@@ -53,11 +53,11 @@ export interface ListList extends Schema.Component {
 }
 
 export interface SlideSlide extends Schema.Component {
-  collectionName: 'components_slide_slides';
+  collectionName: "components_slide_slides";
   info: {
-    displayName: 'slide';
-    icon: 'arrowRight';
-    description: '';
+    displayName: "slide";
+    icon: "arrowRight";
+    description: "";
   };
   attributes: {
     image: Attribute.Media & Attribute.Required;
@@ -69,24 +69,24 @@ export interface SlideSlide extends Schema.Component {
 }
 
 export interface SlidesSlides extends Schema.Component {
-  collectionName: 'components_slides_slides';
+  collectionName: "components_slides_slides";
   info: {
-    displayName: 'slides';
-    icon: 'eye';
-    description: '';
+    displayName: "slides";
+    icon: "eye";
+    description: "";
   };
   attributes: {
     project_team: Attribute.String & Attribute.Required;
     call_to_action: Attribute.String;
-    project: Attribute.Component<'slide.slide', true>;
+    project: Attribute.Component<"slide.slide", true>;
   };
 }
 
 export interface StoryStory extends Schema.Component {
-  collectionName: 'components_story_stories';
+  collectionName: "components_story_stories";
   info: {
-    displayName: 'story';
-    icon: 'book';
+    displayName: "story";
+    icon: "book";
   };
   attributes: {
     image: Attribute.Media & Attribute.Required;
@@ -97,10 +97,10 @@ export interface StoryStory extends Schema.Component {
 }
 
 export interface TextListTextList extends Schema.Component {
-  collectionName: 'components_text_list_text_lists';
+  collectionName: "components_text_list_text_lists";
   info: {
-    displayName: 'text-list';
-    icon: 'file';
+    displayName: "text-list";
+    icon: "file";
   };
   attributes: {
     text_title: Attribute.String;
@@ -108,17 +108,17 @@ export interface TextListTextList extends Schema.Component {
   };
 }
 
-declare module '@strapi/types' {
+declare module "@strapi/types" {
   export module Shared {
     export interface Components {
-      'contact-info.contact-info': ContactInfoContactInfo;
-      'content.why': ContentWhy;
-      'image-list.image-list': ImageListImageList;
-      'list.list': ListList;
-      'slide.slide': SlideSlide;
-      'slides.slides': SlidesSlides;
-      'story.story': StoryStory;
-      'text-list.text-list': TextListTextList;
+      "contact-info.contact-info": ContactInfoContactInfo;
+      "content.why": ContentWhy;
+      "image-list.image-list": ImageListImageList;
+      "list.list": ListList;
+      "slide.slide": SlideSlide;
+      "slides.slides": SlidesSlides;
+      "story.story": StoryStory;
+      "text-list.text-list": TextListTextList;
     }
   }
 }

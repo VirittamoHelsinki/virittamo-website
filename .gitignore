@@ -8,29 +8,52 @@ node_modules
 # testing
 coverage
 
-# next.js
+# web
 .next/
 out/
+next-env.d.ts
+
+# nitro
+.nitro/
+.output/
+
+# cms
+*.cache
+.strapi-updater.json
+types/generated
+.strapi
+.tmp
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+public/uploads/*
+!public/uploads/.gitkeep
+
+# production
+dist
 build
 
 # misc
 .DS_Store
 *.pem
 
+
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
 # local env files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# turbo
-.turbo
+.env*.local
 
 # vercel
 .vercel
+
+# typescript
+*.tsbuildinfo
+
+# turbo
+.turbo
