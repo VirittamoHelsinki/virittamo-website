@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_section_apply_sections",
+  "info": {
+    "displayName": "apply-section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_list_generic_lists",
+  "info": {
+    "displayName": "generic-list"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.list"
+    }
+  }
+}

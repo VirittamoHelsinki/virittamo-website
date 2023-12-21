@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Badge } from "~/@/components/ui/badge";
+import { Toggle } from "~/@/components/ui/toggle";
 
 export default function BlogPage() {
   return (
@@ -17,15 +17,24 @@ export default function BlogPage() {
       </div>
 
       <div className="flex gap-5">
-        <Badge variant="outline" className="text-[1.5625rem]">
+        <Toggle
+          variant="outline"
+          className="rounded-full border-black text-[1.5625rem]"
+        >
           News
-        </Badge>
-        <Badge variant="outline" className="text-[1.5625rem]">
+        </Toggle>
+        <Toggle
+          variant="outline"
+          className="rounded-full border-black  text-[1.5625rem]"
+        >
           Projects
-        </Badge>
-        <Badge variant="outline" className="text-[1.5625rem]">
+        </Toggle>
+        <Toggle
+          variant="outline"
+          className="rounded-full border-black  text-[1.5625rem]"
+        >
           Stories
-        </Badge>
+        </Toggle>
       </div>
 
       <ul className="grid grid-cols-3 gap-[62px]">

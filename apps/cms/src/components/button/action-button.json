@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_button_action_buttons",
+  "info": {
+    "displayName": "action-button"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}

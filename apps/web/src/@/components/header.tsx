@@ -121,7 +121,7 @@ export function Header() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <NavigationMenu>
+        {/* <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>
@@ -159,7 +159,7 @@ export function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
-        </NavigationMenu>
+        </NavigationMenu> */}
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>

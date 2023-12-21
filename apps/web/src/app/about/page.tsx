@@ -26,7 +26,7 @@ export default function AboutPage() {
       <div className="">
         <div id="values" className="pt-[9.375rem]">
           <h2 className="pb-[3.75rem] text-[6.25rem] font-bold">Our Values</h2>
-          <ul className="grid grid-cols-3 gap-10">
+          <ul className="grid grid-cols-3 gap-32">
             {Array.from({ length: 6 }).map((_, index) => (
               <li key={index} className="flex flex-col items-center gap-1">
                 <svg
@@ -42,8 +42,8 @@ export default function AboutPage() {
                   ></path>
                 </svg>
 
-                <h3>Tyohynvointi</h3>
-                <p>
+                <h3 className="text-3xl font-medium">Tyohynvointi</h3>
+                <p className="text-xl opacity-75">
                   Työhyvinvointi synnyttää menestystä ja tee kauppassa on
                   tuotteitta
                 </p>
@@ -55,12 +55,12 @@ export default function AboutPage() {
           <h2 className="pb-[1.875rem] text-[6.25rem] font-bold">
             Contact Info
           </h2>
-          <ul className="grid grid-cols-3 gap-5">
+          <ul className="grid grid-cols-3 gap-[3.125rem]">
             {Array.from({ length: 7 }).map((_, index) => (
-              <li className="flex gap-3" key={index}>
+              <li className="flex gap-[3.75rem]" key={index}>
                 <div className="h-[150px] w-[150px] rounded-xl bg-yellow-100" />
-                <div>
-                  <h3>Arto Aitta</h3>
+                <div className="flex flex-col text-[1.5625rem]">
+                  <h3 className="text-3xl font-medium">Arto Aitta</h3>
                   <p>Softa Team Lead</p>
                   <a href="mailto:arto.aitta@hel.fi">arto.aitta@hel.fi</a>
                   <a href="tel:0123456789">012 345 6789</a>
@@ -72,7 +72,7 @@ export default function AboutPage() {
         <div className="pt-[9.375rem]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.415977479487!2d25.07534967768671!3d60.22349387505956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692097d49be7743%3A0x44d7181298503381!2sMyllypurontie%201%2C%2000920%20Helsinki!5e0!3m2!1sfi!2sfi!4v1702891756176!5m2!1sfi!2sfi"
-            width="600"
+            width="900"
             height="450"
             style={{ border: 0 }}
             className="grayscale"

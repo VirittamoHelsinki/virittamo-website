@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_accordion_benefit_accordions",
+  "info": {
+    "displayName": "benefit-accordion"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "benefits": {
+      "displayName": "benefit-list",
+      "type": "component",
+      "repeatable": true,
+      "component": "list.benefit-list"
+    }
+  }
+}

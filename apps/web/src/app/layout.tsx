@@ -5,6 +5,7 @@ import { LogoWhite, Wave } from "~/@/components/icons";
 
 import { Phone, Mail } from "lucide-react";
 import { Header } from "~/@/components/header";
+import { Providers } from "./providers";
 
 const helsinkiGrotesk = localFont({
   src: [
@@ -91,28 +92,25 @@ function Footer() {
               <Link href="#work" className="text-2xl">
                 Apply to Us
               </Link>
-              <Link href="/" className="text-2xl">
-                For Companies
-              </Link>
-              <Link href="/" className="text-2xl">
+              <Link href="/blog" className="text-2xl">
                 Blog
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
               <Link href="/" className="text-2xl">
-                Services
+                For Companies
               </Link>
               <Link href="/" className="text-2xl">
-                Uraohjain
+                Heading 1
               </Link>
               <Link href="/" className="text-2xl">
-                Opinto-ohjaus
+                Heading 2
               </Link>
               <Link href="/" className="text-2xl">
-                S2 Opetus
+                Heading 3
               </Link>
               <Link href="/" className="text-2xl">
-                Hymykyla
+                Heading 4
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
@@ -123,10 +121,7 @@ function Footer() {
                 Our Values
               </Link>
               <Link href="/" className="text-2xl">
-                Contact
-              </Link>
-              <Link href="/" className="text-2xl">
-                Our Location
+                Contact Info
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
@@ -177,7 +172,7 @@ function Footer() {
               </p>
             </div>
             <div className="flex flex-col gap-1">
-              <p className="text-[1.5625rem]">Metropolian kampusa</p>
+              <p className="text-[1.5625rem]">Metropolian kampus</p>
               <p className="text-[1.5625rem]">
                 Myllypurontie 1, 00920 Helsinkid
               </p>
@@ -200,9 +195,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${helsinkiGrotesk.className}`}>
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

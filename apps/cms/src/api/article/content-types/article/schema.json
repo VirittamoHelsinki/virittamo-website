@@ -38,20 +38,14 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       }
-    },
-    "contents": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "blocks"
     },
     "content": {
       "pluginOptions": {
@@ -70,6 +64,15 @@
       "type": "boolean",
       "required": true,
       "default": false
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

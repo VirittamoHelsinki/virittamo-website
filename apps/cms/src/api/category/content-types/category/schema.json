@@ -15,12 +15,6 @@
       "type": "string",
       "unique": true,
       "required": true
-    },
-    "projects": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::project.project",
-      "inversedBy": "categories"
     }
   }
 }

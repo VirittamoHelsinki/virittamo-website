@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_list_image_lists",
+  "info": {
+    "displayName": "image-list"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

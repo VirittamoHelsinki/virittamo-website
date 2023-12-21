@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_accordion_criterion_accordions",
+  "info": {
+    "displayName": "criterion-accordion"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "criterionList": {
+      "displayName": "generic-list",
+      "type": "component",
+      "repeatable": true,
+      "component": "list.generic-list"
+    },
+    "note": {
+      "type": "text"
+    }
+  }
+}
