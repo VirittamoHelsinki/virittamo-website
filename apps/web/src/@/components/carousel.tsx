@@ -4,13 +4,13 @@ import React, { useState, useCallback } from "react";
 import { useTransition, animated } from "@react-spring/web";
 import Image from "next/image";
 
-interface SlideData {
+type SlideData = {
   imageUrl: string;
   title: string;
   description: string;
 }
 
-interface CarouselProps {
+type CarouselProps = {
   slides: SlideData[];
 }
 
@@ -54,7 +54,7 @@ export function Carousel({ slides }: CarouselProps) {
               <h2 className="text-[6.25rem] font-bold text-white">
                 {item!.title}
               </h2>
-              {/* <p className="text-md text-gray-600">{item!.description}</p> */}
+              <p className="text-md text-gray-600">{item!.description}</p>
             </div>
           </animated.div>
         ))}

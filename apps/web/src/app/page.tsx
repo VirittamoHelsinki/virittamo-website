@@ -15,7 +15,7 @@ import {
 import { Button } from "~/@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
 import { Icons } from "~/@/components/icons";
-import { Test } from "~/@/components/test";
+import { Test } from "./_test";
 import { Suspense } from "react";
 
 function HeroSection() {
@@ -541,7 +541,7 @@ const logos = [
         xmlns="http://www.w3.org/2000/svg"
         className={className}
       >
-        <g clip-path="url(#clip0)">
+        <g clipPath="url(#clip0)">
           <path
             d="M91.8964 5.86963C91.8923 5.86963 91.8876 5.86963 91.8828 5.86963C87.2971 5.86963 83.5801 9.45538 83.5801 13.8792C83.5801 17.0515 85.4916 19.7926 88.2644 21.09C89.3535 21.6413 90.5862 21.9523 91.8944 21.9523C91.8951 21.9523 91.8957 21.9523 91.8964 21.9523H100.163V13.845C100.149 9.44553 96.4563 5.88275 91.8971 5.87029L91.8964 5.86963ZM96.81 18.6731H91.942C91.9175 18.6744 91.8882 18.675 91.859 18.675C91.7093 18.675 91.5631 18.658 91.4236 18.6265C91.2733 18.5805 91.0848 18.5484 90.8896 18.5398C88.6209 18.0529 86.9508 16.1386 86.9352 13.8457C86.9352 11.2135 89.1454 9.08132 91.8726 9.08132C94.5998 9.08132 96.81 11.2135 96.81 13.8444V18.6737V18.6731Z"
             fill="black"
@@ -573,7 +573,7 @@ const logos = [
   {
     Valve: ({ className }: { className: string }) => (
       <svg
-        aria-title="Gofore"
+        xlinkTitle="Gofore"
         width="107"
         height="18"
         viewBox="0 0 107 18"
@@ -655,8 +655,8 @@ const logos = [
             y2="229.34"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#fa344c" />
-            <stop offset="1" stop-color="#011278" />
+            <stop offset="0" stopColor="#fa344c" />
+            <stop offset="1" stopColor="#011278" />
           </linearGradient>
           <clipPath id="clippath">
             <path
@@ -785,17 +785,17 @@ const slides = [
 export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col px-[100px]">
-      <Suspense fallback={"Arto is thinking for 100..."}>
+      <Suspense fallback={<div>Arto is thinking...</div>}>
         <Test />
+        {/* <HeroSection /> */}
+        <Partners />
+        <Carousel slides={slides} />
+        <TODO />
+        <OurTeams />
+        <OurProject />
+        <ApplyToWork />
+        <PreviousEmployees />
       </Suspense>
-      <HeroSection />
-      <Partners />
-      <Carousel slides={slides} />
-      <TODO />
-      <OurTeams />
-      <OurProject />
-      <ApplyToWork />
-      <PreviousEmployees />
     </main>
   );
 }

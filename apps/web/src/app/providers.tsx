@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryStreamedHydration } from '@tanstack/react-query-next-experimental';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { type ReactNode, useState } from 'react'
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import * as React from "react";
+import { ReactQueryStreamedHydration } from "@tanstack/react-query-next-experimental";
 
-export function Providers(props: { children: ReactNode }) {
-  const [queryClient] = useState(
+export function Providers(props: { children: React.ReactNode }) {
+  const [queryClient] = React.useState(
     () =>
       new QueryClient({
         defaultOptions: {
@@ -15,7 +15,7 @@ export function Providers(props: { children: ReactNode }) {
           },
         },
       }),
-  )
+  );
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -24,5 +24,5 @@ export function Providers(props: { children: ReactNode }) {
       </ReactQueryStreamedHydration>
       {<ReactQueryDevtools initialIsOpen={false} />}
     </QueryClientProvider>
-  )
+  );
 }
