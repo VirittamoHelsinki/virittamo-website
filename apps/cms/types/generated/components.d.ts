@@ -69,11 +69,13 @@ export interface ListBenefitList extends Schema.Component {
   collectionName: 'components_list_benefit_lists';
   info: {
     displayName: 'benefit-list';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
     description: Attribute.Text;
     link: Attribute.String;
+    linkName: Attribute.String;
   };
 }
 

@@ -1,8 +1,7 @@
-import { NextResponse } from "next/server";
 
 export async function GET() {
   const res = await fetch(
-    "http://localhost:1337/api/home-page?locale=fi&populate[hero][populate]=*",
+    "http://localhost:1337/api/home-page?locale=fi&populate[teamAccordion][populate][marquee][populate]=*&populate[teamAccordion][populate][button][populate]=*",
     {
       method: "GET",
       headers: {
