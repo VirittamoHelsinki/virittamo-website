@@ -125,6 +125,18 @@ export interface ListList extends Schema.Component {
   };
 }
 
+export interface ListValueList extends Schema.Component {
+  collectionName: 'components_list_value_lists';
+  info: {
+    displayName: 'value-list';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface SectionApplySection extends Schema.Component {
   collectionName: 'components_section_apply_sections';
   info: {
@@ -219,6 +231,7 @@ declare module '@strapi/types' {
       'list.generic-list': ListGenericList;
       'list.image-list': ListImageList;
       'list.list': ListList;
+      'list.value-list': ListValueList;
       'section.apply-section': SectionApplySection;
       'section.employed-section': SectionEmployedSection;
       'section.hero-section': SectionHeroSection;

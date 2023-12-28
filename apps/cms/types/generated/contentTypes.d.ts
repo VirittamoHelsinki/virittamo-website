@@ -774,6 +774,7 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
     singularName: 'about-page';
     pluralName: 'about-pages';
     displayName: 'about-page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -809,6 +810,18 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
         };
       }>;
     heading2: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contacts: Attribute.Component<'list.contact-list', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    values: Attribute.Component<'list.value-list', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -895,6 +908,11 @@ export interface ApiArticleArticle extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    categories: Attribute.Relation<
+      'api::article.article',
+      'manyToMany',
+      'api::category.category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -978,12 +996,18 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     singularName: 'category';
     pluralName: 'categories';
     displayName: 'Category';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     name: Attribute.String & Attribute.Required & Attribute.Unique;
+    articles: Attribute.Relation<
+      'api::category.category',
+      'manyToMany',
+      'api::article.article'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

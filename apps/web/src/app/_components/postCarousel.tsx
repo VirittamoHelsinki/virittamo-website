@@ -11,6 +11,7 @@ import {
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useSuspenseQuery } from "@tanstack/react-query";
 
 const slides = [
     {
@@ -36,7 +37,38 @@ const slides = [
     },
 ];
 
+export const runtime = "edge"; // 'nodejs' (default) | 'edge'
+
+function getBaseURL() {
+    if (typeof window !== "undefined") {
+        return "";
+    }
+    if (process.env.VERCEL_URL) {
+        return `https://${process.env.VERCEL_URL}`;
+    }
+    return "http://localhost:3000";
+}
+const baseUrl = getBaseURL();
+function useFeatureQuery() {
+    const query = useSuspenseQuery({
+        queryKey: ["feature", 1000],
+        queryFn: async () => {
+            const path = `/api/strapi/feature`;
+            const url = baseUrl + path;
+
+            const res = await fetch(url, {
+                cache: "no-store",
+            });
+
+            return (await res.json()) as string;
+        },
+    });
+
+    return [query.data, query] as const;
+}
+
 export function CarouselDemo() {
+    const featureData = useFeatureQuery()
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
@@ -54,6 +86,8 @@ export function CarouselDemo() {
         })
     }, [api])
 
+    console.log(featureData[0].data)
+
     return (
         <div className="pt-[9.375rem]">
             <Carousel
@@ -66,22 +100,22 @@ export function CarouselDemo() {
                 ]}
             >
                 <CarouselContent>
-                    {slides.map((item, index) => (
+                    {featureData[0].data.map((slide, index) => (
                         <CarouselItem key={index}>
                             <Card className="p-0 rounded-xl border-none">
                                 <CardContent className="relative flex p-0">
                                 <figure className="aspect-video w-full">
                                     <Image
-                                        src={item.imageUrl}
-                                        alt={item.title}
+                                        src={slide.attributes.image.data.attributes.url}
+                                        alt={slide.title}
                                         className="w-full h-[911px] rounded-xl object-cover"
                                         width={2000}
                                         height={911}
                                     />
                                     </figure>
                                     <div className="absolute bottom-0 left-0 pl-20 pb-10 text-white max-w-4xl">
-                                        <h2 className="text-[6.25rem] font-bold">{item.title}</h2>
-                                        <p className="text-xl">{item.description}</p>
+                                        <h2 className="text-[6.25rem] font-bold">{slide.title}</h2>
+                                        <p className="text-xl">{slide.description}</p>
                                     </div>
                                 </CardContent>
                             </Card>

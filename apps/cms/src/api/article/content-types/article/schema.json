@@ -73,6 +73,12 @@
       },
       "type": "uid",
       "targetField": "title"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "articles"
     }
   }
 }
