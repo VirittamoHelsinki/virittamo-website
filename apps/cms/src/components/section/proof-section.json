@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_proof_sections",
+  "info": {
+    "displayName": "wwa-section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

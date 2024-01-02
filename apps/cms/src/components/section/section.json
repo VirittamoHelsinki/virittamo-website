@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_section_sections",
+  "info": {
+    "displayName": "partner-section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "partners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.image-list"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_button_buttons",
+  "info": {
+    "displayName": "generic-button",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_section_employed_sections",
+  "info": {
+    "displayName": "employed-section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "logos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.image-list"
+    }
+  }
+}

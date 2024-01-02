@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_section_team_sections",
+  "info": {
+    "displayName": "team-section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

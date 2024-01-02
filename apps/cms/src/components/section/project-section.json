@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_section_project_sections",
+  "info": {
+    "displayName": "project-section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
