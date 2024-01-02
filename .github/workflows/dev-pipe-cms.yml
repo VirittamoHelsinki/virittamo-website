@@ -17,8 +17,8 @@ jobs:
         run: |
           cd apps/cms
           npm ci
-      - name: Run lint
-        run: npm run lint
+      - name: Run typecheck
+        run: npm run typecheck
 
   build:
     runs-on: ubuntu-latest
