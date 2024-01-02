@@ -14,9 +14,7 @@ jobs:
           node-version: 18
           cache: "npm"
       - name: Install Dependencies
-        run: |
-          cd apps/cms
-          npm ci
+        run: npm ci
       - name: Run typecheck
         run: npm run typecheck
 
