@@ -1062,6 +1062,12 @@ export interface ApiCompaniesPageCompaniesPage extends Schema.SingleType {
           localized: false;
         };
       }>;
+    services: Attribute.Component<'list.value-list', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

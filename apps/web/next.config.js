@@ -24,7 +24,7 @@ const config = {
         hostname: "cdn.pixabay.com",
         port: "",
       },
-        {
+      {
         protocol: "https",
         hostname: "virittamocmstest.blob.core.windows.net",
         port: "",

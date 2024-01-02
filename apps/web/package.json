@@ -23,18 +23,22 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@react-spring/web": "^9.7.3",
     "@t3-oss/env-nextjs": "^0.7.1",
-    "@tanstack/react-query": "^5.14.2",
-    "@tanstack/react-query-devtools": "^5.14.2",
-    "@tanstack/react-query-next-experimental": "^5.14.2",
+    "@tanstack/react-query": "^4.36.1",
+    "@trpc/client": "^10.45.0",
+    "@trpc/next": "^10.45.0",
+    "@trpc/react-query": "^10.45.0",
+    "@trpc/server": "^10.45.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "embla-carousel": "^8.0.0-rc17",
     "embla-carousel-autoplay": "^8.0.0-rc17",
     "embla-carousel-react": "^8.0.0-rc17",
-    "lucide-react": "^0.302.0",
+    "lucide-react": "^0.303.0",
     "next": "14.0.4",
     "next-mdx-remote": "^4.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "superjson": "^2.2.1",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
@@ -56,5 +60,15 @@
     "tailwindcss": "^3.4.0",
     "typescript": "5.3.3"
   },
-  "packageManager": "pnpm@8.11.0"
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  }
 }

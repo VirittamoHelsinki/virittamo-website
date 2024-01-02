@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Logo } from "~/@/components/icons";
 import {
@@ -18,12 +16,13 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "~/@/components/ui/navigation-menu";
-import { useState } from "react";
 import { cn } from "~/@/lib/utils";
 import { usePathname } from "next/navigation";
+import { useLang } from "~/utils/lang-provider";
 
 function LanguageSelect() {
-  const [lang, setLang] = useState("fi");
+  const { locale, setLocale } = useLang();
+  if (!setLocale) throw new Error("setLocale is undefined");
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -31,7 +30,7 @@ function LanguageSelect() {
           <span
             className={cn(
               "text-2xl transition-all",
-              lang === "fi"
+              locale === "fi"
                 ? "rotate-0 scale-100"
                 : "absolute -rotate-90 scale-0",
             )}
@@ -42,7 +41,7 @@ function LanguageSelect() {
           <span
             className={cn(
               "text-2xl transition-all",
-              lang === "en"
+              locale === "en"
                 ? "rotate-0 scale-100"
                 : "absolute rotate-90 scale-0",
             )}
@@ -54,9 +53,9 @@ function LanguageSelect() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setLang("fi")}>FI</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setLang("en")}>EN</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setLang("se")}>SE</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setLocale("fi")}>FI</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setLocale("en")}>EN</DropdownMenuItem>
+        {/* <DropdownMenuItem onClick={() => setLocale("se")}>SE</DropdownMenuItem> */}
       </DropdownMenuContent>
     </DropdownMenu>
   );
@@ -65,7 +64,7 @@ function LanguageSelect() {
 export function Header() {
   const pathname = usePathname();
   return (
-    <header className="flex items-center justify-between px-[100px] py-[50px]">
+    <header className="sticky flex items-center justify-between px-[100px] py-[50px]">
       <figure className="w-full max-w-[150px]">
         <Logo />
       </figure>
@@ -87,10 +86,10 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>
                 <Link
-                  href="/companies"
+                  href="/company"
                   className={cn(
                     "text-2xl",
-                    pathname === "/companies" && "underline",
+                    pathname === "/company" && "underline",
                   )}
                 >
                   For Companies
@@ -121,45 +120,6 @@ export function Header() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        {/* <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>
-                <Link
-                  href="/services"
-                  className={cn(
-                    "text-2xl",
-                    pathname === "/services" && "underline",
-                  )}
-                >
-                  Services
-                </Link>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <Link href="/services#uraohjaus" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Uraohjaus
-                  </NavigationMenuLink>
-                </Link>
-                <Link href="/services#opinto-ohjaus" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Opinto-ohjaus
-                  </NavigationMenuLink>
-                </Link>
-                <Link href="/services#s2-opetus" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    S2 Opetus
-                  </NavigationMenuLink>
-                </Link>
-                <Link href="/services#hymykyla" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Hymykylä
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu> */}
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
