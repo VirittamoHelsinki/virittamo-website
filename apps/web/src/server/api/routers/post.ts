@@ -106,10 +106,21 @@ export type Pagination = {
 export const postRouter = createTRPCRouter({
   getPage: publicProcedure
     .input(z.object({ lang: z.string() }))
-    .query(({ input }) => {
-      return {
-        greeting: `Hello from Arto`,
-      };
+    .query(async ({ input }) => {
+      const res = await fetch(
+        `http://localhost:1337/api/blogpage?locale=${input.lang}&populate=*`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
+          },
+        },
+      );
+
+      const data = (await res.json()) as string;
+
+      return data;
     }),
   getAllPost: publicProcedure
     .input(z.object({ lang: z.string() }))

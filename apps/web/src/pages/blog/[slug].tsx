@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-// import { Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import {
   type GetStaticPaths,
   type GetStaticProps,
@@ -29,9 +29,9 @@ export default function PostPage({
   frontMatter,
   html,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  // if (isPostLoading) {
-  //   return <Loader2 className="animate-spin" />;
-  // }
+  if (frontMatter.image === undefined || html === undefined) {
+    return <Loader2 className="animate-spin" />;
+  }
   return (
     <main className="flex min-h-screen flex-col items-center px-[100px]">
       <article className="flex max-w-[85ch] flex-col gap-10">
@@ -105,6 +105,11 @@ export const getStaticProps = (async (context) => {
   );
 
   const postData = (await res.json()) as Articles;
+  if (postData?.data[0] === undefined) {
+    return {
+      notFound: true,
+    };
+  }
   const content = await serialize(postData?.data[0]?.attributes.content);
 
   return {
