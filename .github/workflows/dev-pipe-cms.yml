@@ -16,7 +16,7 @@ jobs:
       - name: Install Dependencies
         run: cd apps/cms && npm ci
       - name: Run typecheck
-        run: npm run typecheck
+        run: cd apps/cms && npm run typecheck
 
   build:
     runs-on: ubuntu-latest
