@@ -34,12 +34,13 @@
       "type": "text",
       "required": true
     },
-    "image": {
+    "media": {
       "type": "media",
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images"
+        "images",
+        "videos"
       ],
       "pluginOptions": {
         "i18n": {

@@ -117,8 +117,8 @@ export const getStaticProps = (async (context) => {
       frontMatter: {
         title: postData?.data[0]?.attributes.title,
         slug: postData?.data[0]?.attributes.slug,
-        mime: postData?.data[0]?.attributes.image.data.attributes.mime,
-        image: postData?.data[0]?.attributes.image.data.attributes.url,
+        mime: postData?.data[0]?.attributes.media.data.attributes.mime,
+        image: postData?.data[0]?.attributes.media.data.attributes.url,
       },
       html: content,
     },

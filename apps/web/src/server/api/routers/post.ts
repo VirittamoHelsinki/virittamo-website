@@ -22,7 +22,7 @@ export type PurpleAttributes = {
   feature: boolean;
   slug: string;
   locale: string;
-  image: Image;
+  media: Image;
   categories: Categories;
   localizations: Categories;
 };

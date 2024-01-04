@@ -1,4 +1,4 @@
-name: CMS Development deployment to Azure Web App
+name: Deploy CMS
 
 on: [push, pull_request]
 
@@ -14,7 +14,7 @@ jobs:
           node-version: 18
           cache: "npm"
       - name: Install Dependencies
-        run: npm ci
+        run: cd apps/cms && npm ci
       - name: Run typecheck
         run: npm run typecheck
 

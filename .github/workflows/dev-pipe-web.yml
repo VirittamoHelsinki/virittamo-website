@@ -1,4 +1,4 @@
-name: Web Development deployment to Azure Web App
+name: Deploy Web
 
 on: [push, pull_request]
 

@@ -12,7 +12,7 @@ WORKDIR /app
 RUN npm install -g turbo
 RUN npm install -g @strapi/strapi
 COPY . .
-RUN turbo prune --scope=cms --docker
+RUN turbo prune cms --docker
 
 # Add lockfile and package.json's of isolated subworkspace
 FROM base AS installer

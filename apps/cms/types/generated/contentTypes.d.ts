@@ -882,7 +882,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    image: Attribute.Media &
+    media: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;

@@ -69,7 +69,7 @@ export default function BlogPage() {
               <Link href={`/blog/${article.attributes.slug}`} passHref>
                 <Image
                   className="h-[500px] w-[535px] rounded-xl object-cover"
-                  src={article.attributes.image.data.attributes.url}
+                  src={article.attributes.media.data.attributes.url}
                   alt="Picture of the author"
                   width={2000}
                   height={2000}
