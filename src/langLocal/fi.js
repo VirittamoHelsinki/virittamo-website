@@ -166,26 +166,33 @@ export const fi = {
       qualifications: [
         {
           title: "Työttömänä vähintään 24 kk / 28 kk",
-          desc: ["30-vuotta täyttänyt, saanut työmarkkinatukea työttömyyden perusteella vähintään 300 päivää"],
+          desc: [
+            "30-vuotta täyttänyt, saanut työmarkkinatukea työttömyyden perusteella vähintään 300 päivää",
+          ],
         },
         {
           title: "Työttömänä vähintään 12 kk / 14 kk",
           desc: [
             "Ammattiin valmistunut tai tutkinnon (ei yo) suorittanut 25-29 -vuotias",
             "Osatyökykyinen kyseiseen työtehtävään vaikuttavan diagnosoidun terveydellisen seikan perusteella",
-            "Maahanmuuttaja, jolla on oleskelulupa tai jonka oleskelu on rekisteröity"
+            "Maahanmuuttaja, jolla on oleskelulupa tai jonka oleskelu on rekisteröity",
           ],
         },
         {
           title: "Työtön vähintään 6 kk",
-          desc: ["Ammattiin valmistunut tai tutkinnon (ei yo) suorittanut alle 25-vuotias"],
+          desc: [
+            "Ammattiin valmistunut tai tutkinnon (ei yo) suorittanut alle 25-vuotias",
+          ],
         },
         {
           title: "Oikeutettu velvoitetyöhön",
-          desc: ["57-vuotias tai vanhempi, ja jonka ansiosidonnaisen tai peruspäivärahan enimmäispäivät ovat täyttyneet hänen täytettyään 57 vuotta"],
+          desc: [
+            "57-vuotias tai vanhempi, ja jonka ansiosidonnaisen tai peruspäivärahan enimmäispäivät ovat täyttyneet hänen täytettyään 57 vuotta",
+          ],
         },
       ],
-      qual_desc: "Edellisen palkkatukijakson päättymisestä kaupungilla tulee olla kulunut vähintään 3 vuotta, jotta voi työllistyä uudelleen palkkatuella kaupungille."
+      qual_desc:
+        "Edellisen palkkatukijakson päättymisestä kaupungilla tulee olla kulunut vähintään 3 vuotta, jotta voi työllistyä uudelleen palkkatuella kaupungille.",
     },
     partners: "Yhteistyökumppanit",
     contact_details: {
@@ -206,7 +213,7 @@ export const fi = {
         {
           name: "John Strandberg",
           title: "Mediatiimin vastaava",
-          phone: "09 310 81403",
+          phone: "09 310 37370",
           email: "john.strandberg@hel.fi",
         },
         {
@@ -258,8 +265,7 @@ export const fi = {
         media: {
           title: "Media",
           description: "Etsitkö media-alan osaajaa projektiisi? Ota yhteyttä!",
-          contact:
-            "John Strandberg / p. 09 310 37370 / john.strandberg@hel.fi",
+          contact: "John Strandberg / p. 09 310 37370 / john.strandberg@hel.fi",
         },
 
         ict: {

@@ -206,7 +206,7 @@ export const en = {
         {
           name: "John Strandberg",
           title: "Head of Media Team",
-          phone: "09 310 81403",
+          phone: "09 310 37370",
           email: "john.strandberg@hel.fi",
         },
         {
