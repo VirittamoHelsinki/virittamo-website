@@ -22,10 +22,9 @@ jobs:
       - name: Build and push container image to registry
         uses: docker/build-push-action@v5
         with:
-          context: apps/web
           push: true
           tags: virittamo.azurecr.io/${{ secrets.ACR_USERNAME }}/${{env.AZURE_WEBAPP_NAME}}:${{ github.sha }}
-          file: apps/web/Dockerfile
+          file: ./apps/web/Dockerfile
 
   deploy-web:
     runs-on: ubuntu-latest
