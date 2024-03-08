@@ -67,13 +67,26 @@ export default function BlogPage() {
           {filteredData?.data.map((article, index) => (
             <li key={index} className="flex max-w-[508px] flex-col gap-[10px]">
               <Link href={`/blog/${article.attributes.slug}`} passHref>
-                <Image
-                  className="h-[500px] w-[535px] rounded-xl object-cover"
-                  src={article.attributes.media.data.attributes.url}
-                  alt="Picture of the author"
-                  width={2000}
-                  height={2000}
-                />
+                {article.attributes.media?.data?.attributes?.mime.startsWith(
+                  "image",
+                ) ? (
+                  <Image
+                    className="h-[500px] w-[535px] rounded-xl object-cover"
+                    src={article.attributes.media.data.attributes.url}
+                    alt="Picture of the author"
+                    width={2000}
+                    height={2000}
+                  />
+                ) : (
+                  <video
+                    disablePictureInPicture={true}
+                    controls={false}
+                    src={article.attributes.media.data.attributes.url}
+                    className="h-[500px] w-[535px] rounded-xl object-cover"
+                    width={2000}
+                    height={800}
+                  />
+                )}
                 <h3 className="text-[2.5rem] font-bold">
                   {article.attributes.title}
                 </h3>

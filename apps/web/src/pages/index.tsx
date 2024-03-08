@@ -139,30 +139,45 @@ function CarouselDemo() {
         <CarouselContent>
           {featureData.data.map((slide, index) => (
             <CarouselItem key={index}>
-              <Card className="rounded-xl border-none p-0">
-                <CardContent className="relative flex p-0">
-                  <figure className="aspect-video max-h-[800px] w-full">
-                    <Image
-                      src={slide.attributes.media.data.attributes.url}
-                      alt={slide.attributes.title}
-                      className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
-                      width={2000}
-                      height={800}
-                    />
-                  </figure>
-                  <div className="absolute bottom-0 left-0 max-w-4xl pb-10 pl-20 text-white">
-                    <h2 className="text-[6.25rem] font-bold">
-                      {slide.attributes.title}
-                    </h2>
-                    <p className="text-xl">{slide.attributes.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <Link href={`/blog/${slide.attributes.slug}`} passHref>
+                <Card className="rounded-xl border-none p-0">
+                  <CardContent className="relative flex p-0">
+                    <figure className="aspect-video max-h-[800px] w-full">
+                      {slide.attributes.media.data.attributes.mime.startsWith(
+                        "image",
+                      ) ? (
+                        <Image
+                          src={slide.attributes.media.data.attributes.url}
+                          alt={slide.attributes.title}
+                          className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
+                          width={2000}
+                          height={800}
+                        />
+                      ) : (
+                        <video
+                          src={slide.attributes.media.data.attributes.url}
+                          className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
+                          width={2000}
+                          height={800}
+                        />
+                      )}
+                    </figure>
+                    <div className="absolute bottom-0 left-0 pb-10 pl-20 text-white">
+                      <h2 className="text-[6.25rem] font-bold">
+                        {slide.attributes.title}
+                      </h2>
+                      <p className="max-w-5xl text-xl">
+                        {slide.attributes.description}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>
         <CarouselPrevious className="absolute left-0 z-10" />
-        <CarouselNext className="absoluteright-0 z-10" />
+        <CarouselNext className="absolute right-0 z-10" />
         <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center gap-1.5 p-5">
           <div>
             {Array.from(Array(count).keys()).map((i) => (
@@ -348,13 +363,24 @@ function OurProject() {
         {fprojectData.data.map((project, index) => (
           <li key={index} className="flex flex-col py-[1.875rem]">
             <Link href={`/blog/${project.attributes.slug}`} passHref>
-              <Image
-                className="h-[661px] w-full rounded-xl object-cover"
-                src={project.attributes.media.data.attributes.url}
-                alt={project.attributes.title}
-                width={553}
-                height={661}
-              />
+              {project.attributes.media.data.attributes.mime.startsWith(
+                "image",
+              ) ? (
+                <Image
+                  className="h-[661px] w-full rounded-xl object-cover"
+                  src={project.attributes.media.data.attributes.url}
+                  alt={project.attributes.title}
+                  width={553}
+                  height={661}
+                />
+              ) : (
+                <video
+                  src={project.attributes.media.data.attributes.url}
+                  className="h-[661px] w-full rounded-xl object-cover"
+                  width={2000}
+                  height={800}
+                />
+              )}
               <span className="hidden text-6xl font-bold">
                 {project.attributes.title}
               </span>

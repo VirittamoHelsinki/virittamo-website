@@ -1,9 +1,9 @@
 export default ({ env }) => {
   return {
     connection: {
-      client: "mysql",
+      client: "mysql2",
       connection: {
-        connectionString: env("DATABASE_URL"),
+        // connectionString: env("DATABASE_URL"),
         host: env("DATABASE_HOST", "localhost"),
         port: env.int("DATABASE_PORT", 3306),
         database: env("DATABASE_NAME", "strapi"),
