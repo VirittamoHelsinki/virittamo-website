@@ -3,7 +3,7 @@ name: Build and deploy a container to an Azure Web App DEV CMS
 # env:
 #   AZURE_WEBAPP_CMS_NAME: virittamocmstest
 
-on: workflow_dispatch
+on: [push, pull_request]
 
 jobs:
   build:
