@@ -4,13 +4,13 @@ RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev l
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-WORKDIR /opt/app/apps/cms
-COPY package.json package-lock.json ./
+WORKDIR /opt/
+COPY ./apps/cms/package.json package-lock.json ./
 RUN npm install -g node-gyp
 RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install --only=production
 ENV PATH /opt/node_modules/.bin:$PATH
-WORKDIR /opt/app/apps/cms
-COPY ./apps/cms/ ./ 
+WORKDIR /opt/app
+COPY . . 
 RUN npm run build
 
 # Creating final production image
