@@ -27,6 +27,7 @@ jobs:
           push: true
           tags: virittamo.azurecr.io/${{ secrets.ACR_USERNAME }}/${{env.AZURE_WEBAPP_CMS_NAME}}:${{ github.sha }}
           file: ./apps/cms/Dockerfile
+          context: ./apps/cms
 
   deploy:
     runs-on: ubuntu-latest
