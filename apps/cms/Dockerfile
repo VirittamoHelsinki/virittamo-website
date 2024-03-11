@@ -10,7 +10,7 @@ RUN npm install -g node-gyp
 RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install --only=production
 ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
-COPY . .
+COPY ./ ./ 
 RUN npm run build
 
 # Creating final production image
