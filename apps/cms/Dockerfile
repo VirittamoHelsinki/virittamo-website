@@ -5,12 +5,12 @@ ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/
-COPY package.json ./
+COPY package.json  ./
 RUN npm install -g node-gyp
 RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install --only=production
 ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
-COPY . . 
+COPY . .
 RUN npm run build
 
 # Creating final production image
