@@ -24,10 +24,9 @@ jobs:
         id: build-to-push
         uses: docker/build-push-action@v5
         with:
-          context: ./apps/cms
           push: true
           tags: virittamo.azurecr.io/${{ secrets.ACR_USERNAME }}/${{env.AZURE_WEBAPP_CMS_NAME}}:${{ github.sha }}
-          file: ./Dockerfile
+          file: ./apps/cms/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
