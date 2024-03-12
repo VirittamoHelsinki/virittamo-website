@@ -6,7 +6,7 @@ on: workflow_dispatch # (manual trigger works on default branch only otherwise i
 jobs:
   build:
     runs-on: ubuntu-latest
-    enviroment: development
+    environment: development
     steps:
       - name: Checkout
         uses: actions/checkout@v4
