@@ -1,6 +1,7 @@
 name: Build and deploy a container to an Azure Web App DEV CMS
 
-on: workflow_dispatch # (manual trigger works on default branch only otherwise it does not do anything. you can not trigger this workflow)
+on:
+  workflow_dispatch # (manual trigger works on default branch only otherwise it does not do anything. you can not trigger this workflow)
   #[push, pull_request] # use this if you want new change after pushing to github
 
 jobs:
@@ -23,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: virittamo.azurecr.io/${{ secrets.ACR_USERNAME }}/${{env.AZURE_WEBAPP_CMS_NAME}}:${{ github.sha }}
+          tags: virittamo.azurecr.io/${{ secrets.ACR_USERNAME }}/${{secrets.AZURE_WEBAPP_CMS_NAME}}:${{ github.sha }}
           file: ./apps/cms/Dockerfile
           context: ./apps/cms
 
@@ -38,6 +39,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ env.AZURE_WEBAPP_CMS_NAME }}
+          app-name: ${{ secrets.AZURE_WEBAPP_CMS_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_CMS_PUBLISH_PROFILE }}
-          images: virittamo.azurecr.io/${{ secrets.ACR_USERNAME }}/${{ env.AZURE_WEBAPP_CMS_NAME }}:${{ github.sha }}
+          images: virittamo.azurecr.io/${{ secrets.ACR_USERNAME }}/${{ secrets.AZURE_WEBAPP_CMS_NAME }}:${{ github.sha }}
