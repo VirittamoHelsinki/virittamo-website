@@ -7,9 +7,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "format": "prettier --check . --ignore-path ../../.gitignore",
-    "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "start": "next start"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",

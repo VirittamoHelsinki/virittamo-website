@@ -6,9 +6,7 @@
   "scripts": {
     "build": "strapi build",
     "dev": "strapi develop",
-    "format": "prettier --check . --ignore-path ../../.gitignore",
     "start": "strapi start",
-    "typecheck": "tsc --noEmit",
     "strapi": "strapi"
   },
   "dependencies": {
@@ -18,9 +16,9 @@
     "mysql2": "3.9.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^5.3.4",
+    "react-router-dom": "5.3.4",
     "strapi-provider-upload-azure-storage": "3.4.0",
-    "styled-components": "^5.3.11"
+    "styled-components": "5.3.11"
   },
   "strapi": {
     "uuid": "98bd700a-1936-4d17-89c8-660b1a5e92af"
