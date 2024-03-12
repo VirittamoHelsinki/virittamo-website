@@ -183,7 +183,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/home-page?locale=${input.lang}&populate=*`,
+        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate=*`,
         {
           method: "GET",
           headers: {
@@ -201,7 +201,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/home-page?locale=${input.lang}&populate[hero][populate]=*`,
+        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[hero][populate]=*`,
         {
           method: "GET",
           headers: {
@@ -219,7 +219,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/home-page?locale=${input.lang}&populate[partners][populate][partners][populate]=*`,
+        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[partners][populate][partners][populate]=*`,
         {
           method: "GET",
           headers: {
@@ -255,7 +255,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/home-page?locale=${input.lang}&populate[wwa][populate]=*`,
+        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[wwa][populate]=*`,
         {
           method: "GET",
           headers: {
@@ -273,7 +273,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/home-page?locale=${input.lang}&populate[teamAccordion][populate][marquee][populate]=*&populate[teamAccordion][populate][button][populate]=*`,
+        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[teamAccordion][populate][marquee][populate]=*&populate[teamAccordion][populate][button][populate]=*`,
         {
           method: "GET",
           headers: {
@@ -291,7 +291,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/articles?locale=${input.lang}&filters[feature][$eq]=true&filters[categories][name][$eq]=project&populate=*`,
+        `${process.env.API_URL}/api/articles?locale=${input.lang}&filters[feature][$eq]=true&filters[categories][name][$eq]=project&populate=*`,
         {
           method: "GET",
           headers: {
@@ -309,7 +309,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/home-page?locale=${input.lang}&populate[criterion][populate][criterionList][populate]=*`,
+        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[criterion][populate][criterionList][populate]=*`,
         {
           method: "GET",
           headers: {
@@ -327,7 +327,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/home-page?locale=${input.lang}&populate[benefit][populate]=*`,
+        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[benefit][populate]=*`,
         {
           method: "GET",
           headers: {
@@ -345,7 +345,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/home-page?locale=${input.lang}&populate[employed][populate][logos][populate]=*`,
+        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[employed][populate][logos][populate]=*`,
         {
           method: "GET",
           headers: {

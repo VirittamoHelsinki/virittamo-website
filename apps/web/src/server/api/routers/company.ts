@@ -87,7 +87,7 @@ export const companyRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/companies-page?locale=${input.lang}&populate=*`,
+        `${process.env.API_URL}/api/companies-page?locale=${input.lang}&populate=*`,
         {
           method: "GET",
           headers: {

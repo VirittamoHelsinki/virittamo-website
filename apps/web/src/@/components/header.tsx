@@ -149,12 +149,12 @@ export function Header() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <Link
+       {/* <Link
           href="/blog"
           className={cn("text-2xl", pathname === "/blog" && "underline")}
         >
-          Blog
-        </Link>
+          Ajankohtaista
+        </Link> */}
         <LanguageSelect />
       </nav>
     </header>

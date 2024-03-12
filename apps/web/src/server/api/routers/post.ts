@@ -108,7 +108,7 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/blogpage?locale=${input.lang}&populate=*`,
+        `${process.env.API_URL}/api/blogpage?locale=${input.lang}&populate=*`,
         {
           method: "GET",
           headers: {
@@ -126,7 +126,7 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/articles?locale=${input.lang}&populate=*`,
+        `${process.env.API_URL}/api/articles?locale=${input.lang}&populate=*`,
         {
           method: "GET",
           headers: {
@@ -145,7 +145,7 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/articles?locale=${input.lang}&filters[categories][name][$eq]=news&populate=*`,
+        `${process.env.API_URL}/api/articles?locale=${input.lang}&filters[categories][name][$eq]=news&populate=*`,
         {
           method: "GET",
           headers: {
@@ -163,7 +163,7 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/articles?locale=${input.lang}&filters[categories][name][$eq]=project&populate=*`,
+        `${process.env.API_URL}/api/articles?locale=${input.lang}&filters[categories][name][$eq]=project&populate=*`,
         {
           method: "GET",
           headers: {
@@ -181,7 +181,7 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/articles?locale=${input.lang}&filters[categories][name][$eq]=story&populate=*`,
+        `${process.env.API_URL}/api/articles?locale=${input.lang}&filters[categories][name][$eq]=story&populate=*`,
         {
           method: "GET",
           headers: {
@@ -199,7 +199,7 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ lang: z.string(), slug: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/articles?locale=${input.lang}&filters[slug]=${input.slug}&populate=*`,
+        `${process.env.API_URL}/api/articles?locale=${input.lang}&filters[slug]=${input.slug}&populate=*`,
         {
           method: "GET",
           headers: {
@@ -217,7 +217,7 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ lang: z.string(), category: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/articles?locale=${input.lang}&filters[categories][name][$eq]=${input.category}&populate=*`,
+        `${process.env.API_URL}/api/articles?locale=${input.lang}&filters[categories][name][$eq]=${input.category}&populate=*`,
         {
           method: "GET",
           headers: {

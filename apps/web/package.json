@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "clean": "git clean -xdf .next .turbo node_modules",
     "dev": "next dev",
     "lint": "next lint",
     "format": "prettier --check . --ignore-path ../../.gitignore",
