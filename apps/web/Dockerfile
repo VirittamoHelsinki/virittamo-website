@@ -3,22 +3,25 @@
 FROM --platform=linux/amd64 node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat openssl
 WORKDIR /app
+
 # Install dependencies based on the preferred package manager
 COPY package.json package-lock.json* ./
+
 RUN npm install
 
 ##### BUILDER
 
 FROM --platform=linux/amd64 node:20-alpine AS builder
-ARG DATABASE_URL
-ARG NEXT_PUBLIC_CLIENTVAR
+ARG STRAPI_TOKEN
+ARG API_URL
+ARG NEXT_PUBLIC_STRAPI_TOKEN
+ARG NEXT_PUBLIC_API_URL
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# ENV NEXT_TELEMETRY_DISABLED 1
+# ENV NEXT_TELEMETRY_DISABLED 1# ENV NEXT_TELEMETRY_DISABLED 1
 RUN SKIP_ENV_VALIDATION=1 npm run build
-
 
 ##### RUNNER
 
@@ -36,7 +39,7 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
-EXPOSE 5173
-ENV PORT 5173
+EXPOSE 3000
+ENV PORT 3000
 
-CMD ["node", "server.js"]
+CMD ["server.js"]
