@@ -14,12 +14,13 @@ npm run dev
 
 ### Apps
 
-- `web`: a [Next.js](https://nextjs.org/) app
-- `cms`: another [StrapiCMS](https://strapi.io/) app
+- `web`: [Next.js](https://nextjs.org/) app
+- `cms`: [StrapiCMS](https://strapi.io/) app
 
 ## Future Features / Improvements
 
-- TBD
+- [ ] homepage loading time fix (static page loading page )
+- [ ] edit strapi content due to sth
 
 ## Credits
 
