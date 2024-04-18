@@ -7,21 +7,11 @@ export function Apply({ apply }) {
   return (
     <section className="homePage__apply">
       <h2>{apply.title}</h2>
-      <p>{apply.description}</p>
+      <p>{apply.description}<a class="large-link" href={apply.link}>{apply.linktext}</a></p>
       <div className="homePage__apply--container">
-        <ul className="homePage__apply--container-list">
-          {apply.qualifications.map((item, index) => (
-            <li key={index} className="homePage__apply--container-list-item">
-             <ul className="unset-list"><li className="heading">{item.title}</li></ul>
-              <ul className="list-style">
-                {item.desc.map((des, index) => (
-                  <li key={index}>{des}</li>
-                ))}
-              </ul>
-            </li>
-          ))}
+        {/* <ul className="homePage__apply--container-list">
           <p>{apply.qual_desc}</p>
-        </ul>
+        </ul> */}
         <figure>
           <img src={applyImg} alt="Apply" />
         </figure>

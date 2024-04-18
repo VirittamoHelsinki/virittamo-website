@@ -162,35 +162,39 @@ export const fi = {
     apply: {
       title: "Kuka voi hakea?",
       description:
-        "Palkkatukityöjaksolle Helsingin kaupungille voi työllistyä helsinkiläinen työtön työnhakija, jolla on mahdollisuus palkkatukeen, ja joka on ollut:",
-      qualifications: [
-        {
-          title: "Työttömänä vähintään 24 kk / 28 kk",
-          desc: [
-            "30-vuotta täyttänyt, saanut työmarkkinatukea työttömyyden perusteella vähintään 300 päivää",
-          ],
-        },
-        {
-          title: "Työttömänä vähintään 12 kk / 14 kk",
-          desc: [
-            "Ammattiin valmistunut tai tutkinnon (ei yo) suorittanut 25-29 -vuotias",
-            "Osatyökykyinen kyseiseen työtehtävään vaikuttavan diagnosoidun terveydellisen seikan perusteella",
-            "Maahanmuuttaja, jolla on oleskelulupa tai jonka oleskelu on rekisteröity",
-          ],
-        },
-        {
-          title: "Työtön vähintään 6 kk",
-          desc: [
-            "Ammattiin valmistunut tai tutkinnon (ei yo) suorittanut alle 25-vuotias",
-          ],
-        },
-        {
-          title: "Oikeutettu velvoitetyöhön",
-          desc: [
-            "57-vuotias tai vanhempi, ja jonka ansiosidonnaisen tai peruspäivärahan enimmäispäivät ovat täyttyneet hänen täytettyään 57 vuotta",
-          ],
-        },
-      ],
+        "Tarkista palkkatukiehdot Helsingin kaupungin sivuilta ",
+      link:
+        "https://tyollisyyspalvelut.hel.fi/tyonhaku/tuetut-tyopaikat/palkkatuki",
+      linktext:
+        "painamalla tästä",
+      // qualifications: [
+      //   {
+      //     title: "Työttömänä vähintään 24 kk / 28 kk",
+      //     desc: [
+      //       "30-vuotta täyttänyt, saanut työmarkkinatukea työttömyyden perusteella vähintään 300 päivää",
+      //     ],
+      //   },
+      //   {
+      //     title: "Työttömänä vähintään 12 kk / 14 kk",
+      //     desc: [
+      //       "Ammattiin valmistunut tai tutkinnon (ei yo) suorittanut 25-29 -vuotias",
+      //       "Osatyökykyinen kyseiseen työtehtävään vaikuttavan diagnosoidun terveydellisen seikan perusteella",
+      //       "Maahanmuuttaja, jolla on oleskelulupa tai jonka oleskelu on rekisteröity",
+      //     ],
+      //   },
+      //   {
+      //     title: "Työtön vähintään 6 kk",
+      //     desc: [
+      //       "Ammattiin valmistunut tai tutkinnon (ei yo) suorittanut alle 25-vuotias",
+      //     ],
+      //   },
+      //   {
+      //     title: "Oikeutettu velvoitetyöhön",
+      //     desc: [
+      //       "57-vuotias tai vanhempi, ja jonka ansiosidonnaisen tai peruspäivärahan enimmäispäivät ovat täyttyneet hänen täytettyään 57 vuotta",
+      //     ],
+      //   },
+      // ],
       qual_desc:
         "Edellisen palkkatukijakson päättymisestä kaupungilla tulee olla kulunut vähintään 3 vuotta, jotta voi työllistyä uudelleen palkkatuella kaupungille.",
     },
@@ -233,6 +237,12 @@ export const fi = {
           title: "Projektipäällikkö,\n Uraohjain+ -hanke",
           phone: "09 310 28040",
           email: "jaakko.hyytia@hel.fi",
+        },
+        {
+          name: "Marika Lindström",
+          title: "Työelämävalmentaja",
+          phone: "09 310 40947",
+          email: "marika.i.lindstrom@edu.hel.fi",
         },
         {
           name: "Leea Hiltunen",

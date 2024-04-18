@@ -162,29 +162,33 @@ export const en = {
     apply: {
       title: "Who can apply?",
       description:
-        "An unemployed jobseeker in Helsinki who is eligible for wage subsidy and who has been:",
-      qualifications: [
-        {
-          title: "Unemployed for at least 24 months / 28 months",
-          desc: ["30 years of age or older, received at least 300 days of labour market benefit for unemployment."],
-        },
-        {
-          title: "Unemployed for at least 12 months / 14 months",
-          desc: [
-            "25 - 29 years old with a vocational qualification or a degree (not matriculation).",
-            "Partially fit for work on the basis of a diagnosed medical condition affecting the job in question.",
-            "Immigrant with a residence permit or whose stay is registered"
-          ],
-        },
-        {
-          title: "Unemployed for at least 6 months",
-          desc: ["Under 25 years old with a vocational qualification or a degree (not matriculation)."],
-        },
-        {
-          title: "Entitled to compulsory work",
-          desc: ["57 years of age or older, and whose maximum number of days of earnings-related or basic daily allowance has been reached after the age of 57."],
-        },
-      ],
+        "Check the pay subsidy conditions on the City of Helsinki website by ",
+      link:
+        "https://tyollisyyspalvelut.hel.fi/en/job-seeking/supported-jobs/pay-subsidy",
+      linktext:
+        "clicking here",
+      // qualifications: [
+      //   {
+      //     title: "Unemployed for at least 24 months / 28 months",
+      //     desc: ["30 years of age or older, received at least 300 days of labour market benefit for unemployment."],
+      //   },
+      //   {
+      //     title: "Unemployed for at least 12 months / 14 months",
+      //     desc: [
+      //       "25 - 29 years old with a vocational qualification or a degree (not matriculation).",
+      //       "Partially fit for work on the basis of a diagnosed medical condition affecting the job in question.",
+      //       "Immigrant with a residence permit or whose stay is registered"
+      //     ],
+      //   },
+      //   {
+      //     title: "Unemployed for at least 6 months",
+      //     desc: ["Under 25 years old with a vocational qualification or a degree (not matriculation)."],
+      //   },
+      //   {
+      //     title: "Entitled to compulsory work",
+      //     desc: ["57 years of age or older, and whose maximum number of days of earnings-related or basic daily allowance has been reached after the age of 57."],
+      //   },
+      // ],
       qual_desc: "At least 3 years must have passed since the end of the previous period of wage subsidy in the city in order to be re-employed with wage subsidy in the city.",
     },
     partners: "Partners",
@@ -226,6 +230,12 @@ export const en = {
           title: "Project Manager,\n Careerdriver+",
           phone: "09 310 28040",
           email: "jaakko.hyytia@hel.fi",
+        },
+        {
+          name: "Marika Lindström",
+          title: "Work Life Coach",
+          phone: "09 310 40947",
+          email: "marika.i.lindstrom@edu.hel.fi",
         },
         {
           name: "Leea Hiltunen",
