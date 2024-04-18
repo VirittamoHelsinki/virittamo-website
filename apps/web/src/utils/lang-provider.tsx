@@ -12,7 +12,6 @@ export function LangProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const storedLocale = localStorage.getItem("virittamo-lang") as Lang;
-
     storedLocale && setLocale(storedLocale);
   }, []);
 
@@ -22,5 +21,6 @@ export function LangProvider({ children }: { children: React.ReactNode }) {
     </LangContext.Provider>
   );
 }
+
 
 export const useLang = () => useContext(LangContext);

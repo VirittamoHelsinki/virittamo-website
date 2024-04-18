@@ -27,7 +27,7 @@ export default function BlogPage() {
       <Suspense fallback={"loading..."}>
         <div className="flex flex-col gap-10">
           <h1 className="text-[8.125rem] font-bold leading-[8rem] tracking-tight sm:text-[8.125rem]">
-            What Is Happ... sth
+            Ajankohtaiset
           </h1>
           <p className="text-[1.875rem]">
             Virittämö on Helsingin kaupungin työllistämispalvelu, joka yhdistää

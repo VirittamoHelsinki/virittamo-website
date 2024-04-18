@@ -111,9 +111,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <figure className="w-full max-w-[563px] ">
-          <LogoWhite />
-        </figure>
       </div>
     </footer>
   );

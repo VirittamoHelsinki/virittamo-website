@@ -237,7 +237,7 @@ export const homeRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `http://localhost:1337/api/articles?locale=${input.lang}&filters[feature][$eq]=true&populate=*`,
+        `${process.env.API_URL}/api/articles?locale=${input.lang}&filters[feature][$eq]=true&populate=*`,
         {
           method: "GET",
           headers: {

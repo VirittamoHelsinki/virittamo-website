@@ -64,7 +64,7 @@ function LanguageSelect() {
 export function Header() {
   const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between bg-white px-[100px] py-[50px]">
+    <header className="sticky top-0 z-50 flex items-center justify-between bg-white px-[100px] py-[30px]">
       <figure className="w-full max-w-[150px]">
         <Logo />
       </figure>
@@ -79,7 +79,7 @@ export function Header() {
           Our Teams
         </Link>
         <Link href="/#work" className="text-2xl">
-          Apply to Us
+          For Jobseekers
         </Link>
         <NavigationMenu>
           <NavigationMenuList>
