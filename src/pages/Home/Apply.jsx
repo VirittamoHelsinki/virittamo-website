@@ -7,7 +7,7 @@ export function Apply({ apply }) {
   return (
     <section className="homePage__apply">
       <h2>{apply.title}</h2>
-      <p>{apply.description}<a class="large-link" href={apply.link}>{apply.linktext}</a></p>
+      <p>{apply.description}<a className="large-link" href={apply.link}>{apply.linktext}</a></p>
       <div className="homePage__apply--container">
         {/* <ul className="homePage__apply--container-list">
           <p>{apply.qual_desc}</p>
@@ -25,6 +25,8 @@ Apply.propTypes = {
   apply: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    linktext: PropTypes.string.isRequired,
     qualifications: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
