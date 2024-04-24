@@ -11,7 +11,7 @@ RUN npm config set fetch-retry-maxtimeout 600000 -g && npm install --only=produc
 ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
 COPY . .
-RUN npm run build
+RUN npm run dev
 
 # Creating final production image
 FROM node:20-alpine
@@ -27,4 +27,4 @@ ENV PATH /opt/node_modules/.bin:$PATH
 RUN chown -R node:node /opt/app
 USER node
 EXPOSE 9090
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "dev"]
