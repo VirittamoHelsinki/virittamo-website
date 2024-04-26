@@ -85,6 +85,8 @@ export default function BlogPage() {
                     className="h-[500px] w-[535px] rounded-xl object-cover"
                     width={2000}
                     height={800}
+                    autoPlay
+                    loop
                   />
                 )}
                 <h3 className="text-[2.5rem] font-bold">
