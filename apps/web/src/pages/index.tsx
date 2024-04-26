@@ -24,21 +24,21 @@ import {
   PopoverTrigger,
 } from "~/@/components/ui/popover";
 import { Button } from "~/@/components/ui/button";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Camera, Server, Code } from "lucide-react";
 import { Icons } from "~/@/components/icons";
 import { api } from "~/utils/api";
 import { useLang } from "~/utils/lang-provider";
 
 function Hero() {
   const { locale } = useLang();
-  
+
   const { data: heroData, isLoading: isHeroLoading } =
     api.home.getHero.useQuery({ lang: locale });
   if (isHeroLoading || !heroData) return;
 
   return (
     <div className="flex flex-col gap-10">
-      <h1 className="text-[8.125rem] font-bold leading-[8rem] tracking-tight sm:text-[8.125rem]">
+      <h1 className="text-[6.125rem] font-bold leading-[8rem] tracking-tight sm:text-[6.125rem]">
         {heroData.data.attributes.hero.title}
       </h1>
       <div className="flex gap-10">
@@ -64,7 +64,7 @@ function Hero() {
             ))}
             <Link
               href={`mailto:${heroData.data.attributes.hero.ctaButton.action}`}
-              className="rounded-[10px] bg-blue-700 px-8 py-4 text-2xl font-bold text-white"
+              className="rounded-[10px] bg-[#F5A4C8] px-8 py-4 text-2xl font-bold text-black"
             >
               {heroData.data.attributes.hero.ctaButton.name}
             </Link>
@@ -110,6 +110,8 @@ function CarouselDemo() {
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
 
+  console.log(featureData)
+
   useEffect(() => {
     if (!apiCarousel) {
       return;
@@ -126,6 +128,11 @@ function CarouselDemo() {
 
   if (isFeatureLoading || !featureData) return;
 
+  //order the data so that the videos are displayed first
+  const videos = featureData.data.filter(slide => slide.attributes.media.data.attributes.mime.startsWith("video"));
+  const otherContent = featureData.data.filter(slide => !slide.attributes.media.data.attributes.mime.startsWith("video"));
+  const orderedData = videos.concat(otherContent);
+
   return (
     <div className="pt-[9.375rem]">
       <Carousel
@@ -138,27 +145,29 @@ function CarouselDemo() {
         ]}
       >
         <CarouselContent>
-          {featureData.data.map((slide, index) => (
+          {orderedData.map((slide, index) => (
             <CarouselItem key={index}>
               <Card className="rounded-xl border-none p-0">
                 <CardContent className="relative flex p-0">
                   <figure className="aspect-video max-h-[800px] w-full">
-                   {slide.attributes.media.data.attributes.mime.startsWith("image") ? (
-                     <Image
-                     src={slide.attributes.media.data.attributes.url}
-                     alt={slide.attributes.title}
-                     className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
-                     width={2000}
-                     height={800}
-                     />
-                      ) : (
-                      <video
-                      src={slide.attributes.media.data.attributes.url}
-                      className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
-                      width={2000}
-                      height={800}
+                    {slide.attributes.media.data.attributes.mime.startsWith("image") ? (
+                      <Image
+                        src={slide.attributes.media.data.attributes.url}
+                        alt={slide.attributes.title}
+                        className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
+                        width={2000}
+                        height={800}
                       />
-                      )
+                    ) : (
+                      <video
+                        src={slide.attributes.media.data.attributes.url}
+                        className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
+                        width={2000}
+                        height={800}
+                        autoPlay
+                        loop
+                      />
+                    )
                     }
                   </figure>
                   <div className="absolute bottom-0 left-0 max-w-4xl pb-10 pl-20 text-white">
@@ -179,11 +188,10 @@ function CarouselDemo() {
             {Array.from(Array(count).keys()).map((i) => (
               <Button
                 key={i}
-                className={`mx-1 h-1.5 flex-grow rounded-full p-1 px-5  ${
-                  i === current - 1
-                    ? "bg-white hover:bg-white"
-                    : "bg-neutral-600/75"
-                }`}
+                className={`mx-1 h-1.5 flex-grow rounded-full p-1 px-5  ${i === current - 1
+                  ? "bg-white hover:bg-white"
+                  : "bg-neutral-600/75"
+                  }`}
                 onClick={() => apiCarousel?.scrollTo(i)}
               />
             ))}
@@ -197,34 +205,34 @@ function CarouselDemo() {
   );
 }
 
-function Wwa() {
-  const { locale } = useLang();
-  const { data: wwaData, isLoading: isWwaLoading } = api.home.getWwa.useQuery({
-    lang: locale,
-  });
-  if (isWwaLoading || !wwaData) return;
-  return (
-    <div className="pt-[9.375rem]">
-      <h2 className="pb-[2.5rem] text-[6.25rem] font-bold">
-        {wwaData.data.attributes.wwa.title}
-      </h2>
-      <div className="flex flex-col gap-48 md:flex-row">
-        <figure className="w-full max-w-[715px]">
-          <Image
-            src={wwaData.data.attributes.wwa.img.data.attributes.url}
-            alt="why we are known"
-            className="h-[470px] w-full rounded-xl object-cover"
-            width={1000}
-            height={1000}
-          />
-        </figure>
-        <p className="w-full max-w-[819px] text-[2.5rem] leading-[3.125rem]">
-          {wwaData.data.attributes.wwa.description}
-        </p>
-      </div>
-    </div>
-  );
-}
+// function Wwa() {
+//   const { locale } = useLang();
+//   const { data: wwaData, isLoading: isWwaLoading } = api.home.getWwa.useQuery({
+//     lang: locale,
+//   });
+//   if (isWwaLoading || !wwaData) return;
+//   return (
+//     <div className="pt-[9.375rem]">
+//       <h2 className="pb-[2.5rem] text-[6.25rem] font-bold">
+//         {wwaData.data.attributes.wwa.title}
+//       </h2>
+//       <div className="flex flex-col gap-48 md:flex-row">
+//         <figure className="w-full max-w-[715px]">
+//           <Image
+//             src={wwaData.data.attributes.wwa.img.data.attributes.url}
+//             alt="why we are known"
+//             className="h-[470px] w-full rounded-xl object-cover"
+//             width={1000}
+//             height={1000}
+//           />
+//         </figure>
+//         <p className="w-full max-w-[819px] text-[2.5rem] leading-[3.125rem]">
+//           {wwaData.data.attributes.wwa.description}
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
 
 function ContactInfo({
   name,
@@ -300,14 +308,27 @@ function Marquee({
   );
 }
 
+const getIconForTeam = (teamName: string) => {
+  switch (teamName.toLowerCase()) {
+    case 'media':
+      return <Camera className="w-12 h-12 ml-1" />;
+    case 'ict':
+      return <Server className="w-11 h-11 ml-1" />;
+    case 'softa':
+      return <Code className="w-12 h-12 ml-1" />;
+    default:
+      return null;
+  }
+};
+
 function OurTeams() {
   const { locale } = useLang();
   const { data: teamsData, isLoading: isTeamsLoading } =
     api.home.getTeams.useQuery({ lang: locale });
   if (isTeamsLoading || !teamsData) return;
   return (
-    <div id="teams" className="flex flex-col gap-10 pt-[9.375rem]">
-      <h2 className="text-[6.25rem] font-bold">
+    <div id="teams" className="flex flex-col gap-10 pt-[7.375rem]">
+      <h2 className="text-[4.25rem] font-bold">
         {teamsData.data.attributes.teamHeading}
       </h2>
       <Accordion type="single" collapsible className="-mx-[100px]">
@@ -317,13 +338,13 @@ function OurTeams() {
             value={`item-${index}`}
             className="border-t px-[100px]"
           >
-            <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
-              {team.name}
+            <AccordionTrigger className="text-[2.75rem] font-bold uppercase flex items-center">
+              <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                {team.name}
+                <span style={{ marginLeft: '1rem' }}>{getIconForTeam(team.name)}</span>
+              </span>
             </AccordionTrigger>
             <AccordionContent className="flex flex-col items-start gap-5 leading-tight">
-              <Marquee marquee={team.marquee}>
-                <Icons.MsPaint />
-              </Marquee>
               <p className="text-[2.5rem]">{team.description}</p>
               <ContactInfo
                 name={team.button.name}
@@ -331,6 +352,9 @@ function OurTeams() {
                 email={team.button.email}
                 phone={team.button.phone}
               />
+              <Marquee marquee={team.marquee}>
+                <Icons.MsPaint />
+              </Marquee>
             </AccordionContent>
           </AccordionItem>
         ))}
@@ -359,7 +383,7 @@ function OurProject() {
         {fprojectData.data.map((project, index) => (
           <li key={index} className="flex flex-col py-[1.875rem]">
             <Link href={`/blog/${project.attributes.slug}`} passHref>
-            {project.attributes.media.data.attributes.mime.startsWith(
+              {project.attributes.media.data.attributes.mime.startsWith(
                 "image",
               ) ? (
                 <Image
@@ -391,91 +415,91 @@ function OurProject() {
   );
 }
 
-function ApplyToWork() {
-  const { locale } = useLang();
-  const { data: applyData, isLoading: isApplyLoading } =
-    api.home.getPage.useQuery({ lang: locale });
-  const { data: criterionData, isLoading: isCriterionLoading } =
-    api.home.getCriterion.useQuery({ lang: locale });
-  const { data: benefitData, isLoading: isBenefitLoading } =
-    api.home.getBenefit.useQuery({ lang: locale });
-  if (
-    isApplyLoading ||
-    isCriterionLoading ||
-    isBenefitLoading ||
-    !applyData ||
-    !criterionData ||
-    !benefitData
-  )
-    return;
-  return (
-    <div id="work" className="flex flex-col gap-10 pt-[9.375rem]">
-      <h2 className="text-[6.25rem] font-bold">
-        {applyData.data.attributes.applyHeading}
-      </h2>
-      <p className="text-[2.1875rem]">
-        {applyData.data.attributes.applyDescription}
-      </p>
-      <Accordion type="single" collapsible className="-mx-[100px]">
-        <AccordionItem value="item-1" className="border-t px-[100px]">
-          <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
-            {criterionData.data.attributes.criterion.name}
-          </AccordionTrigger>
-          <AccordionContent className="flex flex-col gap-[1.875rem] leading-tight">
-            <h3 className="text-[2.5rem] font-medium">
-              {criterionData.data.attributes.criterion.heading}
-            </h3>
-            <ul className="grid grid-cols-2 gap-10">
-              {criterionData.data.attributes.criterion.criterionList.map(
-                (criterion, index) => (
-                  <li key={index}>
-                    <p className="text-[1.875rem] font-medium">
-                      {criterion.name}
-                    </p>
-                    <ul className="flex max-w-[678px] list-inside list-disc flex-col gap-[10px] text-[1.875rem]">
-                      {criterion.item.map((crit, index) => (
-                        <li key={index}>{crit.name}</li>
-                      ))}
-                    </ul>
-                  </li>
-                ),
-              )}
-            </ul>
-            <p className="max-w-[1010px] pt-10 text-[1.875rem] font-medium">
-              {criterionData.data.attributes.criterion.note}
-            </p>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2" className="px-[100px]">
-          <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
-            {benefitData.data.attributes.benefit.name}
-          </AccordionTrigger>
-          <AccordionContent className="flex flex-col gap-[1.875rem] leading-tight">
-            <ul className="flex flex-wrap gap-10">
-              {benefitData.data.attributes.benefit.benefits.map(
-                (benefit, index) => (
-                  <li key={index}>
-                    <h3 className="text-[1.875rem] font-medium">
-                      {benefit.name}
-                    </h3>
-                    <p className="max-w-[678px] text-[1.875rem]">
-                      {benefit.description}
-                    </p>
-                    {benefit.link ? (
-                      <Link href={benefit.link} className="text-sm">
-                        {benefit.linkName} &gt;
-                      </Link>
-                    ) : null}
-                  </li>
-                ),
-              )}
-            </ul>
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
-    </div>
-  );
-}
+// function ApplyToWork() {
+//   const { locale } = useLang();
+//   const { data: applyData, isLoading: isApplyLoading } =
+//     api.home.getPage.useQuery({ lang: locale });
+//   const { data: criterionData, isLoading: isCriterionLoading } =
+//     api.home.getCriterion.useQuery({ lang: locale });
+//   const { data: benefitData, isLoading: isBenefitLoading } =
+//     api.home.getBenefit.useQuery({ lang: locale });
+//   if (
+//     isApplyLoading ||
+//     isCriterionLoading ||
+//     isBenefitLoading ||
+//     !applyData ||
+//     !criterionData ||
+//     !benefitData
+//   )
+//     return;
+//   return (
+//     <div id="work" className="flex flex-col gap-10 pt-[9.375rem]">
+//       <h2 className="text-[6.25rem] font-bold">
+//         {applyData.data.attributes.applyHeading}
+//       </h2>
+//       <p className="text-[2.1875rem]">
+//         {applyData.data.attributes.applyDescription}
+//       </p>
+//       <Accordion type="single" collapsible className="-mx-[100px]">
+//         <AccordionItem value="item-1" className="border-t px-[100px]">
+//           <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
+//             {criterionData.data.attributes.criterion.name}
+//           </AccordionTrigger>
+//           <AccordionContent className="flex flex-col gap-[1.875rem] leading-tight">
+//             <h3 className="text-[2.5rem] font-medium">
+//               {criterionData.data.attributes.criterion.heading}
+//             </h3>
+//             <ul className="grid grid-cols-2 gap-10">
+//               {criterionData.data.attributes.criterion.criterionList.map(
+//                 (criterion, index) => (
+//                   <li key={index}>
+//                     <p className="text-[1.875rem] font-medium">
+//                       {criterion.name}
+//                     </p>
+//                     <ul className="flex max-w-[678px] list-inside list-disc flex-col gap-[10px] text-[1.875rem]">
+//                       {criterion.item.map((crit, index) => (
+//                         <li key={index}>{crit.name}</li>
+//                       ))}
+//                     </ul>
+//                   </li>
+//                 ),
+//               )}
+//             </ul>
+//             <p className="max-w-[1010px] pt-10 text-[1.875rem] font-medium">
+//               {criterionData.data.attributes.criterion.note}
+//             </p>
+//           </AccordionContent>
+//         </AccordionItem>
+//         <AccordionItem value="item-2" className="px-[100px]">
+//           <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
+//             {benefitData.data.attributes.benefit.name}
+//           </AccordionTrigger>
+//           <AccordionContent className="flex flex-col gap-[1.875rem] leading-tight">
+//             <ul className="flex flex-wrap gap-10">
+//               {benefitData.data.attributes.benefit.benefits.map(
+//                 (benefit, index) => (
+//                   <li key={index}>
+//                     <h3 className="text-[1.875rem] font-medium">
+//                       {benefit.name}
+//                     </h3>
+//                     <p className="max-w-[678px] text-[1.875rem]">
+//                       {benefit.description}
+//                     </p>
+//                     {benefit.link ? (
+//                       <Link href={benefit.link} className="text-sm">
+//                         {benefit.linkName} &gt;
+//                       </Link>
+//                     ) : null}
+//                   </li>
+//                 ),
+//               )}
+//             </ul>
+//           </AccordionContent>
+//         </AccordionItem>
+//       </Accordion>
+//     </div>
+//   );
+// }
 
 function PreviousEmployees() {
   const { locale } = useLang();
@@ -526,11 +550,11 @@ export default function HomePage() {
       <Suspense fallback={<div>Thinking...</div>}>
         <Hero />
         <Partners />
+        <hr className="my-40 w-1/4 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
         <CarouselDemo />
-        <Wwa />
         <OurTeams />
         <OurProject />
-        <ApplyToWork />
+        <hr className="my-40 w-1/4 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
         <PreviousEmployees />
       </Suspense>
     </main>

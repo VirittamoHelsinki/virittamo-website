@@ -74,3 +74,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.hover-pink:hover {
+  text-decoration: underline;
+  text-decoration-color: #F5A4C8;
+  text-underline-offset: 0.2em;
+}
