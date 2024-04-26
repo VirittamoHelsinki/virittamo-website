@@ -1,15 +1,10 @@
 import Link from "next/link";
-import { LogoWhite, Wave } from "~/@/components/icons";
+import { Wave } from "~/@/components/icons";
 import { Phone, Mail } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="relative flex w-full grow flex-col pt-[9.375rem]">
-      {/* <img
-        src="/wave.svg"
-        alt="wave"
-        className="absolute left-0 top-[8.375rem]"
-      /> */}
       <Wave className="absolute left-0 top-[8.375rem]  fill-[#222222]" />
       <div className="relative flex h-full w-full flex-col gap-[14rem] bg-[#222222] px-[6.25rem] py-[5.625rem]">
         <div className="flex justify-between gap-10 text-white">
@@ -19,30 +14,33 @@ export function Footer() {
                 Home
               </Link>
               <Link href="#teams" className="text-2xl">
-                Our Teams
+               Teams
               </Link>
               <Link href="#work" className="text-2xl">
                 Apply to Us
               </Link>
+              <Link  href="/company" className="text-2xl">
+                For Companies
+              </Link>
               <Link href="/blog" className="text-2xl">
-                Blog
+                News
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
               <Link href="/" className="text-2xl">
-                For Companies
+                Services
               </Link>
               <Link href="/" className="text-2xl">
-                Heading 1
+                Uraohjaus
               </Link>
               <Link href="/" className="text-2xl">
-                Heading 2
+                Opinto-ohjaus
               </Link>
               <Link href="/" className="text-2xl">
-                Heading 3
+                S2 Opetus
               </Link>
               <Link href="/" className="text-2xl">
-                Heading 4
+                Hymykylä
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
@@ -54,6 +52,9 @@ export function Footer() {
               </Link>
               <Link href="/" className="text-2xl">
                 Contact Info
+              </Link>
+              <Link href="/" className="text-2xl">
+                "map"
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
