@@ -8,7 +8,7 @@ export default function AboutPage() {
   const { data: aboutData, isLoading: isAboutLoading } =
     api.about.getPage.useQuery({ lang: locale });
   if (isAboutLoading || !aboutData) {
-    return <div>loading...</div>;
+    return;
   }
   return (
     <main className="flex min-h-screen flex-col px-[100px]">
@@ -81,7 +81,6 @@ export default function AboutPage() {
               width="900"
               height="450"
               style={{ border: 0 }}
-              className="grayscale"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
