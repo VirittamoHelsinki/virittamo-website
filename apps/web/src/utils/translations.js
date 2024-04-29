@@ -15,7 +15,7 @@ export const translations = {
       teams: "Tiimit",
       jobseekers: "Työntekijöille",
       companies: "Yrityksille",
-      about: "Meistä?",
+      about: "Meistä",
       news: "Uutiset",
       projects: "Projektit",
       stories: "Uutiset",

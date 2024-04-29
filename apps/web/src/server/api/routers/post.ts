@@ -12,6 +12,23 @@ export type ArticlesDatum = {
   attributes: PurpleAttributes;
 };
 
+export type BlogPage = {
+  data: BlogPageData;
+  meta: Meta;
+}
+
+export type BlogPageData = {
+  id: number;
+  attributes: {
+    title: string;
+    description: string;
+    createdAt: Date;
+    updatedAt: Date;
+    publishedAt: Date;
+    locale: string;
+  };
+};
+
 export type PurpleAttributes = {
   title: string;
   description: string;
@@ -117,10 +134,11 @@ export const postRouter = createTRPCRouter({
           },
         },
       );
-      const responseData = await res.json();
-      const data = responseData.data;
+      const responseData = await res.json(); 
+      const data = responseData.data as BlogPageData;
       return data;
     }),
+
   getAllPost: publicProcedure
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
