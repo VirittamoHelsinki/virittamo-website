@@ -134,9 +134,8 @@ export const postRouter = createTRPCRouter({
           },
         },
       );
-      const responseData = await res.json();
-      const data: BlogPageData = responseData.data as BlogPageData;
-      return data;      
+      const data = (await res.json()) as BlogPage;
+      return data;  
     }),
 
   getAllPost: publicProcedure
