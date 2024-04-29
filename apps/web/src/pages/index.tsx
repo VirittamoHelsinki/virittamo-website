@@ -35,10 +35,10 @@ function Hero() {
   const { data: heroData, isLoading: isHeroLoading } =
     api.home.getHero.useQuery({ lang: locale });
   if (isHeroLoading || !heroData) return;
-
+ 
   return (
     <div className="flex flex-col gap-10">
-      <h1 className="text-[6.125rem] font-bold leading-[8rem] tracking-tight sm:text-[6.125rem]">
+      <h1 className="text-[5rem] font-bold leading-[8rem] tracking-tight sm:text-[5rem]">
         {heroData.data.attributes.hero.title}
       </h1>
       <div className="flex gap-10">
@@ -91,7 +91,7 @@ function Partners() {
             <Image
               src={partner.img.data.attributes.url}
               alt={`${partner.id}`}
-              className="h-20 w-full"
+              className="h-20 w-auto"
               height={200}
               width={180}
             />
@@ -149,7 +149,8 @@ function CarouselDemo() {
             <CarouselItem key={index}>
               <Card className="rounded-xl border-none p-0">
                 <CardContent className="relative flex p-0">
-                  <figure className="aspect-video max-h-[800px] w-full">
+                  <figure className="aspect-video max-h-[800px] w-[2000px]">
+                  <Link href={`/blog/${slide.attributes.slug}`} passHref>
                     {slide.attributes.media.data.attributes.mime.startsWith("image") ? (
                       <Image
                         src={slide.attributes.media.data.attributes.url}
@@ -169,13 +170,14 @@ function CarouselDemo() {
                       />
                     )
                     }
+                    </Link>
                   </figure>
                   <div className="absolute bottom-0 left-0 max-w-4xl pb-10 pl-20 text-white">
                     <h2 className="text-[6.25rem] font-bold">
                       {slide.attributes.title}
                     </h2>
                     <p className="text-xl">{slide.attributes.description}</p>
-                  </div>
+                  </div>                 
                 </CardContent>
               </Card>
             </CarouselItem>
@@ -546,7 +548,7 @@ function PreviousEmployees() {
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col px-[100px]">
+    <main className="flex min-h-screen flex-col px-[100px] mx-[245px]">
       <Suspense fallback={<div>Thinking...</div>}>
         <Hero />
         <Partners />
