@@ -179,7 +179,7 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `${process.env.API_URL}/api/articles?locale=${input.lang}&filters[categories][name][$eq]=project&populate=*`,
+        `${process.env.API_URL}/api/articles?locale=${input.lang}&filters[categories][name][$eq]=projects&populate=*`,
         {
           method: "GET",
           headers: {

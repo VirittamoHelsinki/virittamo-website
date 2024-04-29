@@ -374,8 +374,6 @@ function OurProject() {
     api.post.getAllProjects.useQuery({ lang: locale });
   if (isOurLoading || isFprojectLoading || !ourData || !fprojectData)
     return;
-
-  console.log("current language is ", locale);
   return (
     <div className="flex flex-col gap-10 pt-[9.375rem]">
       <h2 className="text-[6.25rem] font-bold">
