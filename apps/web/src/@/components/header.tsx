@@ -13,6 +13,7 @@ import { cn } from "~/@/lib/utils";
 import { usePathname } from "next/navigation";
 import { useLang } from "~/utils/lang-provider";
 import { Globe } from "lucide-react";
+import { translations } from "~/utils/translations";
 
 function LanguageSelect() {
   const { locale, setLocale } = useLang();
@@ -23,21 +24,21 @@ function LanguageSelect() {
       <Globe />
       <button
         onClick={() => setLocale("fi")}
-        className={`text-2xl hover-pink ${locale === "fi" ? "font-bold" : ""}`}
+        className={`sm:text-[1.25rem] hover-pink ${locale === "fi" ? "font-bold" : ""}`}
       >
         FI
       </button>
       <span>/</span>
       <button
         onClick={() => setLocale("en")}
-        className={`text-2xl hover-pink ${locale === "en" ? "font-bold" : ""}`}
+        className={`sm:text-[1.25rem] hover-pink ${locale === "en" ? "font-bold" : ""}`}
       >
         EN
       </button>
       <span>/</span>
       <button
         onClick={() => setLocale("sv")}
-        className={`text-2xl hover-pink ${locale === "sv" ? "font-bold" : ""}`}
+        className={`sm:text-[1.25rem] hover-pink ${locale === "sv" ? "font-bold" : ""}`}
       >
         SV
       </button>
@@ -46,8 +47,19 @@ function LanguageSelect() {
 }
 
 
+
 export function Header() {
   const pathname = usePathname();
+  const {locale} = useLang();
+  const { 
+    home, 
+    teams, 
+    jobseekers, 
+    companies, 
+    about, 
+    news 
+  } = translations[locale];
+  
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between bg-white px-[100px] py-[30px]">
       <Link href="/" className="w-full max-w-[150px]">
@@ -58,15 +70,15 @@ export function Header() {
       <nav className="flex items-end gap-10">
         <Link
           href="/"
-          className={cn("text-2xl", pathname === "/", "hover-pink")}
+          className={cn("sm:text-[1.25rem]", pathname === "/", "hover-pink")}
         >
-          Home
+          {home}
         </Link>
-        <Link href="/#teams" className="text-2xl hover-pink">
-          Teams
+        <Link href="/#teams" className="hover-pink sm:text-[1.25rem]">
+        {teams}
         </Link>
-        <Link href="/jobseekers" className="text-2xl hover-pink">
-          For Jobseekers
+        <Link href="/jobseekers" className="sm:text-[1.25rem] hover-pink">
+        {jobseekers}
         </Link>
         <NavigationMenu>
           <NavigationMenuList>
@@ -75,11 +87,11 @@ export function Header() {
                 <Link
                   href="/company"
                   className={cn(
-                    "text-2xl",
+                    "sm:text-[1.25rem]",
                     pathname === "/company", "hover-pink"
                   )}
                 >
-                  For Companies
+                  {companies}
                 </Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -114,11 +126,11 @@ export function Header() {
                 <Link
                   href="/about"
                   className={cn(
-                    "text-2xl",
+                    "sm:text-[1.25rem]",
                     pathname === "/about" , "hover-pink"
                   )}
                 >
-                  About
+                  {about}
                 </Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -138,9 +150,9 @@ export function Header() {
         </NavigationMenu>
         <Link
           href="/blog"
-          className={cn("text-2xl", pathname === "/blog" , "hover-pink")}
+          className={cn("sm:text-[1.25rem]", pathname === "/blog" , "hover-pink")}
         >
-          News
+          {news}
         </Link>
         <LanguageSelect />
       </nav>

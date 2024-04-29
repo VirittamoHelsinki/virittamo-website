@@ -1,0 +1,36 @@
+export const translations = {
+    en: {
+      home: "Home",
+      teams: "Teams",
+      jobseekers: "For Jobseekers",
+      companies: "For Companies",
+      about: "About",
+      news: "News",
+      projects: "Projects",
+      stories: "Stories",
+      all: "All",
+    },
+    fi: {
+      home: "Etusivu",
+      teams: "Tiimit",
+      jobseekers: "Työntekijöille",
+      companies: "Yrityksille",
+      about: "Meistä?",
+      news: "Uutiset",
+      projects: "Projektit",
+      stories: "Uutiset",
+      all: "Kaikki",
+    },
+    sv: {
+      home: "Förstasida",
+      teams: "Lag?",
+      jobseekers: "För arbetssökande",
+      companies: "För företag",
+      about: "Om oss",
+      news: "Nyheter",
+      projects: "Projekt",
+      stories: "Berättelser",
+      all: "Alla",
+    },
+  };
+  
