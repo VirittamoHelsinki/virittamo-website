@@ -80,3 +80,11 @@
   text-decoration-color: #F5A4C8;
   text-underline-offset: 0.2em;
 }
+
+.h-100 {
+  height: 100px !important;
+}
+
+.w-100 {
+  width: 100px !important;
+}

@@ -193,7 +193,7 @@ CarouselItem.displayName = "CarouselItem";
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = "ghost", size = "big", ...props }, ref) => {
+>(({ className, variant = "nobackground", size = "big", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
 
   return (
@@ -212,7 +212,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeft className="h-50 w-50" />
+      <ChevronLeft className="h-100 w-100 text-white" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -222,7 +222,7 @@ CarouselPrevious.displayName = "CarouselPrevious";
 const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = "ghost", size = "big", ...props }, ref) => {
+>(({ className, variant = "nobackground", size = "big", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
 
   return (
@@ -231,9 +231,9 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-15 w-15 rounded-full",
+        "absolute h-50 w-50 rounded-full",
         orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
+          ? "-right-0 top-1/2 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className,
       )}
@@ -241,7 +241,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRight className="h-15 w-15" />
+      <ChevronRight className="h-100 w-100 text-white" />
       <span className="sr-only">Next slide</span>
     </Button>
   );
