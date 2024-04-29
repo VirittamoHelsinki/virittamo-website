@@ -4,8 +4,9 @@ import Image from "next/image";
 import { Toggle } from "~/@/components/ui/toggle";
 import { api } from "~/utils/api";
 import { useLang } from "~/utils/lang-provider";
+import { translations } from "~/utils/translations";
 
-type Category = "" | "news" | "project" | "story";
+type Category = "" | "news" | "projects" | "stories";
 
 export default function BlogPage() {
   const { locale } = useLang();
@@ -14,52 +15,66 @@ export default function BlogPage() {
     api.post.getAllPost.useQuery({ lang: locale });
   const { data: categoryData, isLoading: isCategoryLoading } =
     api.post.getFilteredPosts.useQuery({ lang: locale, category });
-  if (isBlogLoading || !blogData) return <div>loading...</div>;
-  if (isCategoryLoading || !categoryData) return <div>loading...</div>;
+  const { data: blogPage, isLoading: isBlogPageLoading } =
+    api.post.getPage.useQuery({ lang: locale });
+  if (isBlogLoading || !blogData) return;
+  if (isCategoryLoading || !categoryData) return;
+  if (isBlogPageLoading || !blogPage) return;
+  const {
+    all,
+    news, 
+    projects, 
+    stories, 
+  } = translations[locale];
 
   const filteredData =
-    category == "news" || category === "project" || category === "story"
+    category == "news" || category === "projects" || category === "stories"
       ? categoryData
       : blogData;
-  console.log(category);
   return (
     <main className="flex min-h-screen flex-col gap-10 px-[100px]">
       <Suspense fallback={"loading..."}>
         <div className="flex flex-col gap-10">
           <h1 className="text-[8.125rem] font-bold leading-[8rem] tracking-tight sm:text-[8.125rem]">
-            Ajankohtaiset
+          {blogPage.attributes.title}
           </h1>
           <p className="text-[1.875rem]">
-            Virittämö on Helsingin kaupungin työllistämispalvelu, joka yhdistää
-            tuoretta työkokemusta tarvitsevat tekijät ja käytännön ICT-,
-            ohjelmistokehitys- ja mediaosaajia etsivät yritykset.
+          {blogPage.attributes.description}
           </p>
         </div>
 
         <div className="flex gap-5">
+        <Toggle
+            pressed={category === ""}
+            onPressedChange={(value) => setCategory(value ? "" : "")}
+            variant="outline"
+            className="rounded-full border-black text-[1.5625rem]"
+          >
+            {all}
+          </Toggle>
           <Toggle
             pressed={category === "news"}
             onPressedChange={(value) => setCategory(value ? "news" : "")}
             variant="outline"
             className="rounded-full border-black text-[1.5625rem]"
           >
-            News
+            {news}
           </Toggle>
           <Toggle
-            pressed={category === "project"}
-            onPressedChange={(value) => setCategory(value ? "project" : "")}
+            pressed={category === "projects"}
+            onPressedChange={(value) => setCategory(value ? "projects" : "")}
             variant="outline"
             className="rounded-full border-black  text-[1.5625rem]"
           >
-            Project
+            {projects}
           </Toggle>
           <Toggle
-            pressed={category === "story"}
-            onPressedChange={(value) => setCategory(value ? "story" : "")}
+            pressed={category === "stories"}
+            onPressedChange={(value) => setCategory(value ? "stories" : "")}
             variant="outline"
             className="rounded-full border-black  text-[1.5625rem]"
           >
-            Story
+            {stories}
           </Toggle>
         </div>
 

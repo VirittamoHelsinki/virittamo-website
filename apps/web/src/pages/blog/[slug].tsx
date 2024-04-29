@@ -57,6 +57,8 @@ export default function PostPage({
               className="h-[400px] rounded-xl object-cover"
               width={2000}
               height={2000}
+              autoPlay
+              loop
             />
           )}
         </header>

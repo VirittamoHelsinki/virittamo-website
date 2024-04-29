@@ -108,7 +108,7 @@ export const postRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `${process.env.API_URL}/api/blogpage?locale=${input.lang}&populate=*`,
+        `${process.env.API_URL}/api/blog-page?locale=${input.lang}&populate=*`,
         {
           method: "GET",
           headers: {
@@ -117,9 +117,8 @@ export const postRouter = createTRPCRouter({
           },
         },
       );
-
-      const data = (await res.json()) as string;
-
+      const responseData = await res.json();
+      const data = responseData.data;
       return data;
     }),
   getAllPost: publicProcedure
