@@ -149,7 +149,7 @@ function CarouselDemo() {
             <CarouselItem key={index}>
               <Card className="rounded-xl border-none p-0">
                 <CardContent className="relative flex p-0">
-                  <figure className="aspect-video max-h-[800px] w-[2000px]">
+                  <figure className="aspect-video max-h-[600px] w-[2000px]">
                   <Link href={`/blog/${slide.attributes.slug}`} passHref>
                     {slide.attributes.media.data.attributes.mime.startsWith("image") ? (
                       <Image
@@ -157,14 +157,14 @@ function CarouselDemo() {
                         alt={slide.attributes.title}
                         className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
                         width={2000}
-                        height={800}
+                        height={600}
                       />
                     ) : (
                       <video
                         src={slide.attributes.media.data.attributes.url}
                         className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
                         width={2000}
-                        height={800}
+                        height={600}
                         autoPlay
                         loop
                       />
@@ -333,7 +333,7 @@ function OurTeams() {
       <h2 className="text-[4.25rem] font-bold">
         {teamsData.data.attributes.teamHeading}
       </h2>
-      <Accordion type="single" collapsible className="-mx-[100px]">
+      <Accordion type="single" collapsible className="-mx-[0px]">
         {teamsData.data.attributes.teamAccordion.map((team, index) => (
           <AccordionItem
             key={index}
@@ -376,7 +376,7 @@ function OurProject() {
     return;
   return (
     <div className="flex flex-col gap-10 pt-[9.375rem]">
-      <h2 className="text-[6.25rem] font-bold">
+      <h2 className="sm:text-[5rem] font-bold">
         {ourData.data.attributes.projectHeading}
       </h2>
       <ul className="flex gap-[62px]">
@@ -550,11 +550,11 @@ export default function HomePage() {
       <Suspense fallback={<div>Thinking...</div>}>
         <Hero />
         <Partners />
-        <hr className="my-40 w-1/4 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
+        <hr className="my-20 w-1/4 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
         <CarouselDemo />
         <OurTeams />
         <OurProject />
-        <hr className="my-40 w-1/4 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
+        <hr className="my-20 w-1/4 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
         <PreviousEmployees />
       </Suspense>
     </main>

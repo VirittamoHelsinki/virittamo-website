@@ -77,8 +77,8 @@ export function Footer() {
                 className="text-2xl"
               >
                 <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                <span style={{ marginRight: '1rem' }}><Instagram /></span>
                   Instagram
-                  <span style={{ marginLeft: '1rem' }}><Instagram /></span>
                 </span>
               </Link>
               <Link
@@ -88,8 +88,8 @@ export function Footer() {
                 className="text-2xl"
               >
                 <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                <span style={{ marginRight: '1rem' }}><Facebook /></span>
                   Facebook
-                  <span style={{ marginLeft: '1rem' }}><Facebook /></span>
                 </span>
               </Link>
               <Link
@@ -99,8 +99,8 @@ export function Footer() {
                 className="text-2xl"
               >
                 <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-                  LinkedIn
-                  <span style={{ marginLeft: '1rem' }}><Linkedin /></span>
+                <span style={{ marginRight: '1rem' }}><Linkedin /></span>
+                  LinkedIn                  
                 </span>
               </Link>
             </nav>
