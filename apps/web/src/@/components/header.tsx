@@ -57,7 +57,9 @@ export function Header() {
     jobseekers, 
     companies, 
     about, 
-    news 
+    news,
+    values,
+    contact,
   } = translations[locale];
   
   return (
@@ -80,7 +82,10 @@ export function Header() {
         <Link href="/jobseekers" className="sm:text-[1.25rem] hover-pink">
         {jobseekers}
         </Link>
-        <NavigationMenu>
+        <Link href="/company" className="sm:text-[1.25rem] hover-pink">
+        {companies}
+        </Link>
+        {/* <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>
@@ -118,7 +123,7 @@ export function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
-        </NavigationMenu>
+        </NavigationMenu> */}
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -136,12 +141,12 @@ export function Header() {
               <NavigationMenuContent>
                 <Link href="/about#values" legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "hover-pink")}>
-                    Our Values
+                    {values}
                   </NavigationMenuLink>
                 </Link>
                 <Link href="/about#contact" legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "hover-pink")}>
-                    Contact Info
+                     {contact}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuContent>

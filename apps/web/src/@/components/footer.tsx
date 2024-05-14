@@ -13,7 +13,13 @@ export function Footer() {
     jobseekers,
     companies,
     about,
-    news
+    news,
+    services,
+    uraohjaus,
+    values,
+    contact,
+    location,
+    coordinator,
   } = translations[locale];
   return (
     <footer className="relative flex w-full grow flex-col pt-[9.375rem]">
@@ -39,11 +45,11 @@ export function Footer() {
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
-              <Link href="/" className="text-2xl">
-                Services
+              <Link href="/company#services" className="text-2xl">
+                {services}
               </Link>
               <Link href="/" className="text-2xl">
-                Uraohjaus
+                {uraohjaus}
               </Link>
               <Link href="/" className="text-2xl">
                 Opinto-ohjaus
@@ -59,14 +65,14 @@ export function Footer() {
               <Link href="/about" className="text-2xl">
                 {about}
               </Link>
-              <Link href="/" className="text-2xl">
-                Our Values
+              <Link href="/about#values" className="text-2xl">
+                {values}
               </Link>
-              <Link href="/" className="text-2xl">
-                Contact Info
+              <Link href="/about#contact" className="text-2xl">
+                {contact}
               </Link>
-              <Link href="/" className="text-2xl">
-                "map"
+              <Link href="/about#map" className="text-2xl">
+                {location}
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
@@ -77,7 +83,7 @@ export function Footer() {
                 className="text-2xl"
               >
                 <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '1rem' }}><Instagram /></span>
+                  <span style={{ marginRight: '1rem' }}><Instagram /></span>
                   Instagram
                 </span>
               </Link>
@@ -88,7 +94,7 @@ export function Footer() {
                 className="text-2xl"
               >
                 <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '1rem' }}><Facebook /></span>
+                  <span style={{ marginRight: '1rem' }}><Facebook /></span>
                   Facebook
                 </span>
               </Link>
@@ -99,8 +105,8 @@ export function Footer() {
                 className="text-2xl"
               >
                 <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '1rem' }}><Linkedin /></span>
-                  LinkedIn                  
+                  <span style={{ marginRight: '1rem' }}><Linkedin /></span>
+                  LinkedIn
                 </span>
               </Link>
             </nav>
@@ -108,7 +114,7 @@ export function Footer() {
           <div className="flex flex-col gap-5">
             <div className="flex flex-col">
               <h3 className="text-[2.5rem]">Tarja Kurvinen</h3>
-              <p className="text-[1.875rem]">Tiimikoordinaatori</p>
+              <p className="text-[1.875rem]">{coordinator}</p>
               <p className="flex items-center gap-3">
                 <Mail />
                 <a
