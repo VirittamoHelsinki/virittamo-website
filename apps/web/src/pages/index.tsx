@@ -28,6 +28,8 @@ import { Mail, Phone, Camera, Server, Code } from "lucide-react";
 import { Icons } from "~/@/components/icons";
 import { api } from "~/utils/api";
 import { useLang } from "~/utils/lang-provider";
+import { TeamsCard } from "~/@/components/ui/teams-card";
+import { Wave } from "~/@/components/icons";
 
 function Hero() {
   const { locale } = useLang();
@@ -35,7 +37,7 @@ function Hero() {
   const { data: heroData, isLoading: isHeroLoading } =
     api.home.getHero.useQuery({ lang: locale });
   if (isHeroLoading || !heroData) return;
- 
+
   return (
     <div className="flex flex-col gap-10">
       <h1 className="text-[5rem] font-bold leading-[8rem] tracking-tight sm:text-[5rem]">
@@ -110,8 +112,6 @@ function CarouselDemo() {
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
 
-  console.log(featureData)
-
   useEffect(() => {
     if (!apiCarousel) {
       return;
@@ -134,7 +134,7 @@ function CarouselDemo() {
   const orderedData = videos.concat(otherContent);
 
   return (
-    <div className="pt-[9.375rem]">
+    <div className="">
       <Carousel
         className="flex w-full items-center justify-center"
         setApi={setApiCarousel}
@@ -147,37 +147,41 @@ function CarouselDemo() {
         <CarouselContent>
           {orderedData.map((slide, index) => (
             <CarouselItem key={index}>
-              <Card className="rounded-xl border-none p-0">
+              <Card className="border-none p-0">
                 <CardContent className="relative flex p-0">
                   <figure className="aspect-video max-h-[600px] w-[2000px]">
-                  <Link href={`/blog/${slide.attributes.slug}`} passHref>
-                    {slide.attributes.media.data.attributes.mime.startsWith("image") ? (
-                      <Image
-                        src={slide.attributes.media.data.attributes.url}
-                        alt={slide.attributes.title}
-                        className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
-                        width={2000}
-                        height={600}
-                      />
-                    ) : (
-                      <video
-                        src={slide.attributes.media.data.attributes.url}
-                        className="h-[800px] w-full rounded-xl object-cover brightness-75 filter"
-                        width={2000}
-                        height={600}
-                        autoPlay
-                        loop
-                      />
-                    )
-                    }
+                    <Link href={`/blog/${slide.attributes.slug}`} passHref>
+                      {slide.attributes.media.data.attributes.mime.startsWith("image") ? (
+                        <Image
+                          src={slide.attributes.media.data.attributes.url}
+                          alt={slide.attributes.title}
+                          className="h-[800px] w-full object-cover brightness-75 filter"
+                          width={2000}
+                          height={600}
+                        />
+                      ) : (
+                        <video
+                          src={slide.attributes.media.data.attributes.url}
+                          className="h-[800px] w-full object-cover brightness-75 filter"
+                          width={2000}
+                          height={600}
+                          autoPlay
+                          loop
+                        />
+                      )
+                      }
                     </Link>
                   </figure>
-                  <div className="absolute bottom-0 left-0 max-w-4xl pb-10 pl-20 text-white">
-                    <h2 className="text-[6.25rem] font-bold">
+                  <Wave className="wave-carousel fill-[#F5A4C8]"/>
+                  <div className="color-layer"></div>
+                  <div className="text-box">
+                  <div className="absolute bottom-0 left-0 max-w-4xl text-white">
+                    <h2 className="text-[2.75rem] text-shadow">
                       {slide.attributes.title}
                     </h2>
-                    <p className="text-xl">{slide.attributes.description}</p>
-                  </div>                 
+                    <p className="text-xl items-center pb-10 pr-10 text-shadow">{slide.attributes.description}</p>
+                  </div>
+                  </div>
                 </CardContent>
               </Card>
             </CarouselItem>
@@ -310,18 +314,18 @@ function Marquee({
   );
 }
 
-const getIconForTeam = (teamName: string) => {
-  switch (teamName.toLowerCase()) {
-    case 'media':
-      return <Camera className="w-12 h-12 ml-1" />;
-    case 'ict':
-      return <Server className="w-11 h-11 ml-1" />;
-    case 'softa':
-      return <Code className="w-12 h-12 ml-1" />;
-    default:
-      return null;
-  }
-};
+// const getIconForTeam = (teamName: string) => {
+//   switch (teamName.toLowerCase()) {
+//     case 'media':
+//       return <Camera className="w-12 h-12 ml-1" />;
+//     case 'ict':
+//       return <Server className="w-11 h-11 ml-1" />;
+//     case 'softa':
+//       return <Code className="w-12 h-12 ml-1" />;
+//     default:
+//       return null;
+//   }
+// };
 
 function OurTeams() {
   const { locale } = useLang();
@@ -333,34 +337,42 @@ function OurTeams() {
       <h2 className="text-[4.25rem] font-bold">
         {teamsData.data.attributes.teamHeading}
       </h2>
-      <Accordion type="single" collapsible className="-mx-[0px]">
+      {/* <Accordion type="single" collapsible className="-mx-[0px]"> */}
+      <ul className="flex gap-[62px]">
         {teamsData.data.attributes.teamAccordion.map((team, index) => (
-          <AccordionItem
-            key={index}
-            value={`item-${index}`}
-            className="border-t px-[100px]"
-          >
-            <AccordionTrigger className="text-[2.75rem] font-bold uppercase flex items-center">
-              <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-                {team.name}
-                <span style={{ marginLeft: '1rem' }}>{getIconForTeam(team.name)}</span>
-              </span>
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col items-start gap-5 leading-tight">
-              <p className="text-[2.5rem]">{team.description}</p>
-              <ContactInfo
-                name={team.button.name}
-                title={team.button.title}
-                email={team.button.email}
-                phone={team.button.phone}
-              />
-              <Marquee marquee={team.marquee}>
-                <Icons.MsPaint />
-              </Marquee>
-            </AccordionContent>
-          </AccordionItem>
+          <li key={index} className="flex flex-col py-[1.875rem]">
+            <TeamsCard
+              teamName={team.name}
+              description={team.description}
+            />
+          </li>
+          // <AccordionItem
+          //   key={index}
+          //   value={`item-${index}`}
+          //   className="border-t px-[100px]"
+          // >
+          //   <AccordionTrigger className="text-[2.75rem] font-bold uppercase flex items-center">
+          //     <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+          //       {team.name}
+          //       <span style={{ marginLeft: '1rem' }}>{getIconForTeam(team.name)}</span>
+          //     </span>
+          //   </AccordionTrigger>
+          //   <AccordionContent className="flex flex-col items-start gap-5 leading-tight">
+          //     <p className="text-[2.5rem]">{team.description}</p>
+          //     <ContactInfo
+          //       name={team.button.name}
+          //       title={team.button.title}
+          //       email={team.button.email}
+          //       phone={team.button.phone}
+          //     />
+          //     <Marquee marquee={team.marquee}>
+          //       <Icons.MsPaint />
+          //     </Marquee>
+          //   </AccordionContent>
+          // </AccordionItem>
         ))}
-      </Accordion>
+      </ul>
+      {/* </Accordion> */}
     </div>
   );
 }
@@ -376,7 +388,7 @@ function OurProject() {
     return;
   return (
     <div className="flex flex-col gap-10 pt-[9.375rem]">
-      <h2 className="sm:text-[5rem] font-bold">
+      <h2 className="sm:text-[4rem] font-bold">
         {ourData.data.attributes.projectHeading}
       </h2>
       <ul className="flex gap-[62px]">
@@ -414,6 +426,8 @@ function OurProject() {
     </div>
   );
 }
+
+export {OurProject};
 
 // function ApplyToWork() {
 //   const { locale } = useLang();
@@ -507,7 +521,7 @@ function PreviousEmployees() {
     api.home.getEmployed.useQuery({ lang: locale });
   if (isPreviousLoading || !previousData) return;
   return (
-    <div className="flex flex-col gap-10 pt-[9.375rem]">
+    <div className="flex flex-col gap-10">
       <h2 className="text-[2.5rem] font-bold">
         {previousData.data.attributes.employed.title}
       </h2>
@@ -547,14 +561,13 @@ function PreviousEmployees() {
 export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col px-[100px] mx-[245px]">
-      <Suspense fallback={<div>Thinking...</div>}>
+      <Suspense fallback={<div></div>}>
         <Hero />
         <Partners />
-        <hr className="my-20 w-1/4 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
+        <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
         <CarouselDemo />
         <OurTeams />
-        <OurProject />
-        <hr className="my-20 w-1/4 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
+        <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
         <PreviousEmployees />
       </Suspense>
     </main>
