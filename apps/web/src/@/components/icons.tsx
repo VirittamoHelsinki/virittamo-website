@@ -54,7 +54,7 @@ export function Wave({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 785 48.1"
+      viewBox="0 0 785 49"
       className={className}
     >
       <switch>
