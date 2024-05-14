@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Image from "next/image";
 import { api } from "~/utils/api";
 import { useLang } from "~/utils/lang-provider";
+import { OurProject } from ".";
 
 export default function CompaniesPage() {
   const { locale } = useLang();
@@ -9,16 +10,16 @@ export default function CompaniesPage() {
     api.company.getPage.useQuery({ lang: locale });
 
   if (isCompanyLoading || !companyData) {
-    return <div>loading...</div>;
+    return;
   }
   return (
-    <main className="flex min-h-screen flex-col px-[100px]">
+    <main className="flex min-h-screen flex-col px-[100px] mx-[245px]">
       <Suspense fallback={"loading..."}>
         <div className="flex flex-col gap-10">
-          <h1 className="text-[8.125rem] font-bold leading-[8rem] tracking-tight sm:text-[8.125rem]">
+          <h1 className="text-[5rem] font-bold leading-[8rem] tracking-tight sm:text-[5rem]]">
             {companyData.data.attributes.title}
           </h1>
-          <p className="text-[1.875rem]">
+          <p className="text-[1.675rem]">
             {companyData.data.attributes.description}
           </p>
           <figure className="max-h-4xl">
@@ -31,11 +32,12 @@ export default function CompaniesPage() {
             />
           </figure>
         </div>
-        <ul className="">
+        <OurProject />
+        <ul id="services" className="">
           {companyData.data.attributes.services.map((service, index) => (
             <li id={`v${index + 1}`} key={index} className="pt-[9.375rem]">
-              <h2 className="text-[6.25rem] font-bold">{service.title}</h2>
-              <p className="text-[1.875rem]">{service.description}</p>
+              <h2 className="text-[4.25rem] font-bold">{service.title}</h2>
+              <p className="text-[1.675rem]">{service.description}</p>
             </li>
           ))}
         </ul>
