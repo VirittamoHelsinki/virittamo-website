@@ -11,7 +11,7 @@ export default function AboutPage() {
     return;
   }
   return (
-    <main className="flex min-h-screen flex-col px-[100px]">
+    <main className="flex min-h-screen flex-col px-[100px] mx-[245px]">
       <Suspense fallback={`loading...`}>
         <div className="flex flex-col gap-10">
           <h1 className="text-[8.125rem] font-bold leading-[8rem] tracking-tight sm:text-[8.125rem]">
@@ -75,7 +75,7 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-          <div className="pt-[9.375rem]">
+          <div id="map" className="pt-[9.375rem]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.415977479487!2d25.07534967768671!3d60.22349387505956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692097d49be7743%3A0x44d7181298503381!2sMyllypurontie%201%2C%2000920%20Helsinki!5e0!3m2!1sfi!2sfi!4v1702891756176!5m2!1sfi!2sfi"
               width="900"
