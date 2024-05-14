@@ -21,14 +21,14 @@ export default function ApplyToWork() {
   )
     return;
   return (
-    <main className="flex min-h-screen flex-col px-[100px]">
+    <main className="flex min-h-screen flex-col px-[100px] mx-[245px]">
     <div id="work" className="flex flex-col gap-10 pt-[9.375rem]">
-      <h2 className="text-[6.25rem] font-bold">
+      <h2 className="text-[3.25rem]">
         {applyData.data.attributes.applyHeading}
       </h2>
-      <Accordion type="single" collapsible className="-mx-[100px]">
-        <AccordionItem value="item-1" className="border-t px-[100px]">
-          <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
+      <Accordion type="single" collapsible className="">
+        <AccordionItem value="item-1" className="border-t">
+          <AccordionTrigger className="text-[3.25rem] uppercase">
             {criterionData.data.attributes.criterion.name}
           </AccordionTrigger>
           <AccordionContent className="flex flex-col gap-[1.875rem] leading-tight">
@@ -57,9 +57,56 @@ export default function ApplyToWork() {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+      <hr className="border-black"></hr>
       <p className="text-[2.1875rem]">
         {applyData.data.attributes.applyDescription}
       </p>
+      <div className="flex flex-col gap-10">
+          <h1 className="text-[2.75rem]">
+            {applyData.data.attributes.applyHeading}
+          </h1>
+          <p className="text-[1.675rem]">
+            {applyData.data.attributes.applyDescription}
+          </p>
+          <figure className="max-h-4xl">
+            {/* <Image
+              className="h-[400px] rounded-xl object-cover"
+              src={companyData.data.attributes.img.data.attributes.url}
+              alt="Picture of the author"
+              width={2000}
+              height={2000}
+            /> */}
+            <img
+              src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="Bold typography"
+              style={{
+                display: 'block',
+                objectFit: 'cover',
+                width: '100%',
+                height: 175,
+                backgroundColor: 'var(--gray-5)',
+              }}
+            />
+          </figure>
+          <h1 className="text-[2rem]">
+            {applyData.data.attributes.applyHeading}
+          </h1>
+          <p className="text-[1.675rem]">
+            {applyData.data.attributes.applyDescription}
+          </p>
+          <h1 className="text-[2rem]">
+            {applyData.data.attributes.applyHeading}
+          </h1>
+          <p className="text-[1.675rem]">
+            {applyData.data.attributes.applyDescription}
+          </p>
+          <h1 className="text-[2rem]">
+            {applyData.data.attributes.applyHeading}
+          </h1>
+          <p className="text-[1.675rem]">
+            {applyData.data.attributes.applyDescription}
+          </p>
+        </div>
     </div>
     </main>
   );
