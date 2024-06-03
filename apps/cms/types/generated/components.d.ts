@@ -12,6 +12,7 @@ export interface AccordionAccordion extends Schema.Component {
     description: Attribute.Text;
     button: Attribute.Component<'button.action-button'>;
     marquee: Attribute.Component<'list.list', true>;
+    teamPhoto: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -93,6 +94,14 @@ export interface ListContactList extends Schema.Component {
   };
 }
 
+export interface ListCriterionList extends Schema.Component {
+  collectionName: 'components_list_criterion_lists';
+  info: {
+    displayName: 'CriterionList';
+  };
+  attributes: {};
+}
+
 export interface ListGenericList extends Schema.Component {
   collectionName: 'components_list_generic_lists';
   info: {
@@ -129,11 +138,12 @@ export interface ListValueList extends Schema.Component {
   collectionName: 'components_list_value_lists';
   info: {
     displayName: 'value-list';
+    description: '';
   };
   attributes: {
-    icon: Attribute.Media;
     title: Attribute.String;
     description: Attribute.Text;
+    valueImg: Attribute.Media;
   };
 }
 
@@ -228,6 +238,7 @@ declare module '@strapi/types' {
       'button.button': ButtonButton;
       'list.benefit-list': ListBenefitList;
       'list.contact-list': ListContactList;
+      'list.criterion-list': ListCriterionList;
       'list.generic-list': ListGenericList;
       'list.image-list': ListImageList;
       'list.list': ListList;

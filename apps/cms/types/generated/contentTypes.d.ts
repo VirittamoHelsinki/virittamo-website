@@ -847,6 +847,12 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
           localized: true;
         };
       }>;
+    wwa: Attribute.Component<'section.proof-section'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1088,6 +1094,18 @@ export interface ApiCompaniesPageCompaniesPage extends Schema.SingleType {
           localized: true;
         };
       }>;
+    projectHeading: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    projectLinkName: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1141,12 +1159,6 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
           localized: true;
         };
       }>;
-    wwa: Attribute.Component<'section.proof-section'> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     teamHeading: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1159,36 +1171,6 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
           localized: true;
         };
       }>;
-    projectHeading: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    projectLinkName: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    applyHeading: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    applyDescription: Attribute.Text &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    criterion: Attribute.Component<'accordion.criterion-accordion'> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     benefit: Attribute.Component<'accordion.benefit-accordion'> &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1196,6 +1178,12 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
         };
       }>;
     employed: Attribute.Component<'section.employed-section'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    carouselText: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1225,6 +1213,110 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
   };
 }
 
+export interface ApiJobSeekerpageJobSeekerpage extends Schema.SingleType {
+  collectionName: 'job_seekerpages';
+  info: {
+    singularName: 'job-seekerpage';
+    pluralName: 'job-seekerpages';
+    displayName: 'Job-seekerpage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    applyHeading: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    applyDescription: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    offerHeading: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    offerDescription: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    services: Attribute.Component<'list.value-list', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    criterionHeading: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    criterionLink: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    criterionDescription: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    criterionList: Attribute.Component<'list.list', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::job-seekerpage.job-seekerpage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::job-seekerpage.job-seekerpage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::job-seekerpage.job-seekerpage',
+      'oneToMany',
+      'api::job-seekerpage.job-seekerpage'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1249,6 +1341,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::companies-page.companies-page': ApiCompaniesPageCompaniesPage;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::job-seekerpage.job-seekerpage': ApiJobSeekerpageJobSeekerpage;
     }
   }
 }

@@ -1,22 +1,23 @@
 {
   "collectionName": "components_list_value_lists",
   "info": {
-    "displayName": "value-list"
+    "displayName": "value-list",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "icon": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "title": {
       "type": "string"
     },
     "description": {
       "type": "text"
+    },
+    "valueImg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

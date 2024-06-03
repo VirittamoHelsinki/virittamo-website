@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "about_pages",
+  "collectionName": "job_seekerpages",
   "info": {
-    "singularName": "about-page",
-    "pluralName": "about-pages",
-    "displayName": "about-page",
+    "singularName": "job-seekerpage",
+    "pluralName": "job-seekerpages",
+    "displayName": "Job-seekerpage",
     "description": ""
   },
   "options": {
@@ -16,15 +16,16 @@
     }
   },
   "attributes": {
-    "title": {
+    "applyHeading": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "description": {
+    "applyDescription": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -32,20 +33,7 @@
       },
       "type": "text"
     },
-    "img": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "heading1": {
+    "offerHeading": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -53,26 +41,15 @@
       },
       "type": "string"
     },
-    "heading2": {
+    "offerDescription": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string"
+      "type": "text"
     },
-    "contacts": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "list.contact-list"
-    },
-    "values": {
-      "displayName": "value-list",
+    "services": {
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -82,15 +59,53 @@
       },
       "component": "list.value-list"
     },
-    "wwa": {
-      "type": "component",
-      "repeatable": false,
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "criterionHeading": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "section.proof-section"
+      "type": "string",
+      "required": true
+    },
+    "criterionLink": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "criterionDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "criterionList": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "list.list"
     }
   }
 }
