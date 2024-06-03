@@ -4,8 +4,9 @@ import { Wave } from "../icons";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { translations } from "~/utils/translations";
 import { useLang } from "~/utils/lang-provider";
+import { Img } from "~/server/api/routers/home";
 
-const TeamsCard = ({ teamName, description }: { teamName: string; description: string }) => {
+const TeamsCard = ({ teamName, description, teamImg }: { teamName: string; description: string; teamImg: Img }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   const toggleDescription = () => {
@@ -28,7 +29,7 @@ const TeamsCard = ({ teamName, description }: { teamName: string; description: s
         <Card>
           <Inset clip="padding-box" side="top" pb="current">
             <img
-              src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              src={teamImg.data.attributes.url}
               alt="Bold typography"
               style={{
                 display: 'block',
@@ -40,7 +41,7 @@ const TeamsCard = ({ teamName, description }: { teamName: string; description: s
             />
             <Wave className="wave-position fill-[white]" />
           </Inset>
-          <h2 className="text-[2.5rem] p-1">{teamName}</h2>
+          <h2 className="text-[2.5rem] p-1 pl-[0.6rem]">{teamName}</h2>
           <Text className="p-3" as="p" size="3">
             {showFullDescription ? description : description.slice(0, 200) + (description.length > 200 ? '...' : '')}
           </Text>
