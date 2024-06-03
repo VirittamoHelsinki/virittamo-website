@@ -65,8 +65,8 @@ function Hero() {
               </p>
             ))}
             <Link
-              href={`mailto:${heroData.data.attributes.hero.ctaButton.action}`}
-              className="rounded-[10px] bg-[#F5A4C8] px-8 py-4 text-2xl font-bold text-black"
+              href="/about#contact"
+              className="rounded-[10px] hover-cta bg-[#F5A4C8] px-8 py-4 text-2xl font-bold text-black"
             >
               {heroData.data.attributes.hero.ctaButton.name}
             </Link>
@@ -108,10 +108,11 @@ function CarouselDemo() {
   const { locale } = useLang();
   const { data: featureData, isLoading: isFeatureLoading } =
     api.home.getSlides.useQuery({ lang: locale });
+    const { data: carouselText, isLoading: isCarouselTextLoading } =
+     api.home.getPage.useQuery({ lang: locale });
   const [apiCarousel, setApiCarousel] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-
   useEffect(() => {
     if (!apiCarousel) {
       return;
@@ -121,12 +122,11 @@ function CarouselDemo() {
     setCurrent(apiCarousel.selectedScrollSnap() + 1);
 
     apiCarousel.on("select", () => {
-      console.log("current");
       setCurrent(apiCarousel.selectedScrollSnap() + 1);
     });
   }, [apiCarousel]);
 
-  if (isFeatureLoading || !featureData) return;
+  if (isFeatureLoading || !featureData || isCarouselTextLoading || !carouselText) return;
 
   //order the data so that the videos are displayed first
   const videos = featureData.data.filter(slide => slide.attributes.media.data.attributes.mime.startsWith("video"));
@@ -135,6 +135,9 @@ function CarouselDemo() {
 
   return (
     <div className="">
+       <h2 className="text-[3.25rem] font-bold pb-[2.675rem]">
+      {carouselText.data.attributes.carouselText}
+      </h2>
       <Carousel
         className="flex w-full items-center justify-center"
         setApi={setApiCarousel}
@@ -204,9 +207,9 @@ function CarouselDemo() {
           </div>
         </div>
       </Carousel>
-      <div className="py-2 text-center text-sm text-muted-foreground">
+      {/* <div className="py-2 text-center text-sm text-muted-foreground">
         Slide {current} of {count}
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -240,79 +243,79 @@ function CarouselDemo() {
 //   );
 // }
 
-function ContactInfo({
-  name,
-  title,
-  email,
-  phone,
-}: {
-  name: string;
-  title: string;
-  email: string;
-  phone: string;
-}) {
-  return (
-    <Popover>
-      <PopoverTrigger asChild>
-        <Button
-          variant="ghost"
-          className="group flex flex-col p-0 text-[2.5rem] hover:bg-transparent"
-        >
-          Lets Talk
-          <div className="w-16 self-start border-b-2 border-black transition-all duration-300 group-hover:w-full" />
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="mt-2 w-min" align="start">
-        <div className="flex flex-col gap-4">
-          <div className="space-y-2">
-            <h4 className="font-medium leading-none">{name}</h4>
-            <span className="text-sm opacity-75">{title}</span>
-          </div>
-          <div className="flex flex-col gap-2">
-            <Link className="flex gap-1" href="mailto:arto.aitta@hel.fi">
-              <Mail />
-              {email}
-            </Link>
-            <Link className="flex gap-1" href="tel:012 345 6789">
-              <Phone />
-              {phone}
-            </Link>
-          </div>
-        </div>
-      </PopoverContent>
-    </Popover>
-  );
-}
+// function ContactInfo({
+//   name,
+//   title,
+//   email,
+//   phone,
+// }: {
+//   name: string;
+//   title: string;
+//   email: string;
+//   phone: string;
+// }) {
+//   return (
+//     <Popover>
+//       <PopoverTrigger asChild>
+//         <Button
+//           variant="ghost"
+//           className="group flex flex-col p-0 text-[2.5rem] hover:bg-transparent"
+//         >
+//           Lets Talk
+//           <div className="w-16 self-start border-b-2 border-black transition-all duration-300 group-hover:w-full" />
+//         </Button>
+//       </PopoverTrigger>
+//       <PopoverContent className="mt-2 w-min" align="start">
+//         <div className="flex flex-col gap-4">
+//           <div className="space-y-2">
+//             <h4 className="font-medium leading-none">{name}</h4>
+//             <span className="text-sm opacity-75">{title}</span>
+//           </div>
+//           <div className="flex flex-col gap-2">
+//             <Link className="flex gap-1" href="mailto:arto.aitta@hel.fi">
+//               <Mail />
+//               {email}
+//             </Link>
+//             <Link className="flex gap-1" href="tel:012 345 6789">
+//               <Phone />
+//               {phone}
+//             </Link>
+//           </div>
+//         </div>
+//       </PopoverContent>
+//     </Popover>
+//   );
+// }
 
-function Marquee({
-  marquee,
-  children,
-}: {
-  marquee: { id: number; name: string }[];
-  children?: React.ReactNode;
-}) {
-  return (
-    <div className="relative flex overflow-x-hidden bg-black text-white">
-      <div className="flex animate-marquee flex-nowrap gap-4 whitespace-nowrap py-[1.5625rem]">
-        {marquee.map((job) => (
-          <div key={job.id} className="flex flex-nowrap gap-5">
-            <span className="text-4xl">{job.name}</span>
-            {children}
-          </div>
-        ))}
-      </div>
+// function Marquee({
+//   marquee,
+//   children,
+// }: {
+//   marquee: { id: number; name: string }[];
+//   children?: React.ReactNode;
+// }) {
+//   return (
+//     <div className="relative flex overflow-x-hidden bg-black text-white">
+//       <div className="flex animate-marquee flex-nowrap gap-4 whitespace-nowrap py-[1.5625rem]">
+//         {marquee.map((job) => (
+//           <div key={job.id} className="flex flex-nowrap gap-5">
+//             <span className="text-4xl">{job.name}</span>
+//             {children}
+//           </div>
+//         ))}
+//       </div>
 
-      <div className="absolute top-0 flex animate-marquee2 flex-nowrap gap-4 whitespace-nowrap py-[1.5625rem]">
-        {marquee.map((job) => (
-          <div key={job.id} className=" flex flex-nowrap gap-5">
-            <span className="text-4xl">{job.name}</span>
-            {children}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+//       <div className="absolute top-0 flex animate-marquee2 flex-nowrap gap-4 whitespace-nowrap py-[1.5625rem]">
+//         {marquee.map((job) => (
+//           <div key={job.id} className=" flex flex-nowrap gap-5">
+//             <span className="text-4xl">{job.name}</span>
+//             {children}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
 
 // const getIconForTeam = (teamName: string) => {
 //   switch (teamName.toLowerCase()) {
@@ -342,6 +345,7 @@ function OurTeams() {
         {teamsData.data.attributes.teamAccordion.map((team, index) => (
           <li key={index} className="flex flex-col py-[1.875rem]">
             <TeamsCard
+              teamImg={team.teamPhoto}
               teamName={team.name}
               description={team.description}
             />
@@ -376,58 +380,6 @@ function OurTeams() {
     </div>
   );
 }
-
-function OurProject() {
-  const { locale } = useLang();
-  const { data: ourData, isLoading: isOurLoading } = api.home.getPage.useQuery({
-    lang: locale,
-  });
-  const { data: fprojectData, isLoading: isFprojectLoading } =
-    api.post.getAllProjects.useQuery({ lang: locale });
-  if (isOurLoading || isFprojectLoading || !ourData || !fprojectData)
-    return;
-  return (
-    <div className="flex flex-col gap-10 pt-[9.375rem]">
-      <h2 className="sm:text-[4rem] font-bold">
-        {ourData.data.attributes.projectHeading}
-      </h2>
-      <ul className="flex gap-[62px]">
-        {fprojectData.data.map((project, index) => (
-          <li key={index} className="flex flex-col py-[1.875rem]">
-            <Link href={`/blog/${project.attributes.slug}`} passHref>
-              {project.attributes.media.data.attributes.mime.startsWith(
-                "image",
-              ) ? (
-                <Image
-                  className="h-[661px] w-full rounded-xl object-cover"
-                  src={project.attributes.media.data.attributes.url}
-                  alt={project.attributes.title}
-                  width={553}
-                  height={661}
-                />
-              ) : (
-                <video
-                  src={project.attributes.media.data.attributes.url}
-                  className="h-[661px] w-full rounded-xl object-cover"
-                  width={533}
-                  height={661}
-                />
-              )}
-              <span className="hidden text-6xl font-bold">
-                {project.attributes.title}
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <Link href="/blog" className="text-[2.5rem]">
-        {ourData.data.attributes.projectLinkName} &gt;
-      </Link>
-    </div>
-  );
-}
-
-export {OurProject};
 
 // function ApplyToWork() {
 //   const { locale } = useLang();
@@ -560,7 +512,7 @@ function PreviousEmployees() {
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col px-[100px] mx-[245px]">
+    <main className="flex min-h-screen flex-col px-[100px] mx-[150px]">
       <Suspense fallback={<div></div>}>
         <Hero />
         <Partners />

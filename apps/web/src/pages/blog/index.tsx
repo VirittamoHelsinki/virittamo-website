@@ -22,9 +22,9 @@ export default function BlogPage() {
   if (isBlogPageLoading || !blogPage) return;
   const {
     all,
-    news, 
-    projects, 
-    stories, 
+    news,
+    projects,
+    stories,
   } = translations[locale];
 
   const filteredData =
@@ -32,19 +32,19 @@ export default function BlogPage() {
       ? categoryData
       : blogData;
   return (
-    <main className="flex min-h-screen flex-col gap-10 px-[100px]">
+    <main className="flex min-h-screen flex-col px-[100px] mx-[150px]">
       <Suspense fallback={"loading..."}>
         <div className="flex flex-col gap-10">
-          <h1 className="text-[8.125rem] font-bold leading-[8rem] tracking-tight sm:text-[8.125rem]">
-          {blogPage.data.attributes.title}
+          <h1 className="text-[6.125rem] font-bold leading-[8rem] tracking-tight sm:text-[8.125rem]">
+            {blogPage.data.attributes.title}
           </h1>
           <p className="text-[1.875rem]">
-          {blogPage.data.attributes.description}
+            {blogPage.data.attributes.description}
           </p>
         </div>
 
-        <div className="flex gap-5">
-        <Toggle
+        <div className="flex gap-5 pt-[3.375rem] pb-[2.375rem]">
+          <Toggle
             pressed={category === ""}
             onPressedChange={(value) => setCategory(value ? "" : "")}
             variant="outline"
@@ -86,7 +86,7 @@ export default function BlogPage() {
                   "image",
                 ) ? (
                   <Image
-                    className="h-[500px] w-[535px] rounded-xl object-cover"
+                    className="h-[400px] w-[535px] rounded-xl object-cover"
                     src={article.attributes.media.data.attributes.url}
                     alt="Picture of the author"
                     width={2000}
@@ -97,7 +97,7 @@ export default function BlogPage() {
                     disablePictureInPicture={true}
                     controls={false}
                     src={article.attributes.media.data.attributes.url}
-                    className="h-[500px] w-[535px] rounded-xl object-cover"
+                    className="h-[400px] w-[535px] rounded-xl object-cover"
                     width={2000}
                     height={800}
                     autoPlay
