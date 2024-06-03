@@ -1,6 +1,5 @@
-// import { z } from "zod";
 import { z } from "zod";
-import { type Articles } from "~/server/api/routers/post";
+import { Image, type Articles } from "~/server/api/routers/post";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
 export type Homepage = {
@@ -18,17 +17,12 @@ export type PurpleAttributes = {
   updatedAt: Date;
   publishedAt: Date;
   teamHeading: string;
-  projectHeading: string;
-  projectLinkName: string;
-  applyHeading: string;
-  applyDescription: string;
+  carouselText: string;
   locale: string;
   hero: Hero;
   partners: Partners;
-  wwa: Wwa;
   teamAccordion: TeamAccordion[];
   employed: Employed;
-  criterion: Criterion;
   benefit: AttributesBenefit;
 };
 
@@ -44,25 +38,6 @@ export type BenefitElement = {
   description: string;
   link: null | string;
   linkName: null | string;
-};
-
-export type Criterion = {
-  id: number;
-  name: string;
-  heading: string;
-  note: string;
-  criterionList: CriterionList[];
-};
-
-export type CriterionList = {
-  id: number;
-  name: string;
-  item: Item[];
-};
-
-export type Item = {
-  id: number;
-  name: string;
 };
 
 export type Employed = {
@@ -112,6 +87,7 @@ export type TeamAccordion = {
   description: string;
   marquee: Marquee[];
   button: Button;
+  teamPhoto: Img;
 };
 
 export type Button = {
@@ -120,13 +96,6 @@ export type Button = {
   title: string;
   email: string;
   phone: string;
-};
-
-export type Wwa = {
-  id: number;
-  title: string;
-  description: string;
-  img: Img;
 };
 
 export type Img = {
@@ -192,9 +161,7 @@ export const homeRouter = createTRPCRouter({
           },
         },
       );
-
       const data = (await res.json()) as Homepage;
-
       return data;
     }),
   getHero: publicProcedure
@@ -251,29 +218,11 @@ export const homeRouter = createTRPCRouter({
 
       return data;
     }),
-  getWwa: publicProcedure
-    .input(z.object({ lang: z.string() }))
-    .query(async ({ input }) => {
-      const res = await fetch(
-        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[wwa][populate]=*`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
-          },
-        },
-      );
-
-      const data = (await res.json()) as Homepage;
-
-      return data;
-    }),
   getTeams: publicProcedure
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[teamAccordion][populate][marquee][populate]=*&populate[teamAccordion][populate][button][populate]=*`,
+        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[teamAccordion][populate][marquee][populate]=*&populate[teamAccordion][populate][button][populate]=*&populate[teamAccordion][populate][teamPhoto]=*`,
         {
           method: "GET",
           headers: {
@@ -282,9 +231,7 @@ export const homeRouter = createTRPCRouter({
           },
         },
       );
-
       const data = (await res.json()) as Homepage;
-
       return data;
     }),
   getProjects: publicProcedure
@@ -302,42 +249,6 @@ export const homeRouter = createTRPCRouter({
       );
 
       const data = (await res.json()) as Articles;
-
-      return data;
-    }),
-  getCriterion: publicProcedure
-    .input(z.object({ lang: z.string() }))
-    .query(async ({ input }) => {
-      const res = await fetch(
-        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[criterion][populate][criterionList][populate]=*`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
-          },
-        },
-      );
-
-      const data = (await res.json()) as Homepage;
-
-      return data;
-    }),
-  getBenefit: publicProcedure
-    .input(z.object({ lang: z.string() }))
-    .query(async ({ input }) => {
-      const res = await fetch(
-        `${process.env.API_URL}/api/home-page?locale=${input.lang}&populate[benefit][populate]=*`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
-          },
-        },
-      );
-
-      const data = (await res.json()) as Homepage;
 
       return data;
     }),

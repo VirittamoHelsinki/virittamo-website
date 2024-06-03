@@ -1,12 +1,12 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
-export type Companypage = {
-  data: CompanypageData;
+export type Jobseekerpage = {
+  data: JobseekerpageData;
   meta: Meta;
 };
 
-export type CompanypageData = {
+export type JobseekerpageData = {
   id: number;
   attributes: PurpleAttributes;
 };
@@ -16,12 +16,18 @@ export type PurpleAttributes = {
   createdAt: Date;
   updatedAt: Date;
   publishedAt: Date;
+  applyHeading: string;
+  applyDescription: string;
+  offerHeading: string;
+  offerDescription: string;
+  criterionHeading: string;
+  criterionDescription: string;
+  criterionLink: string;
+  criterionList: CriterionList[];
   description: string;
-  projectHeading: string;
-  projectLinkName: string;
   locale: string;
-  img: Img;
   services: Service[];
+  image: Img;
   // localizations: Localizations;
 };
 
@@ -40,7 +46,6 @@ export type FluffyAttributes = {
   caption: null;
   width: number;
   height: number;
-  formats: Formats;
   hash: string;
   ext: string;
   mime: string;
@@ -53,28 +58,6 @@ export type FluffyAttributes = {
   updatedAt: Date;
 };
 
-export type Formats = {
-  large: Large;
-  small: Large;
-  medium: Large;
-  thumbnail: Large;
-};
-
-export type Large = {
-  ext: string;
-  url: string;
-  hash: string;
-  mime: string;
-  name: string;
-  path: null;
-  size: number;
-  width: number;
-  height: number;
-};
-
-// export type Localizations = {
-//   data: any[];
-// }
 
 export type Service = {
   id: number;
@@ -82,14 +65,19 @@ export type Service = {
   description: string;
 };
 
+  export type CriterionList = {
+    id: number;
+    name: string;
+  };
+
 export type Meta = object;
 
-export const companyRouter = createTRPCRouter({
+export const jobseekerRouter = createTRPCRouter({
   getPage: publicProcedure
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `${process.env.API_URL}/api/companies-page?locale=${input.lang}&populate=*`,
+        `${process.env.API_URL}/api/job-seekerpage?locale=${input.lang}&populate=*`,
         {
           method: "GET",
           headers: {
@@ -98,7 +86,7 @@ export const companyRouter = createTRPCRouter({
           },
         },
       );
-      const data = (await res.json()) as Companypage;
+      const data = (await res.json()) as Jobseekerpage;
       return data;
     }),
 });

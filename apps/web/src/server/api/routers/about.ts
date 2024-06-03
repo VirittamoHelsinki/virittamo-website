@@ -23,13 +23,14 @@ export type PurpleAttributes = {
   img: Img;
   contacts: Contact[];
   values: Value[];
-  // localizations: Localizations;
+  wwa: Wwa;
 };
 
 export type Contact = {
   id: number;
   name: string;
   title: string;
+  img: Img;
   email: string;
   phone: string;
 };
@@ -84,12 +85,16 @@ export type Large = {
 export type Value = {
   id: number;
   title: string;
+  valueImg: Img;
   description: string;
 };
 
-// export type Localizations = {
-//   data: any[];
-// }
+export type Wwa = {
+  id: number;
+  title: string;
+  description: string;
+  img: Img;
+};
 
 export type Meta = object;
 
@@ -98,7 +103,7 @@ export const aboutRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `${process.env.API_URL}/api/about-page?locale=${input.lang}&populate=*`,
+        `${process.env.API_URL}/api/about-page?locale=${input.lang}&populate[img][populate]=*&populate[contacts][populate]=*&populate[values][populate]=*`,
         {
           method: "GET",
           headers: {
@@ -109,6 +114,25 @@ export const aboutRouter = createTRPCRouter({
       );
 
       const data = (await res.json()) as Aboutpage;
+      return data;
+    }),
+
+    getWwa: publicProcedure
+    .input(z.object({ lang: z.string() }))
+    .query(async ({ input }) => {
+      const res = await fetch(
+        `${process.env.API_URL}/api/about-page?locale=${input.lang}&populate[wwa][populate]=*`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
+          },
+        },
+      );
+
+      const data = (await res.json()) as Aboutpage;
+
       return data;
     }),
 });
