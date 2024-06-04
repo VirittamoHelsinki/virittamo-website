@@ -35,10 +35,10 @@ export default function BlogPage() {
     <main className="flex min-h-screen flex-col px-[100px] mx-[150px]">
       <Suspense fallback={"loading..."}>
         <div className="flex flex-col gap-10">
-          <h1 className="text-[6.125rem] font-bold leading-[8rem] tracking-tight sm:text-[8.125rem]">
+          <h1 className="text-[4rem] font-bold leading-[8rem] tracking-tight sm:text-[4rem]">
             {blogPage.data.attributes.title}
           </h1>
-          <p className="text-[1.875rem]">
+          <p className="text-[1.25rem]">
             {blogPage.data.attributes.description}
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function BlogPage() {
                 <h3 className="text-[2.5rem] font-bold">
                   {article.attributes.title}
                 </h3>
-                <p className="text-[1.5625rem]">
+                <p className="text-[1.25rem]">
                   {article.attributes.description}
                 </p>
               </Link>

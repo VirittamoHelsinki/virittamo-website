@@ -12,20 +12,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "~/@/components/ui/accordion";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "~/@/components/ui/popover";
 import { Button } from "~/@/components/ui/button";
-import { Mail, Phone, Camera, Server, Code } from "lucide-react";
-import { Icons } from "~/@/components/icons";
 import { api } from "~/utils/api";
 import { useLang } from "~/utils/lang-provider";
 import { TeamsCard } from "~/@/components/ui/teams-card";
@@ -40,7 +27,7 @@ function Hero() {
 
   return (
     <div className="flex flex-col gap-10">
-      <h1 className="text-[5rem] font-bold leading-[8rem] tracking-tight sm:text-[5rem]">
+      <h1 className="text-[4rem] font-bold leading-[8rem] tracking-tight sm:text-[5rem]">
         {heroData.data.attributes.hero.title}
       </h1>
       <div className="flex gap-10">
@@ -84,7 +71,7 @@ function Partners() {
   if (isPartnerLoading || !partnerData) return;
   return (
     <div className="flex flex-col gap-5 pt-[9.375rem]">
-      <h2 className="text-[2.5rem] font-bold">
+      <h2 className="text-[3rem] font-bold">
         {partnerData.data.attributes.partners.title}
       </h2>
       <ul className="flex flex-wrap items-center justify-between gap-x-10 gap-y-6  md:gap-x-16">
@@ -135,7 +122,7 @@ function CarouselDemo() {
 
   return (
     <div className="">
-       <h2 className="text-[3.25rem] font-bold pb-[2.675rem]">
+       <h2 className="text-[3rem] font-bold pb-[2.675rem]">
       {carouselText.data.attributes.carouselText}
       </h2>
       <Carousel
@@ -179,12 +166,25 @@ function CarouselDemo() {
                   <div className="color-layer"></div>
                   <div className="text-box">
                   <div className="absolute bottom-0 left-0 max-w-4xl text-white">
-                    <h2 className="text-[2.75rem] text-shadow">
+                    <h2 className="text-[3rem] text-shadow">
                       {slide.attributes.title}
                     </h2>
                     <p className="text-xl items-center pb-10 pr-10 text-shadow">{slide.attributes.description}</p>
                   </div>
                   </div>
+                  {/* <div className="absolute top-0 left-0 w-full z-10">
+                <img src="/laine_karuselli.svg" alt="laine_karuselli" className="w-full" />
+              </div>
+              <div className="absolute bottom-0 left-0 w-full z-20 text-box">
+                <div className="max-w-4xl text-white">
+                  <h2 className="text-[3rem] text-shadow">
+                    {slide.attributes.title}
+                  </h2>
+                  <p className="text-xl items-center pb-10 pr-10 text-shadow">
+                    {slide.attributes.description}
+                  </p>
+                </div>
+              </div> */}
                 </CardContent>
               </Card>
             </CarouselItem>
@@ -337,7 +337,7 @@ function OurTeams() {
   if (isTeamsLoading || !teamsData) return;
   return (
     <div id="teams" className="flex flex-col gap-10 pt-[7.375rem]">
-      <h2 className="text-[4.25rem] font-bold">
+      <h2 className="text-[3rem] font-bold">
         {teamsData.data.attributes.teamHeading}
       </h2>
       {/* <Accordion type="single" collapsible className="-mx-[0px]"> */}
@@ -474,7 +474,7 @@ function PreviousEmployees() {
   if (isPreviousLoading || !previousData) return;
   return (
     <div className="flex flex-col gap-10">
-      <h2 className="text-[2.5rem] font-bold">
+      <h2 className="text-[3rem] font-bold">
         {previousData.data.attributes.employed.title}
       </h2>
       <div className="-mx-[100px]">

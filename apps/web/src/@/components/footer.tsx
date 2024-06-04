@@ -28,50 +28,50 @@ export function Footer() {
         <div className="flex justify-between gap-10 text-white">
           <div className="flex justify-between gap-[5.625rem]">
             <nav className="flex flex-col items-start gap-5">
-              <Link href="/" className="text-2xl">
+              <Link href="/" className="text-2xl hover-pink">
                 {home}
               </Link>
-              <Link href="/#teams" className="text-2xl">
+              <Link href="/#teams" className="text-2xl hover-pink">
                 {teams}
               </Link>
-              <Link href="/jobseekers" className="text-2xl">
+              <Link href="/jobseekers" className="text-2xl hover-pink">
                 {jobseekers}
               </Link>
-              <Link href="/company" className="text-2xl">
+              <Link href="/company" className="text-2xl hover-pink">
                 {companies}
               </Link>
-              <Link href="/blog" className="text-2xl">
+              <Link href="/blog" className="text-2xl hover-pink">
                 {news}
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
-              <Link href="/company#services" className="text-2xl">
+              <Link href="/company#services" className="text-2xl hover-pink">
                 {services}
               </Link>
-              <Link href="/" className="text-2xl">
+              <Link href="/" className="text-2xl hover-pink">
                 {uraohjaus}
               </Link>
-              <Link href="/" className="text-2xl">
+              <Link href="/" className="text-2xl hover-pink">
                 Opinto-ohjaus
               </Link>
-              <Link href="/" className="text-2xl">
+              <Link href="/" className="text-2xl hover-pink">
                 S2 Opetus
               </Link>
-              <Link href="/" className="text-2xl">
+              <Link href="/" className="text-2xl hover-pink">
                 Hymykylä
               </Link>
             </nav>
             <nav className="flex flex-col items-start gap-5">
-              <Link href="/about" className="text-2xl">
+              <Link href="/about" className="text-2xl hover-pink">
                 {about}
               </Link>
-              <Link href="/about#values" className="text-2xl">
+              <Link href="/about#values" className="text-2xl hover-pink">
                 {values}
               </Link>
-              <Link href="/about#contact" className="text-2xl">
+              <Link href="/about#contact" className="text-2xl hover-pink">
                 {contact}
               </Link>
-              <Link href="/about#map" className="text-2xl">
+              <Link href="/about#map" className="text-2xl hover-pink">
                 {location}
               </Link>
             </nav>
@@ -82,7 +82,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-2xl"
               >
-                <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                <span className="hover-pink" style={{ display: 'inline-flex', alignItems: 'center' }}>
                   <span style={{ marginRight: '1rem' }}><Instagram /></span>
                   Instagram
                 </span>
@@ -93,7 +93,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-2xl"
               >
-                <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                <span className="hover-pink" style={{ display: 'inline-flex', alignItems: 'center' }}>
                   <span style={{ marginRight: '1rem' }}><Facebook /></span>
                   Facebook
                 </span>
@@ -104,7 +104,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-2xl"
               >
-                <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                <span className="hover-pink" style={{ display: 'inline-flex', alignItems: 'center' }}>
                   <span style={{ marginRight: '1rem' }}><Linkedin /></span>
                   LinkedIn
                 </span>

@@ -81,6 +81,14 @@
   text-underline-offset: 0.2em;
 }
 
+
+.underline-pink {
+  text-decoration: underline;
+  text-decoration-color: #F5A4C8;
+  text-underline-offset: 0.2em;
+}
+
+
 .hover-cta:hover{
   background-color: #F288B7;
 }
@@ -133,16 +141,13 @@
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust the values as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card-shadow {
-  /* Set initial styles */
-  /* Add transition for smooth animation */
   transition: box-shadow 0.3s ease;
 }
 
 .card-shadow:hover {
-  /* Add shadow on hover */
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }

@@ -46,11 +46,9 @@ function LanguageSelect() {
   );
 }
 
-
-
 export function Header() {
   const pathname = usePathname();
-  const {locale} = useLang();
+  const { locale } = useLang();
   const { 
     home, 
     teams, 
@@ -61,7 +59,7 @@ export function Header() {
     values,
     contact,
   } = translations[locale];
-  
+
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between bg-white px-[100px] py-[30px]">
       <Link href="/" className="w-full max-w-[150px]">
@@ -72,58 +70,19 @@ export function Header() {
       <nav className="flex items-end gap-10">
         <Link
           href="/"
-          className={cn("sm:text-[1.25rem]", pathname === "/", "hover-pink")}
+          className={cn("sm:text-[1.25rem]", pathname === "/" ? "underline-pink" : "hover-pink")}
         >
           {home}
         </Link>
-        <Link href="/#teams" className="hover-pink sm:text-[1.25rem]">
-        {teams}
+        <Link href="/#teams" className={cn("sm:text-[1.25rem]", pathname === "/#teams" ? "underline-pink" : "hover-pink")}>
+          {teams}
         </Link>
-        <Link href="/jobseekers" className="sm:text-[1.25rem] hover-pink">
-        {jobseekers}
+        <Link href="/jobseekers" className={cn("sm:text-[1.25rem]", pathname === "/jobseekers" ? "underline-pink" : "hover-pink")}>
+          {jobseekers}
         </Link>
-        <Link href="/company" className="sm:text-[1.25rem] hover-pink">
-        {companies}
+        <Link href="/company" className={cn("sm:text-[1.25rem]", pathname === "/company" ? "underline-pink" : "hover-pink")}>
+          {companies}
         </Link>
-        {/* <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>
-                <Link
-                  href="/company"
-                  className={cn(
-                    "sm:text-[1.25rem]",
-                    pathname === "/company", "hover-pink"
-                  )}
-                >
-                  {companies}
-                </Link>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <Link href="/companies#v1" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "hover-pink")}>
-                    Heading 1
-                  </NavigationMenuLink>
-                </Link>
-                <Link href="/companies#v2" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "hover-pink")}>
-                    Heading 2
-                  </NavigationMenuLink>
-                </Link>
-                <Link href="/about#v3" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "hover-pink")}>
-                    Heading 3
-                  </NavigationMenuLink>
-                </Link>
-                <Link href="/companies#v4" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "hover-pink")}>
-                    Heading 4
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu> */}
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -132,7 +91,7 @@ export function Header() {
                   href="/about"
                   className={cn(
                     "sm:text-[1.25rem]",
-                    pathname === "/about" , "hover-pink"
+                    pathname === "/about" ? "underline-pink" : "hover-pink"
                   )}
                 >
                   {about}
@@ -146,7 +105,7 @@ export function Header() {
                 </Link>
                 <Link href="/about#contact" legacyBehavior passHref>
                   <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "hover-pink")}>
-                     {contact}
+                    {contact}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuContent>
@@ -155,7 +114,7 @@ export function Header() {
         </NavigationMenu>
         <Link
           href="/blog"
-          className={cn("sm:text-[1.25rem]", pathname === "/blog" , "hover-pink")}
+          className={cn("sm:text-[1.25rem]", pathname === "/blog" ? "underline-pink" : "hover-pink")}
         >
           {news}
         </Link>

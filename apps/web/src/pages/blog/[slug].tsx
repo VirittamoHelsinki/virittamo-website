@@ -40,7 +40,7 @@ export default function PostPage({
     <main className="flex min-h-screen flex-col items-center px-[100px]">
       <article className="flex max-w-[85ch] flex-col gap-10">
         <header className="flex flex-col gap-2">
-          <h1 className="text-[8.125rem] font-bold leading-[8rem] tracking-tight sm:text-[8.125rem]">
+          <h1 className="text-[4rem] font-bold leading-[8rem] tracking-tight sm:text-[4rem]">
             {frontMatter.title}
           </h1>
           {frontMatter.mime.startsWith("image") ? (

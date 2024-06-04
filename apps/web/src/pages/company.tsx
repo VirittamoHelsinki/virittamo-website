@@ -3,9 +3,13 @@ import Image from "next/image";
 import { api } from "~/utils/api";
 import { useLang } from "~/utils/lang-provider";
 import Link from "next/link";
+import { translations } from "~/utils/translations";
 
 export default function CompaniesPage() {
   const { locale } = useLang();
+  const { 
+    services
+  } = translations[locale];
   const { data: companyData, isLoading: isCompanyLoading } =
     api.company.getPage.useQuery({ lang: locale });
     const { data: fprojectData, isLoading: isFprojectLoading } =
@@ -17,10 +21,10 @@ export default function CompaniesPage() {
     <main className="flex min-h-screen flex-col px-[100px] mx-[150px]">
       <Suspense fallback={"loading..."}>
         <div className="flex flex-col gap-10">
-          <h1 className="text-[5rem] font-bold leading-[8rem] tracking-tight sm:text-[5rem]]">
+          <h1 className="text-[4rem] font-bold leading-[8rem] tracking-tight sm:text-[5rem]]">
             {companyData.data.attributes.title}
           </h1>
-          <p className="text-[1.675rem]">
+          <p className="text-[1.25rem]">
             {companyData.data.attributes.description}
           </p>
           <figure className="max-h-4xl">
@@ -33,7 +37,8 @@ export default function CompaniesPage() {
             />
           </figure>
         </div>
-        <h2 className="sm:text-[4rem] font-bold pt-[7.375rem]">
+        <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
+        <h2 className="sm:text-[3rem] font-bold pb-[1.375rem]">
         {companyData.data.attributes.projectHeading}
       </h2>
       <ul className="flex gap-[62px]">
@@ -58,21 +63,23 @@ export default function CompaniesPage() {
                   height={661}
                 />
               )}
-              <span className="hidden text-6xl font-bold">
+              <span className="text-[2.5rem] font-bold">
                 {project.attributes.title}
               </span>
             </Link>
           </li>
         ))}
       </ul>
-      <Link href="/blog" className="text-[2.5rem]">
+      <Link href="/blog" className="text-[2rem] pt-[2rem]">
         {companyData.data.attributes.projectLinkName} &gt;
       </Link>
+      <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
+      <h2 className="text-[3rem] font-bold">{services}</h2>
         <ul id="services" className="">
           {companyData.data.attributes.services.map((service, index) => (
-            <li id={`v${index + 1}`} key={index} className="pt-[7.375rem]">
-              <h2 className="text-[4.25rem] font-bold">{service.title}</h2>
-              <p className="text-[1.675rem]">{service.description}</p>
+            <li id={`v${index + 1}`} key={index} className="pt-[2.375rem]">
+              <h3 className="text-[2.5rem]">{service.title}</h3>
+              <p className="text-[1.25rem]">{service.description}</p>
             </li>
           ))}
         </ul>

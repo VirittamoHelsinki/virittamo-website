@@ -16,10 +16,10 @@ export default function AboutPage() {
     <main className="flex min-h-screen flex-col px-[100px] mx-[150px]">
       <Suspense fallback={`loading...`}>
         <div className="flex flex-col gap-10">
-          <h1 className="text-[3.25rem] font-bold leading-[8rem] tracking-tight sm:text-[3.25rem]">
+          <h1 className="text-[4rem] font-bold leading-[8rem] tracking-tight sm:text-[3.25rem]">
             {aboutData.data.attributes.title}
           </h1>
-          <p className="text-[1.5rem]">
+          <p className="text-[1.25rem]">
             {aboutData.data.attributes.description}
           </p>
           <figure className="max-h-4xl">
@@ -32,8 +32,9 @@ export default function AboutPage() {
             />
           </figure>
         </div>
-        <div className="pt-[4.375rem]">
-          <h2 className="pb-[2.5rem] text-[2.25rem] font-bold">
+        <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
+        <div className="">
+          <h2 className="pb-[2.5rem] text-[3rem] font-bold">
             {wwaData.data.attributes.wwa.title}
           </h2>
           <div className="flex flex-col gap-48 md:flex-row">
@@ -46,14 +47,14 @@ export default function AboutPage() {
                 height={1000}
               />
             </figure>
-            <p className="w-full max-w-[819px] text-[1.5rem] leading-[3.125rem]">
+            <p className="w-full max-w-[819px] text-[1.25rem] leading-[3.125rem]">
               {wwaData.data.attributes.wwa.description}
             </p>
           </div>
         </div>
         <div className="">
           <div id="values" className="pt-[9.375rem]">
-            <h2 className="pb-[3.75rem] text-[2.25rem] font-bold">
+            <h2 className="pb-[3.75rem] text-[3rem] font-bold">
               {aboutData.data.attributes.heading1}
             </h2>
             <ul className="grid grid-cols-5 gap-10">
@@ -72,8 +73,9 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-          <div id="contact" className="pt-[9.375rem]">
-            <h2 className="pb-[1.875rem] text-[2.25rem] font-bold">
+          <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
+          <div id="contact" className="">
+            <h2 className="pb-[1.875rem] text-[3rem] font-bold">
               {aboutData.data.attributes.heading2}
             </h2>
             <ul className="grid grid-cols-3 gap-[3.125rem]">
