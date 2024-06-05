@@ -41,7 +41,7 @@ const TeamsCard = ({ teamName, description, teamImg }: { teamName: string; descr
             />
             <Wave className="wave-position fill-[white]" />
           </Inset>
-          <h2 className="text-[2.5rem] p-1 pl-[0.6rem]">{teamName}</h2>
+          <h2 className="text-[2.5rem] p-1 pl-[0.6rem] font-medium">{teamName}</h2>
           <Text className="p-3" as="p" size="3">
             {showFullDescription ? description : description.slice(0, 200) + (description.length > 200 ? '...' : '')}
           </Text>

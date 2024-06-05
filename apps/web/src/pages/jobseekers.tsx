@@ -19,7 +19,7 @@ export default function ApplyToWork() {
         <p className="text-[1.25rem] pt-[2.375rem]">
           {jobseekerData.data.attributes.applyDescription}
         </p>
-        <h2 className="text-[3rem] pt-[2.375rem]">
+        <h2 className="text-[3rem] pt-[2.375rem font-medium">
           {jobseekerData.data.attributes.criterionHeading}
         </h2>
         <div className="flex flex-col gap-2">
@@ -46,7 +46,7 @@ export default function ApplyToWork() {
         </div>
         <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
         <div className="flex flex-col gap-10">
-          <h2 className="text-[3rem]">
+          <h2 className="text-[3rem] font-medium">
             {jobseekerData.data.attributes.offerHeading}
           </h2>
           <p className="text-[1.25rem]">
@@ -76,7 +76,7 @@ export default function ApplyToWork() {
         <ul id="services" className="">
           {jobseekerData.data.attributes.services.map((service, index) => (
             <li id={`v${index + 1}`} key={index} className="pt-[3rem]">
-              <h3 className="text-[2.5rem] pt-[3rem]">{service.title}</h3>
+              <h3 className="text-[2.5rem] pt-[3rem] font-medium">{service.title}</h3>
               <p className="text-[1.25rem] pt-[2rem]">{service.description}</p>
             </li>
           ))}

@@ -34,7 +34,7 @@ export default function AboutPage() {
         </div>
         <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
         <div className="">
-          <h2 className="pb-[2.5rem] text-[3rem] font-bold">
+          <h2 className="pb-[2.5rem] text-[3rem] font-medium">
             {wwaData.data.attributes.wwa.title}
           </h2>
           <div className="flex flex-col gap-48 md:flex-row">
@@ -54,7 +54,7 @@ export default function AboutPage() {
         </div>
         <div className="">
           <div id="values" className="pt-[9.375rem]">
-            <h2 className="pb-[3.75rem] text-[3rem] font-bold">
+            <h2 className="pb-[3.75rem] text-[3rem] font-medium">
               {aboutData.data.attributes.heading1}
             </h2>
             <ul className="grid grid-cols-5 gap-10">
@@ -75,7 +75,7 @@ export default function AboutPage() {
           </div>
           <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
           <div id="contact" className="">
-            <h2 className="pb-[1.875rem] text-[3rem] font-bold">
+            <h2 className="pb-[1.875rem] text-[3rem] font-medium">
               {aboutData.data.attributes.heading2}
             </h2>
             <ul className="grid grid-cols-3 gap-[3.125rem]">

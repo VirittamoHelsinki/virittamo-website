@@ -38,7 +38,7 @@ export default function CompaniesPage() {
           </figure>
         </div>
         <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
-        <h2 className="sm:text-[3rem] font-bold pb-[1.375rem]">
+        <h2 className="sm:text-[3rem] font-medium pb-[1.375rem]">
         {companyData.data.attributes.projectHeading}
       </h2>
       <ul className="flex gap-[62px]">
@@ -63,7 +63,7 @@ export default function CompaniesPage() {
                   height={661}
                 />
               )}
-              <span className="text-[2.5rem] font-bold">
+              <span className="text-[2.5rem] font-medium">
                 {project.attributes.title}
               </span>
             </Link>
@@ -74,11 +74,11 @@ export default function CompaniesPage() {
         {companyData.data.attributes.projectLinkName} &gt;
       </Link>
       <hr className="my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
-      <h2 className="text-[3rem] font-bold">{services}</h2>
+      <h2 className="text-[3rem] font-medium">{services}</h2>
         <ul id="services" className="">
           {companyData.data.attributes.services.map((service, index) => (
             <li id={`v${index + 1}`} key={index} className="pt-[2.375rem]">
-              <h3 className="text-[2.5rem]">{service.title}</h3>
+              <h3 className="text-[2.5rem] font-medium">{service.title}</h3>
               <p className="text-[1.25rem]">{service.description}</p>
             </li>
           ))}

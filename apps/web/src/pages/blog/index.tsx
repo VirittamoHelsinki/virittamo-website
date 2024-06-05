@@ -104,7 +104,7 @@ export default function BlogPage() {
                     loop
                   />
                 )}
-                <h3 className="text-[2.5rem] font-bold">
+                <h3 className="text-[2.5rem] font-medium">
                   {article.attributes.title}
                 </h3>
                 <p className="text-[1.25rem]">

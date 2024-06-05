@@ -41,7 +41,7 @@ function Hero() {
           />
         </figure>
         <div className="flex flex-1 flex-col gap-10">
-          <p className="text-3xl leading-[50px] opacity-75">
+          <p className="text-3xl opacity-75">
             {heroData.data.attributes.hero.description}
           </p>
           <div className="flex justify-between gap-5">
@@ -71,7 +71,7 @@ function Partners() {
   if (isPartnerLoading || !partnerData) return;
   return (
     <div className="flex flex-col gap-5 pt-[9.375rem]">
-      <h2 className="text-[3rem] font-bold">
+      <h2 className="text-[3rem] font-medium">
         {partnerData.data.attributes.partners.title}
       </h2>
       <ul className="flex flex-wrap items-center justify-between gap-x-10 gap-y-6  md:gap-x-16">
@@ -122,7 +122,7 @@ function CarouselDemo() {
 
   return (
     <div className="">
-       <h2 className="text-[3rem] font-bold pb-[2.675rem]">
+       <h2 className="text-[3rem] font-medium pb-[2.675rem]">
       {carouselText.data.attributes.carouselText}
       </h2>
       <Carousel
@@ -166,25 +166,12 @@ function CarouselDemo() {
                   <div className="color-layer"></div>
                   <div className="text-box">
                   <div className="absolute bottom-0 left-0 max-w-4xl text-white">
-                    <h2 className="text-[3rem] text-shadow">
+                    <h2 className="text-[3rem] font-medium text-shadow">
                       {slide.attributes.title}
                     </h2>
                     <p className="text-xl items-center pb-10 pr-10 text-shadow">{slide.attributes.description}</p>
                   </div>
                   </div>
-                  {/* <div className="absolute top-0 left-0 w-full z-10">
-                <img src="/laine_karuselli.svg" alt="laine_karuselli" className="w-full" />
-              </div>
-              <div className="absolute bottom-0 left-0 w-full z-20 text-box">
-                <div className="max-w-4xl text-white">
-                  <h2 className="text-[3rem] text-shadow">
-                    {slide.attributes.title}
-                  </h2>
-                  <p className="text-xl items-center pb-10 pr-10 text-shadow">
-                    {slide.attributes.description}
-                  </p>
-                </div>
-              </div> */}
                 </CardContent>
               </Card>
             </CarouselItem>
@@ -214,122 +201,6 @@ function CarouselDemo() {
   );
 }
 
-// function Wwa() {
-//   const { locale } = useLang();
-//   const { data: wwaData, isLoading: isWwaLoading } = api.home.getWwa.useQuery({
-//     lang: locale,
-//   });
-//   if (isWwaLoading || !wwaData) return;
-//   return (
-//     <div className="pt-[9.375rem]">
-//       <h2 className="pb-[2.5rem] text-[6.25rem] font-bold">
-//         {wwaData.data.attributes.wwa.title}
-//       </h2>
-//       <div className="flex flex-col gap-48 md:flex-row">
-//         <figure className="w-full max-w-[715px]">
-//           <Image
-//             src={wwaData.data.attributes.wwa.img.data.attributes.url}
-//             alt="why we are known"
-//             className="h-[470px] w-full rounded-xl object-cover"
-//             width={1000}
-//             height={1000}
-//           />
-//         </figure>
-//         <p className="w-full max-w-[819px] text-[2.5rem] leading-[3.125rem]">
-//           {wwaData.data.attributes.wwa.description}
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// function ContactInfo({
-//   name,
-//   title,
-//   email,
-//   phone,
-// }: {
-//   name: string;
-//   title: string;
-//   email: string;
-//   phone: string;
-// }) {
-//   return (
-//     <Popover>
-//       <PopoverTrigger asChild>
-//         <Button
-//           variant="ghost"
-//           className="group flex flex-col p-0 text-[2.5rem] hover:bg-transparent"
-//         >
-//           Lets Talk
-//           <div className="w-16 self-start border-b-2 border-black transition-all duration-300 group-hover:w-full" />
-//         </Button>
-//       </PopoverTrigger>
-//       <PopoverContent className="mt-2 w-min" align="start">
-//         <div className="flex flex-col gap-4">
-//           <div className="space-y-2">
-//             <h4 className="font-medium leading-none">{name}</h4>
-//             <span className="text-sm opacity-75">{title}</span>
-//           </div>
-//           <div className="flex flex-col gap-2">
-//             <Link className="flex gap-1" href="mailto:arto.aitta@hel.fi">
-//               <Mail />
-//               {email}
-//             </Link>
-//             <Link className="flex gap-1" href="tel:012 345 6789">
-//               <Phone />
-//               {phone}
-//             </Link>
-//           </div>
-//         </div>
-//       </PopoverContent>
-//     </Popover>
-//   );
-// }
-
-// function Marquee({
-//   marquee,
-//   children,
-// }: {
-//   marquee: { id: number; name: string }[];
-//   children?: React.ReactNode;
-// }) {
-//   return (
-//     <div className="relative flex overflow-x-hidden bg-black text-white">
-//       <div className="flex animate-marquee flex-nowrap gap-4 whitespace-nowrap py-[1.5625rem]">
-//         {marquee.map((job) => (
-//           <div key={job.id} className="flex flex-nowrap gap-5">
-//             <span className="text-4xl">{job.name}</span>
-//             {children}
-//           </div>
-//         ))}
-//       </div>
-
-//       <div className="absolute top-0 flex animate-marquee2 flex-nowrap gap-4 whitespace-nowrap py-[1.5625rem]">
-//         {marquee.map((job) => (
-//           <div key={job.id} className=" flex flex-nowrap gap-5">
-//             <span className="text-4xl">{job.name}</span>
-//             {children}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// const getIconForTeam = (teamName: string) => {
-//   switch (teamName.toLowerCase()) {
-//     case 'media':
-//       return <Camera className="w-12 h-12 ml-1" />;
-//     case 'ict':
-//       return <Server className="w-11 h-11 ml-1" />;
-//     case 'softa':
-//       return <Code className="w-12 h-12 ml-1" />;
-//     default:
-//       return null;
-//   }
-// };
-
 function OurTeams() {
   const { locale } = useLang();
   const { data: teamsData, isLoading: isTeamsLoading } =
@@ -337,11 +208,10 @@ function OurTeams() {
   if (isTeamsLoading || !teamsData) return;
   return (
     <div id="teams" className="flex flex-col gap-10 pt-[7.375rem]">
-      <h2 className="text-[3rem] font-bold">
+      <h2 className="text-[3rem] font-medium">
         {teamsData.data.attributes.teamHeading}
       </h2>
-      {/* <Accordion type="single" collapsible className="-mx-[0px]"> */}
-      <ul className="flex gap-[62px]">
+      <ul className="flex gap-[130px] justify-center">
         {teamsData.data.attributes.teamAccordion.map((team, index) => (
           <li key={index} className="flex flex-col py-[1.875rem]">
             <TeamsCard
@@ -350,122 +220,11 @@ function OurTeams() {
               description={team.description}
             />
           </li>
-          // <AccordionItem
-          //   key={index}
-          //   value={`item-${index}`}
-          //   className="border-t px-[100px]"
-          // >
-          //   <AccordionTrigger className="text-[2.75rem] font-bold uppercase flex items-center">
-          //     <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-          //       {team.name}
-          //       <span style={{ marginLeft: '1rem' }}>{getIconForTeam(team.name)}</span>
-          //     </span>
-          //   </AccordionTrigger>
-          //   <AccordionContent className="flex flex-col items-start gap-5 leading-tight">
-          //     <p className="text-[2.5rem]">{team.description}</p>
-          //     <ContactInfo
-          //       name={team.button.name}
-          //       title={team.button.title}
-          //       email={team.button.email}
-          //       phone={team.button.phone}
-          //     />
-          //     <Marquee marquee={team.marquee}>
-          //       <Icons.MsPaint />
-          //     </Marquee>
-          //   </AccordionContent>
-          // </AccordionItem>
         ))}
       </ul>
-      {/* </Accordion> */}
     </div>
   );
 }
-
-// function ApplyToWork() {
-//   const { locale } = useLang();
-//   const { data: applyData, isLoading: isApplyLoading } =
-//     api.home.getPage.useQuery({ lang: locale });
-//   const { data: criterionData, isLoading: isCriterionLoading } =
-//     api.home.getCriterion.useQuery({ lang: locale });
-//   const { data: benefitData, isLoading: isBenefitLoading } =
-//     api.home.getBenefit.useQuery({ lang: locale });
-//   if (
-//     isApplyLoading ||
-//     isCriterionLoading ||
-//     isBenefitLoading ||
-//     !applyData ||
-//     !criterionData ||
-//     !benefitData
-//   )
-//     return;
-//   return (
-//     <div id="work" className="flex flex-col gap-10 pt-[9.375rem]">
-//       <h2 className="text-[6.25rem] font-bold">
-//         {applyData.data.attributes.applyHeading}
-//       </h2>
-//       <p className="text-[2.1875rem]">
-//         {applyData.data.attributes.applyDescription}
-//       </p>
-//       <Accordion type="single" collapsible className="-mx-[100px]">
-//         <AccordionItem value="item-1" className="border-t px-[100px]">
-//           <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
-//             {criterionData.data.attributes.criterion.name}
-//           </AccordionTrigger>
-//           <AccordionContent className="flex flex-col gap-[1.875rem] leading-tight">
-//             <h3 className="text-[2.5rem] font-medium">
-//               {criterionData.data.attributes.criterion.heading}
-//             </h3>
-//             <ul className="grid grid-cols-2 gap-10">
-//               {criterionData.data.attributes.criterion.criterionList.map(
-//                 (criterion, index) => (
-//                   <li key={index}>
-//                     <p className="text-[1.875rem] font-medium">
-//                       {criterion.name}
-//                     </p>
-//                     <ul className="flex max-w-[678px] list-inside list-disc flex-col gap-[10px] text-[1.875rem]">
-//                       {criterion.item.map((crit, index) => (
-//                         <li key={index}>{crit.name}</li>
-//                       ))}
-//                     </ul>
-//                   </li>
-//                 ),
-//               )}
-//             </ul>
-//             <p className="max-w-[1010px] pt-10 text-[1.875rem] font-medium">
-//               {criterionData.data.attributes.criterion.note}
-//             </p>
-//           </AccordionContent>
-//         </AccordionItem>
-//         <AccordionItem value="item-2" className="px-[100px]">
-//           <AccordionTrigger className="text-[3.75rem] font-bold uppercase">
-//             {benefitData.data.attributes.benefit.name}
-//           </AccordionTrigger>
-//           <AccordionContent className="flex flex-col gap-[1.875rem] leading-tight">
-//             <ul className="flex flex-wrap gap-10">
-//               {benefitData.data.attributes.benefit.benefits.map(
-//                 (benefit, index) => (
-//                   <li key={index}>
-//                     <h3 className="text-[1.875rem] font-medium">
-//                       {benefit.name}
-//                     </h3>
-//                     <p className="max-w-[678px] text-[1.875rem]">
-//                       {benefit.description}
-//                     </p>
-//                     {benefit.link ? (
-//                       <Link href={benefit.link} className="text-sm">
-//                         {benefit.linkName} &gt;
-//                       </Link>
-//                     ) : null}
-//                   </li>
-//                 ),
-//               )}
-//             </ul>
-//           </AccordionContent>
-//         </AccordionItem>
-//       </Accordion>
-//     </div>
-//   );
-// }
 
 function PreviousEmployees() {
   const { locale } = useLang();
@@ -474,10 +233,10 @@ function PreviousEmployees() {
   if (isPreviousLoading || !previousData) return;
   return (
     <div className="flex flex-col gap-10">
-      <h2 className="text-[3rem] font-bold">
+      <h2 className="text-[3rem] font-medium">
         {previousData.data.attributes.employed.title}
       </h2>
-      <div className="-mx-[100px]">
+      <div className="-mx-[0px]">
         <div className="relative flex overflow-x-hidden">
           <div className="flex animate-marquee flex-nowrap gap-4 whitespace-nowrap py-0">
             {previousData.data.attributes.employed.logos.map((logo, index) => (
@@ -491,7 +250,6 @@ function PreviousEmployees() {
               />
             ))}
           </div>
-
           <div className="absolute top-0 flex animate-marquee2 flex-nowrap gap-4 whitespace-nowrap py-0">
             {previousData.data.attributes.employed.logos.map((logo, index) => (
               <Image

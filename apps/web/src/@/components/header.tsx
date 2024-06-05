@@ -55,7 +55,7 @@ export function Header() {
     jobseekers, 
     companies, 
     about, 
-    news,
+    newsheader,
     values,
     contact,
   } = translations[locale];
@@ -116,7 +116,7 @@ export function Header() {
           href="/blog"
           className={cn("sm:text-[1.25rem]", pathname === "/blog" ? "underline-pink" : "hover-pink")}
         >
-          {news}
+          {newsheader}
         </Link>
         <LanguageSelect />
       </nav>
