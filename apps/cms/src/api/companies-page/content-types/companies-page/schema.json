@@ -71,6 +71,16 @@
         }
       },
       "type": "string"
+    },
+    "servicesList": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "list.generic-list"
     }
   }
 }

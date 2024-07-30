@@ -22,6 +22,7 @@ export type PurpleAttributes = {
   locale: string;
   img: Img;
   services: Service[];
+  servicesList: ServiceItem[];
   // localizations: Localizations;
 };
 
@@ -82,6 +83,16 @@ export type Service = {
   description: string;
 };
 
+export type Services = {
+  name: string;
+};
+
+export type ServiceItem = {
+  id: number;
+  name: string;
+  item: Services[];
+};
+
 export type Meta = object;
 
 export const companyRouter = createTRPCRouter({
@@ -89,7 +100,7 @@ export const companyRouter = createTRPCRouter({
     .input(z.object({ lang: z.string() }))
     .query(async ({ input }) => {
       const res = await fetch(
-        `${process.env.API_URL}/api/companies-page?locale=${input.lang}&populate=*`,
+        `${process.env.API_URL}/api/companies-page?locale=${input.lang}&populate[img]=*&populate[servicesList][populate]=*`,
         {
           method: "GET",
           headers: {
