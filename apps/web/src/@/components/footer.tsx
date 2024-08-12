@@ -14,8 +14,6 @@ export function Footer() {
     companies,
     about,
     news,
-    services,
-    uraohjaus,
     values,
     contact,
     location,
