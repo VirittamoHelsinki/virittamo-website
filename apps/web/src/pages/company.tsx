@@ -34,7 +34,7 @@ export default function CompaniesPage() {
             {companyData.data.attributes.title}
           </h1>
           <p className="text-lg sm:text-[1.25rem]"
-            dangerouslySetInnerHTML={{ __html: formattedDescription || '' }} />
+            dangerouslySetInnerHTML={{ __html: formattedDescription ?? '' }} />
         </div>
         <figure className="max-h-4xl mt-[24px]">
           <Image

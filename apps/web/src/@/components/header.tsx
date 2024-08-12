@@ -105,7 +105,7 @@ export function Header() {
       {isMenuOpen && (
         <div
           className="fixed inset-0 bg-white z-40"
-          style={{ top: headerRef.current?.clientHeight || 0 }}
+          style={{ top: headerRef.current?.clientHeight ?? 0 }}
         >
           <div ref={menuRef} className="flex flex-col items-start gap-4 p-4">
             <Link

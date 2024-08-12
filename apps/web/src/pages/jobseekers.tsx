@@ -59,7 +59,7 @@ export default function ApplyToWork() {
           </h2>
           <p
             className="text-[1rem] sm:text-[1.25rem]"
-            dangerouslySetInnerHTML={{ __html: formattedOfferDescription || '' }}
+            dangerouslySetInnerHTML={{ __html: formattedOfferDescription ?? '' }}
           />
         </div>
       </div>

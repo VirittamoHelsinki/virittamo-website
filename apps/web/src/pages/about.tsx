@@ -57,7 +57,7 @@ export default function AboutPage() {
             />
           </figure>
           <p className="ml-[20px] mr-[20px] mt-[24px] sm:mt-[0px] sm:ml-[0px] sm:mr-[0px] md:ml-[24px] md:mr-[0px] text-[16px] sm:text-[1.25rem] md:w-1/2"
-            dangerouslySetInnerHTML={{ __html: formattedWwaDescription || '' }} />
+            dangerouslySetInnerHTML={{ __html: formattedWwaDescription ?? '' }} />
         </div>
         <div className="">
           <div id="values" className="pt-[40px] sm:pt-[9.375rem]">
