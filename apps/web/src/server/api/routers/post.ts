@@ -71,7 +71,7 @@ export type Data = {
 
 export type DataAttributes = {
   name: string;
-  alternativeText: null;
+  alternativeText: string;
   caption: null;
   width: number;
   height: number;
