@@ -16,8 +16,9 @@ export const translations = {
       contact: "Contact Info",
       location: "Location",
       coordinator: "Team Coordinator",
-      more: "Show more",
-      less: "Show less",
+      more: "Read more",
+      less: "Read less",
+      back: "Back to news",
     },
     fi: {
       home: "Etusivu",
@@ -36,8 +37,9 @@ export const translations = {
       contact: "Yhteystiedot",
       location: "Sijainti",
       coordinator: "Tiimikoordinaattori",
-      more: "Näytä enemmän",
-      less: "Näytä vähemmän",
+      more: "Lue lisää",
+      less: "Lue vähemmän",
+      back: "Takaisin ajankohtaisiin",
     },
     sv: {
       home: "Förstasida",
@@ -56,8 +58,9 @@ export const translations = {
       contact: "Kontaktinformation",
       location: "Plats",
       coordinator: "Teamkoordinator",
-      more: "Visa mer",
-      less: "Visa mindre",
+      more: "Läsa mer",
+      less: "Läsa mindre",
+      back: "Tillbaka till nyheterna",
     },
   };
   
