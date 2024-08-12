@@ -20,35 +20,30 @@ export default function BlogPage() {
   if (isBlogLoading || !blogData) return;
   if (isCategoryLoading || !categoryData) return;
   if (isBlogPageLoading || !blogPage) return;
-  const {
-    all,
-    news,
-    projects,
-    stories,
-  } = translations[locale];
+  const { all, news, projects, stories } = translations[locale];
 
   const filteredData =
     category == "news" || category === "projects" || category === "stories"
       ? categoryData
       : blogData;
   return (
-    <main className="flex min-h-screen flex-col px-[100px] mx-[150px]">
+    <main className="flex min-h-screen flex-col px-[20px] sm:px-10 md:px-[100px] lg:mx-[150px]">
       <Suspense fallback={"loading..."}>
-        <div className="flex flex-col gap-10">
-          <h1 className="text-[4rem] font-bold leading-[8rem] tracking-tight sm:text-[4rem]">
+        <div className="flex flex-col sm:gap-6 sm:gap-10">
+          <h1 className="text-[2.5rem] sm:text-[4rem] mt-[40px] sm:mt-[0px] font-bold leading-tight sm:leading-[8rem] tracking-tight">
             {blogPage.data.attributes.title}
           </h1>
-          <p className="text-[1.25rem]">
+          <p className="text-lg sm:text-[1.25rem]">
             {blogPage.data.attributes.description}
           </p>
         </div>
 
-        <div className="flex gap-5 pt-[3.375rem] pb-[2.375rem]">
+        <div className="flex flex-wrap gap-2 sm:gap-[25px] pt-[40px] sm:pt-[3.375rem] pb-[24px] sm:pb-[40px]">
           <Toggle
             pressed={category === ""}
             onPressedChange={(value) => setCategory(value ? "" : "")}
             variant="outline"
-            className="rounded-full border-black text-[1.5625rem]"
+            className="rounded-full border-black text-lg sm:text-[1.5625rem]"
           >
             {all}
           </Toggle>
@@ -56,7 +51,7 @@ export default function BlogPage() {
             pressed={category === "news"}
             onPressedChange={(value) => setCategory(value ? "news" : "")}
             variant="outline"
-            className="rounded-full border-black text-[1.5625rem]"
+            className="rounded-full border-black text-lg sm:text-[1.5625rem]"
           >
             {news}
           </Toggle>
@@ -64,7 +59,7 @@ export default function BlogPage() {
             pressed={category === "projects"}
             onPressedChange={(value) => setCategory(value ? "projects" : "")}
             variant="outline"
-            className="rounded-full border-black  text-[1.5625rem]"
+            className="rounded-full border-black text-lg sm:text-[1.5625rem]"
           >
             {projects}
           </Toggle>
@@ -72,21 +67,20 @@ export default function BlogPage() {
             pressed={category === "stories"}
             onPressedChange={(value) => setCategory(value ? "stories" : "")}
             variant="outline"
-            className="rounded-full border-black  text-[1.5625rem]"
+            className="rounded-full border-black text-lg sm:text-[1.5625rem]"
           >
             {stories}
           </Toggle>
         </div>
-
-        <ul className="grid grid-cols-3 gap-[62px]">
+        <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-[24px] sm:gap-[40px]">
           {filteredData?.data.map((article, index) => (
-            <li key={index} className="flex max-w-[508px] flex-col gap-[10px]">
+            <li key={index} className="flex max-w-full sm:max-w-[508px] flex-col gap-[10px]">
               <Link href={`/blog/${article.attributes.slug}`} passHref>
                 {article.attributes.media?.data?.attributes?.mime.startsWith(
                   "image",
                 ) ? (
                   <Image
-                    className="h-[400px] w-[535px] rounded-xl object-cover"
+                    className="h-[200px] sm:h-[400px] w-full rounded-xl object-cover"
                     src={article.attributes.media.data.attributes.url}
                     alt="Picture of the author"
                     width={2000}
@@ -97,17 +91,17 @@ export default function BlogPage() {
                     disablePictureInPicture={true}
                     controls={false}
                     src={article.attributes.media.data.attributes.url}
-                    className="h-[400px] w-[535px] rounded-xl object-cover"
+                    className="h-[200px] sm:h-[400px] w-full rounded-xl object-cover"
                     width={2000}
                     height={800}
                     autoPlay
                     loop
                   />
                 )}
-                <h3 className="text-[2.5rem] font-medium">
+                <h3 className="text-xl sm:text-[2.5rem] sm:mt-[20px] leading-[40px]">
                   {article.attributes.title}
                 </h3>
-                <p className="text-[1.25rem]">
+                <p className="hidden sm:block text-lg sm:text-[25px] sm:mt-[10px]">
                   {article.attributes.description}
                 </p>
               </Link>

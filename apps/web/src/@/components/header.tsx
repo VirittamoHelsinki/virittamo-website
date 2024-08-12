@@ -14,6 +14,8 @@ import { usePathname } from "next/navigation";
 import { useLang } from "~/utils/lang-provider";
 import { Globe } from "lucide-react";
 import { translations } from "~/utils/translations";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X } from "lucide-react";
 
 function LanguageSelect() {
   const { locale, setLocale } = useLang();
@@ -49,38 +51,155 @@ function LanguageSelect() {
 export function Header() {
   const pathname = usePathname();
   const { locale } = useLang();
-  const { 
-    home, 
-    teams, 
-    jobseekers, 
-    companies, 
-    about, 
+  const {
+    home,
+    teams,
+    jobseekers,
+    companies,
+    about,
     newsheader,
     values,
     contact,
   } = translations[locale];
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between bg-white px-[100px] py-[30px]">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-50 flex items-center justify-between bg-white px-4 sm:px-6 lg:px-[100px] py-4 sm:py-6 lg:py-[30px] shadow-md sm:shadow-none"
+    >
       <Link href="/" className="w-full max-w-[150px]">
-        <figure>
+        <figure className="w-[80px] h-[33.75px] sm:w-full sm:h-auto">
           <Logo />
         </figure>
       </Link>
-      <nav className="flex items-end gap-10">
+      <div className="lg:hidden">
+        <button onClick={toggleMenu} className="text-gray-700">
+          {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
+        </button>
+      </div>
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-white z-40"
+          style={{ top: headerRef.current?.clientHeight || 0 }}
+        >
+          <div ref={menuRef} className="flex flex-col items-start gap-4 p-4">
+            <Link
+              href="/"
+              className={cn("text-[1rem] sm:text-[1.25rem] block", pathname === "/" ? "underline-pink" : "hover-pink")}
+              onClick={handleLinkClick}
+            >
+              {home}
+            </Link>
+            <Link
+              href="/#teams"
+              className={cn("text-[1rem] sm:text-[1.25rem] block", pathname === "/#teams" ? "underline-pink" : "hover-pink")}
+              onClick={handleLinkClick}
+            >
+              {teams}
+            </Link>
+            <Link
+              href="/jobseekers"
+              className={cn("text-[1rem] sm:text-[1.25rem] block", pathname === "/jobseekers" ? "underline-pink" : "hover-pink")}
+              onClick={handleLinkClick}
+            >
+              {jobseekers}
+            </Link>
+            <Link
+              href="/company"
+              className={cn("text-[1rem] sm:text-[1.25rem] block", pathname === "/company" ? "underline-pink" : "hover-pink")}
+              onClick={handleLinkClick}
+            >
+              {companies}
+            </Link>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>
+                    <Link
+                      href="/about"
+                      className={cn(
+                        "text-[1rem] sm:text-[1.25rem] block",
+                        pathname === "/about" ? "underline-pink" : "hover-pink"
+                      )}
+                      onClick={handleLinkClick}
+                    >
+                      {about}
+                    </Link>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <Link href="/about#values" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "hover-pink")} onClick={handleLinkClick}>
+                        {values}
+                      </NavigationMenuLink>
+                    </Link>
+                    <Link href="/about#contact" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "hover-pink")} onClick={handleLinkClick}>
+                        {contact}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            <Link
+              href="/blog"
+              className={cn("text-[1rem] sm:text-[1.25rem] block", pathname === "/blog" ? "underline-pink" : "hover-pink")}
+              onClick={handleLinkClick}
+            >
+              {newsheader}
+            </Link>
+            <LanguageSelect />
+          </div>
+        </div>
+      )}
+      <nav className="hidden lg:flex flex-row items-center gap-4 lg:gap-10">
         <Link
           href="/"
-          className={cn("sm:text-[1.25rem]", pathname === "/" ? "underline-pink" : "hover-pink")}
+          className={cn("text-[1rem] sm:text-[1.25rem] block lg:inline", pathname === "/" ? "underline-pink" : "hover-pink")}
         >
           {home}
         </Link>
-        <Link href="/#teams" className={cn("sm:text-[1.25rem]", pathname === "/#teams" ? "underline-pink" : "hover-pink")}>
+        <Link
+          href="/#teams"
+          className={cn("text-[1rem] sm:text-[1.25rem] block lg:inline", pathname === "/#teams" ? "underline-pink" : "hover-pink")}
+        >
           {teams}
         </Link>
-        <Link href="/jobseekers" className={cn("sm:text-[1.25rem]", pathname === "/jobseekers" ? "underline-pink" : "hover-pink")}>
+        <Link
+          href="/jobseekers"
+          className={cn("text-[1rem] sm:text-[1.25rem] block lg:inline", pathname === "/jobseekers" ? "underline-pink" : "hover-pink")}
+        >
           {jobseekers}
         </Link>
-        <Link href="/company" className={cn("sm:text-[1.25rem]", pathname === "/company" ? "underline-pink" : "hover-pink")}>
+        <Link
+          href="/company"
+          className={cn("text-[1rem] sm:text-[1.25rem] block lg:inline", pathname === "/company" ? "underline-pink" : "hover-pink")}
+        >
           {companies}
         </Link>
         <NavigationMenu>
@@ -90,7 +209,7 @@ export function Header() {
                 <Link
                   href="/about"
                   className={cn(
-                    "sm:text-[1.25rem]",
+                    "text-[1rem] sm:text-[1.25rem] block lg:inline",
                     pathname === "/about" ? "underline-pink" : "hover-pink"
                   )}
                 >
@@ -114,7 +233,7 @@ export function Header() {
         </NavigationMenu>
         <Link
           href="/blog"
-          className={cn("sm:text-[1.25rem]", pathname === "/blog" ? "underline-pink" : "hover-pink")}
+          className={cn("text-[1rem] sm:text-[1.25rem] block lg:inline", pathname === "/blog" ? "underline-pink" : "hover-pink")}
         >
           {newsheader}
         </Link>
