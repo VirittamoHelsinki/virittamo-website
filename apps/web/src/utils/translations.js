@@ -19,6 +19,8 @@ export const translations = {
       more: "Read more",
       less: "Read less",
       back: "Back to news",
+      address: "Address",
+      campus: "Metropolia Campus",
     },
     fi: {
       home: "Etusivu",
@@ -40,6 +42,8 @@ export const translations = {
       more: "Lue lisää",
       less: "Lue vähemmän",
       back: "Takaisin ajankohtaisiin",
+      address: "Osoite",
+      campus: "Metropolian kampus",
     },
     sv: {
       home: "Förstasida",
@@ -61,6 +65,8 @@ export const translations = {
       more: "Läsa mer",
       less: "Läsa mindre",
       back: "Tillbaka till nyheterna",
+      address: "Adress",
+      campus: "Metropolia Campus",
     },
   };
   
