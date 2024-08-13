@@ -30,13 +30,13 @@ function Hero() {
         {heroData.data.attributes.hero.title}
       </h1>
       <div className="flex flex-col gap-6 sm:flex-row sm:gap-10">
-        <figure className="w-full sm:max-h-96 sm:flex-1">
+        <figure className="w-full sm:flex-1">
           <Image
             src={heroData.data.attributes.hero.img.data.attributes.url}
             alt="virittamo desc"
             width={1000}
             height={388}
-            className="h-[216px] w-full sm:rounded-xl object-cover sm:h-[388px] sm:w-[979px]"
+            className="h-[216px] w-full sm:rounded-xl object-cover sm:h-[500px] sm:w-[979px]"
           />
         </figure>
         <div className="flex flex-1 flex-col gap-6 sm:gap-10">
@@ -52,7 +52,7 @@ function Hero() {
             ))}
             <Link
               href="/about#contact"
-              className="rounded-[10px] h-[37px] sm:h-auto bg-[#F5A4C8] px-6 py-3 text-[14px] font-bold text-black sm:px-8 sm:py-4 sm:text-2xl flex items-center justify-center"
+              className="rounded-[6px] h-[37px] sm:h-auto bg-[#F5A4C8] px-6 py-3 text-[14px] font-bold text-black sm:px-8 sm:py-4 sm:text-2xl flex items-center justify-center"
             >
               {heroData.data.attributes.hero.ctaButton.name}
             </Link>
