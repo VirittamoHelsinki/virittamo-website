@@ -18,6 +18,7 @@ export function Footer() {
     contact,
     location,
     coordinator,
+    campus,
   } = translations[locale];
 
   return (
@@ -113,7 +114,7 @@ export function Footer() {
               </div>
             </div>
             <div className="flex flex-col gap-1">
-              <p className="text-lg sm:text-[1.5625rem]">Metropolian kampus</p>
+              <p className="text-lg sm:text-[1.5625rem]">{campus}</p>
               <p className="text-lg sm:text-[1.5625rem]">
                 Myllypurontie 1, 00920 Helsinki
               </p>

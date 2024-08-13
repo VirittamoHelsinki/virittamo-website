@@ -71,7 +71,9 @@ export default function PostPage({
                   height={2000}
                 />
                 {frontMatter.alt && (
-                  <p className="sm:mt-[20px] mt-[8px] sm:text-[20px] text-[12px] text-[#2E2E2E]">{frontMatter.alt}</p>
+                  <p className="sm:mt-[20px] self-start mt-[8px] sm:text-[20px] text-[12px] text-[#2E2E2E] ml-[20px] sm:ml-[0px]">
+                    {frontMatter.alt}
+                  </p>
                 )}
               </div>
             ) : (
@@ -89,10 +91,10 @@ export default function PostPage({
         <main className="prose prose-lg sm:prose-2xl">
           <MDXRemote {...html} components={components} />
         </main>
-        <div className="self-start mt-4 ml-4 sm:ml-0">
+        <div className="self-start mt-4 ml-0">
           <button
             onClick={() => router.push('/blog')}
-            className="text-[20px] sm:text-[40px] pt-[40px] sm:pt-[100px]"
+            className="text-[20px] sm:text-[40px] pt-[20px] sm:pt-[50px]"
           >
             &larr; {back}
           </button>

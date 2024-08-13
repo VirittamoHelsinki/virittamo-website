@@ -22,7 +22,7 @@ function LanguageSelect() {
   if (!setLocale) throw new Error("setLocale is undefined");
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 mt-[20px] sm:mt-[0px]">
       <Globe />
       <button
         onClick={() => setLocale("fi")}
@@ -97,8 +97,8 @@ export function Header() {
           <Logo />
         </figure>
       </Link>
-      <div className="lg:hidden">
-        <button onClick={toggleMenu} className="text-gray-700">
+      <div className="lg:hidden flex items-center">
+        <button onClick={toggleMenu} className="">
           {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
       </div>

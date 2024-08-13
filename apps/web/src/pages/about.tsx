@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Suspense } from "react";
 import { api } from "~/utils/api";
 import { useLang } from "~/utils/lang-provider";
+import { translations } from "~/utils/translations";
 
 const formatText = (text: string | null) => {
   if (!text) return null;
@@ -19,6 +20,11 @@ export default function AboutPage() {
   }
 
   const formattedWwaDescription = formatText(wwaData.data.attributes.wwa.description);
+
+  const {
+    address,
+    campus,
+  } = translations[locale];
 
   return (
     <main className="flex min-h-screen flex-col px-0 sm:px-10 md:px-[100px] lg:mx-[150px]">
@@ -46,18 +52,19 @@ export default function AboutPage() {
             {wwaData.data.attributes.wwa.title}
           </h2>
         </div>
-        <div className="flex flex-col sm:gap-48 md:flex-row">
-          <figure className="w-full md:flex-grow">
+        <div className="flex flex-col md:flex-row">
+          <figure className="w-full sm:w-1/2">
             <Image
               src={wwaData.data.attributes.wwa.img.data.attributes.url}
               alt="why we are known"
-              className="h-[300px] sm:h-[470px] w-full object-cover sm:rounded-xl"
+              className="h-[230px] sm:h-[400px] w-full object-cover sm:rounded-xl"
               width={1000}
               height={1000}
             />
           </figure>
-          <p className="ml-[20px] mr-[20px] mt-[24px] sm:mt-[0px] sm:ml-[0px] sm:mr-[0px] md:ml-[24px] md:mr-[0px] text-[16px] sm:text-[1.25rem] md:w-1/2"
-            dangerouslySetInnerHTML={{ __html: formattedWwaDescription ?? '' }} />
+          <p className="ml-[20px] mr-[20px] mt-[24px] sm:mt-[0px] sm:ml-[40px] sm:mr-[0px] text-[16px] sm:text-[1.25rem] sm:w-1/2"
+            dangerouslySetInnerHTML={{ __html: formattedWwaDescription ?? '' }}
+          />
         </div>
         <div className="">
           <div id="values" className="pt-[40px] sm:pt-[9.375rem]">
@@ -113,11 +120,11 @@ export default function AboutPage() {
           </div>
           <div id="map" className="flex flex-col pt-[40px] sm:pt-[9.375rem]">
             <div className="flex flex-col sm:gap-6 md:flex-row md:gap-10">
-              <div className="flex flex-col md:w-[900px] md:h-[450px]">
+              <div className="flex flex-col h-[230px] sm:w-[995px] sm:h-[483px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.415977479487!2d25.07534967768671!3d60.22349387505956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692097d49be7743%3A0x44d7181298503381!2sMyllypurontie%201%2C%2000920%20Helsinki!5e0!3m2!1sfi!2sfi!4v1702891756176!5m2!1sfi!2sfi"
                   width="100%"
-                  height="300"
+                  height="100%"
                   className="w-full h-full"
                   style={{ border: 0 }}
                   allowFullScreen
@@ -127,9 +134,9 @@ export default function AboutPage() {
               </div>
               <div className="flex flex-col pt-6 md:pt-0 md:pl-[4.25rem] ml-[20px] mr-[20px] sm:ml-[0px] sm:mr-[0px]">
                 <p className="pb-[12px] sm:pb-[2.5rem] text-[24px] sm:text-[2.25rem]">
-                  Osoite
+                  {address}
                 </p>
-                <p className="text-[16px] sm:text-[1.25rem]">Metropolian kampus</p>
+                <p className="text-[16px] sm:text-[1.25rem]">{campus}</p>
                 <p className="text-[16px] sm:text-[1.25rem]">Myllypurontie 1, 00920 Helsinki</p>
               </div>
             </div>

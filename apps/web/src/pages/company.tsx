@@ -51,9 +51,9 @@ export default function CompaniesPage() {
           {companyData.data.attributes.projectHeading}
         </h2>
 
-        <ul className="flex flex-wrap gap-[30px] sm:gap-[62px] ml-[20px] mr-[20px] sm:ml-[0px] sm:mr-[0px]">
+        <ul className="flex flex-col sm:flex-row gap-[30px] sm:gap-[62px] ml-[20px] mr-[20px] sm:ml-[0px] sm:mr-[0px]">
           {fprojectData.data.map((project, index) => (
-            <li key={index} className="w-full flex flex-col gap-[10px]">
+            <li key={index} className="w-full sm:w-1/2 lg:w-1/3 flex flex-col gap-[10px]">
               <Link href={`/blog/${project.attributes.slug}`} passHref>
                 {project.attributes.media.data.attributes.mime.startsWith("image") ? (
                   <Image
@@ -73,14 +73,12 @@ export default function CompaniesPage() {
                   />
                 )}
               </Link>
-              <span className="text-xl sm:mt-[20px] sm:text-[2.5rem] font-medium">
+              <span className="text-xl sm:mt-[20px] sm:text-[2.5rem]">
                 {project.attributes.title}
               </span>
             </li>
           ))}
         </ul>
-
-
         <Link href="/blog" className="text-lg sm:text-[2rem] mt-[24px] sm:mt-[40px] sm:mb-[100px]  ml-[20px] mr-[20px] sm:ml-[0px] sm:mr-[0px]">
           <span style={{ display: 'inline-flex', alignItems: 'center' }}>
             {companyData.data.attributes.projectLinkName}
@@ -88,7 +86,7 @@ export default function CompaniesPage() {
           </span>
         </Link>
 
-        <hr className="my-10 sm:my-20 w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
+        <hr className="w-1/3 mx-auto border-t border-solid border-[#F5A4C8] border-4 rounded-full" />
 
         <div className="flex flex-col gap-6 sm:gap-10 sm:pt-[100px] ml-[20px] mr-[20px] sm:ml-[0px] sm:mr-[0px]">
           <h2 className="text-2xl sm:text-[3rem] font-medium">
@@ -99,7 +97,7 @@ export default function CompaniesPage() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border-t pt-[0px] pb-[0px] sm:pb-[16px] sm:pt-[16px]"
+                className="border-b border-[#E2E8F0] pt-[0px] pb-[0px] sm:pb-[16px] sm:pt-[16px]"
               >
                 <AccordionTrigger className="text-[20px] sm:text-[2.5rem] font-medium flex items-center">
                   <span style={{ display: 'inline-flex', alignItems: 'center' }}>
