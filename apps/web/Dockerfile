@@ -1,45 +1,28 @@
-##### DEPENDENCIES
+# Use the Node.js base image
+FROM node:20-alpine
 
-FROM --platform=linux/amd64 node:20-alpine AS deps
-RUN apk add --no-cache libc6-compat openssl
+# Set the working directory inside the container
 WORKDIR /app
 
-# Install dependencies based on the preferred package manager
-COPY package.json package-lock.json* ./
+# Install any required system dependencies
+RUN apk add --no-cache libc6-compat openssl
 
+# Copy the package files and install dependencies
+COPY package.json package-lock.json* ./
 RUN npm install
 
-##### BUILDER
-
-FROM --platform=linux/amd64 node:20-alpine AS builder
-ARG STRAPI_TOKEN
-ARG API_URL
-ARG NEXT_PUBLIC_STRAPI_TOKEN
-ARG NEXT_PUBLIC_API_URL
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+# Copy the rest of the application files
 COPY . .
 
-# ENV NEXT_TELEMETRY_DISABLED 1# ENV NEXT_TELEMETRY_DISABLED 1
-RUN SKIP_ENV_VALIDATION=1 npm run build
+# Build the Next.js application
+RUN npm run build
 
-##### RUNNER
-
-FROM --platform=linux/amd64 gcr.io/distroless/nodejs20-debian12 AS runner
-WORKDIR /app
-
+# Set the environment to production
 ENV NODE_ENV production
-
-# ENV NEXT_TELEMETRY_DISABLED 1
-
-COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
-
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-
-EXPOSE 3000
 ENV PORT 3000
 
-CMD ["server.js"]
+# Expose the port on which the application will run
+EXPOSE 3000
+
+# Start the application
+CMD ["npm", "start"]

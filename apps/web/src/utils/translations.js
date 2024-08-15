@@ -21,6 +21,9 @@ export const translations = {
       back: "Back to news",
       address: "Address",
       campus: "Metropolia Campus",
+      subsidy1: "You can get more information about the pay subsidy ",
+      subsidy2: "from the website of employment services ",
+      subsidy3: "or by asking your TE office expert.",
     },
     fi: {
       home: "Etusivu",
@@ -44,6 +47,9 @@ export const translations = {
       back: "Takaisin ajankohtaisiin",
       address: "Osoite",
       campus: "Metropolian kampus",
+      subsidy1: "Palkkatukioikeudesta voit saada lisää tietoamaksaa tukea ",
+      subsidy2: "työllisyyspalveluiden nettisivuilta ",
+      subsidy3: "tai kysymällä TE-toimiston asiantuntijaltasi.",
     },
     sv: {
       home: "Förstasida",
@@ -67,6 +73,9 @@ export const translations = {
       back: "Tillbaka till nyheterna",
       address: "Adress",
       campus: "Metropolia Campus",
+      subsidy1: "Du kan få mer information om rätten att betala stöd ",
+      subsidy2: "från arbetsförmedlingens webbplats ",
+      subsidy3: "eller genom att fråga din TE-kontorsexpert.",
     },
   };
   

@@ -16,7 +16,7 @@ export default function AboutPage() {
   const { data: wwaData, isLoading: isWwaLoading } =
     api.about.getWwa.useQuery({ lang: locale });
   if (isAboutLoading || isWwaLoading || !wwaData || !aboutData) {
-    return;
+    return <div className="bg-white min-h-screen"></div>;
   }
 
   const formattedWwaDescription = formatText(wwaData.data.attributes.wwa.description);
@@ -27,7 +27,7 @@ export default function AboutPage() {
   } = translations[locale];
 
   return (
-    <main className="flex min-h-screen flex-col px-0 sm:px-10 md:px-[100px] lg:mx-[150px]">
+    <main className="flex min-h-screen flex-col px-0 md:px-[50px] lg:px-[100px] md:mx-[75px] lg:mx-[150px]">
       <Suspense fallback={`loading...`}>
         <div className="flex flex-col gap-6 sm:gap-10 ml-[20px] mr-[20px] sm:ml-[0px] sm:mr-[0px]">
           <h1 className="text-[32px] sm:text-[4rem] pt-[40px] sm:pt-[0] font-bold leading-tight sm:leading-[8rem] tracking-tight">
@@ -98,7 +98,7 @@ export default function AboutPage() {
             </h2>
             <ul className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-[3.125rem] ml-[20px] mr-[20px] sm:ml-[0px] sm:mr-[0px]">
               {aboutData.data.attributes.contacts.map((contact, index) => (
-                <li key={index} className="flex flex-col items-start gap-4 sm:gap-[1.875rem]">
+                <li key={index} className="flex flex-col items-start gap-4 lg:gap-[1.875rem]">
                   <Image
                     src={contact.img.data.attributes.url}
                     alt=""
@@ -106,13 +106,13 @@ export default function AboutPage() {
                     width={150}
                     height={150}
                   />
-                  <div className="flex flex-col text-lg sm:text-[1.5625rem]">
-                    <h3 className="text-[18px] sm:text-[30px]">
+                  <div className="flex flex-col text-lg lg:text-[1.5625rem]">
+                    <h3 className="text-[18px] lg:text-[30px]">
                       {contact.name}
                     </h3>
-                    <p className="text-[14px] sm:text-[25px]">{contact.title}</p>
-                    <a href={`mailto:${contact.email}`} className="block text-[14px] sm:text-[25px]">{contact.email}</a>
-                    <a href={`tel:${contact.phone}`} className="block text-[14px] sm:text-[25px]">{contact.phone}</a>
+                    <p className="text-[14px] lg:text-[25px]">{contact.title}</p>
+                    <a href={`mailto:${contact.email}`} className="text-[14px] lg:text-[25px]">{contact.email}</a>
+                    <a href={`tel:${contact.phone}`} className="text-[14px] lg:text-[25px]">{contact.phone}</a>
                   </div>
                 </li>
               ))}

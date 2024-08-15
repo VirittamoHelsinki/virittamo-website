@@ -17,9 +17,14 @@ export default function BlogPage() {
     api.post.getFilteredPosts.useQuery({ lang: locale, category });
   const { data: blogPage, isLoading: isBlogPageLoading } =
     api.post.getPage.useQuery({ lang: locale });
-  if (isBlogLoading || !blogData) return;
-  if (isCategoryLoading || !categoryData) return;
-  if (isBlogPageLoading || !blogPage) return;
+  if (
+    isBlogLoading || !blogData ||
+    isCategoryLoading || !categoryData ||
+    isBlogPageLoading || !blogPage
+  ) {
+    return <div className="bg-white min-h-screen"></div>;
+  }
+
   const { all, news, projects, stories } = translations[locale];
 
   const filteredData =
