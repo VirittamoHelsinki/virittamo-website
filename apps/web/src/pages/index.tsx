@@ -9,14 +9,14 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "~/@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Button } from "~/@/components/ui/button";
 import { api } from "~/utils/api";
 import { useLang } from "~/utils/lang-provider";
 import { TeamsCard } from "~/@/components/ui/teams-card";
 import { Wave } from "~/@/components/icons";
+
+
 
 function Hero() {
   const { locale } = useLang();
@@ -25,34 +25,34 @@ function Hero() {
   if (isHeroLoading || !heroData) return null;
 
   return (
-    <div className="flex mt-[40px] flex-col gap-6 px-0 sm:px-10 md:gap-10">
-      <h1 className="text-[32px] pl-[20px] sm:pl-[0px] font-bold leading-tight tracking-tight sm:text-[4rem] sm:leading-[8rem] sm:tracking-tight md:text-[5rem]">
+    <div className="flex mt-[40px] flex-col gap-6 px-0 lg:px-10 xl:px-10 md:gap-10">
+      <h1 className="text-[32px] pl-[20px] lg:pl-[0px] xl:pl-[0px] font-bold leading-tight tracking-tight lg:text-[4rem] xl:text-[4rem]  xl:leading-[8rem]  xl:tracking-tight">
         {heroData.data.attributes.hero.title}
       </h1>
-      <div className="flex flex-col gap-6 sm:flex-row sm:gap-10">
-        <figure className="w-full sm:flex-1">
+      <div className="flex flex-col gap-6 lg:flex-row xl:flex-row lg:gap-10 xl:gap-10">
+        <figure className="w-full lg:flex-1 xl:flex-1">
           <Image
             src={heroData.data.attributes.hero.img.data.attributes.url}
             alt="virittamo desc"
             width={1000}
             height={388}
-            className="h-[216px] w-full sm:rounded-xl object-cover sm:h-[500px] sm:w-[979px]"
+            className="h-[216px] w-full lg:rounded-xl xl:rounded-xl object-cover lg:h-[392px] xl:h-[500px] md:h-[392px]"
           />
         </figure>
-        <div className="flex flex-1 flex-col gap-6 sm:gap-10">
-          <p className="text-[16px] pl-[20px] pr-[20px] sm:pl-[0px] sm:pr-[0px] opacity-75 sm:text-3xl">
+        <div className="flex flex-1 flex-col gap-6 lg:gap-10 xl:gap-10">
+          <p className="text-[16px] pl-[20px] pr-[20px] lg:pl-[0px] xl:pl-[0px] lg:pr-[0px] xl:pr-[0px] opacity-75 lg:text-[20px] xl:text-3xl">
             {heroData.data.attributes.hero.description}
           </p>
-          <div className="pl-[20px] pr-[20px] sm:pl-[0px] sm:pr-[0px] flex flex-row flex-wrap gap-[30px] sm:gap-5 items-center">
+          <div className="pl-[20px] pr-[20px] lg:pl-[0px] xl:pl-[0px] lg:pr-[0px] xl:pr-[0px] flex flex-row flex-wrap gap-[30px] lg:gap-5 xl:gap-5 items-center">
             {heroData.data.attributes.hero.proofing.map((proof, index) => (
-              <p key={index} className="flex flex-col text-base lg:text-[20px]">
+              <p key={index} className="flex flex-col text-base lg:text-[20px] xl:text-[20px]">
                 {proof.name}
-                <span className="text-[16px] lg:text-[30px] mt-[4px] lg:mt-2">{proof.action}</span>
+                <span className="text-[16px] lg:text-[30px] xl:text-[30px] mt-[4px] lg:mt-2 xl:mt-2">{proof.action}</span>
               </p>
             ))}
             <Link
               href="/about#contact"
-              className="rounded-[6px] h-[37px] sm:h-auto bg-[#F5A4C8] px-6 py-3 text-[14px] font-bold text-black sm:px-8 sm:py-4 sm:text-2xl flex items-center justify-center"
+              className="rounded-[6px] h-[37px] lg:h-auto xl:h-auto bg-[#F5A4C8] px-6 py-3 text-[14px] font-bold text-black lg:px-8 xl:px-8 lg:py-4 xl:py-4 lg:text-[20px] xl:text-[20px] flex items-center justify-center"
             >
               {heroData.data.attributes.hero.ctaButton.name}
             </Link>
@@ -63,7 +63,6 @@ function Hero() {
   );
 }
 
-
 function Partners() {
   const { locale } = useLang();
   const { data: partnerData, isLoading: isPartnerLoading } =
@@ -71,18 +70,18 @@ function Partners() {
 
   if (isPartnerLoading || !partnerData) return;
   return (
-    <div className="flex flex-col gap-5 px-4 pt-[40px] sm:px-10 sm:pt-[9.375rem]">
-      <h2 className="text-2xl mb-[24px] sm:mb-[40px] font-medium sm:text-[3rem]">
+    <div className="flex flex-col gap-5 px-4 pt-[40px] lg:px-10 xl:px-10 lg:pt-[9.375rem] xl:pt-[9.375rem]">
+      <h2 className="text-2xl mb-[24px] lg:mb-[40px] xl:mb-[40px] font-medium lg:text-[3rem] xl:text-[3rem]">
         {partnerData.data.attributes.partners.title}
       </h2>
       <div className="overflow-x-auto pb-[16px]">
-        <ul className="flex items-center gap-x-10 gap-y-6 md:gap-x-16 lg:justify-between">
+        <ul className="flex items-center gap-x-10 gap-y-6 md:gap-x-16 lg:justify-between xl:justify-between">
           {partnerData.data.attributes.partners.partners.map((partner, index) => (
             <li key={index} className="flex-shrink-0 max-w-xs">
               <Image
                 src={partner.img.data.attributes.url}
                 alt={`${partner.id}`}
-                className="h-12 w-auto sm:h-20"
+                className="h-12 w-auto lg:h-20 xl:h-20"
                 height={200}
                 width={180}
               />
@@ -93,7 +92,6 @@ function Partners() {
     </div>
   );
 }
-
 
 function CarouselDemo() {
   const { locale } = useLang();
@@ -130,8 +128,8 @@ function CarouselDemo() {
   const orderedData = videos.concat(otherContent);
 
   return (
-    <div className="px-0 sm:px-10">
-      <h2 className="pb-6 pl-[20px] sm:pl-[0px] text-2xl font-medium sm:mb-[40px] sm:text-[3rem]">
+    <div className="px-0 xl:px-10">
+      <h2 className="pb-6 pl-[20px] xl:pl-[0px] text-2xl font-medium xl:mb-[40px] xl:text-[3rem]">
         {carouselText.data.attributes.carouselText}
       </h2>
       <Carousel
@@ -144,7 +142,7 @@ function CarouselDemo() {
             <CarouselItem key={index}>
               <Card className="border-none p-0">
                 <CardContent className="relative flex p-0">
-                  <figure className="aspect-video max-h-[300px] w-full sm:max-h-[600px] sm:w-[2000px]">
+                  <figure className="aspect-video max-h-[300px] w-full xl:max-h-[600px] xl:w-[2000px]">
                     <Link href={`/blog/${slide.attributes.slug}`} passHref>
                       {slide.attributes.media.data.attributes.mime.startsWith(
                         "image"
@@ -152,18 +150,20 @@ function CarouselDemo() {
                         <Image
                           src={slide.attributes.media.data.attributes.url}
                           alt={slide.attributes.title}
-                          className="h-full w-full object-cover brightness-75 filter"
+                          className="h-full w-full object-cover brightness-75 filter xl:rounded-xl"
                           width={2000}
                           height={600}
                         />
                       ) : (
                         <video
                           src={slide.attributes.media.data.attributes.url}
-                          className="h-full w-full object-cover brightness-75 filter"
+                          className="h-full w-full object-cover brightness-75 filter xl:rounded-xl"
                           width={2000}
                           height={600}
                           autoPlay
                           loop
+                          playsInline
+                          webkit-playsinline
                         />
                       )}
                     </Link>
@@ -172,10 +172,10 @@ function CarouselDemo() {
                   <div className="color-layer"></div>
                   <div className="text-box">
                     <div className="absolute bottom-0 left-0 max-w-4xl text-white">
-                      <h2 className="text-[20px] font-medium text-shadow sm:text-[3rem]">
+                      <h2 className="text-[20px] font-medium text-shadow xl:text-[3rem]">
                         {slide.attributes.title}
                       </h2>
-                      <p className="items-center text-[12px] pb-[7px] sm:pb-10 pr-10 text-sm text-shadow sm:text-xl">
+                      <p className="items-center text-[12px] pb-[7px] xl:pb-10 pr-10 text-sm text-shadow xl:text-xl">
                         {slide.attributes.description}
                       </p>
                     </div>
@@ -186,10 +186,10 @@ function CarouselDemo() {
           ))}
         </CarouselContent>
         <CarouselPrevious
-          className="absolute left-0 z-10 text-gray-600 text-xl sm:text-2xl md:text-3xl"
+          className="absolute left-0 z-10 text-gray-600 text-xl xl:text-2xl md:text-3xl"
         />
         <CarouselNext
-          className="absolute right-0 z-10 text-gray-600 text-xl sm:text-2xl md:text-3xl"
+          className="absolute right-0 z-10 text-gray-600 text-xl xl:text-2xl md:text-3xl"
         />
       </Carousel>
     </div>
@@ -204,14 +204,14 @@ function OurTeams() {
   return (
     <div
       id="teams"
-      className="flex flex-col gap-6 px-4 pt-[5rem] sm:px-10 sm:pt-[7.375rem] md:gap-10"
+      className="flex flex-col gap-6 px-4 pt-[5rem] xl:px-10 xl:pt-[7.375rem] md:gap-10"
     >
-      <h2 className="text-2xl font-medium sm:text-[3rem]">
+      <h2 className="text-2xl font-medium xl:text-[3rem]">
         {teamsData.data.attributes.teamHeading}
       </h2>
-      <ul className="flex flex-col gap-10 sm:flex-row sm:justify-center sm:gap-[130px]">
+      <ul className="flex flex-col gap-10 xl:flex-row xl:justify-center xl:gap-[130px]">
         {teamsData.data.attributes.teamAccordion.map((team, index) => (
-          <li key={index} className="flex flex-col sm:py-[1.875rem]">
+          <li key={index} className="flex flex-col xl:py-[1.875rem]">
             <TeamsCard
               teamImg={team.teamPhoto}
               teamName={team.name}
@@ -231,38 +231,35 @@ function PreviousEmployees() {
   if (isPreviousLoading || !previousData) return;
 
   return (
-    <div className="flex flex-col gap-6 px-4 sm:px-10 md:gap-10">
-      <h2 className="text-2xl sm:mb-[40px] font-medium sm:text-[3rem]">
+    <div className="flex flex-col gap-6 px-4 xl:px-10 md:gap-10">
+      <h2 className="text-2xl xl:mb-[40px] font-medium xl:text-[3rem]">
         {previousData.data.attributes.employed.title}
       </h2>
-      <div className="flex flex-wrap gap-4 sm:-mx-[0px] sm:flex-nowrap sm:overflow-x-hidden">
-        {/* On mobile view, display logos in rows */}
-        <div className="overflow-x-auto sm:overflow-x-hidden pb-[16px]">
-        <ul className="flex sm:hidden items-center gap-y-6 md:gap-x-16 lg:justify-between">
-          {previousData.data.attributes.employed.logos.map((logo, index) => (
-            <li key={index} className="flex-shrink-0 max-w-xs">
-            <Image
-              key={index}
-              src={logo.img.data.attributes.url}
-              alt=""
-              className="h-8 w-40 sm:h-16 sm:w-60"
-              width={logo.img.data.attributes.width}
-              height={logo.img.data.attributes.height}
-            />
-            </li>
-          ))}
-        </ul>
-      </div>
-
-        {/* On larger screens, use the marquee effect */}
-        <div className="hidden sm:flex sm:relative sm:flex-nowrap sm:gap-4 sm:whitespace-nowrap sm:py-0">
+      <div className="flex flex-wrap gap-4 xl:-mx-[0px] xl:flex-nowrap xl:overflow-x-hidden">
+        <div className="overflow-x-auto xl:overflow-x-hidden pb-[16px]">
+          <ul className="flex xl:hidden items-center gap-y-6 md:gap-x-16 xl:justify-between">
+            {previousData.data.attributes.employed.logos.map((logo, index) => (
+              <li key={index} className="flex-shrink-0 max-w-xs">
+                <Image
+                  key={index}
+                  src={logo.img.data.attributes.url}
+                  alt=""
+                  className="h-8 w-40 xl:h-16 xl:w-60"
+                  width={logo.img.data.attributes.width}
+                  height={logo.img.data.attributes.height}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="hidden xl:flex xl:relative xl:flex-nowrap xl:gap-4 xl:whitespace-nowrap xl:py-0">
           <div className="flex animate-marquee flex-nowrap gap-4 whitespace-nowrap py-0">
             {previousData.data.attributes.employed.logos.map((logo, index) => (
               <Image
                 key={index}
                 src={logo.img.data.attributes.url}
                 alt=""
-                className="mx-4 h-8 w-40 sm:h-16 sm:w-60"
+                className="mx-4 h-8 w-40 xl:h-16 xl:w-60"
                 width={logo.img.data.attributes.width}
                 height={logo.img.data.attributes.height}
               />
@@ -274,7 +271,7 @@ function PreviousEmployees() {
                 key={index}
                 src={logo.img.data.attributes.url}
                 alt=""
-                className="mx-4 h-8 w-40 sm:h-16 sm:w-60"
+                className="mx-4 h-8 w-40 xl:h-16 xl:w-60"
                 width={logo.img.data.attributes.width}
                 height={logo.img.data.attributes.height}
               />
@@ -286,18 +283,37 @@ function PreviousEmployees() {
   );
 }
 
+
+
 export default function HomePage() {
+  const { locale } = useLang();
+
+
+  const { isLoading: isHeroLoading } = api.home.getHero.useQuery({ lang: locale });
+  const { isLoading: isPartnersLoading } = api.home.getPartners.useQuery({ lang: locale });
+  const { isLoading: isCarouselLoading } = api.home.getSlides.useQuery({ lang: locale });
+  const { isLoading: isTeamsLoading } = api.home.getTeams.useQuery({ lang: locale });
+  const { isLoading: isPreviousLoading } = api.home.getEmployed.useQuery({ lang: locale });
+
+
+  if (
+    isHeroLoading ||
+    isPartnersLoading ||
+    isCarouselLoading ||
+    isTeamsLoading ||
+    isPreviousLoading
+  ) {
+    return <div className="bg-white min-h-screen"></div>;
+  }
   return (
-    <main className="flex min-h-screen flex-col px-0 sm:px-[100px] md:mx-[150px]">
-      <Suspense fallback={<div></div>}>
-        <Hero />
-        <Partners />
-        <hr className="my-10 mx-auto w-1/3 border-t-4 w border-solid border-[#F5A4C8] rounded-full sm:my-20" />
-        <CarouselDemo />
-        <OurTeams />
-        <hr className="my-10 mx-auto w-1/3 border-t-4 border-solid border-[#F5A4C8] rounded-full sm:my-20" />
-        <PreviousEmployees />
-      </Suspense>
+    <main className="flex min-h-screen flex-col mx-[0] xl:mx-[245px] lg:mx-[120px]">
+      <Hero />
+      <Partners />
+      <hr className="my-10 mx-auto w-1/3 border-t-4 w border-solid border-[#F5A4C8] rounded-full xl:my-20" />
+      <CarouselDemo />
+      <OurTeams />
+      <hr className="my-10 mx-auto w-1/3 border-t-4 border-solid border-[#F5A4C8] rounded-full xl:my-20" />
+      <PreviousEmployees />
     </main>
   );
 }
