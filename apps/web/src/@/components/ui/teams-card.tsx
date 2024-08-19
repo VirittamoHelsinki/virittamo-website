@@ -20,7 +20,7 @@ const TeamsCard = ({ teamName, description, teamImg }: { teamName: string; descr
   } = translations[locale];
 
   return (
-    <div className="border border-gray-300 rounded-md overflow-hidden relative max-w-sm card-shadow">
+    <div className="border border-gray-300 rounded-md overflow-hidden relative w-full max-[1999px]:max-w-sm min-[2000px]:w-[560px] card-shadow">
       <Box onClick={() => {
         if ((!showFullDescription && description.length > 200) || showFullDescription) {
           toggleDescription();
@@ -41,7 +41,7 @@ const TeamsCard = ({ teamName, description, teamImg }: { teamName: string; descr
             />
             <Wave className="wave-position fill-[white]" />
           </Inset>
-          <h2 className="text-[20px] lg:text-[2.5rem] p-[14px] pl-[0.6rem] font-medium">{teamName}</h2>
+          <h2 className="text-[20px] 2xl:text-[40px] md:text-[30px] p-[14px] pl-[0.6rem] font-medium">{teamName}</h2>
           <Text className="p-3" as="p" size="3">
             {showFullDescription ? description : description.slice(0, 200) + (description.length > 200 ? '...' : '')}
           </Text>

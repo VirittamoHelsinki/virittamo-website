@@ -210,7 +210,7 @@ function OurTeams() {
       <h2 className="text-2xl mx-[20px] md:mx-[0px] 2xl:mx-[0px] font-medium md:text-[38px] 2xl:text-[3rem]">
         {teamsData.data.attributes.teamHeading}
       </h2>
-      <ul className="flex flex-col mx-[20px] md:mx-[0px] 2xl:mx-[0px] flex-column gap-[24px] md:flex-row md:justify-center md:gap-[40px] 2xl:flex-row 2xl:justify-center 2xl:gap-[92.5px]">
+      <ul className="flex flex-col mx-[20px] md:mx-[0px] 2xl:mx-[0px] gap-[24px] md:flex-row md:justify-between md:gap-[40px] 2xl:flex-row 2xl:justify-between  2xl:gap-[92.5px]">
         {teamsData.data.attributes.teamAccordion.map((team, index) => (
           <li key={index} className="flex flex-col 2xl:py-[1.875rem] items-center md:items-start">
             <TeamsCard
