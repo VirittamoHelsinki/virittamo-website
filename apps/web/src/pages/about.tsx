@@ -96,9 +96,9 @@ export default function AboutPage() {
             <h2 className="pb-[1.875rem] text-[24px] md:text-[38px] 2xl:text-[48px] font-medium mx-[20px] md:mx-[0px] 2xl:mx-[0px]">
               {aboutData.data.attributes.heading2}
             </h2>
-            <ul className="grid grid-cols-2 md:grid-cols-2 2xl:grid-cols-3 gap-6 2xl:gap-[3.125rem] mx-[20px] md:mx-[0px] 2xl:mx-[0px]">
+            <ul className="grid grid-cols-2 md:grid-cols-2 2xl:grid-cols-3 gap-6 md:gap-[40px] 2xl:gap-[3.125rem] mx-[20px] md:mx-[0px] 2xl:mx-[0px]">
               {aboutData.data.attributes.contacts.map((contact, index) => (
-                <li key={index} className="flex flex-col 2xl:flex-row items-start gap-4 lg:gap-[1.875rem]">
+                <li key={index} className="flex flex-col md:flex-row items-start gap-4 lg:gap-[1.875rem]">
                   <Image
                     src={contact.img.data.attributes.url}
                     alt=""
@@ -107,21 +107,21 @@ export default function AboutPage() {
                     height={150}
                   />
                   <div className="flex flex-col">
-                    <h3 className="text-[18px] md:text-[30px]">
+                    <h3 className="text-[18px] md:text-[24px] 2xl:text-[30px]">
                       {contact.name}
                     </h3>
-                    <p className="text-[14px] md:text-[25px] flex" 
+                    <p className="text-[14px] md:text-[20px] 2xl:text-[25px] flex" 
                     style={{ overflowWrap: 'anywhere' }}
                     >{contact.title}</p>
                     <a
                       href={`mailto:${contact.email}`}
-                      className="text-[14px] md:text-[25px] flex"
+                      className="text-[14px] md:text-[20px] 2xl:text-[25px] flex"
                       style={{ overflowWrap: 'anywhere' }}
                     >
                       {contact.email}
                     </a>
                     <a href={`tel:${contact.phone}`} 
-                    className="text-[14px] md:text-[25px] flex"
+                    className="text-[14px] md:text-[20px] 2xl:text-[25px] flex"
                     style={{ overflowWrap: 'anywhere' }}>
                       {contact.phone}</a>
                   </div>

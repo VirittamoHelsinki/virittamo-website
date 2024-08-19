@@ -57,7 +57,7 @@ export default function PostPage({
           </button>
         </div>
         <header className="flex flex-col gap-2">
-          <h1 className="text-[32px] md:text-[52px] 2xl:text-[64px] mb-[40px] font-bold leading-tight md:leading-[8rem] tracking-tight">
+          <h1 className="text-[32px] md:text-[52px] 2xl:text-[64px] mb-[40px] mt-[40px] md:mb-[60px] md:mt-[60px] font-bold leading-tight md:leading-[8rem] tracking-tight">
             {frontMatter.title}
           </h1>
           <div className="mx-[-20px] sm:mx-0">
