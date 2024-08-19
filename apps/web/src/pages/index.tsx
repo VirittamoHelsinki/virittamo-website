@@ -17,7 +17,6 @@ import { TeamsCard } from "~/@/components/ui/teams-card";
 import { Wave } from "~/@/components/icons";
 
 
-
 function Hero() {
   const { locale } = useLang();
 
@@ -27,7 +26,7 @@ function Hero() {
   return (
     <div className="flex mt-[40px] flex-col gap-6 md:gap-10">
       <h1 className="text-[32px] px-[20px] md:px-[0px] 2xl:px-[0px] font-bold leading-tight tracking-tight md:text-[52px] 2xl:text-[64px]"
-      style={{ overflowWrap: 'anywhere' }}>
+        style={{ overflowWrap: 'anywhere' }}>
         {heroData.data.attributes.hero.title}
       </h1>
       <div className="flex flex-col gap-6 md:flex-row 2xl:flex-row md:gap-10 2xl:gap-10">
@@ -44,7 +43,7 @@ function Hero() {
           <p className="text-[16px] pl-[20px] pr-[20px] md:pl-[0px] 2xl:pl-[0px] md:pr-[0px] 2xl:pr-[0px] md:text-[20px] 2xl:text-[20px]">
             {heroData.data.attributes.hero.description}
           </p>
-          <div className="pl-[20px] pr-[20px] md:pl-[0px] 2xl:pl-[0px] md:pr-[0px] 2xl:pr-[0px] flex flex-row flex-wrap gap-[30px] md:gap-5 2xl:gap-5 items-center">
+          <div className="pl-[20px] pr-[20px] md:pl-[0px] 2xl:pl-[0px] md:pr-[0px] 2xl:pr-[0px] flex flex-row flex-wrap gap-[30px] md:gap-5 2xl:gap-5 items-center justify-between">
             {heroData.data.attributes.hero.proofing.map((proof, index) => (
               <p key={index} className="flex flex-col text-base md:text-[20px] 2xl:text-[20px]">
                 {proof.name}
@@ -128,6 +127,14 @@ function CarouselDemo() {
   );
   const orderedData = videos.concat(otherContent);
 
+
+  const truncateText = (description: string) => {
+    const isMobile = window.innerWidth < 768; // Mobile view if width is less than 768px
+    return isMobile && description.length > 100
+      ? description.slice(0, 100) + "..."
+      : description;
+  };
+
   return (
     <div className="">
       <h2 className="text-2xl mx-[20px] md:mx-[0px] 2xl:mx-[0px] mb-[24px] md:mb-[40px] 2xl:mb-[40px] font-medium md:text-[38px] 2xl:text-[3rem]">
@@ -143,7 +150,7 @@ function CarouselDemo() {
             <CarouselItem key={index}>
               <Card className="border-none p-0">
                 <CardContent className="relative flex p-0">
-                  <figure className="aspect-video max-h-[300px] w-full md:max-h-[500px] 2xl:max-h-[600px]">
+                  <figure className="aspect-video h-[236px] w-full md:h-[500px] 2xl:h-[600px]">
                     <Link href={`/blog/${slide.attributes.slug}`} passHref>
                       {slide.attributes.media.data.attributes.mime.startsWith(
                         "image"
@@ -176,8 +183,8 @@ function CarouselDemo() {
                       <h2 className="text-[20px] font-medium lg:text-[30px] text-shadow 2xl:text-[3rem]">
                         {slide.attributes.title}
                       </h2>
-                      <p className="items-center text-[12px] pb-[7px] md:pb-8 2xl:pb-10 pr-10  lg:text-[20px]  text-shadow 2xl:text-xl">
-                        {slide.attributes.description}
+                      <p className="items-center text-[12px] pb-[7px] md:pb-8 2xl:pb-10 pr-10 lg:text-[20px] text-shadow 2xl:text-xl">
+                        {truncateText(slide.attributes.description)}
                       </p>
                     </div>
                   </div>

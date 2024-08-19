@@ -20,29 +20,23 @@ const TeamsCard = ({ teamName, description, teamImg }: { teamName: string; descr
   } = translations[locale];
 
   return (
-    <div className="border border-gray-300 rounded-md overflow-hidden relative w-full max-[1999px]:max-w-sm min-[2000px]:w-[560px] card-shadow">
+    <div className="border border-gray-300 rounded-md overflow-hidden relative w-full max-[2129px]:max-w-sm min-[2130px]:w-[560px] card-shadow">
       <Box onClick={() => {
         if ((!showFullDescription && description.length > 200) || showFullDescription) {
           toggleDescription();
         }
       }}>
         <Card>
-          <Inset clip="padding-box" side="top" pb="current">
+          <Inset clip="padding-box" side="top" pb="current" className="relative">
             <img
               src={teamImg.data.attributes.url}
               alt="Bold typography"
-              style={{
-                display: 'block',
-                objectFit: 'cover',
-                width: '100%',
-                height: 175,
-                backgroundColor: 'var(--gray-5)',
-              }}
+              className="min-[2130px]:h-[300px] w-full block cover"
             />
-            <Wave className="wave-position fill-[white]" />
+            <Wave className="absolute -bottom-1 left-0 w-full fill-[white]" />
           </Inset>
           <h2 className="text-[20px] 2xl:text-[40px] md:text-[30px] p-[14px] pl-[0.6rem] font-medium">{teamName}</h2>
-          <Text className="p-3" as="p" size="3">
+          <Text className="p-3 min-[2130px]:text-[20px]" as="p" size="3">
             {showFullDescription ? description : description.slice(0, 200) + (description.length > 200 ? '...' : '')}
           </Text>
           <div className="flex justify-end mt-2 p-2">
