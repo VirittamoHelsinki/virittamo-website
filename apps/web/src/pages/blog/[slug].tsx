@@ -45,33 +45,33 @@ export default function PostPage({
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center px-0 sm:px-10 md:px-[100px]">
+    <main className="flex min-h-screen flex-col items-center">
 
-      <article className="flex max-w-[85ch] ml-[20px] mr-[20px] sm:ml-[0px] sm:mr-[0px] flex-col gap-6 sm:gap-10">
+      <article className="flex mx-[20px] flex-col">
         <div className="self-start mt-4 ml-0">
           <button
             onClick={() => router.push('/blog')}
-            className="text-[20px] sm:text-[40px] pt-[20px] sm:pt-[50px]"
+            className="text-[20px] md:text-[30px] 2xl:text-[40px] pt-[20px] sm:pt-[50px]"
           >
             &larr; {back}
           </button>
         </div>
         <header className="flex flex-col gap-2">
-          <h1 className="text-[32px] sm:text-[64px] mb-[40px] font-bold leading-tight sm:leading-[8rem] tracking-tight">
+          <h1 className="text-[32px] md:text-[52px] 2xl:text-[64px] mb-[40px] font-bold leading-tight md:leading-[8rem] tracking-tight">
             {frontMatter.title}
           </h1>
           <div className="mx-[-20px] sm:mx-0">
             {frontMatter.mime.startsWith("image") ? (
               <div className="flex flex-col items-center">
                 <Image
-                  className="h-[200px] sm:h-[400px] w-full sm:rounded-xl object-cover"
+                  className="h-[200px] md:h-[400px] 2xl:h-[600px] w-full sm:rounded-xl object-cover"
                   src={frontMatter.image}
                   alt={frontMatter.alt}
                   width={2000}
                   height={2000}
                 />
                 {frontMatter.alt && (
-                  <p className="sm:mt-[20px] self-start mt-[8px] sm:text-[20px] text-[12px] text-[#2E2E2E] ml-[20px] sm:ml-[0px]">
+                  <p className="md:mt-[20px] self-start mt-[8px] 2xl:text-[20px] md:text-[18px] text-[12px] text-[#2E2E2E] ml-[20px] sm:ml-[0px]">
                     {frontMatter.alt}
                   </p>
                 )}
@@ -84,17 +84,19 @@ export default function PostPage({
                 height={2000}
                 autoPlay
                 loop
+                playsInline
+                webkit-playsinline
               />
             )}
           </div>
         </header>
-        <main className="prose prose-lg sm:prose-2xl">
+        <main className="prose prose-lg mt-[40px] md:mt-[60px] 2xl:mt-[100px]">
           <MDXRemote {...html} components={components} />
         </main>
         <div className="self-start mt-4 ml-0">
           <button
             onClick={() => router.push('/blog')}
-            className="text-[20px] sm:text-[40px] pt-[20px] sm:pt-[50px]"
+            className="text-[20px] md:text-[30px] 2xl:text-[40px] pt-[20px] sm:pt-[50px]"
           >
             &larr; {back}
           </button>

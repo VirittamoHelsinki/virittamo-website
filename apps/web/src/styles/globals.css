@@ -114,6 +114,7 @@
   opacity: 0.8;
   left: 12%;
   transform: rotate(270deg);
+  pointer-events: none;
 }
 
 .color-layer {
@@ -124,6 +125,7 @@
   height: 100%;
   opacity: 0.8;
   background-color: #F5A4C8;
+  pointer-events: none;
 }
 
 .text-box{
@@ -132,6 +134,7 @@
   right: 0;
   width: 38%;
   height: 100%;
+  pointer-events: none;
 }
 
 .carousel-font{

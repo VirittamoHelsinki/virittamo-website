@@ -26,21 +26,21 @@ function LanguageSelect() {
       <Globe />
       <button
         onClick={() => setLocale("fi")}
-        className={`text-[16px] md:text-[18px] lg:text-[20px] hover-pink ${locale === "fi" ? "font-bold" : ""}`}
+        className={`text-[16px] md:text-[18px] 2xl:text-[20px] hover-pink ${locale === "fi" ? "font-bold" : ""}`}
       >
         FI
       </button>
       <span>/</span>
       <button
         onClick={() => setLocale("en")}
-        className={`text-[16px] md:text-[18px] lg:text-[20px] hover-pink ${locale === "en" ? "font-bold" : ""}`}
+        className={`text-[16px] md:text-[18px] 2xl:text-[20px] hover-pink ${locale === "en" ? "font-bold" : ""}`}
       >
         EN
       </button>
       <span>/</span>
       <button
         onClick={() => setLocale("sv")}
-        className={`text-[16px] md:text-[18px] lg:text-[20px] hover-pink ${locale === "sv" ? "font-bold" : ""}`}
+        className={`text-[16px] md:text-[18px] 2xl:text-[20px] hover-pink ${locale === "sv" ? "font-bold" : ""}`}
       >
         SV
       </button>
@@ -90,7 +90,7 @@ export function Header() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 flex items-center justify-between bg-white px-[20px] md:px-[60px] 2xl:px-[100px] py-4 md:py-5 lg:py-[30px] shadow-md md:shadow-none"
+      className="sticky top-0 z-50 flex items-center justify-between bg-white px-[20px] md:px-[60px] 2xl:px-[100px] py-4 md:py-5 2xl:py-[30px] shadow-md lg:shadow-none"
     >
       <Link href="/" className="w-[80px] h-[33.75px] md:w-[100px] md:h-[40px] 2xl:w-[144px] 2xl:h-[60px]">
         <figure className="w-[80px] h-[33.75px] md:w-[100px] md:h-[40px] 2xl:w-[144px] 2xl:h-[60px]">
@@ -107,31 +107,31 @@ export function Header() {
           className="fixed inset-0 bg-white z-40"
           style={{ top: headerRef.current?.clientHeight ?? 0 }}
         >
-          <div ref={menuRef} className="flex flex-col items-start gap-4 p-4 md:p-6 lg:p-8">
+          <div ref={menuRef} className="flex flex-col items-start gap-4 p-4">
             <Link
               href="/"
-              className={cn("text-[16px] md:text-[18px] lg:text-[20px] block", pathname === "/" ? "underline-pink" : "hover-pink")}
+              className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block", pathname === "/" ? "underline-pink" : "hover-pink")}
               onClick={handleLinkClick}
             >
               {home}
             </Link>
             <Link
               href="/#teams"
-              className={cn("text-[16px] md:text-[18px] lg:text-[20px] block", pathname === "/#teams" ? "underline-pink" : "hover-pink")}
+              className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block", pathname === "/#teams" ? "underline-pink" : "hover-pink")}
               onClick={handleLinkClick}
             >
               {teams}
             </Link>
             <Link
               href="/jobseekers"
-              className={cn("text-[16px] md:text-[18px] lg:text-[20px] block", pathname === "/jobseekers" ? "underline-pink" : "hover-pink")}
+              className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block", pathname === "/jobseekers" ? "underline-pink" : "hover-pink")}
               onClick={handleLinkClick}
             >
               {jobseekers}
             </Link>
             <Link
               href="/company"
-              className={cn("text-[16px] md:text-[18px] lg:text-[20px] block", pathname === "/company" ? "underline-pink" : "hover-pink")}
+              className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block", pathname === "/company" ? "underline-pink" : "hover-pink")}
               onClick={handleLinkClick}
             >
               {companies}
@@ -143,7 +143,7 @@ export function Header() {
                     <Link
                       href="/about"
                       className={cn(
-                        "text-[16px] md:text-[18px] lg:text-[20px] block",
+                        "text-[16px] md:text-[18px] 2xl:text-[20px] block",
                         pathname === "/about" ? "underline-pink" : "hover-pink"
                       )}
                       onClick={handleLinkClick}
@@ -168,7 +168,7 @@ export function Header() {
             </NavigationMenu>
             <Link
               href="/blog"
-              className={cn("text-[16px] md:text-[18px] lg:text-[20px] block", pathname === "/blog" ? "underline-pink" : "hover-pink")}
+              className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block", pathname === "/blog" ? "underline-pink" : "hover-pink")}
               onClick={handleLinkClick}
             >
               {newsheader}
@@ -177,28 +177,28 @@ export function Header() {
           </div>
         </div>
       )}
-      <nav className="hidden lg:flex flex-row items-center gap-4 md:gap-6 lg:gap-10">
+      <nav className="hidden lg:flex flex-row items-center md:gap-[40px]">
         <Link
           href="/"
-          className={cn("text-[16px] md:text-[18px] lg:text-[20px] block lg:inline", pathname === "/" ? "underline-pink" : "hover-pink")}
+          className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block lg:inline", pathname === "/" ? "underline-pink" : "hover-pink")}
         >
           {home}
         </Link>
         <Link
           href="/#teams"
-          className={cn("text-[16px] md:text-[18px] lg:text-[20px] block lg:inline", pathname === "/#teams" ? "underline-pink" : "hover-pink")}
+          className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block lg:inline", pathname === "/#teams" ? "underline-pink" : "hover-pink")}
         >
           {teams}
         </Link>
         <Link
           href="/jobseekers"
-          className={cn("text-[16px] md:text-[18px] lg:text-[20px] block lg:inline", pathname === "/jobseekers" ? "underline-pink" : "hover-pink")}
+          className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block lg:inline", pathname === "/jobseekers" ? "underline-pink" : "hover-pink")}
         >
           {jobseekers}
         </Link>
         <Link
           href="/company"
-          className={cn("text-[16px] md:text-[18px] lg:text-[20px] block lg:inline", pathname === "/company" ? "underline-pink" : "hover-pink")}
+          className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block lg:inline", pathname === "/company" ? "underline-pink" : "hover-pink")}
         >
           {companies}
         </Link>
@@ -209,7 +209,7 @@ export function Header() {
                 <Link
                   href="/about"
                   className={cn(
-                    "text-[16px] md:text-[18px] lg:text-[20px] block lg:inline",
+                    "text-[16px] md:text-[18px] 2xl:text-[20px] block lg:inline",
                     pathname === "/about" ? "underline-pink" : "hover-pink"
                   )}
                 >
@@ -233,7 +233,7 @@ export function Header() {
         </NavigationMenu>
         <Link
           href="/blog"
-          className={cn("text-[16px] md:text-[18px] lg:text-[20px] block lg:inline", pathname === "/blog" ? "underline-pink" : "hover-pink")}
+          className={cn("text-[16px] md:text-[18px] 2xl:text-[20px] block lg:inline", pathname === "/blog" ? "underline-pink" : "hover-pink")}
         >
           {newsheader}
         </Link>

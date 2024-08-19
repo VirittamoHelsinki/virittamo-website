@@ -32,18 +32,15 @@ export default function BlogPage() {
       ? categoryData
       : blogData;
   return (
-    <main className="flex min-h-screen flex-col px-[20px] sm:px-10 md:px-[100px] lg:mx-[150px]">
+    <main className="flex min-h-screen flex-col px-[20px] md:px-[120px] 2xl:px-[245px]">
       <Suspense fallback={"loading..."}>
         <div className="flex flex-col sm:gap-6 sm:gap-10">
-          <h1 className="text-[2.5rem] sm:text-[4rem] mt-[40px] sm:mt-[0px] font-bold leading-tight sm:leading-[8rem] tracking-tight">
+          <h1 className="text-[32px] md:text-[52px] 2xl:text-[64px] pt-[40px] 2xl:pt-[0] font-bold leading-tight 2xl:leading-[8rem] tracking-tight">
             {blogPage.data.attributes.title}
           </h1>
-          <p className="text-lg sm:text-[1.25rem]">
-            {blogPage.data.attributes.description}
-          </p>
         </div>
 
-        <div className="flex flex-wrap gap-2 sm:gap-[25px] pt-[40px] sm:pt-[3.375rem] pb-[24px] sm:pb-[40px]">
+        <div className="flex flex-wrap gap-2 md:gap-[20px] pt-[40px] md:pt-[60px] 2xl:pt-[100px] pb-[24px] md:pb-[40px]">
           <Toggle
             pressed={category === ""}
             onPressedChange={(value) => setCategory(value ? "" : "")}
@@ -77,7 +74,7 @@ export default function BlogPage() {
             {stories}
           </Toggle>
         </div>
-        <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-[24px] sm:gap-[40px]">
+        <ul className="grid grid-cols-2 md:grid-cols-3 gap-[24px] 2xl:gap-[94px] md:gap-[40px]">
           {filteredData?.data.map((article, index) => (
             <li key={index} className="flex max-w-full sm:max-w-[508px] flex-col gap-[10px]">
               <Link href={`/blog/${article.attributes.slug}`} passHref>
@@ -85,7 +82,7 @@ export default function BlogPage() {
                   "image",
                 ) ? (
                   <Image
-                    className="h-[200px] sm:h-[400px] w-full rounded-xl object-cover"
+                    className="h-[200px] md:h-[324px] 2xl:h-[420px] w-full rounded-xl object-cover"
                     src={article.attributes.media.data.attributes.url}
                     alt="Picture of the author"
                     width={2000}
@@ -96,17 +93,19 @@ export default function BlogPage() {
                     disablePictureInPicture={true}
                     controls={false}
                     src={article.attributes.media.data.attributes.url}
-                    className="h-[200px] sm:h-[400px] w-full rounded-xl object-cover"
+                    className="h-[200px] md:h-[324px] 2xl:h-[420px] w-full rounded-xl object-cover"
                     width={2000}
                     height={800}
                     autoPlay
                     loop
+                    playsInline
+                    webkit-playsinline
                   />
                 )}
-                <h3 className="text-xl sm:text-[2.5rem] sm:mt-[20px] leading-[40px]">
+                <h3 className="text-[20px] md:text-[30px] 2xl:text-[40px] md:mt-[12px] 2xl:mt-[20px] leading-[40px]">
                   {article.attributes.title}
                 </h3>
-                <p className="hidden sm:block text-lg sm:text-[25px] sm:mt-[10px]">
+                <p className="hidden md:block md:text-[20px] 2xl:text-[25px] md:mt-[5px]">
                   {article.attributes.description}
                 </p>
               </Link>
