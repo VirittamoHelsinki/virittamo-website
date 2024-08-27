@@ -19,6 +19,13 @@ export default function ApplyToWork() {
 
   const formattedOfferDescription = formatText(jobseekerData.data.attributes.offerDescription);
 
+  const subsidyLink =
+  locale === "en"
+    ? "https://tyollisyyspalvelut.hel.fi/en/job-seeking/supported-jobs/pay-subsidy"
+    : locale === "sv"
+    ? "https://tyollisyyspalvelut.hel.fi/sv/arbetssokande/subventionerat-arbete/lonesubvention"
+    : "https://tyollisyyspalvelut.hel.fi/tyonhaku/tuetut-tyopaikat/palkkatuki";
+
   const {
     subsidy1,
     subsidy2,
@@ -54,7 +61,7 @@ export default function ApplyToWork() {
           <p className="text-[16px] md:text-[20px] pt-4 md:pt-6 2xl:pt-10">
             {subsidy1}
             <a
-              href="https://tyollisyyspalvelut.hel.fi/tyonhaku/tuetut-tyopaikat/palkkatuki"
+              href={subsidyLink}
               className="text-black underline"
               target="_blank"
               rel="noopener noreferrer"
