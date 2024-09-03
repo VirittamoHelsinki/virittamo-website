@@ -106,60 +106,78 @@ export default function PostPage({
   );
 }
 
-export const getStaticPaths = (async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?locale=fi&populate=*`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+export const getStaticPaths: GetStaticPaths = async () => {
+  const locales = ["fi", "sv", "en"];
+  const fetchPathsForLocale = async (locale: string) => {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/articles?locale=${locale}&populate=*`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+        },
       },
-    },
-  );
+    );
+    const postsData = await res.json();
+    return postsData?.data.map((post: any) => ({
+      params: { slug: post.attributes.slug || "" },
+    }));
+  };
 
-  const postsData = (await res.json()) as Articles;
-  const paths = postsData?.data.map((post) => ({
-    params: { slug: post.attributes.slug || "" },
-  }));
+  const pathsArray = await Promise.all(locales.map(fetchPathsForLocale));
+  const paths = pathsArray.flat(); // Flatten the array of arrays
 
   return {
     paths,
     fallback: "blocking",
   };
-}) satisfies GetStaticPaths;
+};
 
-export const getStaticProps = (async (context) => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/articles?locale=fi&filters[slug]=${context.params?.slug as string
-    }&populate=*`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+export const getStaticProps: GetStaticProps = async (context) => {
+  const locales = ["fi", "sv", "en"];
+  const slug = context.params?.slug as string;
+
+  const fetchArticleForLocale = async (locale: string) => {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/articles?locale=${locale}&filters[slug][$eq]=${slug}&populate=*`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
+        },
       },
-    },
-  );
+    );
+    return res.json();
+  };
 
-  const postData = (await res.json()) as Articles;
-  if (postData?.data[0] === undefined) {
+  // Fetch articles for all locales
+  const articlesData = await Promise.all(locales.map(fetchArticleForLocale));
+  const articles = articlesData.flat(); // Flatten the array of arrays
+
+  // Find the article in the requested locale
+  const article = articles.find((data: any) => data.data.length > 0);
+
+  if (!article) {
     return {
       notFound: true,
     };
   }
-  const content = await serialize(postData?.data[0]?.attributes.content);
+
+  const postData = article.data[0];
+  const content = await serialize(postData.attributes.content);
 
   return {
     props: {
       frontMatter: {
-        title: postData?.data[0]?.attributes.title,
-        slug: postData?.data[0]?.attributes.slug,
-        mime: postData?.data[0]?.attributes.media.data.attributes.mime,
-        image: postData?.data[0]?.attributes.media.data.attributes.url,
-        alt: postData?.data[0]?.attributes.media.data.attributes.alternativeText,
+        title: postData.attributes.title,
+        slug: postData.attributes.slug,
+        mime: postData.attributes.media.data.attributes.mime,
+        image: postData.attributes.media.data.attributes.url,
+        alt: postData.attributes.media.data.attributes.alternativeText,
       },
       html: content,
     },
   };
-}) satisfies GetStaticProps;
+};

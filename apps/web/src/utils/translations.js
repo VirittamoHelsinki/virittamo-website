@@ -52,7 +52,7 @@ export const translations = {
       subsidy3: " tai kysymällä TE-toimiston asiantuntijaltasi.",
     },
     sv: {
-      home: "Förstasida",
+      home: "Hem",
       teams: "Lag",
       jobseekers: "För arbetssökande",
       companies: "För företag",

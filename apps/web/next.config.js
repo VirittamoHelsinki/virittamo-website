@@ -32,6 +32,10 @@ const config = {
       },
     ],
   },
+  i18n: {
+    locales: ["en", "fi", "sv"],
+    defaultLocale: "fi",
+  },
 };
 
 export default config;
