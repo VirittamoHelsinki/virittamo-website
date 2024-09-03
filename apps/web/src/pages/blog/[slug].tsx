@@ -211,16 +211,16 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => 
   }
 
   const postData = article.data[0];
-  const content = await serialize(postData.attributes.content);
+  const content = await serialize(postData!.attributes.content);
 
   return {
     props: {
       frontMatter: {
-        title: postData.attributes.title,
-        slug: postData.attributes.slug,
-        mime: postData.attributes.media.data.attributes.mime,
-        image: postData.attributes.media.data.attributes.url,
-        alt: postData.attributes.media.data.attributes.alternativeText,
+        title: postData!.attributes.title,
+        slug: postData!.attributes.slug,
+        mime: postData!.attributes.media.data.attributes.mime,
+        image: postData!.attributes.media.data.attributes.url,
+        alt: postData!.attributes.media.data.attributes.alternativeText,
       },
       html: content,
     },
