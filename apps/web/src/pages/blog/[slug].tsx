@@ -28,6 +28,33 @@ const components = {
 };
 
 
+interface MediaAttributes {
+  mime: string;
+  url: string;
+  alternativeText: string;
+}
+
+interface MediaData {
+  attributes: MediaAttributes;
+}
+
+interface PostAttributes {
+  title: string;
+  slug: string;
+  content: string;
+  media: {
+    data: MediaData;
+  };
+}
+
+interface PostData {
+  attributes: PostAttributes;
+}
+
+interface ApiResponse {
+  data: PostData[];
+}
+
 type FrontMatter = {
   title: string;
   slug: string;
@@ -40,6 +67,7 @@ type PostPageProps = {
   frontMatter: FrontMatter;
   html: any;
 };
+
 
 
 export default function PostPage({
@@ -81,6 +109,8 @@ export default function PostPage({
                   className="h-[200px] md:h-[400px] 2xl:h-[600px] w-full sm:rounded-xl object-cover"
                   src={frontMatter.image}
                   alt={frontMatter.alt}
+                  width={2000}
+                  height={2000}
                 />
                 {frontMatter.alt && (
                   <p className="md:mt-[20px] self-start mt-[8px] 2xl:text-[20px] md:text-[18px] text-[12px] text-[#2E2E2E] ml-[20px] sm:ml-[0px]">
@@ -92,6 +122,8 @@ export default function PostPage({
               <video
                 src={frontMatter.image}
                 className="h-[200px] sm:h-[400px] w-full sm:rounded-xl object-cover"
+                width={2000}
+                height={2000}
                 autoPlay
                 loop
                 controls
@@ -130,8 +162,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
         },
       },
     );
-    const postsData = await res.json();
-    return postsData?.data.map((post: any) => ({
+    const postsData: ApiResponse = await res.json(); // Use the `ApiResponse` type here
+    return postsData.data.map((post) => ({
       params: { slug: post.attributes.slug || "" },
     }));
   };
@@ -144,6 +176,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: "blocking",
   };
 };
+
 
 export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => {
   const locales = ["fi", "sv", "en"];
@@ -160,7 +193,8 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => 
         },
       },
     );
-    return res.json();
+    const response: ApiResponse = await res.json(); // Use the `ApiResponse` type here
+    return response;
   };
 
   // Fetch articles for all locales
@@ -168,7 +202,7 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => 
   const articles = articlesData.flat(); // Flatten the array of arrays
 
   // Find the article in the requested locale
-  const article = articles.find((data: any) => data.data.length > 0);
+  const article = articles.find((data) => data.data.length > 0);
 
   if (!article) {
     return {
