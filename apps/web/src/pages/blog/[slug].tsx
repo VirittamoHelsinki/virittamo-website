@@ -10,6 +10,8 @@ import {
 import { useLang } from "~/utils/lang-provider";
 import { translations } from "~/utils/translations";
 import { useRouter } from 'next/router';
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
+
 
 const components = {
   IFrame({ url }: { url: string }) {
@@ -65,7 +67,7 @@ type FrontMatter = {
 
 type PostPageProps = {
   frontMatter: FrontMatter;
-  html: any;
+  html: MDXRemoteSerializeResult;
 };
 
 
@@ -211,7 +213,7 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => 
   }
 
   const postData = article.data[0];
-  const content = await serialize(postData!.attributes.content);
+  const content: MDXRemoteSerializeResult = await serialize(postData!.attributes.content);
 
   return {
     props: {
