@@ -7,7 +7,6 @@ import {
   type GetStaticProps,
   type InferGetStaticPropsType,
 } from "next";
-import { type Articles } from "~/server/api/routers/post";
 import { useLang } from "~/utils/lang-provider";
 import { translations } from "~/utils/translations";
 import { useRouter } from 'next/router';
@@ -27,6 +26,21 @@ const components = {
     );
   },
 };
+
+
+type FrontMatter = {
+  title: string;
+  slug: string;
+  mime: string;
+  image: string;
+  alt: string;
+};
+
+type PostPageProps = {
+  frontMatter: FrontMatter;
+  html: any;
+};
+
 
 export default function PostPage({
   frontMatter,
@@ -67,8 +81,6 @@ export default function PostPage({
                   className="h-[200px] md:h-[400px] 2xl:h-[600px] w-full sm:rounded-xl object-cover"
                   src={frontMatter.image}
                   alt={frontMatter.alt}
-                  width={2000}
-                  height={2000}
                 />
                 {frontMatter.alt && (
                   <p className="md:mt-[20px] self-start mt-[8px] 2xl:text-[20px] md:text-[18px] text-[12px] text-[#2E2E2E] ml-[20px] sm:ml-[0px]">
@@ -80,10 +92,9 @@ export default function PostPage({
               <video
                 src={frontMatter.image}
                 className="h-[200px] sm:h-[400px] w-full sm:rounded-xl object-cover"
-                width={2000}
-                height={2000}
                 autoPlay
                 loop
+                controls
                 playsInline
                 webkit-playsinline
               />
@@ -134,7 +145,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => {
   const locales = ["fi", "sv", "en"];
   const slug = context.params?.slug as string;
 

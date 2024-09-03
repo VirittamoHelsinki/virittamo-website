@@ -98,6 +98,7 @@ export default function BlogPage() {
                     height={800}
                     autoPlay
                     loop
+                    muted
                     playsInline
                     webkit-playsinline
                   />

@@ -33,8 +33,9 @@ const config = {
     ],
   },
   i18n: {
-    locales: ["en", "fi", "sv"],
+    locales: ["fi", "en", "sv"],
     defaultLocale: "fi",
+    localeDetection: false,
   },
 };
 

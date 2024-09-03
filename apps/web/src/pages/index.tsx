@@ -170,6 +170,7 @@ function CarouselDemo() {
                           height={600}
                           autoPlay
                           loop
+                          muted
                           playsInline
                           webkit-playsinline
                         />
