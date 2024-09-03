@@ -151,6 +151,10 @@ export default function PostPage({
   );
 }
 
+function isApiResponse(data: ApiResponse): data is ApiResponse {
+  return data && Array.isArray(data.data) && data.data.every((item: PostData) => item.attributes);
+}
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const locales = ["fi", "sv", "en"];
   const fetchPathsForLocale = async (locale: string) => {
@@ -164,7 +168,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         },
       },
     );
-    const postsData: ApiResponse = await res.json(); // Use the `ApiResponse` type here
+    const postsData = await res.json() as ApiResponse;
     return postsData.data.map((post) => ({
       params: { slug: post.attributes.slug || "" },
     }));
@@ -178,6 +182,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: "blocking",
   };
 };
+
 
 
 export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => {
@@ -195,8 +200,13 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => 
         },
       },
     );
-    const response: ApiResponse = await res.json(); // Use the `ApiResponse` type here
-    return response;
+    const data = await res.json() as ApiResponse;
+
+    if (!isApiResponse(data)) {
+      throw new Error("Unexpected response format");
+    }
+
+    return data;
   };
 
   // Fetch articles for all locales
