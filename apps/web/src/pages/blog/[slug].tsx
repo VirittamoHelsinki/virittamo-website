@@ -121,17 +121,24 @@ export default function PostPage({
                 )}
               </div>
             ) : (
-              <video
-                src={frontMatter.image}
-                className="h-[200px] sm:h-[400px] w-full sm:rounded-xl object-cover"
-                width={2000}
-                height={2000}
-                autoPlay
-                loop
-                controls
-                playsInline
-                webkit-playsinline
-              />
+              <div className="flex flex-col items-center">
+                <video
+                  src={frontMatter.image}
+                  className="h-[200px] sm:h-[400px] w-full sm:rounded-xl object-cover"
+                  width={2000}
+                  height={2000}
+                  autoPlay
+                  loop
+                  controls
+                  playsInline
+                  webkit-playsinline
+                />
+                {frontMatter.alt && (
+                  <p className="md:mt-[20px] self-start mt-[8px] 2xl:text-[20px] md:text-[18px] text-[12px] text-[#2E2E2E] ml-[20px] sm:ml-[0px]">
+                    {frontMatter.alt}
+                  </p>
+                )}
+              </div>
             )}
           </div>
         </header>
