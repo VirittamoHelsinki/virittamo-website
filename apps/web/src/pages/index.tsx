@@ -43,19 +43,24 @@ function Hero() {
           <p className="text-[16px] pl-[20px] pr-[20px] md:pl-[0px] 2xl:pl-[0px] md:pr-[0px] 2xl:pr-[0px] md:text-[20px] 2xl:text-[20px]">
             {heroData.data.attributes.hero.description}
           </p>
-          <div className="pl-[20px] pr-[20px] md:pl-[0px] 2xl:pl-[0px] md:pr-[0px] 2xl:pr-[0px] flex flex-row flex-wrap gap-[30px] md:gap-5 2xl:gap-5 items-center justify-between">
-            {heroData.data.attributes.hero.proofing.map((proof, index) => (
-              <p key={index} className="flex flex-col text-base md:text-[20px] 2xl:text-[20px]">
-                {proof.name}
-                <span className="text-[16px] md:text-[30px] 2xl:text-[30px] mt-[4px] md:mt-2 2xl:mt-[8px]">{proof.action}</span>
-              </p>
-            ))}
-            <Link
-              href="/about#contact"
-              className="rounded-[6px] h-[37px] md:h-auto 2xl:h-auto bg-[#F5A4C8] px-6 py-3 text-[14px] font-bold text-black md:px-8 2xl:px-8 md:py-4 2xl:py-4 md:text-[20px] 2xl:text-[20px] flex items-center justify-center"
-            >
-              {heroData.data.attributes.hero.ctaButton.name}
-            </Link>
+          <div className="pl-[20px] pr-[20px] md:pl-[0px] 2xl:pl-[0px] md:pr-[0px] 2xl:pr-[0px] flex flex-row flex-wrap items-center justify-between">
+            <div className="flex flex-row flex-wrap gap-[45px] md:gap-10 2xl:gap-12 items-center"> {/* Smaller gap for mapped elements */}
+              {heroData.data.attributes.hero.proofing.map((proof, index) => (
+                <p key={index} className="flex flex-col text-base md:text-[20px] 2xl:text-[20px]">
+                  {proof.name}
+                  <span className="text-[16px] md:text-[30px] 2xl:text-[30px] mt-[4px] md:mt-2 2xl:mt-[8px]">{proof.action}</span>
+                </p>
+              ))}
+            </div>
+
+            <div className="flex mt-[20px]"> {/* Larger margin/gap for the link */}
+              <Link
+                href="/about#contact"
+                className="rounded-[6px] h-[37px] md:h-auto 2xl:h-auto bg-[#F5A4C8] px-6 py-3 text-[14px] font-bold text-black md:px-8 2xl:px-8 md:py-4 2xl:py-4 md:text-[20px] 2xl:text-[20px] flex items-center justify-center"
+              >
+                {heroData.data.attributes.hero.ctaButton.name}
+              </Link>
+            </div>
           </div>
         </div>
       </div>

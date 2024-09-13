@@ -75,44 +75,47 @@ export default function BlogPage() {
           </Toggle>
         </div>
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-[24px] 2xl:gap-[94px] md:gap-[40px]">
-          {filteredData?.data.map((article, index) => (
-            <li key={index} className="flex max-w-full sm:max-w-[508px] flex-col gap-[10px]">
-              <Link href={`/blog/${article.attributes.slug}`} passHref>
-                {article.attributes.media?.data?.attributes?.mime.startsWith(
-                  "image",
-                ) ? (
-                  <Image
-                    className="h-[200px] md:h-[324px] 2xl:h-[420px] w-full rounded-xl object-cover"
-                    src={article.attributes.media.data.attributes.url}
-                    alt="Picture of the author"
-                    width={2000}
-                    height={2000}
-                  />
-                ) : (
-                  <video
-                    disablePictureInPicture={true}
-                    controls={false}
-                    src={article.attributes.media.data.attributes.url}
-                    className="h-[200px] md:h-[324px] 2xl:h-[420px] w-full rounded-xl object-cover"
-                    width={2000}
-                    height={800}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    webkit-playsinline
-                  />
-                )}
-                <h3 className="text-[20px] md:text-[30px] 2xl:text-[40px] md:mt-[12px] 2xl:mt-[20px] leading-[40px]">
-                  {article.attributes.title}
-                </h3>
-                <p className="hidden md:block md:text-[20px] 2xl:text-[25px] md:mt-[5px]">
-                  {article.attributes.description}
-                </p>
-              </Link>
-            </li>
-          ))}
+          {filteredData?.data.map((article, index, arr) => {
+            const reversedIndex = arr.length - 1 - index; // Calculate reversed index
+            const reversedArticle = arr[reversedIndex]; // Get the item at the reversed index
+            return (
+              <li key={index} className="flex max-w-full sm:max-w-[508px] flex-col gap-[10px]">
+                <Link href={`/blog/${reversedArticle?.attributes.slug}`} passHref>
+                  {reversedArticle?.attributes.media?.data?.attributes?.mime.startsWith("image") ? (
+                    <Image
+                      className="h-[200px] md:h-[324px] 2xl:h-[420px] w-full rounded-xl object-cover"
+                      src={reversedArticle.attributes.media.data.attributes.url}
+                      alt="Picture of the author"
+                      width={2000}
+                      height={2000}
+                    />
+                  ) : (
+                    <video
+                      disablePictureInPicture={true}
+                      controls={false}
+                      src={reversedArticle?.attributes.media.data.attributes.url}
+                      className="h-[200px] md:h-[324px] 2xl:h-[420px] w-full rounded-xl object-cover"
+                      width={2000}
+                      height={800}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      webkit-playsinline
+                    />
+                  )}
+                  <h3 className="text-[20px] md:text-[30px] 2xl:text-[40px] md:mt-[12px] 2xl:mt-[20px] leading-[40px]">
+                    {reversedArticle?.attributes.title}
+                  </h3>
+                  <p className="hidden md:block md:text-[20px] 2xl:text-[25px] md:mt-[5px]">
+                    {reversedArticle?.attributes.description}
+                  </p>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
+
       </Suspense>
     </main>
   );
