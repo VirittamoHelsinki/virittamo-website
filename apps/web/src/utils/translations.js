@@ -73,9 +73,9 @@ export const translations = {
       back: "Tillbaka till nyheterna",
       address: "Adress",
       campus: "Metropolia Campus",
-      subsidy1: "Du kan få mer information om rätten att betala stöd ",
+      subsidy1: "Du kan få mer information om rätten till lönesubvention ",
       subsidy2: "från arbetsförmedlingens webbplats",
-      subsidy3: " eller genom att fråga din TE-kontorsexpert.",
+      subsidy3: " eller genom att fråga din handläggare på TE-byrån.",
     },
   };
   
