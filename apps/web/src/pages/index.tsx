@@ -107,6 +107,7 @@ function CarouselDemo() {
   const [apiCarousel, setApiCarousel] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const [videoLoaded, setVideoLoaded] = useState<boolean[]>([]);
 
   useEffect(() => {
     if (!apiCarousel) {
@@ -121,9 +122,16 @@ function CarouselDemo() {
     });
   }, [apiCarousel]);
 
+  useEffect(() => {
+    // Initialize the video loaded state for each slide
+    if (featureData) {
+      setVideoLoaded(new Array(featureData.data.length).fill(false));
+    }
+  }, [featureData]);
+
   if (isFeatureLoading || !featureData || isCarouselTextLoading || !carouselText) return;
 
-  //order the data so that the videos are displayed first
+  // Order the data so that the videos are displayed first
   const videos = featureData.data.filter((slide) =>
     slide.attributes.media.data.attributes.mime.startsWith("video")
   );
@@ -132,6 +140,13 @@ function CarouselDemo() {
   );
   const orderedData = videos.concat(otherContent);
 
+  const handleVideoLoaded = (index: number) => {
+    setVideoLoaded((prevState) => {
+      const newState = [...prevState];
+      newState[index] = true;
+      return newState;
+    });
+  };
 
   const truncateText = (description: string) => {
     const isMobile = window.innerWidth < 768; // Mobile view if width is less than 768px
@@ -168,17 +183,31 @@ function CarouselDemo() {
                           height={600}
                         />
                       ) : (
-                        <video
-                          src={slide.attributes.media.data.attributes.url}
-                          className="h-full w-full object-cover brightness-75 filter md:rounded-xl 2xl:rounded-xl"
-                          width={2000}
-                          height={600}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          webkit-playsinline
-                        />
+                        <div className="relative h-full w-full">
+                          {!videoLoaded[index] && (
+                            <Image
+                              src="/placeholder.png"
+                              alt="Placeholder"
+                              className="h-full w-full object-cover brightness-75 filter md:rounded-xl 2xl:rounded-xl"
+                              width={2000}
+                              height={600}
+                            />
+                          )}
+                          <video
+                            src={slide.attributes.media.data.attributes.url}
+                            className={`h-full w-full object-cover brightness-75 filter md:rounded-xl 2xl:rounded-xl ${
+                              videoLoaded[index] ? "visible" : "invisible"
+                            }`}
+                            width={2000}
+                            height={600}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            webkit-playsinline
+                            onLoadedData={() => handleVideoLoaded(index)}
+                          />
+                        </div>
                       )}
                     </Link>
                   </figure>
@@ -209,6 +238,7 @@ function CarouselDemo() {
     </div>
   );
 }
+
 
 function OurTeams() {
   const { locale } = useLang();

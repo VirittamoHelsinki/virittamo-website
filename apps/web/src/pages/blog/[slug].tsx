@@ -13,6 +13,8 @@ import { useRouter } from 'next/router';
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 
+//TODO when changing to another language, refresh is needed to display article in the new language. We want to get rid of the refresh
+
 const components = {
   IFrame({ url }: { url: string }) {
     return (
