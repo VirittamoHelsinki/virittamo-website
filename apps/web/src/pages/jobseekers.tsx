@@ -58,6 +58,8 @@ export default function ApplyToWork() {
               <li key={index}>{criterion.name}</li>
             ))}
           </ul>
+
+          {/* TODO implement these subsidys to be changeable via strapi */}
           <p className="text-[16px] md:text-[20px] pt-4 md:pt-6 2xl:pt-10">
             {subsidy1}
             <a
