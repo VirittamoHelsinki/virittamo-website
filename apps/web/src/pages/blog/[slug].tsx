@@ -245,5 +245,6 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => 
       },
       html: content,
     },
+    revalidate: 60,
   };
 };
